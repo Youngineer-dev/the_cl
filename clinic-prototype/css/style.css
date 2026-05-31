@@ -87,20 +87,32 @@ ul, ol {
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s var(--ease-elegant), transform 0.8s var(--ease-elegant);
+  filter: blur(8px);
+  transition: opacity 0.8s var(--ease-elegant), transform 0.8s var(--ease-elegant), filter 0.8s var(--ease-elegant);
 }
 
 .reveal.revealed {
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0);
 }
 
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-.reveal-delay-5 { transition-delay: 0.5s; }
-.reveal-delay-6 { transition-delay: 0.6s; }
+@media (min-width: 768px) {
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+  .reveal-delay-6 { transition-delay: 0.6s; }
+}
+
+@media (max-width: 767px) {
+  /* 모바일 환경에서는 요소가 세로로 하나씩 나타나므로 딜레이를 제거해 즉각적으로 반응하도록 설정 */
+  .reveal-delay-1, .reveal-delay-2, .reveal-delay-3, 
+  .reveal-delay-4, .reveal-delay-5, .reveal-delay-6 {
+    transition-delay: 0s !important;
+  }
+}
 
 /* ============================================================
    HEADER

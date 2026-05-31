@@ -6,18 +6,24 @@
 (function () {
   'use strict';
 
-  // --- Scroll Reveal ---
-  const revealElements = () => {
-    const elements = document.querySelectorAll('.reveal:not(.revealed)');
-    const windowH = window.innerHeight;
-
-    elements.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      const triggerPoint = windowH * 0.88;
-
-      if (rect.top < triggerPoint) {
-        el.classList.add('revealed');
+  // --- Scroll Reveal (Intersection Observer) ---
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target); // 한 번 나타나면 다시 숨기지 않음
       }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -15% 0px', // 화면 하단에서 15% 진입 시 트리거
+    threshold: 0
+  });
+
+  const initReveal = () => {
+    const elements = document.querySelectorAll('.reveal');
+    elements.forEach(el => {
+      revealObserver.observe(el);
     });
   };
 
@@ -45,7 +51,7 @@
     }
 
     // Reveal animations
-    revealElements();
+    // (IntersectionObserver가 처리하므로 여기서는 호출하지 않음)
   };
 
   // --- Hamburger Menu ---
@@ -127,14 +133,13 @@
     heroParallax();
   }, { passive: true });
 
-  window.addEventListener('resize', revealElements, { passive: true });
+  window.addEventListener('resize', () => {
+    // 뷰포트 변경 시 필요한 로직 (현재는 옵저버가 자동 처리)
+  }, { passive: true });
 
   // Initial call
   window.addEventListener('DOMContentLoaded', () => {
     handleScroll();
-    revealElements();
+    initReveal();
   });
-
-  // Reveal elements already in view on load
-  window.addEventListener('load', revealElements);
 })();
