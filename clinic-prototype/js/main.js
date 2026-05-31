@@ -6,6 +6,23 @@
 (function () {
   'use strict';
 
+  // --- Smooth Scroll (Lenis) ---
+  let lenis;
+  if (typeof Lenis !== 'undefined') {
+    lenis = new Lenis({
+      lerp: 0.15,          // 스크롤 반응 속도 증가 (기본 0.1, 높을수록 빠르고 기민함)
+      wheelMultiplier: 1.2, // 마우스 휠 1틱당 이동 거리 20% 증가
+      duration: 0.8,        // 앵커 이동 등 부가 애니메이션 시간 단축
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+
   // --- Scroll Reveal (Intersection Observer) ---
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -91,7 +108,11 @@
   const topBtn = document.querySelector('.quick-btn.top-btn');
   if (topBtn) {
     topBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (lenis) {
+        lenis.scrollTo(0);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     });
   }
 
@@ -107,10 +128,14 @@
         const headerH = header ? header.offsetHeight : 0;
         const targetPos = target.offsetTop - headerH;
 
-        window.scrollTo({
-          top: targetPos,
-          behavior: 'smooth',
-        });
+        if (lenis) {
+          lenis.scrollTo(targetPos);
+        } else {
+          window.scrollTo({
+            top: targetPos,
+            behavior: 'smooth',
+          });
+        }
       }
     });
   });
