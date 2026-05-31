@@ -275,6 +275,24 @@
         "title": "$t:user.page.page_title"
       }
     },
+    {
+      "_comment": "=== 의료진 소개 ===",
+      "path": "/doctors",
+      "layout": "page/doctors",
+      "auth_required": false,
+      "meta": {
+        "title": "의료진 소개 - LAPIS Doctors"
+      }
+    },
+    {
+      "_comment": "=== 의료진 소개 (단수형) ===",
+      "path": "/doctor",
+      "layout": "page/doctors",
+      "auth_required": false,
+      "meta": {
+        "title": "의료진 소개 - LAPIS Doctors"
+      }
+    },
 
     {
       "_comment": "=== 검색 ===",
