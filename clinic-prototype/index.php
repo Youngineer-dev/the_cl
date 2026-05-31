@@ -1,118 +1,7 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>삼성더클성장의원 - 소아 내분비 전문</title>
-  <meta name="description" content="소아 내분비 전문 클리닉 - 성장 평가, 저신장, 성조숙, 비만, 갑상선 질환, 당뇨 전문. 아이의 건강한 성장을 함께합니다.">
-  <meta name="keywords" content="소아내분비, 성장클리닉, 저신장, 성조숙증, 소아비만, 갑상선, 당뇨, 영양수액">
-
-  <!-- OG Tags -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="삼성더클성장의원 - 소아 내분비 전문">
-  <meta property="og:description" content="아이의 건강한 성장, 삼성더클성장의원이 함께합니다. 소아 내분비 전문.">
-  <meta property="og:image" content="img/hero.png">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <!-- ============================================================
-       HEADER
-       ============================================================ -->
-  <header class="site-header" id="header">
-    <div class="header-inner">
-      <!-- Left: Slogan -->
-      <div class="header-left">
-        <p class="slogan">
-          아이의 건강한 성장을 함께하는 곳 — <span class="accent">Samsung The CL</span>
-        </p>
-      </div>
-
-      <!-- Center: Logo -->
-      <div class="header-center">
-        <a href="#" class="logo-link">
-          <img src="img/brand_logo.png" alt="삼성더클성장의원" class="logo-img">
-        </a>
-      </div>
-
-      <!-- Right: Location + Hamburger -->
-      <div class="header-right">
-        <span class="header-location">
-          <svg class="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          강남역 3번출구 도보 3분
-        </span>
-        <div class="header-contact">
-          <a href="tel:02-1234-5678" class="header-phone">02.1234.5678</a>
-        </div>
-        <div class="hamburger" id="hamburger" aria-label="메뉴 열기">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ============================================================
-       FULL SCREEN NAVIGATION
-       ============================================================ -->
-  <nav class="nav-overlay" id="navOverlay">
-    <div class="nav-content">
-      <p class="nav-slogan">Grow Together, Grow Healthy</p>
-      <div class="nav-menu">
-        <!-- Group 1 -->
-        <div class="nav-menu-group">
-          <h3 class="nav-menu-title">About</h3>
-          <ul class="nav-menu-items">
-            <li><a href="#about">병원 소개</a></li>
-            <li><a href="#doctors">원장 인사말</a></li>
-            <li><a href="#doctors">의료진 소개</a></li>
-            <li><a href="#space">둘러보기</a></li>
-            <li><a href="#contact">오시는 길</a></li>
-          </ul>
-        </div>
-
-        <!-- Group 2 -->
-        <div class="nav-menu-group">
-          <h3 class="nav-menu-title">Clinic</h3>
-          <ul class="nav-menu-items">
-            <li><a href="#programs">성장 평가</a></li>
-            <li><a href="#programs">저신장</a></li>
-            <li><a href="#programs">성조숙</a></li>
-            <li><a href="#programs">소아 비만</a></li>
-            <li><a href="#programs">갑상선 질환</a></li>
-            <li><a href="#programs">당뇨</a></li>
-            <li><a href="#programs">영양수액</a></li>
-          </ul>
-        </div>
-
-        <!-- Group 3 -->
-        <div class="nav-menu-group">
-          <h3 class="nav-menu-title">Info</h3>
-          <ul class="nav-menu-items">
-            <li><a href="#contact">진료 시간</a></li>
-            <li><a href="#">진료 절차</a></li>
-            <li><a href="#">검사 항목</a></li>
-            <li><a href="#">비급여</a></li>
-          </ul>
-          <h3 class="nav-menu-title" style="margin-top: 20px;">Community</h3>
-          <ul class="nav-menu-items">
-            <li><a href="#">치료 사례 <span class="member-only">회원전용</span></a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">공지사항</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
+<?php
+$page_title = "삼성더클성장의원 - 소아 내분비 전문";
+include_once('./head.php');
+?>
 
   <!-- ============================================================
        HERO SECTION
@@ -176,10 +65,10 @@
 
         <div class="about-images">
           <div class="about-img-1 reveal">
-            <img src="img/hero.png" alt="클리닉 진료 모습">
+            <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="클리닉 진료 모습">
           </div>
           <div class="about-img-2 reveal reveal-delay-2">
-            <img src="img/interior.png" alt="클리닉 내부">
+            <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="클리닉 내부">
           </div>
         </div>
       </div>
@@ -202,7 +91,7 @@
       <!-- Doctor 1 -->
       <article class="doctor-card reveal">
         <div class="doctor-photo">
-          <img src="img/doctor.png" alt="김지은 원장">
+          <img src="<?php echo $G5_URL; ?>/img/doctor.png" alt="김지은 원장">
         </div>
         <div class="doctor-info">
           <span class="doctor-position">소아청소년과 전문의 · 내분비 분과</span>
@@ -346,21 +235,21 @@
 
       <div class="space-gallery">
         <div class="space-gallery-item reveal">
-          <img src="img/interior.png" alt="대기실">
+          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="대기실">
           <div class="gallery-caption">
             <p class="caption-en">Waiting Area</p>
             <p class="caption-kr">편안하고 따뜻한 대기 공간</p>
           </div>
         </div>
         <div class="space-gallery-item reveal reveal-delay-1">
-          <img src="img/hero.png" alt="진료실">
+          <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="진료실">
           <div class="gallery-caption">
             <p class="caption-en">Consultation</p>
             <p class="caption-kr">1:1 맞춤 진료실</p>
           </div>
         </div>
         <div class="space-gallery-item reveal reveal-delay-2">
-          <img src="img/interior.png" alt="검사실">
+          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="검사실">
           <div class="gallery-caption">
             <p class="caption-en">Examination</p>
             <p class="caption-kr">정밀 검사 공간</p>
@@ -380,7 +269,7 @@
         <div class="contact-left reveal">
           <p class="section-en">Contact Us</p>
           <div class="contact-img">
-            <img src="img/interior.png" alt="클리닉 외관">
+            <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="클리닉 외관">
           </div>
           <p class="address">
             <span class="star">✦</span> 서울 강남구 테헤란로 123 그린빌딩 4층<br>
@@ -434,46 +323,6 @@
     </div>
   </section>
 
-  <!-- Footer Slogan -->
-  <div class="footer-slogan">
-    <div class="footer-slogan-track">
-      <p class="footer-slogan-text">SAMSUNG THE CL, Grow Together, Grow Healthy&nbsp;&nbsp;&nbsp;</p>
-      <p class="footer-slogan-text">SAMSUNG THE CL, Grow Together, Grow Healthy&nbsp;&nbsp;&nbsp;</p>
-      <p class="footer-slogan-text">SAMSUNG THE CL, Grow Together, Grow Healthy&nbsp;&nbsp;&nbsp;</p>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-info">
-          <span>삼성더클성장의원</span><br>
-          <span>사업자번호 : 123-45-67890</span> &nbsp;|&nbsp; <span>대표 김지은</span><br>
-          <span>서울시 강남구 테헤란로 123, 4층</span> &nbsp;|&nbsp; <span>TEL 02-1234-5678</span><br>
-          <span style="margin-top: 4px; display: inline-block;">COPYRIGHT © 2025 삼성더클성장의원. ALL RIGHTS RESERVED.</span>
-        </div>
-        <div class="footer-links">
-          <a href="#">이용약관</a>
-          <a href="#">개인정보 취급방침</a>
-          <a href="#">비급여 진료안내</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ============================================================
-       QUICK MENU (Fixed Side Buttons)
-       ============================================================ -->
-  <div class="quick-menu" id="quickMenu">
-    <button class="quick-btn phone" title="전화문의" onclick="location.href='tel:02-1234-5678'">📞</button>
-    <button class="quick-btn kakao" title="카톡상담">💬</button>
-    <button class="quick-btn naver" title="네이버예약">📋</button>
-    <button class="quick-btn top-btn" title="맨 위로">↑</button>
-  </div>
-
-  <!-- JavaScript -->
-  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
+<?php
+include_once('./tail.php');
+?>
