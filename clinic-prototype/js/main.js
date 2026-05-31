@@ -1,5 +1,5 @@
 /* ============================================================
-   GreenKids Clinic - Main JavaScript
+   Samsung The CL Growth Clinic - Main JavaScript
    Scroll Reveal, Mobile Menu, Header Scroll, Quick Menu
    ============================================================ */
 

@@ -1,28 +1,28 @@
 /* ============================================================
-   그린키즈 소아내분비 클리닉 - Premium Stylesheet
+   삼성더클성장의원 - Premium Stylesheet
    Design Reference: lapisclinic.com
    ============================================================ */
 
 /* --- CSS Variables --- */
 :root {
-  /* Primary Palette - Warm Mint & Sage */
-  --c-primary: #5B8A72;
-  --c-primary-light: #7BAA94;
-  --c-primary-dark: #3D6B54;
-  --c-primary-pale: #E8F0EC;
+  /* Primary Palette - Vivid Green Theme */
+  --c-primary: #2E8B57;
+  --c-primary-light: #3CB371;
+  --c-primary-dark: #1B6B3A;
+  --c-primary-pale: #E0F2E9;
   
   /* Accent - Warm Gold */
-  --c-accent: #C4A265;
-  --c-accent-light: #D9C18E;
+  --c-accent: #B8963E;
+  --c-accent-light: #D4B96A;
   
   /* Neutrals */
-  --c-bg: #FAF8F5;
-  --c-bg-cream: #F5F0EA;
-  --c-bg-dark: #2C2C2C;
-  --c-text: #333333;
-  --c-text-light: #777777;
+  --c-bg: #F9FBF9;
+  --c-bg-cream: #F0F5F1;
+  --c-bg-dark: #1E2D24;
+  --c-text: #2A2A2A;
+  --c-text-light: #6B7B72;
   --c-text-white: #FFFFFF;
-  --c-border: #E5E0D8;
+  --c-border: #D5E0D8;
   
   /* Typography */
   --font-serif: 'Cormorant', 'Georgia', serif;
@@ -36,6 +36,7 @@
   --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-elegant: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 /* --- Reset & Base --- */
 *, *::before, *::after {
