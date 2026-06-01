@@ -54,9 +54,17 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--c-text);
-  /* 맑고 편안한 민트 크림 선형 그라디언트 배경 */
-  background-image: linear-gradient(180deg, #F9FBF9 0%, #F0F5F1 50%, #F9FBF9 100%);
+  background-color: var(--c-bg);
+  /* 24px 간격의 정밀 도트 그리드 + 고요하게 일렁이는 은은한 오로라 물결 배경 */
+  background-image: 
+    radial-gradient(rgba(46, 139, 87, 0.02) 1.5px, transparent 1.5px), /* 도트 */
+    radial-gradient(circle at 10% 20%, rgba(224, 242, 233, 0.45) 0%, transparent 45%), /* Sage Green Wave */
+    radial-gradient(circle at 90% 80%, rgba(212, 185, 106, 0.12) 0%, transparent 45%), /* Gold Wave */
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
+    linear-gradient(180deg, #F9FBF9 0%, #F0F5F1 50%, #F9FBF9 100%);
+  background-size: 24px 24px, 200% 200%, 200% 200%, 200% 200%, 100% 100%;
   background-attachment: fixed;
+  animation: aurora-move 32s ease infinite alternate; /* 32초 주기로 은은히 일렁이며 이동 */
   line-height: 1.7;
   overflow-x: hidden;
   
@@ -65,6 +73,19 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+/* 오로라 물결 일렁임 애니메이션 */
+@keyframes aurora-move {
+  0% {
+    background-position: 0% 0%, 0% 0%, 100% 100%, 0% 0%, 0% 0%;
+  }
+  50% {
+    background-position: 0% 0%, 80% 20%, 20% 80%, 0% 0%, 0% 0%;
+  }
+  100% {
+    background-position: 0% 0%, 50% 90%, 90% 10%, 0% 0%, 0% 0%;
+  }
 }
 
 /* 입력 필드만 선택 및 드래그 허용 */
@@ -2339,6 +2360,7 @@ ul, ol {
 .hero, .about, .doctors, .programs, .space, .contact {
   position: relative;
   z-index: 1;
+  overflow: hidden; /* 배경의 자이언트 사선 슬로건과 아우라가 화면 우측을 침범해 여백을 만드는 현상 방어 */
 }
 
 /* 3. Hero Section - Floating Sage Leaf Shape & Gold Star */
@@ -2368,7 +2390,7 @@ ul, ol {
   animation: float-reverse 14s ease-in-out infinite;
 }
 
-/* 4. About Section - Giant Background Sliding Slogan */
+/* 4. About Section - Giant Background Sliding Slogan with -2deg Angle */
 .about::before {
   content: "Grow Together ✦ Grow Healthy ✦ Samsung The CL ✦";
   position: absolute;
@@ -2383,20 +2405,24 @@ ul, ol {
   white-space: nowrap;
   pointer-events: none;
   z-index: -1;
+  transform: rotate(-2deg); /* 은은한 사선 기울임으로 역동적 공간감 부여 */
+  transform-origin: left top;
   animation: marquee-giant 35s linear infinite;
 }
 
 .about::after {
   content: '';
   position: absolute;
-  top: 10%;
-  right: 5%;
-  width: 120px;
-  height: 120px;
-  border: 1px dashed rgba(184, 150, 62, 0.12);
+  top: 8%;
+  right: 2%;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
-  z-index: -1;
-  animation: spin-infinitely 40s linear infinite;
+  /* 120px 이상의 초광폭 블러 Sage Green Aura */
+  background: radial-gradient(circle, rgba(224, 242, 233, 0.5) 0%, transparent 75%);
+  filter: blur(120px);
+  z-index: -2;
+  animation: pulse-gentle 12s ease-in-out infinite;
 }
 
 /* 5. Doctors Section - Elegant Rotating Double Rings Behind Cards */
@@ -2428,7 +2454,7 @@ ul, ol {
   animation: spin-infinitely 60s linear infinite;
 }
 
-/* 6. Programs Section - Giant Background Reverse Sliding Slogan */
+/* 6. Programs Section - Giant Background Reverse Sliding Slogan with -2deg Angle */
 .programs::before {
   content: "Grow Together ✦ Grow Healthy ✦ Samsung The CL ✦";
   position: absolute;
@@ -2443,7 +2469,25 @@ ul, ol {
   white-space: nowrap;
   pointer-events: none;
   z-index: -1;
+  transform: rotate(-2deg);
+  transform-origin: left bottom;
   animation: marquee-giant-reverse 40s linear infinite;
+}
+
+/* 7. Programs Section - Glowing Ultra-wide Amber Gold Aura */
+.programs::after {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: -100px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  /* 140px 이상의 초광폭 블러 Amber Gold Aura */
+  background: radial-gradient(circle, rgba(214, 185, 106, 0.09) 0%, transparent 75%);
+  filter: blur(140px);
+  z-index: -2;
+  animation: float-slow 22s ease-in-out infinite;
 }
 
 /* 초거대 슬로건 롤링 키프레임 애니메이션 */
@@ -2455,5 +2499,264 @@ ul, ol {
 @keyframes marquee-giant-reverse {
   0% { transform: translateX(0); }
   100% { transform: translateX(50%); }
+}
+
+/* ============================================================
+   LAPIS STYLE COPY - SUB1_1 (Spacious & Artistic Upgrade)
+   ============================================================ */
+
+.sub11_sect1 {
+  padding: 120px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sub11_sect1::before {
+  content: '';
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  border: 1px dashed rgba(184, 150, 62, 0.05); /* 은은한 대형 기하학 그리드 선 */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.sub11_sect1_img {
+  width: 100%;
+  max-width: 980px;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 80px 0 80px 0; /* 단조롭지 않은 비대칭 사선 곡선 프레임 */
+  margin: 50px auto;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.06);
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+.sub11_sect1_descWrap {
+  max-width: 840px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sub11_sect1_desc {
+  font-size: 15px;
+  line-height: 2.1;
+  color: var(--c-text-light);
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+.sub11_sect1_desc.desc2 {
+  font-size: 16px;
+  color: var(--c-primary-dark);
+  font-weight: 400;
+}
+
+.sub11_sect1_desc b {
+  font-size: 19px;
+  color: var(--c-text);
+  font-weight: 600;
+  border-bottom: 2px solid var(--c-accent-light);
+  padding-bottom: 6px;
+}
+
+/* 3 Core Values - Spacious & Artistic Alternating Grid */
+.sub11_sect2_contWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 220px; /* 극적으로 넓직한 갤러리식 여백 확보 */
+  padding: 100px 0;
+  position: relative;
+}
+
+/* 배경 뒤편에 은은하게 흐르는 추가 기하학 선 드로잉 */
+.sub11_sect2_contWrap::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 1200px;
+  border-left: 1px dashed rgba(46, 139, 87, 0.04);
+  border-right: 1px dashed rgba(46, 139, 87, 0.04);
+  pointer-events: none;
+  z-index: -2;
+}
+
+.sub11_sect2_item {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 110px; /* 카드와 설명 간의 숨통이 트이는 여유로운 정돈 간격 */
+  align-items: center;
+  position: relative;
+}
+
+.sub11_sect2_item.imgLeft {
+  grid-template-columns: 1fr 1.15fr;
+}
+
+.sub11_sect2_item.imgLeft .descBox {
+  grid-column: 2;
+}
+
+.sub11_sect2_item.imgLeft .imgBox {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.descBox .item_title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.descBox .item_title .marcell {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-style: italic;
+  color: var(--c-accent);
+}
+
+.descBox .item_title .line {
+  flex-grow: 1;
+  max-width: 80px;
+  height: 1px;
+  background: var(--c-accent-light);
+}
+
+.descBox .item_title .kpb_l {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--c-primary-dark);
+}
+
+.descBox .item_subTitle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--c-text);
+  margin-bottom: 28px;
+  letter-spacing: -0.5px;
+}
+
+.descBox .item_desc_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.descBox .item_desc {
+  font-size: 14.5px;
+  line-height: 1.9;
+  color: var(--c-text-light);
+  font-weight: 300;
+}
+
+/* 입체 엇갈림 오프셋 이미지 프레임 워크 */
+.imgBox {
+  position: relative;
+  overflow: visible; /* 삐져나오는 오프셋 프레임 노출을 위해 */
+}
+
+/* 홀수 아이템의 이미지 셰이프 비대칭화 */
+.sub11_sect2_item.item1 .imgBox .item_img,
+.sub11_sect2_item.item3 .imgBox .item_img {
+  border-radius: 120px 24px 120px 24px; /* 우상단, 좌하단만 거대 라운딩 */
+}
+
+/* 짝수 아이템의 이미지 셰이프 비대칭화 */
+.sub11_sect2_item.item2 .imgBox .item_img {
+  border-radius: 24px 120px 24px 120px; /* 좌상단, 우하단만 거대 라운딩 */
+}
+
+/* 엇갈린 오프셋 데코 와이어프레임 박스 */
+.imgBox::before {
+  content: '';
+  position: absolute;
+  border: 1px solid rgba(184, 150, 62, 0.18);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+  transition: transform 0.6s var(--ease-elegant);
+}
+
+/* 홀수 오프셋 박스 위치 */
+.sub11_sect2_item.item1 .imgBox::before,
+.sub11_sect2_item.item3 .imgBox::before {
+  top: -15px; left: -15px; right: 15px; bottom: 15px;
+}
+
+/* 짝수 오프셋 박스 위치 */
+.sub11_sect2_item.item2 .imgBox::before {
+  top: -15px; left: 15px; right: -15px; bottom: 15px;
+}
+
+.imgBox .item_img {
+  width: 100%;
+  height: 420px; /* 높이를 연장하여 웅장함 확보 */
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255,255,255,0.7);
+  transition: transform 0.6s var(--ease-elegant);
+  display: block;
+}
+
+/* 3D 패럴랙스 엇갈림 호버 연출 */
+.sub11_sect2_item:hover .imgBox .item_img {
+  transform: scale(0.98) rotate(0.5deg); /* 이미지는 소폭 안으로 안전하게 수축 */
+}
+
+.sub11_sect2_item.item1:hover .imgBox::before,
+.sub11_sect2_item.item3:hover .imgBox::before {
+  transform: translate(-10px, -10px) scale(1.02); /* 와이어프레임은 바깥으로 반대 엇갈림 이동 */
+}
+
+.sub11_sect2_item.item2:hover .imgBox::before {
+  transform: translate(10px, -10px) scale(1.02);
+}
+
+.imgBox .bgText {
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+  font-family: var(--font-serif);
+  font-size: 90px;
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(184, 150, 62, 0.04);
+  pointer-events: none;
+  z-index: 2;
+  transition: transform 0.6s var(--ease-elegant);
+}
+
+.sub11_sect2_item:hover .imgBox .bgText {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 1024px) {
+  .sub11_sect2_contWrap {
+    gap: 120px;
+  }
+  .sub11_sect2_item, .sub11_sect2_item.imgLeft {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .sub11_sect2_item.imgLeft .descBox, .sub11_sect2_item.imgLeft .imgBox {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  .imgBox .item_img {
+    height: 320px;
+  }
+  .imgBox::before {
+    display: none; /* 모바일/태블릿에서는 정돈을 위해 와이어프레임 숨김 */
+  }
 }
 
