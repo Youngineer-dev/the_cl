@@ -2229,3 +2229,231 @@ ul, ol {
   }
 }
 
+/* ============================================================
+   SUBPAGES - PREMIUM GLASSMORPHISM & ARTISTIC LAYOUTS
+   ============================================================ */
+
+/* 서브페이지 메인 아우라 백그라운드 */
+.sub-page-hero {
+  position: relative;
+  padding: 100px 0 60px;
+  background: transparent;
+}
+
+/* 프리미엄 글래스모피즘 카드 */
+.sub-card {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  border-radius: 24px 8px 24px 8px !important; /* 창의적인 비대칭 모서리 */
+  padding: 40px 30px !important;
+  box-shadow: 0 15px 35px rgba(46, 139, 87, 0.04) !important;
+  transition: all 0.4s var(--ease-elegant) !important;
+}
+
+.sub-card:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(60, 179, 113, 0.4) !important;
+  box-shadow: 0 25px 50px rgba(46, 139, 87, 0.08) !important;
+}
+
+/* 체크리스트 박스의 창의적 변형 */
+.checklist-box {
+  background: rgba(240, 245, 241, 0.5) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  border-radius: 32px 32px 8px 32px !important; /* 비대칭 테두리 */
+  padding: 50px 40px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.02) !important;
+}
+
+/* 타임라인 카드 정교화 */
+.timeline-step {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 16px 32px 16px 32px !important;
+  padding: 30px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01) !important;
+  transition: all 0.3s;
+}
+
+.timeline-step:hover {
+  border-color: rgba(184, 150, 62, 0.3) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  transform: translateX(6px);
+}
+
+.timeline-badge {
+  background: linear-gradient(135deg, var(--c-primary), var(--c-accent)) !important;
+  box-shadow: 0 10px 20px rgba(46, 139, 87, 0.2) !important;
+}
+
+/* 아코디언 컴포넌트의 반투명 글래스 입체화 */
+.accordion-item {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 12px !important;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.accordion-item:hover {
+  border-color: rgba(60, 179, 113, 0.3) !important;
+}
+
+/* ============================================================
+   FLOATING GEOMETRIC SHAPES & MICRO-ANIMATIONS
+   ============================================================ */
+
+/* 1. 공통 키프레임 애니메이션 정의 */
+@keyframes float-slow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(6deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes float-reverse {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(18px) rotate(-6deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes pulse-gentle {
+  0% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 0.25; transform: scale(1.05); }
+  100% { opacity: 0.1; transform: scale(1); }
+}
+
+@keyframes spin-infinitely {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 2. 각 섹션별 absolute 컨테이너 설정 */
+.hero, .about, .doctors, .programs, .space, .contact {
+  position: relative;
+  z-index: 1;
+}
+
+/* 3. Hero Section - Floating Sage Leaf Shape & Gold Star */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  width: 180px;
+  height: 180px;
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; /* 유기적 잎사귀 셰이프 */
+  background: linear-gradient(135deg, rgba(60, 179, 113, 0.06), rgba(184, 150, 62, 0.03));
+  filter: blur(8px);
+  z-index: -1;
+  animation: float-slow 16s ease-in-out infinite;
+}
+
+.hero::after {
+  content: '✦';
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  font-size: 36px;
+  color: var(--c-accent-light);
+  opacity: 0.2;
+  z-index: -1;
+  animation: float-reverse 14s ease-in-out infinite;
+}
+
+/* 4. About Section - Giant Background Sliding Slogan */
+.about::before {
+  content: "Grow Together ✦ Grow Healthy ✦ Samsung The CL ✦";
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 200%;
+  font-family: var(--font-serif);
+  font-size: 130px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(46, 139, 87, 0.02); /* 극도로 투명하여 메인 정보 가독성을 방해하지 않음 */
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: -1;
+  animation: marquee-giant 35s linear infinite;
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 120px;
+  height: 120px;
+  border: 1px dashed rgba(184, 150, 62, 0.12);
+  border-radius: 50%;
+  z-index: -1;
+  animation: spin-infinitely 40s linear infinite;
+}
+
+/* 5. Doctors Section - Elegant Rotating Double Rings Behind Cards */
+.doctors::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  border: 1px solid rgba(46, 139, 87, 0.03);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.doctors::after {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 580px;
+  height: 580px;
+  border: 1px dashed rgba(184, 150, 62, 0.04);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+  animation: spin-infinitely 60s linear infinite;
+}
+
+/* 6. Programs Section - Giant Background Reverse Sliding Slogan */
+.programs::before {
+  content: "Grow Together ✦ Grow Healthy ✦ Samsung The CL ✦";
+  position: absolute;
+  bottom: 10%;
+  left: -100%;
+  width: 200%;
+  font-family: var(--font-serif);
+  font-size: 130px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(184, 150, 62, 0.015);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: -1;
+  animation: marquee-giant-reverse 40s linear infinite;
+}
+
+/* 초거대 슬로건 롤링 키프레임 애니메이션 */
+@keyframes marquee-giant {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-giant-reverse {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
