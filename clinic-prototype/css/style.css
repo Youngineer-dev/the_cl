@@ -54,7 +54,9 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--c-text);
-  background-color: var(--c-bg);
+  /* 맑고 편안한 민트 크림 선형 그라디언트 배경 */
+  background-image: linear-gradient(180deg, #F9FBF9 0%, #F0F5F1 50%, #F9FBF9 100%);
+  background-attachment: fixed;
   line-height: 1.7;
   overflow-x: hidden;
   
@@ -700,9 +702,24 @@ ul, ol {
 }
 
 .doctor-photo {
-  border-radius: 4px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--c-border);
+  position: relative;
+}
+
+.doctor-photo::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  pointer-events: none;
+  transform: scale(0.98);
+  transition: transform 0.6s var(--ease-elegant);
+  z-index: 2;
 }
 
 .doctor-photo img {
@@ -710,6 +727,10 @@ ul, ol {
   height: 520px;
   object-fit: cover;
   transition: transform 0.6s var(--ease-elegant);
+}
+
+.doctor-card:hover .doctor-photo::before {
+  transform: scale(0.96);
 }
 
 .doctor-card:hover .doctor-photo img {
@@ -915,7 +936,7 @@ ul, ol {
 }
 
 .space-gallery-item {
-  border-radius: 4px;
+  border-radius: 12px; /* 세련되고 부드러운 라운딩 */
   overflow: hidden;
   position: relative;
   aspect-ratio: 4/3;
