@@ -91,11 +91,11 @@ include_once('./head.php');
       <!-- Doctor 1 -->
       <article class="doctor-card reveal">
         <div class="doctor-photo">
-          <img src="<?php echo $G5_URL; ?>/img/doctor.png" alt="김지은 원장">
+          <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="이중민 원장">
         </div>
         <div class="doctor-info">
           <span class="doctor-position">소아청소년과 전문의 · 내분비 분과</span>
-          <h3 class="doctor-name"><strong>김 지 은</strong> 대표원장</h3>
+          <h3 class="doctor-name"><strong>이 중 민</strong> 대표원장</h3>
 
           <div class="history-section">
             <div>
@@ -279,9 +279,21 @@ include_once('./head.php');
             <span class="star">✦</span> 주차 &nbsp; 건물 내 주차장 이용 가능 (1시간 무료)
           </p>
           <div class="map-buttons">
-            <a href="#" class="map-btn">네이버 길찾기</a>
-            <a href="#" class="map-btn">카카오 길찾기</a>
-            <a href="#" class="map-btn">티맵 길찾기</a>
+            <a href="#" class="map-btn">
+              <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #03C75A; flex-shrink: 0; margin-right: 6px;">
+                <path d="M16.2 3H21v18h-4.8l-8.4-12v12H3V3h4.8l8.4 12z"/>
+              </svg>네이버 길찾기
+            </a>
+            <a href="#" class="map-btn">
+              <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #FEE500; flex-shrink: 0; filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.25)); margin-right: 6px;">
+                <path d="M12 3c-5.5 0-10 3.8-10 8.5 0 3.1 2 5.8 5 7.2l-1.3 4.8c-.1.3 0 .6.2.8.1.1.3.2.5.2.1 0 .2 0 .3-.1l5.6-3.7c.9.2 1.8.3 2.7.3 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/>
+              </svg>카카오 길찾기
+            </a>
+            <a href="#" class="map-btn">
+              <svg class="map-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #1F87FF; flex-shrink: 0; margin-right: 6px;">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>티맵 길찾기
+            </a>
           </div>
         </div>
 

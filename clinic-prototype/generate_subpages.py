@@ -60,7 +60,7 @@ subpages_content["sub1_2"] = """
   <div class="about-text" style="text-align: left;">
     <div class="desc-group reveal">
       <p class="desc" style="font-size: 15px; line-height: 2.2; color: var(--c-text-light); font-weight: 300;">
-        안녕하세요. 삼성더클성장의원 대표원장 김지은입니다.<br><br>
+        안녕하세요. 삼성더클성장의원 대표원장 이중민입니다.<br><br>
         아이들의 웃음소리가 울려 퍼지는 건강한 성장을 관찰하는 것은 참으로 경이로운 일이지만, 다른 아이들보다 성장이 조금 더디거나 사춘기가 너무 일찍 올 때 부모님의 속앓이와 걱정 또한 무겁다는 것을 잘 알고 있습니다.<br><br>
         소아 내분비학 전문의로서 수많은 아이들을 지켜보며 깨달은 점은, <strong>모든 아동은 저마다의 고유한 성장 템포와 건강한 가능성</strong>을 내포하고 있다는 사실입니다. 우리의 임무는 그 템포를 적시에 과학적으로 분석하여 올바른 골든타임을 놓치지 않도록 이끄는 것입니다.<br><br>
         저희 의원은 부모님과 같은 눈높이에서 아이의 건강한 내일을 지극히 진실하고 정교하게 설계하겠습니다. 성장의 매 순간 든든한 등대지기가 되어 동행할 것을 약속드립니다.
@@ -68,13 +68,13 @@ subpages_content["sub1_2"] = """
     </div>
     
     <div class="reveal reveal-delay-2" style="margin-top: 40px; font-family: var(--font-serif); font-size: 20px; font-style: italic; color: var(--c-primary-dark); font-weight: 600;">
-      - Representative Director, Ji Eun Kim
+      - Representative Director, Jung Min Lee
     </div>
   </div>
 
   <div class="about-images reveal reveal-delay-1" style="height: 480px;">
     <div class="about-img-1" style="width: 100%; position: relative;">
-      <img src="<?php echo $G5_URL; ?>/img/doctor.png" alt="김지은 원장" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.06);">
+      <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="이중민 원장" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.06);">
     </div>
   </div>
 </div>
@@ -92,11 +92,11 @@ subpages_content["sub1_3"] = """
 
 <article class="doctor-card reveal" style="background: white; border-radius: 8px; border: 1px solid var(--c-border); padding: 48px; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.01);">
   <div class="doctor-photo">
-    <img src="<?php echo $G5_URL; ?>/img/doctor.png" alt="김지은 대표원장">
+    <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="이중민 대표원장">
   </div>
   <div class="doctor-info">
     <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
-    <h3 class="doctor-name"><strong>김 지 은</strong> 대표원장</h3>
+    <h3 class="doctor-name"><strong>이 중 민</strong> 대표원장</h3>
     
     <p class="desc" style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
       대학병원 소아내분비 임상교수 출신으로, 풍부한 임상경험과 글로벌 학술적 네트워크를 기반으로 삼아 저신장과 성조숙증 진료에 탁월한 해법을 제시합니다.
@@ -217,9 +217,21 @@ subpages_content["sub1_5"] = """
     </div>
     
     <div class="map-buttons" style="margin-top: 30px;">
-      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600;">네이버 길찾기 바로가기</a>
-      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600;">카카오 맵 바로가기</a>
-      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600;">T맵 안내 바로가기</a>
+      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+        <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #03C75A; flex-shrink: 0;">
+          <path d="M16.2 3H21v18h-4.8l-8.4-12v12H3V3h4.8l8.4 12z"/>
+        </svg>네이버 길찾기 바로가기
+      </a>
+      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+        <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #FEE500; flex-shrink: 0; filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.25));">
+          <path d="M12 3c-5.5 0-10 3.8-10 8.5 0 3.1 2 5.8 5 7.2l-1.3 4.8c-.1.3 0 .6.2.8.1.1.3.2.5.2.1 0 .2 0 .3-.1l5.6-3.7c.9.2 1.8.3 2.7.3 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/>
+        </svg>카카오 맵 바로가기
+      </a>
+      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+        <svg class="map-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #1F87FF; flex-shrink: 0;">
+          <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+        </svg>T맵 안내 바로가기
+      </a>
     </div>
   </div>
 
@@ -706,7 +718,7 @@ subpages_content["sub3_2"] = """
     <div class="timeline-content">
       <span class="timeline-step-num">Step 03</span>
       <h4 class="timeline-step-title">대표원장 1:1 맞춤 진료 및 정밀 문진</h4>
-      <p class="timeline-step-desc">소아 내분비 세부전문의 김지은 원장이 손목 엑스레이 필름을 면밀히 판독하고 성장 장애 원인을 감별합니다.</p>
+      <p class="timeline-step-desc">소아 내분비 세부전문의 이중민 원장이 손목 엑스레이 필름을 면밀히 판독하고 성장 장애 원인을 감별합니다.</p>
     </div>
   </div>
 
@@ -1066,7 +1078,7 @@ subpages_content["sub4_3"] = """
       </tr>
       <tr>
         <td style="text-align: center;">3</td>
-        <td><a href="#">김지은 대표원장 유럽소아내분비학회(ESPE) 해외 세미나 초청 강연 참관기</a></td>
+        <td><a href="#">이중민 대표원장 유럽소아내분비학회(ESPE) 해외 세미나 초강연 참관기</a></td>
         <td style="text-align: center;">2026.05.15</td>
         <td style="text-align: center;">89</td>
       </tr>

@@ -70,7 +70,7 @@ include_once('../head.php');
     <div class="timeline-content">
       <span class="timeline-step-num">Step 03</span>
       <h4 class="timeline-step-title">대표원장 1:1 맞춤 진료 및 정밀 문진</h4>
-      <p class="timeline-step-desc">소아 내분비 세부전문의 김지은 원장이 손목 엑스레이 필름을 면밀히 판독하고 성장 장애 원인을 감별합니다.</p>
+      <p class="timeline-step-desc">소아 내분비 세부전문의 이중민 원장이 손목 엑스레이 필름을 면밀히 판독하고 성장 장애 원인을 감별합니다.</p>
     </div>
   </div>
 

@@ -64,7 +64,7 @@ include_once('../head.php');
       </tr>
       <tr>
         <td style="text-align: center;">3</td>
-        <td><a href="#">김지은 대표원장 유럽소아내분비학회(ESPE) 해외 세미나 초청 강연 참관기</a></td>
+        <td><a href="#">이중민 대표원장 유럽소아내분비학회(ESPE) 해외 세미나 초강연 참관기</a></td>
         <td style="text-align: center;">2026.05.15</td>
         <td style="text-align: center;">89</td>
       </tr>

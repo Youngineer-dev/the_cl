@@ -57,6 +57,20 @@ body {
   background-color: var(--c-bg);
   line-height: 1.7;
   overflow-x: hidden;
+  
+  /* 전역 드래그 및 선택 차단 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 입력 필드만 선택 및 드래그 허용 */
+input, textarea {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
 }
 
 a {
@@ -1038,13 +1052,23 @@ ul, ol {
 }
 
 .map-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 10px 20px;
   font-size: 13px;
   font-weight: 500;
+  line-height: 1; /* 텍스트의 상하 여백 공간을 제거하여 정렬 중심선을 맞춤 */
   border: 1px solid var(--c-border);
   border-radius: 4px;
   background: white;
   transition: all 0.3s;
+}
+
+.map-icon {
+  display: block;
+  flex-shrink: 0;
 }
 
 .map-btn:hover {

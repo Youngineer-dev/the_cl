@@ -50,9 +50,21 @@ include_once('../head.php');
     </div>
     
     <div class="map-buttons" style="margin-top: 30px;">
-      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600;">네이버 길찾기 바로가기</a>
-      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600;">카카오 맵 바로가기</a>
-      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600;">T맵 안내 바로가기</a>
+      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+        <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #03C75A; flex-shrink: 0;">
+          <path d="M16.2 3H21v18h-4.8l-8.4-12v12H3V3h4.8l8.4 12z"/>
+        </svg>네이버 길찾기 바로가기
+      </a>
+      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+        <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #FEE500; flex-shrink: 0; filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.25));">
+          <path d="M12 3c-5.5 0-10 3.8-10 8.5 0 3.1 2 5.8 5 7.2l-1.3 4.8c-.1.3 0 .6.2.8.1.1.3.2.5.2.1 0 .2 0 .3-.1l5.6-3.7c.9.2 1.8.3 2.7.3 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/>
+        </svg>카카오 맵 바로가기
+      </a>
+      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+        <svg class="map-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #1F87FF; flex-shrink: 0;">
+          <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+        </svg>T맵 안내 바로가기
+      </a>
     </div>
   </div>
 

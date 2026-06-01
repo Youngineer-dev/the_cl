@@ -41,11 +41,11 @@ include_once('../head.php');
 
 <article class="doctor-card reveal" style="background: white; border-radius: 8px; border: 1px solid var(--c-border); padding: 48px; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.01);">
   <div class="doctor-photo">
-    <img src="<?php echo $G5_URL; ?>/img/doctor.png" alt="김지은 대표원장">
+    <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="이중민 대표원장">
   </div>
   <div class="doctor-info">
     <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
-    <h3 class="doctor-name"><strong>김 지 은</strong> 대표원장</h3>
+    <h3 class="doctor-name"><strong>이 중 민</strong> 대표원장</h3>
     
     <p class="desc" style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
       대학병원 소아내분비 임상교수 출신으로, 풍부한 임상경험과 글로벌 학술적 네트워크를 기반으로 삼아 저신장과 성조숙증 진료에 탁월한 해법을 제시합니다.
