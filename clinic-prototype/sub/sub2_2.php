@@ -78,14 +78,17 @@ include_once('../head.php');
 
 <div class="sub-card-grid" style="margin-top: 50px;">
   <div class="sub-card reveal">
+    <div class="sub-card-icon">💉</div>
     <h3 class="sub-card-title">성장 호르몬 주사 요법</h3>
     <p class="sub-card-desc">체내에 부족한 성장호르몬을 무통 주사 펜 기기를 사용하여 매일 밤 수면 전에 자가 투여하는 치료법으로, 세계적으로 공인된 안전성이 확립되어 있습니다.</p>
   </div>
   <div class="sub-card reveal reveal-delay-1">
+    <div class="sub-card-icon">🧘</div>
     <h3 class="sub-card-title">성장판 자극 도수 치료</h3>
     <p class="sub-card-desc">원내의 전문 운동 재활 물리치료팀이 관절 및 뼈 성장판 주변부 근육의 긴장을 해소하고 척추를 정렬하여 성장 에너지를 활성화합니다.</p>
   </div>
   <div class="sub-card reveal reveal-delay-2">
+    <div class="sub-card-icon">🥗</div>
     <h3 class="sub-card-title">라이프 영양 처방</h3>
     <p class="sub-card-desc">뼈 성장에 필수적인 칼슘, 비타민D, 아연, 양질의 단백질 흡수를 늘리기 위해 일상 식습관과 보조 보충제의 최적 처방을 구성합니다.</p>
   </div>

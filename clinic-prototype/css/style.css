@@ -996,12 +996,14 @@ ul, ol {
   font-size: 20px;
   font-style: italic;
   margin-bottom: 4px;
+  color: var(--c-text-white);
 }
 
 .gallery-caption .caption-kr {
   font-size: 12px;
   font-weight: 300;
-  opacity: 0.8;
+  opacity: 0.85;
+  color: var(--c-text-white);
 }
 
 /* ============================================================
@@ -2355,25 +2357,27 @@ ul, ol {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.02) !important;
 }
 
-/* 타임라인 카드 정교화 */
-.timeline-step {
-  background: rgba(255, 255, 255, 0.7) !important;
+/* 타임라인 카드 정교화 — 레이아웃 행(.timeline-step)이 아닌 실제 카드(.timeline-content)에만 글래스 처리.
+   (행에 카드 스타일을 주면 중앙 세로선/뱃지 정렬이 깨지고 카드가 이중 중첩됨) */
+.timeline-content {
+  background: rgba(255, 255, 255, 0.72) !important;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
   border-radius: 16px 32px 16px 32px !important;
-  padding: 30px !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01) !important;
-  transition: all 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
 }
 
-.timeline-step:hover {
-  border-color: rgba(184, 150, 62, 0.3) !important;
-  background: rgba(255, 255, 255, 0.9) !important;
-  transform: translateX(6px);
+.timeline-step:hover .timeline-content {
+  border-color: rgba(184, 150, 62, 0.35) !important;
+  background: rgba(255, 255, 255, 0.93) !important;
+  box-shadow: 0 18px 40px rgba(46, 139, 87, 0.07) !important;
 }
 
 .timeline-badge {
   background: linear-gradient(135deg, var(--c-primary), var(--c-accent)) !important;
+  border-color: transparent !important;
+  color: #fff !important; /* 그라데이션 위 숫자 가독성 확보 */
   box-shadow: 0 10px 20px rgba(46, 139, 87, 0.2) !important;
 }
 
