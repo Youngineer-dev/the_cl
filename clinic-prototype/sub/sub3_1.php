@@ -30,67 +30,74 @@ include_once('../head.php');
 <!-- MAIN CONTENT -->
 <main class="sub-main">
   <div class="container">
-    
-<div class="sub-intro-text">
-  <p class="section-en reveal">Clinic Hours</p>
-  <h2 class="section-title reveal reveal-delay-1">
-    예약제로 편안하게 내원하시는<br>
-    <strong>삼성더클성장의원 진료 일정표</strong>
-  </h2>
-  <div class="desc-group reveal reveal-delay-2" style="margin-top: 30px;">
-    <p class="desc">
-      한 분 한 분 깊이 있는 1:1 상담을 위해 사전 예약을 원칙으로 운영합니다.<br>
-      아래 진료 시간을 참고하여 내원 예약 일정을 잡으실 수 있습니다.
-    </p>
-  </div>
-  <div class="sub-intro-divider reveal reveal-delay-3"></div>
-</div>
 
-<div class="premium-table-wrap reveal">
-  <table class="premium-table">
-    <thead>
-      <tr>
-        <th>구분</th>
-        <th>진료 시작 시간</th>
-        <th>진료 종료 시간</th>
-        <th>비고 및 특이사항</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>평일 (월 — 금)</td>
-        <td>오전 09:00</td>
-        <td>오후 18:30</td>
-        <td>점심시간: 13:00 ~ 14:00 (진료 접수 마감: 18:00)</td>
-      </tr>
-      <tr>
-        <td>토요일</td>
-        <td>오전 09:00</td>
-        <td>오후 13:00</td>
-        <td>토요일은 점심시간 없이 연속 진료합니다. (접수 마감: 12:30)</td>
-      </tr>
-      <tr>
-        <td>일요일 · 공휴일</td>
-        <td colspan="2" style="text-align: center; font-weight: 600; color: var(--c-accent);">휴  진</td>
-        <td>긴급 문의 및 내원 예약은 카카오톡 채널을 통해 남겨주세요.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<!-- 스플릿 인트로 (텍스트 좌 / 겹친 이미지 우) -->
+<section class="ed-split reveal">
+  <div class="ed-split__text">
+    <span class="ed-eyebrow">Clinic Hours</span>
+    <h2 class="ed-split__title">
+      <span class="i1">예약제로</span>
+      <span class="i2">편안하게</span>
+      <span class="i3"><strong>모십니다</strong></span>
+    </h2>
+    <div class="ed-split__body">
+      <p class="lead">
+        한 분 한 분 깊이 있는 1:1 상담을 위해 사전 예약을 원칙으로 운영합니다.
+      </p>
+      <p>
+        아래 진료 시간을 참고하여 내원 일정을 잡으실 수 있습니다.
+        긴급 문의나 당일 예약은 전화 또는 카카오톡 채널로 편하게 연락 주세요.
+      </p>
+    </div>
+  </div>
+  <div class="ed-collage reveal reveal-delay-2">
+    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="진료 공간" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="상담실" class="ed-collage__sub">
+  </div>
+</section>
 
-<div class="sub-card-grid" style="margin-top: 50px;">
-  <div class="sub-card reveal" style="text-align: center;">
-    <h3 class="sub-card-title">📞 간편 전화 예약</h3>
-    <a href="tel:02-1234-5678" style="font-size: 24px; font-weight: 700; color: var(--c-primary); display: block; margin: 12px 0;">02.1234.5678</a>
-    <p class="sub-card-desc">당일 진료 예약이나 비급여 주차권 관련 급한 용무는 전화로 연락 주시면 신속히 응대합니다.</p>
+<!-- 진료시간 그리드 -->
+<section style="padding-top: 30px;">
+  <div class="ed-sectlabel reveal" style="margin-bottom: 30px;">
+    <span class="ed-kicker">Schedule</span>
+    <h2>요일별 <strong>진료 일정표</strong></h2>
   </div>
-  
-  <div class="sub-card reveal reveal-delay-1" style="text-align: center;">
-    <h3 class="sub-card-title">💬 카카오톡 24시간 문의</h3>
-    <a href="#" style="font-size: 18px; font-weight: 700; color: #391B1B; background: #FEE500; display: inline-block; padding: 10px 24px; border-radius: 4px; margin: 12px 0;">삼성더클성장 채널상담</a>
-    <p class="sub-card-desc">카카오톡 채널을 추가하시면 진료 예약일 알림 서비스와 1:1 채팅 문의를 자유로이 이용하실 수 있습니다.</p>
+  <div class="ed-hours reveal">
+    <div class="ed-hours__cell">
+      <p class="ed-hours__day">Mon — Fri</p>
+      <p class="ed-hours__time">09:00 — 18:30</p>
+      <p class="ed-hours__note">점심시간 13:00 ~ 14:00<br>접수 마감 18:00</p>
+    </div>
+    <div class="ed-hours__cell">
+      <p class="ed-hours__day">Saturday</p>
+      <p class="ed-hours__time">09:00 — 13:00</p>
+      <p class="ed-hours__note">점심시간 없이 연속 진료<br>접수 마감 12:30</p>
+    </div>
+    <div class="ed-hours__cell is-off">
+      <p class="ed-hours__day">Sun · Holiday</p>
+      <p class="ed-hours__time">휴 진</p>
+      <p class="ed-hours__note">카카오톡 채널로<br>예약 문의 가능</p>
+    </div>
   </div>
-</div>
+</section>
+
+<!-- 연락 안내 -->
+<section style="padding-top: 60px;">
+  <div class="ed-cards ed-cards--two">
+    <div class="ed-card2 reveal" style="text-align: center;">
+      <div class="ed-card2__no" style="margin: 0 auto 18px;">☎</div>
+      <h3 class="ed-card2__title">간편 전화 예약</h3>
+      <a href="tel:02-1234-5678" style="display:block; font-family: var(--font-serif); font-size: 30px; font-weight: 500; color: var(--c-primary-dark); margin: 8px 0 16px;">02.1234.5678</a>
+      <p class="ed-card2__desc">당일 진료 예약이나 주차권 관련 급한 용무는 전화로 연락 주시면 신속히 응대합니다.</p>
+    </div>
+    <div class="ed-card2 reveal reveal-delay-1" style="text-align: center;">
+      <div class="ed-card2__no" style="margin: 0 auto 18px;">💬</div>
+      <h3 class="ed-card2__title">카카오톡 24시간 문의</h3>
+      <a href="#" class="ed-pill" style="margin: 14px 0; background: #FEE500; color: #391B1B;">삼성더클성장 채널상담</a>
+      <p class="ed-card2__desc">채널을 추가하시면 예약일 알림 서비스와 1:1 채팅 문의를 자유롭게 이용하실 수 있습니다.</p>
+    </div>
+  </div>
+</section>
 
   </div>
 </main>

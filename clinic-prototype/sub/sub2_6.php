@@ -30,39 +30,70 @@ include_once('../head.php');
 <!-- MAIN CONTENT -->
 <main class="sub-main">
   <div class="container">
-    
-<div class="sub-intro-text">
-  <p class="section-en reveal">Pediatric Diabetes</p>
-  <h2 class="section-title reveal reveal-delay-1">
-    소아청소년 특성을 반영한 혈당 케어,<br>
-    <strong>합병증 없는 든든한 일상 밀착 관리</strong>
-  </h2>
-  <div class="desc-group reveal reveal-delay-2" style="margin-top: 30px;">
-    <p class="desc">
-      소아 당뇨는 성인 당뇨와 성격이 매우 다르고, 지속적인 성장 발달을 동시에 고려해야 합니다.<br>
-      인슐린 의존성을 정밀하게 파악하여 아이가 낙인 효과 없이 학교생활을 활발히 영위하도록 정성껏 돌봅니다.
-    </p>
-  </div>
-  <div class="sub-intro-divider reveal reveal-delay-3"></div>
-</div>
 
-<div class="sub-card-grid">
-  <div class="sub-card reveal">
-    <div class="sub-card-icon">🍭</div>
-    <h3 class="sub-card-title">1형 당뇨 특화 인슐린 매니지먼트</h3>
-    <p class="sub-card-desc">췌장 인슐린 분비 결핍이 원인인 1형 당뇨 아동을 위해 안전한 인슐린 펜 투여법 교육, 실시간 연속혈당측정기(CGM) 데이터 모니터링을 통합 지도합니다.</p>
+<!-- 스플릿 인트로 (미러형: 이미지 좌 / 텍스트 우) -->
+<section class="ed-split ed-split--reverse reveal">
+  <div class="ed-split__text">
+    <span class="ed-eyebrow">Pediatric Diabetes</span>
+    <h2 class="ed-split__title">
+      <span class="i1">성장과 혈당을</span>
+      <span class="i2">함께 살피는</span>
+      <span class="i3"><strong>소아 맞춤 케어</strong></span>
+    </h2>
+    <div class="ed-split__body">
+      <p class="lead">
+        소아 당뇨는 성인 당뇨와 성격이 다르고, 지속적인 성장 발달을 동시에 고려해야 합니다.
+      </p>
+      <p>
+        인슐린 의존성을 정밀하게 파악하여, 아이가 낙인 효과 없이 학교생활을 활발히
+        영위하도록 일상에 밀착해 정성껏 돌봅니다.
+      </p>
+    </div>
   </div>
-  <div class="sub-card reveal reveal-delay-1">
-    <div class="sub-card-icon">🍱</div>
-    <h3 class="sub-card-title">인슐린 저항성 개선 (2형 당뇨)</h3>
-    <p class="sub-card-desc">서구화된 식생활로 증가하는 소아 2형 당뇨를 완화하기 위해 복부 비만을 해소하고 췌장의 인슐린 저항성을 떨어뜨리는 라이프 코칭을 적용합니다.</p>
+  <div class="ed-collage reveal reveal-delay-2">
+    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="혈당 관리" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="소아 진료" class="ed-collage__sub">
   </div>
-  <div class="sub-card reveal reveal-delay-2">
-    <div class="sub-card-icon">🏥</div>
-    <h3 class="sub-card-title">학교 및 가정 연계 네트워크</h3>
-    <p class="sub-card-desc">아이가 학교나 유치원에서 저혈당 응급 상황에 처하지 않도록 가정통신 안내 가이드를 보완해 드리고, 대처 약물 상비 매뉴얼을 수립해 드립니다.</p>
+</section>
+
+<!-- 빅넘버 리스트 -->
+<section class="ed-features">
+  <div class="ed-sectlabel reveal">
+    <span class="ed-kicker">Care Program</span>
+    <h2>일상을 지키는 <strong>3가지 관리</strong></h2>
   </div>
-</div>
+
+  <div class="ed-feat reveal">
+    <div class="ed-feat__num">01</div>
+    <div class="ed-feat__body">
+      <h3 class="ed-feat__title">1형 당뇨 특화 인슐린 매니지먼트</h3>
+      <p class="ed-feat__desc">
+        췌장 인슐린 분비 결핍이 원인인 1형 당뇨 아동을 위해 안전한 인슐린 펜 투여법 교육과
+        실시간 연속혈당측정기(CGM) 데이터 모니터링을 통합 지도합니다.
+      </p>
+    </div>
+  </div>
+  <div class="ed-feat reveal reveal-delay-1">
+    <div class="ed-feat__num">02</div>
+    <div class="ed-feat__body">
+      <h3 class="ed-feat__title">인슐린 저항성 개선 (2형 당뇨)</h3>
+      <p class="ed-feat__desc">
+        서구화된 식생활로 증가하는 소아 2형 당뇨를 완화하기 위해 복부 비만을 해소하고
+        췌장의 인슐린 저항성을 떨어뜨리는 라이프 코칭을 적용합니다.
+      </p>
+    </div>
+  </div>
+  <div class="ed-feat reveal reveal-delay-2">
+    <div class="ed-feat__num">03</div>
+    <div class="ed-feat__body">
+      <h3 class="ed-feat__title">학교 및 가정 연계 네트워크</h3>
+      <p class="ed-feat__desc">
+        아이가 학교나 유치원에서 저혈당 응급 상황에 처하지 않도록 가정통신 안내 가이드를
+        보완해 드리고, 대처 약물 상비 매뉴얼을 수립해 드립니다.
+      </p>
+    </div>
+  </div>
+</section>
 
   </div>
 </main>
