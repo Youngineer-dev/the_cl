@@ -2841,3 +2841,78 @@ ul, ol {
   }
 }
 
+/* ============================================================
+   MOBILE OPTIMIZATION — 보완 디자인 요소들의 반응형/성능 최적화
+   (소스 순서상 글래스·장식 규칙보다 뒤에 두어 확실히 우선 적용)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* 1) 배경 성능: fixed 배경은 iOS에서 깨지고 스크롤이 무거움 → scroll */
+  body { background-attachment: scroll; }
+  .sub-main { background-attachment: scroll; }
+
+  /* 떠다니는 장식 오브 크기·블러 경감 (GPU 부담 완화 + 화면 침범 방지) */
+  .sub-main::before {
+    width: 300px; height: 300px; top: -80px; right: -70px;
+    filter: blur(60px);
+  }
+  .sub-main::after {
+    width: 280px; height: 280px; bottom: -90px; left: -90px;
+    filter: blur(60px);
+  }
+
+  /* 2) 글래스 카드 블러 경감 (저사양 단말 렌더링 부담 완화) */
+  .sub-card,
+  .checklist-box,
+  .timeline-content,
+  .accordion-item {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* 카드·박스 여백 축소 (글래스 규칙의 !important를 덮어쓰기 위해 !important 사용) */
+  .sub-card { padding: 34px 24px !important; }
+  .checklist-box { padding: 32px 26px !important; }
+
+  /* 3) 타임라인 — 좁은 화면 여백/라벨 정리 */
+  .timeline-content { padding: 26px 22px; }
+  .timeline-step-num { font-size: 10px; letter-spacing: 2px; }
+  .timeline-step-title { font-size: 17px; }
+
+  /* 4) 표 — 가로 스크롤 부드럽게 + 셀 여백/폰트 축소 */
+  .premium-table-wrap { -webkit-overflow-scrolling: touch; }
+  .premium-table th,
+  .premium-table td { padding: 14px 16px; font-size: 13px; }
+
+  /* 5) 갤러리 캡션(둘러보기) 가독성 */
+  .gallery-caption { padding: 18px; }
+  .gallery-caption .caption-en { font-size: 17px; }
+
+  /* 6) 케이스·잠금 박스 여백 */
+  .case-card-body { padding: 28px 24px; }
+  .lock-box { padding: 32px 24px; margin: 32px auto; }
+}
+
+@media (max-width: 480px) {
+  .sub-hero { height: 240px; }
+  .sub-hero-title { font-size: 23px; }
+  .sub-hero-subtitle { font-size: 13px; }
+  .sub-intro-text .section-title { font-size: 21px; }
+
+  /* 오브 추가 축소 */
+  .sub-main::before { width: 220px; height: 220px; filter: blur(50px); }
+  .sub-main::after { width: 220px; height: 220px; filter: blur(50px); }
+
+  /* 비대칭 라운딩이 작은 화면에서 과해 보이지 않도록 완화 (글래스 !important 대응) */
+  .sub-card { border-radius: 18px 6px 18px 6px !important; padding: 30px 20px !important; }
+  .checklist-box { border-radius: 22px 22px 6px 22px !important; padding: 26px 20px !important; }
+  .timeline-content { border-radius: 14px 22px 14px 22px !important; padding: 22px 18px; }
+
+  /* 치료사례 메타 정보 세로 정렬 */
+  .case-meta { flex-direction: column; gap: 8px; }
+
+  /* 아코디언 질문 텍스트 축소 */
+  .accordion-q { font-size: 15px; gap: 10px; }
+  .accordion-q::before { font-size: 19px; }
+  .accordion-a { font-size: 13px; }
+}
+
