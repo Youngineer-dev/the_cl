@@ -1924,12 +1924,15 @@ ul, ol {
 }
 
 .timeline-step-num {
-  font-family: var(--font-serif);
-  font-size: 26px;
-  font-style: italic;
-  color: var(--c-accent);
-  margin-bottom: 10px;
-  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--c-primary);
+  opacity: 0.8;
+  margin-bottom: 14px;
+  display: inline-block;
 }
 
 .timeline-step-title {
@@ -2374,11 +2377,21 @@ ul, ol {
   box-shadow: 0 18px 40px rgba(46, 139, 87, 0.07) !important;
 }
 
+/* 단계 뱃지 — 그라데이션 제거, 흰 원 + 얇은 링 + 세리프 숫자의 절제된 디자인 */
 .timeline-badge {
-  background: linear-gradient(135deg, var(--c-primary), var(--c-accent)) !important;
-  border-color: transparent !important;
-  color: #fff !important; /* 그라데이션 위 숫자 가독성 확보 */
-  box-shadow: 0 10px 20px rgba(46, 139, 87, 0.2) !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid var(--c-primary-pale) !important;
+  color: var(--c-primary-dark) !important;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 6px 18px rgba(46, 139, 87, 0.10) !important;
+}
+
+.timeline-step:hover .timeline-badge {
+  background: var(--c-primary) !important;
+  border-color: var(--c-primary) !important;
+  color: #FFFFFF !important;
 }
 
 /* 아코디언 컴포넌트의 반투명 글래스 입체화 */
