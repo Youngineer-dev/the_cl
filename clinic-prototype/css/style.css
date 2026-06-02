@@ -1676,8 +1676,72 @@ ul, ol {
 
 /* Sub Main Base Layout */
 .sub-main {
+  position: relative;
   padding: 100px 0 140px;
-  background: var(--c-bg);
+  overflow: hidden;
+  /* 밋밋한 단색 대신: 코너 세이지/골드 글로우 + 은은한 그리드 텍스처 */
+  background-color: var(--c-bg);
+  background-image:
+    radial-gradient(circle at 0% 0%, rgba(224, 242, 233, 0.55) 0%, transparent 38%),   /* 좌상단 세이지 */
+    radial-gradient(circle at 100% 12%, rgba(212, 185, 106, 0.09) 0%, transparent 32%), /* 우상단 골드 */
+    radial-gradient(circle at 85% 100%, rgba(224, 242, 233, 0.45) 0%, transparent 40%), /* 우하단 세이지 */
+    linear-gradient(rgba(46, 139, 87, 0.022) 1px, transparent 1px),                     /* 가로 그리드 */
+    linear-gradient(90deg, rgba(46, 139, 87, 0.022) 1px, transparent 1px);              /* 세로 그리드 */
+  background-size: 100% 100%, 100% 100%, 100% 100%, 34px 34px, 34px 34px;
+  background-attachment: fixed, fixed, fixed, scroll, scroll;
+}
+
+/* 본문 위로 천천히 떠다니는 블러 그라데이션 오브 (장식) */
+.sub-main::before,
+.sub-main::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sub-main::before {
+  width: 480px;
+  height: 480px;
+  top: -130px;
+  right: -110px;
+  background: radial-gradient(circle, rgba(60, 179, 113, 0.16) 0%, transparent 70%);
+  animation: sub-orb-a 22s ease-in-out infinite alternate;
+}
+
+.sub-main::after {
+  width: 420px;
+  height: 420px;
+  bottom: -120px;
+  left: -130px;
+  background: radial-gradient(circle, rgba(212, 185, 106, 0.15) 0%, transparent 70%);
+  animation: sub-orb-b 27s ease-in-out infinite alternate;
+}
+
+@keyframes sub-orb-a {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-70px, 60px) scale(1.18); }
+}
+
+@keyframes sub-orb-b {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(60px, -50px) scale(1.12); }
+}
+
+/* 콘텐츠는 항상 장식 레이어 위에 */
+.sub-main > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 모션 최소화 선호 시 오브 애니메이션 정지 */
+@media (prefers-reduced-motion: reduce) {
+  .sub-main::before,
+  .sub-main::after {
+    animation: none;
+  }
 }
 
 .sub-intro-text {

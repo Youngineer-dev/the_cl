@@ -14,7 +14,7 @@
       <div class="footer-inner">
         <div class="footer-info">
           <span>삼성더클성장의원</span><br>
-          <span>사업자번호 : 123-45-67890</span> &nbsp;|&nbsp; <span>대표 이중민</span><br>
+          <span>사업자번호 : 123-45-67890</span> &nbsp;|&nbsp; <span>대표 노유선</span><br>
           <span>서울시 강남구 테헤란로 123, 4층</span> &nbsp;|&nbsp; <span>TEL 02-1234-5678</span><br>
           <span style="margin-top: 4px; display: inline-block;">COPYRIGHT © 2025 삼성더클성장의원. ALL RIGHTS RESERVED.</span>
         </div>

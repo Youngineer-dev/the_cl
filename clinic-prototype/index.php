@@ -91,37 +91,37 @@ include_once('./head.php');
       <!-- Doctor 1 -->
       <article class="doctor-card reveal">
         <div class="doctor-photo">
-          <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="이중민 원장">
+          <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="노유선 원장">
         </div>
         <div class="doctor-info">
-          <span class="doctor-position">소아청소년과 전문의 · 내분비 분과</span>
-          <h3 class="doctor-name"><strong>이 중 민</strong> 대표원장</h3>
+          <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
+          <h3 class="doctor-name"><strong>노 유 선</strong> 대표원장</h3>
 
           <div class="history-section">
             <div>
               <div class="history-title">
-                <span class="star">✦</span> 약력
+                <span class="star">✦</span> 주요 약력
               </div>
               <ul class="history-list">
-                <li>서울대학교병원 소아청소년과 전문의</li>
-                <li>서울대학교병원 소아내분비 전임의</li>
-                <li>서울대학교 의과대학 학사/석사</li>
-                <li>대한소아내분비학회 정회원</li>
-                <li>전 삼성서울병원 소아내분비 임상강사</li>
+                <li>한림대학교 강동성심병원 소아청소년과 소아내분비분과 교수</li>
+                <li>삼성서울병원 인턴</li>
+                <li>삼성서울병원 소아청소년과 전공의</li>
+                <li>삼성서울병원 소아청소년과 외래교수</li>
+                <li>삼성서울병원 소아내분비·유전대사 임상강사 (우수전임의상 수상)</li>
                 <li>현 삼성더클성장의원 대표원장</li>
               </ul>
             </div>
             <div>
               <div class="history-title">
-                <span class="star">✦</span> 학회활동
+                <span class="star">✦</span> 학회 및 학술활동
               </div>
               <ul class="history-list">
-                <li>대한소아과학회</li>
-                <li>대한소아내분비학회</li>
-                <li>대한성장의학회</li>
-                <li>대한당뇨병학회</li>
-                <li>대한갑상선학회</li>
-                <li>소아비만연구회</li>
+                <li>대한소아내분비학회 기획위원회 간사</li>
+                <li>전 대한소아내분비학회 연구위원회 위원</li>
+                <li>아시아태평양소아내분비학회 Fellow School 수료</li>
+                <li>KRDMS Pediatric 초음파 과정 수료</li>
+                <li>소아 필라테스 운동지도사 과정 수료</li>
+                <li>성장·성조숙증·비만 관련 PubMed/SCI 논문 다수 발표</li>
               </ul>
             </div>
           </div>
