@@ -11,38 +11,119 @@ subpages_content = {}
 
 # 1-1. 병원 소개
 subpages_content["sub1_1"] = """
-<div class="sub-intro-text">
-  <p class="section-en reveal">About Samsung The CL</p>
-  <h2 class="section-title reveal reveal-delay-1">
-    소아 내분비학의 세심한 전문성,<br>
-    <strong>정직하고 신뢰할 수 있는 진료</strong>로 답합니다
-  </h2>
-  <div class="desc-group reveal reveal-delay-2" style="margin-top: 30px;">
-    <p class="desc">
-      삼성더클성장의원은 성장에 고민이 있는 모든 어린이들에게 바른 성장 방향을 제시합니다.<br>
-      검증된 과학적 정밀 진단과 아동 특성에 꼭 맞춘 1:1 맞춤 영양/라이프스타일 케어로<br>
-      가장 소중한 우리 아이들의 밝고 건강한 미래를 함께 디자인해 드립니다.
-    </p>
+<!-- ============================================================
+     PHILOSOPHY SECTION (Sect 1)
+     ============================================================ -->
+<div class="sub11_sect1 flexCol_aiCenter">
+  <div class="sub-intro-text" style="text-align: center; margin-bottom: 0;">
+    <p class="section-en reveal" style="font-family: var(--font-serif); font-size: 14px; letter-spacing: 4px; color: var(--c-primary); text-transform: uppercase;">Philosophy</p>
+    <h2 class="section-title reveal reveal-delay-1" style="font-size: 32px; font-weight: 300; line-height: 1.5; color: var(--c-primary-dark); margin-top: 12px;">
+      Grow Together, Grow Healthy
+    </h2>
   </div>
-  <div class="sub-intro-divider reveal reveal-delay-3"></div>
+  
+  <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="삼성더클성장의원 전경" class="reveal reveal-delay-2 sub11_sect1_img">
+  
+  <div class="sub11_sect1_descWrap reveal reveal-delay-3">
+    <p class="sub11_sect1_desc desc1">
+      푸른 성장의 에너지를 담은 더클(The CL)의 진심 속에<br>
+      과학적이고 정직한 진료, 따뜻한 신뢰가 깃들어 있습니다
+    </p>
+    <p class="sub11_sect1_desc desc2">
+      잠시 고민을 나누는 진료에 그치지 않고, 아이의 성장 템포를 끝까지 책임지도록<br>
+      진단은 신중하고 엄격하지만, 과정과 소통은 부모님 품처럼 한없이 따뜻하도록<br>
+      성장의 모든 계절을 함께 통과하며 우리 아이의 잠재력을 믿는 진료
+    </p>
+    <p class="sub11_sect1_desc"><b class="ptd_sb">삼성더클성장의원, 진심과 최고의 전문성이 만나는 공간입니다</b></p>
+  </div>
 </div>
 
-<div class="sub-card-grid">
-  <div class="sub-card reveal">
-    <div class="sub-card-icon">🔬</div>
-    <h3 class="sub-card-title">근거 기반의 정밀 진단</h3>
-    <p class="sub-card-desc">과잉 진료를 철저히 배제하고, 골연령 측정, 성장 호르몬 상태 분석 및 풍부한 빅데이터 진단 예측 모델을 통해 객관적 수치만을 근거로 판단합니다.</p>
+<!-- ============================================================
+     THREE CORE VALUES SECTION (Sect 2)
+     ============================================================ -->
+<div class="sub11_sect2_contWrap">
+  
+  <!-- Value 1: Carefully (세심하게) - Image Right -->
+  <div class="sub11_sect2_item item1 imgRight reveal">
+    <div class="descBox">
+      <h3 class="item_title">
+        <span class="marcell">Carefully</span>
+        <span class="line"></span>
+        <span class="kpb_l">세심하게</span>
+      </h3>
+      <p class="item_subTitle">소아 내분비 세부 전문의의<br>정교한 진료로 아동의 성장 골든타임을 확보하다</p>
+      <div class="item_desc_wrap">
+        <p class="item_desc">
+          아이의 성장은 뼈나이, 유전 신장, 호르몬 대사 등 수많은 요인들이 결합된 정교한 퍼즐입니다.<br>
+          삼성서울병원 및 서울대병원 출신의 풍부한 세부전문의 임상 경력이<br>
+          이곳의 흔들리지 않는 전문성의 기초이자 약속입니다.
+        </p>
+        <p class="item_desc">
+          삼성더클은 아주 미세한 성장 인자의 이상이나 작은 뼈나이 오차율조차 절대로 놓치지 않고,<br>
+          언제나 우리 아동의 건강 앞에 가장 정성스럽고 세심하게 서 있겠습니다.
+        </p>
+      </div>
+    </div>
+    <div class="imgBox">
+      <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="세심한 성장 정밀 진단" class="item_img">
+      <i class="bgText marcell">Carefully</i>
+    </div>
   </div>
-  <div class="sub-card reveal reveal-delay-1">
-    <div class="sub-card-icon">💖</div>
-    <h3 class="sub-card-title">부모의 마음을 담은 배려</h3>
-    <p class="sub-card-desc">아이들이 병원을 낯설고 두려운 곳이 아닌, 스스로의 건강과 키 성장을 함께 축하하고 설계해 나가는 즐겁고 친근한 공간으로 느낄 수 있게 세심히 보살핍니다.</p>
+
+  <!-- Value 2: Gracefully (정직하게) - Image Left -->
+  <div class="sub11_sect2_item item2 imgLeft reveal">
+    <div class="imgBox">
+      <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="정직하고 올바른 성장 호르몬 처방" class="item_img">
+      <i class="bgText marcell">Gracefully</i>
+    </div>
+    <div class="descBox">
+      <h3 class="item_title">
+        <span class="marcell">Gracefully</span>
+        <span class="line"></span>
+        <span class="kpb_l">정직하게</span>
+      </h3>
+      <p class="item_subTitle">과잉 진료를 철저히 배제하고<br>객관적 근거에 기반한 올바른 치료를 제안합니다</p>
+      <div class="item_desc_wrap">
+        <p class="item_desc">
+          성장호르몬 주사나 사춘기 지연제는 유행이나 남을 따라 하는 결정이 되어선 안 됩니다.<br>
+          삼성더클은 부모님의 불안감을 악용하는 과잉 처방을 완벽히 차단하고,<br>
+          철저한 혈액 호르몬 검출 및 AI 골연령 정량 데이터만을 근거로 정직하게 진단합니다.
+        </p>
+        <p class="item_desc">
+          아이에게 꼭 필요한 가장 정직한 치료만을 권장하여,<br>
+          아이의 건강과 성장판을 부작용 우려 없이 올바르게 지켜내겠습니다.
+        </p>
+      </div>
+    </div>
   </div>
-  <div class="sub-card reveal reveal-delay-2">
-    <div class="sub-card-icon">🌱</div>
-    <h3 class="sub-card-title">라이프스타일 토탈 케어</h3>
-    <p class="sub-card-desc">단순한 처방을 넘어 식습관, 운동 요법, 수면 상태 및 체지방률, 아동의 심리적 상태까지 유기적으로 개선하는 융합 솔루션을 선사합니다.</p>
+
+  <!-- Value 3: Together (함께) - Image Right -->
+  <div class="sub11_sect2_item item3 imgRight reveal">
+    <div class="descBox">
+      <h3 class="item_title">
+        <span class="marcell">Together</span>
+        <span class="line"></span>
+        <span class="kpb_l">함께</span>
+      </h3>
+      <p class="item_subTitle">성장판이 닫히는 그날까지,<br>아이와 부모님 곁을 변함없이 동행하는 등대지기</p>
+      <div class="item_desc_wrap">
+        <p class="item_desc">
+          키 성장은 몇 달 만에 끝나는 과제가 아니라, 수년에 걸쳐 생활 습관과 성격을 형성해 나가는 긴 여정입니다.<br>
+          삼성더클성장의원은 단순한 치료제 처방을 넘어 식단, 수면, 운동, 그리고 성장기 아동의 정서적 피로까지<br>
+          토탈 라이프스타일 융합 매니지먼트를 병행하여 종합 돌봄을 선사합니다.
+        </p>
+        <p class="item_desc">
+          외롭고 걱정스러운 성장의 여정 속에서,<br>
+          아이와 부모님 모두의 손을 꼭 쥐고 한 걸음씩 성장의 축하를 함께 만들어 가겠습니다.
+        </p>
+      </div>
+    </div>
+    <div class="imgBox">
+      <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="따뜻한 성장 라이프스타일 동행" class="item_img">
+      <i class="bgText marcell">Together</i>
+    </div>
   </div>
+
 </div>
 """
 
@@ -60,7 +141,7 @@ subpages_content["sub1_2"] = """
   <div class="about-text" style="text-align: left;">
     <div class="desc-group reveal">
       <p class="desc" style="font-size: 15px; line-height: 2.2; color: var(--c-text-light); font-weight: 300;">
-        안녕하세요. 삼성더클성장의원 대표원장 김지은입니다.<br><br>
+        안녕하세요. 삼성더클성장의원 대표원장 이중민입니다.<br><br>
         아이들의 웃음소리가 울려 퍼지는 건강한 성장을 관찰하는 것은 참으로 경이로운 일이지만, 다른 아이들보다 성장이 조금 더디거나 사춘기가 너무 일찍 올 때 부모님의 속앓이와 걱정 또한 무겁다는 것을 잘 알고 있습니다.<br><br>
         소아 내분비학 전문의로서 수많은 아이들을 지켜보며 깨달은 점은, <strong>모든 아동은 저마다의 고유한 성장 템포와 건강한 가능성</strong>을 내포하고 있다는 사실입니다. 우리의 임무는 그 템포를 적시에 과학적으로 분석하여 올바른 골든타임을 놓치지 않도록 이끄는 것입니다.<br><br>
         저희 의원은 부모님과 같은 눈높이에서 아이의 건강한 내일을 지극히 진실하고 정교하게 설계하겠습니다. 성장의 매 순간 든든한 등대지기가 되어 동행할 것을 약속드립니다.
@@ -68,13 +149,13 @@ subpages_content["sub1_2"] = """
     </div>
     
     <div class="reveal reveal-delay-2" style="margin-top: 40px; font-family: var(--font-serif); font-size: 20px; font-style: italic; color: var(--c-primary-dark); font-weight: 600;">
-      - Representative Director, Ji Eun Kim
+      - Representative Director, Jung Min Lee
     </div>
   </div>
 
   <div class="about-images reveal reveal-delay-1" style="height: 480px;">
     <div class="about-img-1" style="width: 100%; position: relative;">
-      <img src="<?php echo $G5_URL; ?>/img/doctor.png" alt="김지은 원장" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.06);">
+      <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="이중민 원장" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.06);">
     </div>
   </div>
 </div>
@@ -92,11 +173,11 @@ subpages_content["sub1_3"] = """
 
 <article class="doctor-card reveal" style="background: white; border-radius: 8px; border: 1px solid var(--c-border); padding: 48px; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.01);">
   <div class="doctor-photo">
-    <img src="<?php echo $G5_URL; ?>/img/doctor.png" alt="김지은 대표원장">
+    <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="이중민 대표원장">
   </div>
   <div class="doctor-info">
     <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
-    <h3 class="doctor-name"><strong>김 지 은</strong> 대표원장</h3>
+    <h3 class="doctor-name"><strong>이 중 민</strong> 대표원장</h3>
     
     <p class="desc" style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
       대학병원 소아내분비 임상교수 출신으로, 풍부한 임상경험과 글로벌 학술적 네트워크를 기반으로 삼아 저신장과 성조숙증 진료에 탁월한 해법을 제시합니다.
@@ -217,9 +298,21 @@ subpages_content["sub1_5"] = """
     </div>
     
     <div class="map-buttons" style="margin-top: 30px;">
-      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600;">네이버 길찾기 바로가기</a>
-      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600;">카카오 맵 바로가기</a>
-      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600;">T맵 안내 바로가기</a>
+      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+        <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #03C75A; flex-shrink: 0;">
+          <path d="M16.2 3H21v18h-4.8l-8.4-12v12H3V3h4.8l8.4 12z"/>
+        </svg>네이버 길찾기 바로가기
+      </a>
+      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+        <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #FEE500; flex-shrink: 0; filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.25));">
+          <path d="M12 3c-5.5 0-10 3.8-10 8.5 0 3.1 2 5.8 5 7.2l-1.3 4.8c-.1.3 0 .6.2.8.1.1.3.2.5.2.1 0 .2 0 .3-.1l5.6-3.7c.9.2 1.8.3 2.7.3 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/>
+        </svg>카카오 맵 바로가기
+      </a>
+      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+        <svg class="map-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #1F87FF; flex-shrink: 0;">
+          <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+        </svg>T맵 안내 바로가기
+      </a>
     </div>
   </div>
 
@@ -706,7 +799,7 @@ subpages_content["sub3_2"] = """
     <div class="timeline-content">
       <span class="timeline-step-num">Step 03</span>
       <h4 class="timeline-step-title">대표원장 1:1 맞춤 진료 및 정밀 문진</h4>
-      <p class="timeline-step-desc">소아 내분비 세부전문의 김지은 원장이 손목 엑스레이 필름을 면밀히 판독하고 성장 장애 원인을 감별합니다.</p>
+      <p class="timeline-step-desc">소아 내분비 세부전문의 이중민 원장이 손목 엑스레이 필름을 면밀히 판독하고 성장 장애 원인을 감별합니다.</p>
     </div>
   </div>
 
@@ -1066,7 +1159,7 @@ subpages_content["sub4_3"] = """
       </tr>
       <tr>
         <td style="text-align: center;">3</td>
-        <td><a href="#">김지은 대표원장 유럽소아내분비학회(ESPE) 해외 세미나 초청 강연 참관기</a></td>
+        <td><a href="#">이중민 대표원장 유럽소아내분비학회(ESPE) 해외 세미나 초강연 참관기</a></td>
         <td style="text-align: center;">2026.05.15</td>
         <td style="text-align: center;">89</td>
       </tr>

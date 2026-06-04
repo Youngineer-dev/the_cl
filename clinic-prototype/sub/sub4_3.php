@@ -30,59 +30,65 @@ include_once('../head.php');
 <!-- MAIN CONTENT -->
 <main class="sub-main">
   <div class="container">
-    
-<div class="sub-intro-text">
-  <p class="section-en reveal">Notice Board</p>
-  <h2 class="section-title reveal reveal-delay-1">
-    삼성더클성장의원의<br>
-    <strong>새로운 소식 및 알림판</strong>
-  </h2>
-</div>
 
-<div class="premium-table-wrap reveal" style="margin-top: 60px;">
-  <table class="premium-table">
-    <thead>
-      <tr>
-        <th style="width: 80px; text-align: center;">번호</th>
-        <th>공지사항 제목</th>
-        <th style="width: 120px; text-align: center;">작성일</th>
-        <th style="width: 100px; text-align: center;">조회수</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="font-weight: 600; background-color: rgba(240, 245, 241, 0.2);">
-        <td style="text-align: center; color: var(--c-primary);"><span style="background: var(--c-primary-pale); padding: 2px 6px; border-radius: 4px; font-size: 11px;">공지</span></td>
-        <td><a href="#" style="color: var(--c-primary-dark);">삼성더클성장의원 여름 하계 휴진 일정 안내 (8/1 ~ 8/4)</a></td>
-        <td style="text-align: center;">2026.05.28</td>
-        <td style="text-align: center;">245</td>
-      </tr>
-      <tr style="font-weight: 600; background-color: rgba(240, 245, 241, 0.2);">
-        <td style="text-align: center; color: var(--c-primary);"><span style="background: var(--c-primary-pale); padding: 2px 6px; border-radius: 4px; font-size: 11px;">공지</span></td>
-        <td><a href="#" style="color: var(--c-primary-dark);">토요일 오전 진료 예약 대기시간 단축 및 검사 프로세스 최적화 도입</a></td>
-        <td style="text-align: center;">2026.05.20</td>
-        <td style="text-align: center;">312</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">3</td>
-        <td><a href="#">김지은 대표원장 유럽소아내분비학회(ESPE) 해외 세미나 초청 강연 참관기</a></td>
-        <td style="text-align: center;">2026.05.15</td>
-        <td style="text-align: center;">89</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">2</td>
-        <td><a href="#">소아 저선량 초정밀 X-ray 성장 진단 보정 분석기 도입 안내</a></td>
-        <td style="text-align: center;">2026.05.02</td>
-        <td style="text-align: center;">156</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">1</td>
-        <td><a href="#">삼성더클성장의원 신축 개원 안내 및 강남역 3번출구 주차 지원 제도 안내</a></td>
-        <td style="text-align: center;">2026.04.10</td>
-        <td style="text-align: center;">482</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<!-- 스플릿 인트로 (텍스트 좌 / 겹친 이미지 우) -->
+<section class="ed-split reveal" style="padding-bottom: 80px;">
+  <div class="ed-split__text">
+    <span class="ed-eyebrow">Notice Board</span>
+    <h2 class="ed-split__title">
+      <span class="i1">새로운 소식과</span>
+      <span class="i2"><strong>알림</strong>을</span>
+      <span class="i3">전해 드립니다</span>
+    </h2>
+    <div class="ed-split__body">
+      <p class="lead">
+        진료 일정, 신규 장비 도입 등 삼성더클성장의원의 소식을 가장 먼저 알려 드립니다.
+      </p>
+      <p>
+        휴진 및 진료 시간 변경 공지는 상단에 고정되어 표시되니 내원 전 꼭 확인해 주세요.
+      </p>
+    </div>
+  </div>
+  <div class="ed-collage reveal reveal-delay-2">
+    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="병원 소식" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="병원 전경" class="ed-collage__sub">
+  </div>
+</section>
+
+<!-- 에디토리얼 공지 리스트 -->
+<section>
+  <div class="ed-sectlabel reveal" style="margin-bottom: 24px;">
+    <span class="ed-kicker">Latest News</span>
+    <h2>최근 <strong>공지사항</strong></h2>
+  </div>
+  <div class="ed-notice reveal">
+    <a href="#" class="ed-notice__row">
+      <span class="ed-notice__no is-pin">공지</span>
+      <span class="ed-notice__title">삼성더클성장의원 여름 하계 휴진 일정 안내 (8/1 ~ 8/4)</span>
+      <span class="ed-notice__date">2026.05.28</span>
+    </a>
+    <a href="#" class="ed-notice__row">
+      <span class="ed-notice__no is-pin">공지</span>
+      <span class="ed-notice__title">토요일 오전 진료 예약 대기시간 단축 및 검사 프로세스 최적화 도입</span>
+      <span class="ed-notice__date">2026.05.20</span>
+    </a>
+    <a href="#" class="ed-notice__row">
+      <span class="ed-notice__no">03</span>
+      <span class="ed-notice__title">노유선 대표원장 아시아태평양소아내분비학회 Fellow School 수료 후기</span>
+      <span class="ed-notice__date">2026.05.15</span>
+    </a>
+    <a href="#" class="ed-notice__row">
+      <span class="ed-notice__no">02</span>
+      <span class="ed-notice__title">소아 저선량 초정밀 X-ray 성장 진단 보정 분석기 도입 안내</span>
+      <span class="ed-notice__date">2026.05.02</span>
+    </a>
+    <a href="#" class="ed-notice__row">
+      <span class="ed-notice__no">01</span>
+      <span class="ed-notice__title">삼성더클성장의원 신축 개원 및 강남역 3번출구 주차 지원 제도 안내</span>
+      <span class="ed-notice__date">2026.04.10</span>
+    </a>
+  </div>
+</section>
 
   </div>
 </main>

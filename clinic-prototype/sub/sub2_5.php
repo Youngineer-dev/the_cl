@@ -30,51 +30,53 @@ include_once('../head.php');
 <!-- MAIN CONTENT -->
 <main class="sub-main">
   <div class="container">
-    
-<div class="sub-intro-text">
-  <p class="section-en reveal">Thyroid Disorders</p>
-  <h2 class="section-title reveal reveal-delay-1">
-    성장 대사 에너지의 사령탑인 갑상선 호르몬,<br>
-    <strong>체계적인 호르몬 조절 및 균형 회복</strong>
-  </h2>
-  <div class="desc-group reveal reveal-delay-2" style="margin-top: 30px;">
-    <p class="desc">
-      소아청소년기 갑상선 기능 이상은 피로감, 집중력 저하뿐만 아니라 골성숙 지연, 성장 부진의 주 원인이 됩니다.<br>
-      갑상선 호르몬 수치의 안정적 복원과 장기적인 모니터링을 책임집니다.
-    </p>
-  </div>
-  <div class="sub-intro-divider reveal reveal-delay-3"></div>
-</div>
 
-<div class="checklist-box reveal">
-  <h3 class="checklist-title">🔍 소아 갑상선 의심 자가 체크리스트</h3>
-  <div class="checklist-grid">
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>유독 또래에 비해 추위나 더위를 지나치게 많이 탈 때</p>
-    </div>
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>충분히 자도 늘 극심한 피로를 호소하고 활력이 떨어질 때</p>
-    </div>
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>목 앞부분(갑상선 위치)이 불룩하게 튀어나와 보일 때</p>
-    </div>
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>최근 들어 많이 먹는데도 살이 쭉 빠지거나, 안 먹어도 급격히 찔 때</p>
-    </div>
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>피부가 유난히 거칠고 건조해지며 모발이 뚝뚝 끊어질 때</p>
-    </div>
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>심박수가 비정상적으로 빨라 가슴이 두근거린다고 할 때</p>
+<!-- 스플릿 인트로 (텍스트 좌 / 겹친 이미지 우) -->
+<section class="ed-split reveal">
+  <div class="ed-split__text">
+    <span class="ed-eyebrow">Thyroid Disorders</span>
+    <h2 class="ed-split__title">
+      <span class="i1">성장 대사의</span>
+      <span class="i2">사령탑,</span>
+      <span class="i3"><strong>갑상선 호르몬</strong></span>
+    </h2>
+    <div class="ed-split__body">
+      <p class="lead">
+        소아청소년기 갑상선 기능 이상은 골성숙 지연과 성장 부진의 주된 원인이 됩니다.
+      </p>
+      <p>
+        피로감과 집중력 저하뿐 아니라 키 성장에도 직접 영향을 주는 갑상선 호르몬.
+        삼성더클성장의원은 호르몬 수치의 안정적 복원과 장기적인 모니터링을 책임집니다.
+      </p>
     </div>
   </div>
-</div>
+  <div class="ed-collage reveal reveal-delay-2">
+    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="갑상선 진료" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="호르몬 검사" class="ed-collage__sub">
+  </div>
+</section>
+
+<!-- 자가체크 밴드 -->
+<section class="ed-check reveal">
+  <div class="ed-check__head">
+    <span class="ed-kicker">Self Check</span>
+    <p class="ed-check__label">소아 갑상선<br>자가 체크리스트</p>
+  </div>
+  <ul class="ed-check__list">
+    <li class="ed-check__item"><span class="ed-check__num">01</span><p>또래에 비해 추위나 더위를 지나치게 많이 탈 때</p></li>
+    <li class="ed-check__item"><span class="ed-check__num">02</span><p>충분히 자도 극심한 피로를 호소하고 활력이 떨어질 때</p></li>
+    <li class="ed-check__item"><span class="ed-check__num">03</span><p>목 앞부분(갑상선 위치)이 불룩하게 튀어나와 보일 때</p></li>
+    <li class="ed-check__item"><span class="ed-check__num">04</span><p>많이 먹는데 살이 빠지거나, 안 먹어도 급격히 찔 때</p></li>
+    <li class="ed-check__item"><span class="ed-check__num">05</span><p>피부가 유난히 거칠고 건조하며 모발이 끊어질 때</p></li>
+    <li class="ed-check__item"><span class="ed-check__num">06</span><p>심박수가 비정상적으로 빨라 가슴이 두근거릴 때</p></li>
+  </ul>
+</section>
+
+<!-- 닫는 문장 밴드 -->
+<section class="ed-statement reveal">
+  <span class="ed-eyebrow">Our Promise</span>
+  <p>“작은 호르몬의 균형이 아이의 하루와 성장을 바꿉니다.<br>정밀한 진단으로 그 균형을 되찾아 드리겠습니다.”</p>
+</section>
 
   </div>
 </main>

@@ -30,80 +30,81 @@ include_once('../head.php');
 <!-- MAIN CONTENT -->
 <main class="sub-main">
   <div class="container">
-    
-<div class="sub-intro-text">
-  <p class="section-en reveal">Precocious Puberty</p>
-  <h2 class="section-title reveal reveal-delay-1">
-    사춘기의 이른 출발은 성장을 조기에 종료시킵니다,<br>
-    <strong>속도 제어를 통한 올바른 키 확보</strong>
-  </h2>
-  <div class="desc-group reveal reveal-delay-2" style="margin-top: 30px;">
-    <p class="desc">
-      성조숙증은 또래보다 너무 일찍 성호르몬이 분비되어 일시적으로는 급속히 자라는 것처럼 보이나,<br>
-      결과적으로 성장판을 빨리 닫히게 만들어 성인 신장을 저해하고 심리적 불안을 유발합니다. 치료 시기가 가장 중요한 치료입니다.
-    </p>
-  </div>
-  <div class="sub-intro-divider reveal reveal-delay-3"></div>
-</div>
 
-<div class="checklist-box reveal">
-  <h3 class="checklist-title">⚠️ 성조숙증 의심 및 자가진단 항목</h3>
-  <div class="checklist-grid">
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>여아: 만 8세 이전에 가슴 몽우리가 잡히고 통증을 느낄 때</p>
-    </div>
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>남아: 만 9세 이전에 고환의 크기가 메추리알 크기 이상 커질 때</p>
-    </div>
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>또래에 비해 갑자기 1년에 7~8cm 이상 급격하게 키가 클 때</p>
-    </div>
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>얼굴에 여드름이 나고, 머리 냄새 및 정수리 체취가 심해질 때</p>
-    </div>
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>음모나 액모가 발달하기 시작할 때</p>
-    </div>
-    <div class="checklist-item">
-      <span class="checklist-icon">✦</span>
-      <p>피부나 피하 지방이 유독 빠르게 단단해지며 골격이 드러날 때</p>
+<!-- 스플릿 인트로 (미러형: 이미지 좌 / 텍스트 우) -->
+<section class="ed-split ed-split--reverse reveal">
+  <div class="ed-split__text">
+    <span class="ed-eyebrow">Precocious Puberty</span>
+    <h2 class="ed-split__title">
+      <span class="i1">이른 사춘기는</span>
+      <span class="i2">성장을 일찍</span>
+      <span class="i3"><strong>마감시킵니다</strong></span>
+    </h2>
+    <div class="ed-split__body">
+      <p class="lead">
+        성조숙증은 일시적으로 급성장하는 듯 보이나, 성장판을 빨리 닫아 성인 키를 저해합니다.
+      </p>
+      <p>
+        또래보다 일찍 성호르몬이 분비되면 신체 변화로 인한 심리적 불안까지 동반됩니다.
+        그래서 성조숙증은 무엇보다 <strong>치료 시기(타이밍)</strong>가 결정적인 질환입니다.
+      </p>
     </div>
   </div>
-</div>
+  <div class="ed-collage reveal reveal-delay-2">
+    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="성조숙 진단" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="호르몬 검사" class="ed-collage__sub">
+  </div>
+</section>
 
-<div class="timeline-wrap">
-  <div class="timeline-step reveal">
-    <div class="timeline-badge">1</div>
-    <div class="timeline-content">
-      <span class="timeline-step-num">Step 01</span>
-      <h4 class="timeline-step-title">성선자극호르몬 방출호르몬(GnRHa) 자극 검사</h4>
-      <p class="timeline-step-desc">일정한 간격으로 호르몬 자극 반응을 평가하여 시상하부-뇌하수체-성선 축이 조기에 활성화되었는지 정밀 감별합니다.</p>
-    </div>
+<!-- 자가체크 밴드 -->
+<section class="ed-check reveal">
+  <div class="ed-check__head">
+    <span class="ed-kicker">Self Check</span>
+    <p class="ed-check__label">성조숙증<br>의심 신호</p>
   </div>
+  <ul class="ed-check__list">
+    <li class="ed-check__item"><span class="ed-check__num">01</span><p>여아: 만 8세 이전 가슴 몽우리가 잡히고 통증을 느낄 때</p></li>
+    <li class="ed-check__item"><span class="ed-check__num">02</span><p>남아: 만 9세 이전 고환이 메추리알 크기 이상 커질 때</p></li>
+    <li class="ed-check__item"><span class="ed-check__num">03</span><p>또래보다 갑자기 1년에 7~8cm 이상 급격히 클 때</p></li>
+    <li class="ed-check__item"><span class="ed-check__num">04</span><p>여드름이 나고 머리·정수리 체취가 심해질 때</p></li>
+    <li class="ed-check__item"><span class="ed-check__num">05</span><p>음모나 액모가 발달하기 시작할 때</p></li>
+    <li class="ed-check__item"><span class="ed-check__num">06</span><p>피하 지방이 빠르게 단단해지며 골격이 드러날 때</p></li>
+  </ul>
+</section>
 
-  <div class="timeline-step reveal reveal-delay-1">
-    <div class="timeline-badge">2</div>
-    <div class="timeline-content">
-      <span class="timeline-step-num">Step 02</span>
-      <h4 class="timeline-step-title">성조숙증 억제 주사 요법</h4>
-      <p class="timeline-step-desc">4주 또는 3달 간격으로 성호르몬 억제 주사를 처방하여 성장판의 뼈 노화 진행을 감속시키고 본래의 완만한 성장 속도를 회복시킵니다.</p>
+<!-- 세로 프로세스 (3단계) -->
+<section class="ed-features" style="padding-top: 70px;">
+  <div class="ed-sectlabel reveal">
+    <span class="ed-kicker">Treatment Flow</span>
+    <h2>속도를 늦추는 <strong>3단계 치료</strong></h2>
+  </div>
+  <div class="ed-steps" style="margin-top: 30px;">
+    <div class="ed-step reveal">
+      <div class="ed-step__num"><span>01</span></div>
+      <div class="ed-step__body">
+        <span class="ed-step__eyebrow">Diagnosis</span>
+        <h3 class="ed-step__title">GnRHa 자극 검사</h3>
+        <p class="ed-step__desc">일정 간격으로 호르몬 자극 반응을 평가하여 시상하부-뇌하수체-성선 축이 조기에 활성화되었는지 정밀 감별합니다.</p>
+      </div>
+    </div>
+    <div class="ed-step reveal reveal-delay-1">
+      <div class="ed-step__num"><span>02</span></div>
+      <div class="ed-step__body">
+        <span class="ed-step__eyebrow">Suppression</span>
+        <h3 class="ed-step__title">성조숙증 억제 주사 요법</h3>
+        <p class="ed-step__desc">4주 또는 3달 간격으로 성호르몬 억제 주사를 처방하여 성장판의 뼈 노화 진행을 감속시키고 완만한 성장 속도를 회복시킵니다.</p>
+      </div>
+    </div>
+    <div class="ed-step reveal reveal-delay-2">
+      <div class="ed-step__num"><span>03</span></div>
+      <div class="ed-step__body">
+        <span class="ed-step__eyebrow">Care</span>
+        <h3 class="ed-step__title">정서 및 신체 밸런스 케어</h3>
+        <p class="ed-step__desc">이른 사춘기 변화로 위축될 수 있는 소아의 심리 상태를 위로하고 건강한 또래 관계를 유지하도록 돕습니다.</p>
+      </div>
     </div>
   </div>
-
-  <div class="timeline-step reveal reveal-delay-2">
-    <div class="timeline-badge">3</div>
-    <div class="timeline-content">
-      <span class="timeline-step-num">Step 03</span>
-      <h4 class="timeline-step-title">정서 및 신체 밸런스 밀착 케어</h4>
-      <p class="timeline-step-desc">이른 사춘기 변화로 위축될 수 있는 소아의 심리 상태를 위로하고 건강한 또래 관계를 유지하도록 돕습니다.</p>
-    </div>
-  </div>
-</div>
+</section>
 
   </div>
 </main>
