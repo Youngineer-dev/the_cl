@@ -3135,10 +3135,10 @@ ul, ol {
   display: grid;
   grid-template-columns: 0.85fr 1.4fr;
   gap: 80px;
-  align-items: start;
+  align-items: center; /* 좌측 텍스트를 우측 리스트 전체 높이의 중앙에 정렬 */
   padding: 20px 0 40px;
 }
-.ed-aside__index { position: sticky; top: 130px; }
+.ed-aside__index { position: static; align-self: center; }
 .ed-aside__title {
   font-size: 36px;
   font-weight: 300;
