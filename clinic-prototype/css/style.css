@@ -3753,3 +3753,171 @@ ul, ol {
   .board-gallery__title { font-size: 16px; }
 }
 
+/* ── 게시판 상세(보기) ── */
+.board-view { max-width: 880px; margin: 0 auto; }
+.board-view__head {
+  padding-bottom: 28px;
+  border-bottom: 2px solid var(--c-primary-dark);
+}
+.board-view__badge,
+.board-view__cat {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 5px 15px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.board-view__badge { background: var(--c-primary); color: #fff; font-weight: 700; letter-spacing: 0.5px; }
+.board-view__cat { background: var(--c-primary-pale); color: var(--c-primary-dark); }
+.board-view__title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.6px;
+  color: var(--c-text);
+  margin-bottom: 20px;
+}
+.board-view__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--c-text-light);
+}
+.board-view__metakey { font-style: normal; opacity: 0.65; margin-right: 5px; }
+
+.board-view__body {
+  padding: 40px 4px 48px;
+  border-bottom: 1px solid var(--c-border);
+  font-size: 15.5px;
+  line-height: 1.95;
+  font-weight: 300;
+  color: var(--c-text);
+}
+.board-view__body p { margin-bottom: 18px; }
+.board-view__body ul { margin: 0 0 18px; padding-left: 20px; list-style: disc; }
+.board-view__body li { margin-bottom: 8px; line-height: 1.8; }
+.board-view__figure { margin: 0 0 32px; border-radius: 6px; overflow: hidden; }
+.board-view__figure img { display: block; width: 100%; }
+.board-view__stats {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 32px;
+  padding: 24px 28px;
+  background: var(--c-bg-cream);
+  border-radius: 6px;
+}
+.board-view__stat span { display: block; font-size: 12px; letter-spacing: 1px; color: var(--c-text-light); margin-bottom: 8px; }
+.board-view__stat b { font-family: var(--font-serif); font-style: italic; font-size: 26px; font-weight: 600; color: var(--c-primary-dark); }
+.board-view__notice { margin-top: 28px !important; margin-bottom: 0 !important; font-size: 13px; line-height: 1.8; color: var(--c-text-light); }
+
+/* 이전/다음 글 */
+.board-view__navrow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--c-border);
+  transition: background 0.25s, padding-left 0.25s;
+}
+.board-view__navlabel {
+  flex-shrink: 0;
+  width: 64px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-primary-dark);
+}
+.board-view__navtitle {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--c-text-light);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.board-view__navrow:hover { background: rgba(240, 245, 241, 0.5); padding-left: 14px; }
+.board-view__navrow:hover .board-view__navtitle { color: var(--c-primary-dark); }
+
+/* 하단 목록 버튼 */
+.board-view__foot { display: flex; justify-content: center; margin-top: 36px; }
+.board-view__listbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 40px;
+  border: 1px solid var(--c-primary);
+  border-radius: 4px;
+  background: var(--c-primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s, border-color 0.3s;
+}
+.board-view__listbtn:hover { background: var(--c-primary-dark); border-color: var(--c-primary-dark); }
+
+/* ── 댓글 ── */
+.board-comment { margin-top: 56px; }
+.board-comment__title { font-size: 17px; font-weight: 600; color: var(--c-text); margin-bottom: 18px; }
+.board-comment__title strong { color: var(--c-primary); margin-left: 2px; }
+.board-comment__list { margin-bottom: 28px; border-top: 1px solid var(--c-border); }
+.board-comment__item { padding: 18px 2px; border-bottom: 1px solid var(--c-border); }
+.board-comment__head { display: flex; gap: 12px; align-items: baseline; margin-bottom: 8px; }
+.board-comment__name { font-size: 14px; font-weight: 600; color: var(--c-text); }
+.board-comment__date { font-size: 12px; font-weight: 300; color: var(--c-text-light); }
+.board-comment__text { font-size: 14px; line-height: 1.7; font-weight: 300; color: var(--c-text-light); }
+.board-comment__empty {
+  padding: 30px 0;
+  margin-bottom: 28px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--c-text-light);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+.board-comment__form {
+  display: grid;
+  grid-template-columns: 170px 1fr auto;
+  gap: 10px;
+  align-items: stretch;
+}
+.board-comment__name-input,
+.board-comment__textarea {
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  padding: 12px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  background: #fff;
+  color: var(--c-text);
+}
+.board-comment__name-input { align-self: start; height: 44px; }
+.board-comment__textarea { resize: vertical; min-height: 84px; }
+.board-comment__name-input:focus,
+.board-comment__textarea:focus { outline: none; border-color: var(--c-primary); }
+.board-comment__submit {
+  align-self: stretch;
+  padding: 0 26px;
+  border: none;
+  border-radius: 4px;
+  background: var(--c-primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.board-comment__submit:hover { background: var(--c-primary-dark); }
+
+@media (max-width: 768px) {
+  .board-view__title { font-size: 22px; }
+  .board-view__body { font-size: 15px; padding: 32px 0 40px; }
+  .board-view__stats { gap: 28px; padding: 20px 22px; }
+  .board-comment__form { grid-template-columns: 1fr; }
+  .board-comment__name-input { width: 100%; }
+  .board-comment__submit { height: 48px; }
+}
+
