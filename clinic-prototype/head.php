@@ -22,7 +22,7 @@ if (!isset($G5_URL)) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="<?php echo $G5_URL; ?>/css/style.css?v=11">
+  <link rel="stylesheet" href="<?php echo $G5_URL; ?>/css/style.css?v=12">
 </head>
 <body>
 

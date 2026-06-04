@@ -338,11 +338,14 @@ ul, ol {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s var(--ease-elegant), visibility 0.5s;
-  /* 메뉴가 화면보다 길면 오버레이 자체가 스크롤되도록 (중앙정렬 + 넘치면 스크롤) */
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch; /* iOS 관성 스크롤 */
+  /* 네이티브 스크롤바를 노출하지 않고 휠/드래그로 내부 콘텐츠를 부드럽게 이동 (main.js) */
+  overflow: hidden;
   overscroll-behavior: contain;      /* 끝에서 뒤 페이지로 스크롤 전파 방지 */
+  touch-action: none;                /* 터치 드래그를 브라우저가 가로채지 않도록 */
 }
+
+/* 혹시 모를 스크롤바 노출 방지 */
+.nav-overlay::-webkit-scrollbar { display: none; }
 
 .nav-overlay.open {
   opacity: 1;
@@ -360,6 +363,7 @@ ul, ol {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  will-change: transform; /* 휠/드래그 부드러운 이동을 위한 GPU 합성 힌트 */
 }
 
 .nav-overlay .nav-slogan {

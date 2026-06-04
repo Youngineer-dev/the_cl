@@ -74,32 +74,137 @@
   // --- Hamburger Menu ---
   const hamburger = document.querySelector('.hamburger');
   const navOverlay = document.querySelector('.nav-overlay');
+  const navContent = navOverlay ? navOverlay.querySelector('.nav-content') : null;
 
   if (hamburger && navOverlay) {
+    /* ----------------------------------------------------------
+       메뉴 내부 부드러운 스크롤
+       - 네이티브 스크롤바 없이 휠 / 드래그(마우스·터치)로 이동
+       - lerp 보간으로 "스르륵" 미끄러지듯 움직임
+       ---------------------------------------------------------- */
+    let navTarget = 0;   // 목표 위치
+    let navCurrent = 0;  // 현재 위치(보간값)
+    let navMax = 0;      // 최대 스크롤 범위
+    let navRAF = null;
+    let isDragging = false;
+    let dragStartY = 0;
+    let dragStartTarget = 0;
+    let pointerMoved = false;
+
+    const calcNavMax = () => {
+      if (!navContent) return;
+      navMax = Math.max(0, navContent.offsetHeight - navOverlay.clientHeight);
+      navTarget = Math.min(navTarget, navMax);
+      navCurrent = Math.min(navCurrent, navMax);
+      applyNav();
+    };
+
+    const applyNav = () => {
+      if (navContent) {
+        navContent.style.transform = `translate3d(0, ${-navCurrent}px, 0)`;
+      }
+    };
+
+    const navLoop = () => {
+      navCurrent += (navTarget - navCurrent) * 0.15; // lerp
+      if (Math.abs(navTarget - navCurrent) < 0.1) {
+        navCurrent = navTarget;
+        applyNav();
+        navRAF = null;
+        return;
+      }
+      applyNav();
+      navRAF = requestAnimationFrame(navLoop);
+    };
+
+    const startNavLoop = () => {
+      if (navRAF === null) navRAF = requestAnimationFrame(navLoop);
+    };
+
+    const setNavTarget = (value) => {
+      navTarget = Math.max(0, Math.min(value, navMax));
+      startNavLoop();
+    };
+
+    // 휠 스크롤
+    navOverlay.addEventListener(
+      'wheel',
+      (e) => {
+        if (!navOverlay.classList.contains('open')) return;
+        e.preventDefault();
+        e.stopPropagation(); // 페이지(Lenis) 스크롤로 전파 방지
+        setNavTarget(navTarget + e.deltaY);
+      },
+      { passive: false }
+    );
+
+    // 드래그 스크롤 (마우스 + 터치 통합 — Pointer Events)
+    navOverlay.addEventListener('pointerdown', (e) => {
+      if (!navOverlay.classList.contains('open')) return;
+      isDragging = true;
+      pointerMoved = false;
+      dragStartY = e.clientY;
+      dragStartTarget = navTarget;
+    });
+
+    window.addEventListener('pointermove', (e) => {
+      if (!isDragging) return;
+      const delta = e.clientY - dragStartY;
+      if (Math.abs(delta) > 4) pointerMoved = true;
+      setNavTarget(dragStartTarget - delta);
+    });
+
+    const endDrag = () => { isDragging = false; };
+    window.addEventListener('pointerup', endDrag);
+    window.addEventListener('pointercancel', endDrag);
+
+    // 드래그 직후 의도치 않은 링크 클릭 방지 (탭은 정상 동작)
+    navOverlay.addEventListener(
+      'click',
+      (e) => {
+        if (pointerMoved) {
+          e.preventDefault();
+          e.stopPropagation();
+          pointerMoved = false;
+        }
+      },
+      true
+    );
+
+    // 열려 있을 때 뷰포트 변화 시 범위 재계산
+    window.addEventListener('resize', () => {
+      if (navOverlay.classList.contains('open')) calcNavMax();
+    }, { passive: true });
+
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
-      navOverlay.classList.toggle('open');
-      document.body.style.overflow = navOverlay.classList.contains('open')
-        ? 'hidden'
-        : '';
+      const isOpen = navOverlay.classList.toggle('open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+      if (isOpen) {
+        navTarget = navCurrent = 0;
+        applyNav();
+        // 표시 직후 레이아웃이 반영된 상태에서 범위 계산
+        requestAnimationFrame(calcNavMax);
+      }
     });
+
+    const closeNav = () => {
+      hamburger.classList.remove('active');
+      navOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+      isDragging = false;
+    };
 
     // Close nav on link click
     const navLinks = navOverlay.querySelectorAll('a');
     navLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navOverlay.classList.remove('open');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeNav);
     });
 
     // Close on ESC key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navOverlay.classList.contains('open')) {
-        hamburger.classList.remove('active');
-        navOverlay.classList.remove('open');
-        document.body.style.overflow = '';
+        closeNav();
       }
     });
   }

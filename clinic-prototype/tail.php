@@ -31,6 +31,6 @@
 
   <!-- JavaScript -->
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="<?php echo $G5_URL; ?>/js/main.js"></script>
+  <script src="<?php echo $G5_URL; ?>/js/main.js?v=2"></script>
 </body>
 </html>
