@@ -2172,6 +2172,11 @@ ul, ol {
   color: var(--c-text);
 }
 
+.premium-table .pt-cat { font-weight: 500; color: var(--c-text); }
+.premium-table .pt-price { font-weight: 500; color: var(--c-primary-dark); }
+/* 데스크톱에서는 rowspan 병합 셀이 대분류를 대신 표시하므로 모바일용 중복 셀 숨김 */
+.premium-table .pt-cat-m { display: none; }
+
 /* Case Cards & Lock UI */
 .case-card-grid {
   display: grid;
@@ -2931,10 +2936,57 @@ ul, ol {
   .timeline-step-num { font-size: 10px; letter-spacing: 2px; }
   .timeline-step-title { font-size: 17px; }
 
-  /* 4) 표 — 가로 스크롤 부드럽게 + 셀 여백/폰트 축소 */
-  .premium-table-wrap { -webkit-overflow-scrolling: touch; }
-  .premium-table th,
-  .premium-table td { padding: 14px 16px; font-size: 13px; }
+  /* 4) 비급여 표 — 모바일에서는 가로 스크롤 대신 항목별 카드로 재배치 */
+  .premium-table-wrap {
+    overflow: visible;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 24px;
+  }
+  .premium-table {
+    min-width: 0;
+    width: 100%;
+    background: transparent;
+  }
+  .premium-table thead { display: none; }
+  .premium-table tbody { display: block; }
+  .premium-table tr {
+    display: block;
+    background: #fff;
+    border: 1px solid var(--c-border);
+    border-radius: 10px;
+    padding: 6px 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.03);
+  }
+  .premium-table tr:last-child { margin-bottom: 0; }
+  .premium-table tr:hover td { background: transparent; color: inherit; }
+  .premium-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 18px;
+    padding: 12px 0;
+    font-size: 14px;
+    text-align: right;
+    border-bottom: 1px solid var(--c-border);
+  }
+  .premium-table tr td:last-child { border-bottom: none; }
+  .premium-table td::before {
+    content: attr(data-label);
+    flex-shrink: 0;
+    font-weight: 600;
+    color: var(--c-primary-dark);
+    letter-spacing: 0.3px;
+    text-align: left;
+  }
+  /* 모바일 카드에서는 각 항목마다 대분류를 표시 */
+  .premium-table .pt-cat-m { display: flex; }
+  .premium-table .pt-cat,
+  .premium-table .pt-cat-m { font-weight: 600; color: var(--c-text); }
+  .premium-table .pt-name { font-weight: 500; color: var(--c-text); }
+  .premium-table .pt-price { font-weight: 600; color: var(--c-primary-dark); }
 
   /* 5) 갤러리 캡션(둘러보기) 가독성 */
   .gallery-caption { padding: 18px; }
