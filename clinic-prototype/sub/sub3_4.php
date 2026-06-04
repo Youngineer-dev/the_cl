@@ -75,43 +75,46 @@ include_once('../head.php');
       </thead>
       <tbody>
         <tr>
-          <td rowspan="2" style="font-weight: 500;">정밀 성장 검사</td>
-          <td>골연령 AI 정밀 판독 검사</td>
-          <td>1회 촬영</td>
-          <td>50,000</td>
-          <td>판독 및 레포트 포함</td>
+          <td rowspan="2" class="pt-cat" data-label="대분류">정밀 성장 검사</td>
+          <td data-label="수가 항목명" class="pt-name">골연령 AI 정밀 판독 검사</td>
+          <td data-label="규격 및 용량">1회 촬영</td>
+          <td data-label="비용 (원)" class="pt-price">50,000</td>
+          <td data-label="비고">판독 및 레포트 포함</td>
         </tr>
         <tr>
-          <td>성장호르몬 자극 정밀유발 검사</td>
-          <td>1회 세트 (채혈 5회)</td>
-          <td>220,000</td>
-          <td>약물 비용 별도</td>
+          <td class="pt-cat-m" data-label="대분류">정밀 성장 검사</td>
+          <td data-label="수가 항목명" class="pt-name">성장호르몬 자극 정밀유발 검사</td>
+          <td data-label="규격 및 용량">1회 세트 (채혈 5회)</td>
+          <td data-label="비용 (원)" class="pt-price">220,000</td>
+          <td data-label="비고">약물 비용 별도</td>
         </tr>
         <tr>
-          <td rowspan="2" style="font-weight: 500;">성장호르몬 치료제</td>
-          <td>그로우트로핀투 주사</td>
-          <td>16 IU 1펜</td>
-          <td>145,000</td>
-          <td>용량에 따른 비례 단가</td>
+          <td rowspan="2" class="pt-cat" data-label="대분류">성장호르몬 치료제</td>
+          <td data-label="수가 항목명" class="pt-name">그로우트로핀투 주사</td>
+          <td data-label="규격 및 용량">16 IU 1펜</td>
+          <td data-label="비용 (원)" class="pt-price">145,000</td>
+          <td data-label="비고">용량에 따른 비례 단가</td>
         </tr>
         <tr>
-          <td>지노트로핀 주사</td>
-          <td>36 IU 1카트리지</td>
-          <td>290,000</td>
-          <td>오리지널 제제</td>
+          <td class="pt-cat-m" data-label="대분류">성장호르몬 치료제</td>
+          <td data-label="수가 항목명" class="pt-name">지노트로핀 주사</td>
+          <td data-label="규격 및 용량">36 IU 1카트리지</td>
+          <td data-label="비용 (원)" class="pt-price">290,000</td>
+          <td data-label="비고">오리지널 제제</td>
         </tr>
         <tr>
-          <td rowspan="2" style="font-weight: 500;">프리미엄 수액</td>
-          <td>성장 아미노산 에너지 주사</td>
-          <td>100 ml</td>
-          <td>80,000</td>
-          <td>성장 필수 아미노산 조합</td>
+          <td rowspan="2" class="pt-cat" data-label="대분류">프리미엄 수액</td>
+          <td data-label="수가 항목명" class="pt-name">성장 아미노산 에너지 주사</td>
+          <td data-label="규격 및 용량">100 ml</td>
+          <td data-label="비용 (원)" class="pt-price">80,000</td>
+          <td data-label="비고">성장 필수 아미노산 조합</td>
         </tr>
         <tr>
-          <td>고농축 비타민 면역 부스터</td>
-          <td>150 ml</td>
-          <td>120,000</td>
-          <td>피로 회복 및 면역 증강</td>
+          <td class="pt-cat-m" data-label="대분류">프리미엄 수액</td>
+          <td data-label="수가 항목명" class="pt-name">고농축 비타민 면역 부스터</td>
+          <td data-label="규격 및 용량">150 ml</td>
+          <td data-label="비용 (원)" class="pt-price">120,000</td>
+          <td data-label="비고">피로 회복 및 면역 증강</td>
         </tr>
       </tbody>
     </table>
