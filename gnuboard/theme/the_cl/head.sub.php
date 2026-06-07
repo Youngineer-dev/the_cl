@@ -4,17 +4,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 $g5_debug['php']['begin_time'] = $begin_time = get_microtime();
 
-if (!isset($g5['title'])) {
-    $g5['title'] = $config['cf_title'];
-    $g5_head_title = $g5['title'];
-}
-else {
-    // 상태바에 표시될 제목
-    $g5_head_title = implode(' | ', array_filter(array($g5['title'], $config['cf_title'])));
-}
+$g5['title'] = isset($g5['title']) ? strip_tags($g5['title']) : '';
 
-$g5['title'] = strip_tags($g5['title']);
-$g5_head_title = strip_tags($g5_head_title);
+if (defined('_INDEX_')) {
+    $g5_head_title = "삼성더클성장의원 - 소아 내분비 전문";
+} else {
+    $g5_head_title = ($g5['title'] ? $g5['title'] . ' - ' : '') . '삼성더클성장의원';
+}
 
 // 현재 접속자
 // 게시판 제목에 ' 포함되면 오류 발생
