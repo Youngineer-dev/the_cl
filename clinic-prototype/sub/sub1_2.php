@@ -57,7 +57,7 @@ include_once('../head.php');
 
   <div class="about-images reveal reveal-delay-1" style="height: 480px;">
     <div class="about-img-1" style="width: 100%; position: relative;">
-      <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="노유선 원장" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.06);">
+      <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="노유선 원장" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.06);">
     </div>
   </div>
 </div>

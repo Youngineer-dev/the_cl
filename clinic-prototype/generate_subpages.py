@@ -141,7 +141,7 @@ subpages_content["sub1_2"] = """
   <div class="about-text" style="text-align: left;">
     <div class="desc-group reveal">
       <p class="desc" style="font-size: 15px; line-height: 2.2; color: var(--c-text-light); font-weight: 300;">
-        안녕하세요. 삼성더클성장의원 대표원장 이중민입니다.<br><br>
+        안녕하세요. 삼성더클성장의원 대표원장 노유선입니다.<br><br>
         아이들의 웃음소리가 울려 퍼지는 건강한 성장을 관찰하는 것은 참으로 경이로운 일이지만, 다른 아이들보다 성장이 조금 더디거나 사춘기가 너무 일찍 올 때 부모님의 속앓이와 걱정 또한 무겁다는 것을 잘 알고 있습니다.<br><br>
         소아 내분비학 전문의로서 수많은 아이들을 지켜보며 깨달은 점은, <strong>모든 아동은 저마다의 고유한 성장 템포와 건강한 가능성</strong>을 내포하고 있다는 사실입니다. 우리의 임무는 그 템포를 적시에 과학적으로 분석하여 올바른 골든타임을 놓치지 않도록 이끄는 것입니다.<br><br>
         저희 의원은 부모님과 같은 눈높이에서 아이의 건강한 내일을 지극히 진실하고 정교하게 설계하겠습니다. 성장의 매 순간 든든한 등대지기가 되어 동행할 것을 약속드립니다.
@@ -149,13 +149,13 @@ subpages_content["sub1_2"] = """
     </div>
     
     <div class="reveal reveal-delay-2" style="margin-top: 40px; font-family: var(--font-serif); font-size: 20px; font-style: italic; color: var(--c-primary-dark); font-weight: 600;">
-      - Representative Director, Jung Min Lee
+      - Representative Director, Yu Sun Noh
     </div>
   </div>
 
   <div class="about-images reveal reveal-delay-1" style="height: 480px;">
     <div class="about-img-1" style="width: 100%; position: relative;">
-      <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="이중민 원장" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.06);">
+      <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="노유선 원장" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.06);">
     </div>
   </div>
 </div>
@@ -173,41 +173,41 @@ subpages_content["sub1_3"] = """
 
 <article class="doctor-card reveal" style="background: white; border-radius: 8px; border: 1px solid var(--c-border); padding: 48px; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.01);">
   <div class="doctor-photo">
-    <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="이중민 대표원장">
+    <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="노유선 대표원장">
   </div>
   <div class="doctor-info">
     <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
-    <h3 class="doctor-name"><strong>이 중 민</strong> 대표원장</h3>
+    <h3 class="doctor-name"><strong>노 유 선</strong> 대표원장</h3>
     
     <p class="desc" style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
-      대학병원 소아내분비 임상교수 출신으로, 풍부한 임상경험과 글로벌 학술적 네트워크를 기반으로 삼아 저신장과 성조숙증 진료에 탁월한 해법을 제시합니다.
+      대학병원 소아내분비분과 교수 출신으로, 삼성서울병원에서의 풍부한 임상경험과 글로벌 학술적 네트워크를 기반으로 저신장과 성조숙증 진료에 탁월한 해법을 제시합니다.
     </p>
 
     <div class="history-section">
       <div>
         <div class="history-title">
-          <span class="star">✦</span> 학력 및 약력
+          <span class="star">✦</span> 주요 약력
         </div>
         <ul class="history-list">
-          <li>서울대학교병원 소아청소년과 전문의</li>
-          <li>서울대학교병원 소아내분비 전임의 수료</li>
-          <li>서울대학교 의과대학 학사 / 석사 최우수 졸업</li>
-          <li>전 삼성서울병원 소아내분비 임상조교수</li>
-          <li>대한소아청소년과학회 평생회원</li>
-          <li>대한소아내분비학회 정회원 및 심사위원</li>
+          <li>한림대학교 강동성심병원 소아청소년과 소아내분비분과 교수</li>
+          <li>삼성서울병원 인턴</li>
+          <li>삼성서울병원 소아청소년과 전공의</li>
+          <li>삼성서울병원 소아청소년과 외래교수</li>
+          <li>삼성서울병원 소아내분비·유전대사 임상강사 (우수전임의상 수상)</li>
+          <li>현 삼성더클성장의원 대표원장</li>
         </ul>
       </div>
       <div>
         <div class="history-title">
-          <span class="star">✦</span> 학회 및 정학술 활동
+          <span class="star">✦</span> 학회 및 학술활동
         </div>
         <ul class="history-list">
-          <li>유럽소아내분비학회(ESPE) 우수 임상 연구 구연</li>
-          <li>소아 성조숙증 최신 진단 표준 지침서 공동 저자</li>
-          <li>대한당뇨병학회 소아당뇨 특별위원회 소속</li>
-          <li>소아 비만 및 대사 증후군 통합 포럼 연사</li>
-          <li>성장 호르몬 안전성 장기 추적 연구 공동 연구원</li>
-          <li>현 삼성더클성장의원 대표원장</li>
+          <li>대한소아내분비학회 기획위원회 간사</li>
+          <li>전 대한소아내분비학회 연구위원회 위원</li>
+          <li>아시아태평양소아내분비학회 Fellow School 수료</li>
+          <li>KRDMS Pediatric 초음파 과정 수료</li>
+          <li>소아 필라테스 운동지도사 과정 수료</li>
+          <li>성장·성조숙증·비만 관련 PubMed/SCI 논문 다수 발표</li>
         </ul>
       </div>
     </div>

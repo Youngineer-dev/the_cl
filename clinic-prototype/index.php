@@ -91,7 +91,7 @@ include_once('./head.php');
       <!-- Doctor 1 -->
       <article class="doctor-card reveal">
         <div class="doctor-photo">
-          <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="노유선 원장">
+          <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="노유선 원장">
         </div>
         <div class="doctor-info">
           <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>

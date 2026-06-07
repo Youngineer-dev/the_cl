@@ -1,12 +1,19 @@
 <?php
 if (!isset($G5_URL)) {
-    // 현재 스크립트 실행 경로를 기반으로 clinic-prototype 폴더가 속한 베이스 URL을 자동 감지합니다.
-    $script_name = $_SERVER['SCRIPT_NAME'];
-    $pos = strpos($script_name, '/clinic-prototype');
-    if ($pos !== false) {
-        $G5_URL = substr($script_name, 0, $pos + strlen('/clinic-prototype'));
+    // 실행되고 있는 스크립트 경로에서 현재 폴더의 위치를 추적합니다.
+    $script_dir = dirname($_SERVER['SCRIPT_NAME']);
+    $script_dir = str_replace('\\', '/', $script_dir);
+    
+    // 만약 /sub 폴더 안의 파일이 실행 중인 경우 한 단계 상위 디렉토리를 루트로 설정합니다.
+    if (preg_match('/\/sub$/i', $script_dir)) {
+        $G5_URL = dirname($script_dir);
     } else {
-        $G5_URL = '/clinic-prototype';
+        $G5_URL = $script_dir;
+    }
+    
+    // 윈도우 환경 및 최상위 루트 경로인 경우에 대한 예외 처리
+    if ($G5_URL === '/' || $G5_URL === '\\') {
+        $G5_URL = '';
     }
 }
 ?>

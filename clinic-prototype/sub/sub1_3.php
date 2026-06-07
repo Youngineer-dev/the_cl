@@ -41,7 +41,7 @@ include_once('../head.php');
 
 <article class="doctor-card reveal" style="background: white; border-radius: 8px; border: 1px solid var(--c-border); padding: 48px; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.01);">
   <div class="doctor-photo">
-    <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=2" alt="노유선 대표원장">
+    <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="노유선 대표원장">
   </div>
   <div class="doctor-info">
     <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
