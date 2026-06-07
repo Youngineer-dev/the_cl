@@ -76,8 +76,12 @@ $list_url = $G5_URL . '/sub/sub4_3.php';
       </nav>
 
       <!-- 하단 버튼 -->
-      <div class="board-view__foot">
-        <a href="<?php echo $list_url; ?>" class="board-view__listbtn">목록으로</a>
+      <div class="board-view__foot" style="gap: 12px;">
+        <a href="<?php echo $list_url; ?>" class="board-view__listbtn" style="background: var(--c-text-light); border-color: var(--c-text-light);">목록으로</a>
+        <?php if (isset($is_member) && $is_member) { ?>
+        <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=notice&id=<?php echo $post['id']; ?>" class="board-view__listbtn">수정</a>
+        <a href="javascript:alert('프로토타입 단계로 삭제 기능은 그누보드 이식 후 작동합니다.');" class="board-view__listbtn" style="background: #e63c3c; border-color: #e63c3c;">삭제</a>
+        <?php } ?>
       </div>
 
       <!-- 댓글 -->
