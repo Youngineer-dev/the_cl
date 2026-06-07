@@ -132,9 +132,9 @@ $G5_URL = G5_THEME_URL;
             </div>
           </div>
 
-          <div class="btn_confirm" style="display: flex; gap: 12px; margin-top: 36px; justify-content: center;">
-            <a href="<?php echo G5_URL ?>" class="btn-cancel" style="display: inline-flex; align-items: center; justify-content: center; padding: 12px 30px; border: 1px solid var(--c-border); border-radius: 4px; font-size: 14px; font-weight: 500; color: var(--c-text-light); transition: all 0.3s;">취소</a>
-            <button type="submit" id="btn_submit" class="btn-submit auth-btn" style="margin-top: 0; width: auto; padding: 12px 40px;"><?php echo $w==''?'가입 완료하기':'정보수정 완료'; ?></button>
+          <div class="btn_confirm" style="display: flex; gap: 12px; margin-top: 36px; justify-content: center; align-items: center;">
+            <a href="<?php echo G5_URL ?>" class="btn-cancel" style="display: inline-flex; align-items: center; justify-content: center; width: 140px; height: 52px; box-sizing: border-box; border: 1px solid var(--c-border); border-radius: 6px; font-size: 14px; font-weight: 500; color: var(--c-text-light); background: #ffffff; transition: all 0.3s; text-decoration: none;">취소</a>
+            <button type="submit" id="btn_submit" class="btn-submit auth-btn" style="margin-top: 0; width: 180px; height: 52px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; padding: 0;"><?php echo $w==''?'가입 완료하기':'정보수정 완료'; ?></button>
           </div>
         </form>
 
