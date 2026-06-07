@@ -94,6 +94,13 @@ $total_count = $board_notice_total;
       <a href="#" class="board-pagination__nav" aria-label="다음 페이지">›</a>
     </nav>
 
+    <!-- 글쓰기 버튼 (로그인 회원 전용) -->
+    <?php if (isset($is_member) && $is_member) { ?>
+    <div class="board-btn-wrap reveal" style="display: flex; justify-content: flex-end; margin-top: 24px;">
+      <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=notice" class="board-btn-write" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 24px; background: var(--c-primary); color: #ffffff; border-radius: 4px; font-size: 13px; font-weight: 500; transition: background 0.3s; box-shadow: 0 4px 10px rgba(46, 139, 87, 0.15);">글쓰기</a>
+    </div>
+    <?php } ?>
+
   </div>
 </main>
 

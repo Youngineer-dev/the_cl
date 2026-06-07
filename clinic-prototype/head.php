@@ -1,4 +1,21 @@
 <?php
+// 가상 로그인 디버깅용 세션 스타트
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// debug_login 파라미터 감지하여 세션 변경
+if (isset($_GET['debug_login'])) {
+    if ($_GET['debug_login'] === '1') {
+        $_SESSION['is_member'] = true;
+    } else if ($_GET['debug_login'] === '0') {
+        $_SESSION['is_member'] = false;
+    }
+}
+
+// 로그인 여부 변수 설정 (그누보드5 이식 대비)
+$is_member = isset($_SESSION['is_member']) && $_SESSION['is_member'] === true;
+
 if (!isset($G5_URL)) {
     // 실행되고 있는 스크립트 경로에서 현재 폴더의 위치를 추적합니다.
     $script_dir = dirname($_SERVER['SCRIPT_NAME']);
@@ -29,7 +46,7 @@ if (!isset($G5_URL)) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="<?php echo $G5_URL; ?>/css/style.css?v=18">
+  <link rel="stylesheet" href="<?php echo $G5_URL; ?>/css/style.css?v=19">
 </head>
 <body>
 
@@ -49,6 +66,16 @@ if (!isset($G5_URL)) {
         <div class="header-contact">
           <a href="tel:02-1234-5678" class="header-phone">02.1234.5678</a>
         </div>
+        <div class="header-auth">
+          <?php if ($is_member) { ?>
+            <span class="auth-welcome" style="font-size: 11px; color: var(--c-accent-light); font-weight: 500;">[회원]</span>
+            <a href="?debug_login=0" class="auth-link auth-logout">로그아웃</a>
+          <?php } else { ?>
+            <a href="<?php echo $G5_URL; ?>/sub/login.php" class="auth-link auth-login">로그인</a>
+            <span class="auth-divider">|</span>
+            <a href="<?php echo $G5_URL; ?>/sub/register.php" class="auth-link auth-register">회원가입</a>
+          <?php } ?>
+        </div>
         <div class="hamburger" id="hamburger" aria-label="메뉴 열기">
           <span></span><span></span><span></span>
         </div>
@@ -59,6 +86,17 @@ if (!isset($G5_URL)) {
   <!-- NAV OVERLAY -->
   <nav class="nav-overlay" id="navOverlay">
     <div class="nav-content">
+      <div class="nav-mobile-auth">
+        <?php if ($is_member) { ?>
+          <span class="mobile-auth-welcome" style="font-size: 14px; color: var(--c-accent-light); font-weight: 500;">[로그인 상태]</span>
+          <span class="mobile-auth-divider">|</span>
+          <a href="?debug_login=0" class="mobile-auth-link">로그아웃</a>
+        <?php } else { ?>
+          <a href="<?php echo $G5_URL; ?>/sub/login.php" class="mobile-auth-link">로그인</a>
+          <span class="mobile-auth-divider">|</span>
+          <a href="<?php echo $G5_URL; ?>/sub/register.php" class="mobile-auth-link">회원가입</a>
+        <?php } ?>
+      </div>
       <p class="nav-slogan">Grow Together, Grow Healthy</p>
       <div class="nav-menu">
         <div class="nav-menu-group">
