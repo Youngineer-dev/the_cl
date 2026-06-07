@@ -24,7 +24,7 @@ if (!isset($G5_URL)) {
         </div>
         <div class="header-auth">
           <?php if ($is_member) { ?>
-            <span class="auth-welcome" style="font-size: 11px; color: var(--c-accent-light); font-weight: 500;">[회원]</span>
+            <span class="auth-welcome" style="font-size: 11px; color: var(--c-accent-light); font-weight: 500;">[<?php echo get_text($member['mb_name']); ?>님]</span>
             <a href="<?php echo G5_BBS_URL; ?>/logout.php" class="auth-link auth-logout">로그아웃</a>
           <?php } else { ?>
             <a href="<?php echo G5_BBS_URL; ?>/login.php" class="auth-link auth-login">로그인</a>
@@ -44,7 +44,7 @@ if (!isset($G5_URL)) {
     <div class="nav-content">
       <div class="nav-mobile-auth">
         <?php if ($is_member) { ?>
-          <span class="mobile-auth-welcome" style="font-size: 14px; color: var(--c-accent-light); font-weight: 500;">[로그인 상태]</span>
+          <span class="mobile-auth-welcome" style="font-size: 14px; color: var(--c-accent-light); font-weight: 500;">[<?php echo get_text($member['mb_name']); ?>님]</span>
           <span class="mobile-auth-divider">|</span>
           <a href="<?php echo G5_BBS_URL; ?>/logout.php" class="mobile-auth-link">로그아웃</a>
         <?php } else { ?>

@@ -6,6 +6,11 @@ $g5_debug['php']['begin_time'] = $begin_time = get_microtime();
 
 $g5['title'] = isset($g5['title']) ? strip_tags($g5['title']) : '';
 
+// $page_title 변수가 정의되어 있는 경우 그누보드 타이틀 변수로 대체 연동
+if (!$g5['title'] && isset($page_title) && $page_title) {
+    $g5['title'] = strip_tags($page_title);
+}
+
 if (defined('_INDEX_')) {
     $g5_head_title = "삼성더클성장의원 - 소아 내분비 전문";
 } else {
@@ -80,14 +85,3 @@ if(!defined('G5_IS_ADMIN'))
 ?>
 </head>
 <body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
-<?php
-if ($is_member) { // 회원이라면 로그인 중이라는 메세지를 출력해준다.
-    $sr_admin_msg = '';
-    if ($is_admin == 'super') $sr_admin_msg = "최고관리자 ";
-    else if ($is_admin == 'group') $sr_admin_msg = "그룹관리자 ";
-    else if ($is_admin == 'board') $sr_admin_msg = "게시판관리자 ";
-
-    echo '<div id="hd_login_msg">'.$sr_admin_msg.get_text($member['mb_nick']).'님 로그인 중 ';
-    echo '<a href="'.G5_BBS_URL.'/logout.php">로그아웃</a></div>';
-}
-?>
