@@ -15,11 +15,15 @@
   * `css/` : 테마 전체 스타일시트 파일 (`style.css` - 4,000줄 이상의 테마 디자인 스타일 포함)
   * `js/` : 프론트엔드 인터랙션 스크립트 (`main.js` - Lenis 스크롤, AOS 효과 등 포함)
   * `img/` : 로고 및 메인/서브페이지 이미지 리소스 5종 (`brand_logo.png`, `doctor.png`, `hero.png`, `interior.png`, `programs.png`)
-  * `skin/` : 로그인/회원가입 커스텀 스킨 (`skin/member/basic/`)
-    * `login.skin.php` : 커스텀 로그인 화면
-    * `register.skin.php` : 커스텀 약관 동의 화면
-    * `register_form.skin.php` : 커스텀 원페이지 회원 정보 입력 화면
-    * `register_result.skin.php` : 커스텀 회원가입 완료 화면
+  * `skin/` : PC 및 모바일 커스텀 회원 스킨
+    * **PC 스킨 경로**: `theme/the_cl/skin/member/basic/`
+    * **모바일 스킨 경로**: `theme/the_cl/mobile/skin/member/basic/` (그누보드 관리자 페이지에서 모바일 스킨을 활성화하기 위해 필수 업로드 필요)
+    * **포함될 파일 (양쪽 모두 동일)**:
+      * `login.skin.php` : 커스텀 로그인 화면
+      * `register.skin.php` : 커스텀 약관 동의 화면
+      * `register_form.skin.php` : 커스텀 원페이지 회원 정보 입력 화면
+      * `register_result.skin.php` : 커스텀 회원가입 완료 화면
+      * `password_lost.skin.php` : 커스텀 아이디/비밀번호 찾기 화면
   * `sub/` : DB 데이터 및 커스텀 페이지가 연동된 동적 서브페이지 26개 파일
     * `_common.php`, `_board_data.php` (설정 및 더미 데이터 파일)
     * `login.php`, `register.php`, `write.php` (로그인, 회원가입, 글쓰기 커스텀 라우팅 페이지)
