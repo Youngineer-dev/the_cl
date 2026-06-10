@@ -112,11 +112,11 @@ include_once(G5_PATH.'/head.php');
             </div>
           </div>
 
-          <button type="submit" class="btn-submit auth-btn" style="margin-top: 36px;">가입 완료하기</button>
+          <button type="submit" class="btn-submit auth-btn" style="margin-top: 36px;">회원가입</button>
         </form>
 
         <div class="auth-card-footer">
-          <p>이미 계정이 있으신가요? <a href="<?php echo $G5_URL; ?>/sub/login.php" class="join-link">로그인 하러가기</a></p>
+          <p>이미 계정이 있으신가요? <a href="<?php echo $G5_URL; ?>/sub/login.php" class="join-link">로그인</a></p>
         </div>
       </div>
     </div>

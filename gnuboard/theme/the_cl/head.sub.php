@@ -47,7 +47,7 @@ if($config['cf_add_meta'])
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?php echo G5_THEME_URL; ?>/css/style.css?v=21">
+<link rel="stylesheet" href="<?php echo G5_THEME_URL; ?>/css/style.css?v=23">
 <!--[if lte IE 8]>
 <script src="<?php echo G5_JS_URL ?>/html5.js"></script>
 <![endif]-->

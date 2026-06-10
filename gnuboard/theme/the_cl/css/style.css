@@ -117,6 +117,21 @@ ul, ol {
   list-style: none;
 }
 
+/* 그누보드 보조 텍스트(스크린리더 전용) 숨김 — 이 테마는 그누보드 기본
+   CSS를 로드하지 않으므로 직접 정의해야 캡차 버튼 등의 라벨이 노출되지 않음 */
+.sound_only {
+  display: inline-block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  border: 0;
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -4591,28 +4606,55 @@ fieldset#captcha #captcha_info {
   }
   .mobile-auth-link { padding: 10px 6px; }
 
-  /* ── 6) 캡차(자동등록방지) — 고정폭 가로 나열 → 유연한 줄바꿈 배치 ── */
+  /* ── 6) 캡차(자동등록방지) — 그리드로 각 컨트롤의 자리를 명시 고정:
+         [ 이미지        ][ ♪ ][ ↻ ]
+         [ 입력칸 (풀폭)             ]
+         [ 안내문 (풀폭)             ]
+         flex 흐름 배치와 달리 폭이 좁아도 버튼이 엉뚱한 줄로 떨어지지 않음 ── */
   fieldset#captcha {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 48px 48px;
+    gap: 10px;
     align-items: center;
-    gap: 8px;
-    padding: 16px;
+    padding: 16px !important;
   }
-  fieldset#captcha #captcha_img,
-  fieldset#captcha #captcha_key,
-  fieldset#captcha button {
-    margin: 0 !important;
-    height: 44px !important;
-  }
-  fieldset#captcha #captcha_key {
-    flex: 1 1 110px;
+  fieldset#captcha #captcha_img {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    height: 48px !important;
     width: auto !important;
-    min-width: 0;
+    max-width: 100%;
+    object-fit: contain; /* 극협폭에서 칸이 줄어도 숫자 비율 유지 */
+    object-position: left center;
+    margin: 0 !important;
+  }
+  fieldset#captcha button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 48px !important;
+    height: 48px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 15px !important;
+    overflow: hidden;
+  }
+  fieldset#captcha #captcha_mp3 { grid-column: 2; grid-row: 1; }
+  fieldset#captcha #captcha_reload { grid-column: 3; grid-row: 1; }
+  fieldset#captcha #captcha_key {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100% !important;
+    height: 48px !important;
+    margin: 0 !important;
+    padding: 0 14px;
+    text-align: left;
   }
   fieldset#captcha #captcha_info {
-    flex-basis: 100%;
-    margin-top: 2px !important;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 0 !important;
   }
 
   /* ── 7) 병원 소개(sub1_1) 모듈 모바일 보정 ── */

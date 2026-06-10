@@ -74,7 +74,7 @@ include_once(G5_THEME_PATH.'/header.html.php');
         <?php } ?>
 
         <div class="auth-card-footer">
-          <p>비밀번호가 기억나셨나요? <a href="<?php echo G5_BBS_URL ?>/login.php" class="join-link">로그인 하러가기</a></p>
+          <p>비밀번호가 기억나셨나요? <a href="<?php echo G5_BBS_URL ?>/login.php" class="join-link">로그인</a></p>
         </div>
       </div>
     </div>

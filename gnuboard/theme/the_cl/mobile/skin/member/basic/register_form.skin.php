@@ -135,12 +135,12 @@ include_once(G5_THEME_PATH.'/header.html.php');
 
           <div class="btn_confirm" style="display: flex; gap: 12px; margin-top: 36px; justify-content: center; align-items: center;">
             <a href="<?php echo G5_URL ?>" class="btn-cancel" style="display: inline-flex; align-items: center; justify-content: center; width: 140px; height: 52px; box-sizing: border-box; border: 1px solid var(--c-border); border-radius: 6px; font-size: 14px; font-weight: 500; color: var(--c-text-light); background: #ffffff; transition: all 0.3s; text-decoration: none;">취소</a>
-            <button type="submit" id="btn_submit" class="btn-submit auth-btn" style="margin-top: 0; width: 180px; height: 52px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; padding: 0;"><?php echo $w==''?'가입 완료하기':'정보수정 완료'; ?></button>
+            <button type="submit" id="btn_submit" class="btn-submit auth-btn" style="margin-top: 0; width: 180px; height: 52px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; padding: 0;"><?php echo $w==''?'회원가입':'정보수정 완료'; ?></button>
           </div>
         </form>
 
         <div class="auth-card-footer">
-          <p>이미 계정이 있으신가요? <a href="<?php echo G5_BBS_URL ?>/login.php" class="join-link">로그인 하러가기</a></p>
+          <p>이미 계정이 있으신가요? <a href="<?php echo G5_BBS_URL ?>/login.php" class="join-link">로그인</a></p>
         </div>
       </div>
     </div>
