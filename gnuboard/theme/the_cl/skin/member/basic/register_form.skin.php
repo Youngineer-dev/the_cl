@@ -6,6 +6,7 @@ if ($config['cf_cert_use'] && ($config['cf_cert_simple'] || $config['cf_cert_ipi
     add_javascript('<script src="'.G5_JS_URL.'/certify.js?v='.G5_JS_VER.'"></script>', 0);
 
 $G5_URL = G5_THEME_URL;
+include_once(G5_THEME_PATH.'/header.html.php');
 ?>
 
 <!-- SUB HERO -->
@@ -256,3 +257,4 @@ function fregisterform_submit(f)
     return true;
 }
 </script>
+<?php include_once(G5_THEME_PATH.'/footer.html.php'); ?>

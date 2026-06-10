@@ -49,6 +49,8 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* 모바일 탭 시 회색 하이라이트 박스 제거 */
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -67,6 +69,9 @@ body {
   animation: aurora-move 32s ease infinite alternate; /* 32초 주기로 은은히 일렁이며 이동 */
   line-height: 1.7;
   overflow-x: hidden;
+  /* 한글이 단어 중간에서 끊기지 않도록 (좁은 화면 가독성 핵심) */
+  word-break: keep-all;
+  overflow-wrap: break-word;
   
   /* 전역 드래그 및 선택 차단 */
   -webkit-user-select: none;
@@ -429,6 +434,13 @@ ul, ol {
   height: 100vh;
   min-height: 600px;
   overflow: hidden;
+}
+
+/* 모바일 브라우저 주소창으로 인한 100vh 점프/과대 높이 방지 */
+@supports (height: 100svh) {
+  .hero {
+    height: 100svh;
+  }
 }
 
 .hero-bg {
@@ -2369,8 +2381,9 @@ ul, ol {
     font-size: 28px;
   }
   
+  /* 서브 페이지들이 인라인 style로 30~34px를 지정하므로 !important로 모바일 크기를 강제 */
   .sub-intro-text .section-title {
-    font-size: 24px;
+    font-size: 24px !important;
   }
   
   .sub-intro-text .desc {
@@ -3016,7 +3029,7 @@ ul, ol {
   .sub-hero { height: 240px; }
   .sub-hero-title { font-size: 23px; }
   .sub-hero-subtitle { font-size: 13px; }
-  .sub-intro-text .section-title { font-size: 21px; }
+  .sub-intro-text .section-title { font-size: 21px !important; } /* 인라인 style 대응 */
 
   /* 오브 추가 축소 */
   .sub-main::before { width: 220px; height: 220px; filter: blur(50px); }
@@ -4441,6 +4454,255 @@ fieldset#captcha #captcha_info {
   font-size: 12px;
   color: var(--c-text-light);
   opacity: 0.8;
+}
+
+/* ============================================================
+   MOBILE UX & LAYOUT REFINEMENT
+   - 파일 맨 끝에 위치하여 모든 선행 규칙(글래스 !important 포함)보다 우선
+   - 인라인 style을 쓰는 서브 페이지 대응을 위해 일부 !important 사용
+   ============================================================ */
+
+/* 그리드 블로우아웃 방지: 그리드 아이템의 기본 min-width:auto 때문에
+   내부의 nowrap 콘텐츠(길찾기 버튼 등)가 1fr 트랙을 컨테이너 밖으로
+   밀어내는 현상 차단. (모바일 Contact 우측 패딩 소실의 원인) */
+.about-inner > *,
+.contact-inner > *,
+.doctor-card > *,
+.history-section > *,
+.ed-split > *,
+.ed-aside > *,
+.ed-case > *,
+.ed-check > *,
+.form-grid > * {
+  min-width: 0;
+}
+
+/* 본인인증 영역 (비밀번호 찾기) — 테마 공통 스타일 */
+.cert-section {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px dashed var(--c-border);
+  text-align: center;
+}
+.cert-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--c-primary-dark);
+  margin-bottom: 14px;
+}
+.cert-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.btn-cert {
+  width: 100%;
+  height: 46px;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--c-text);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.btn-cert:hover {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+  background: var(--c-primary-pale);
+}
+
+/* 회원가입 form-grid: 1열 구간에서 인라인 grid-column: span 2가
+   유령(암시적) 2번째 컬럼을 만들어 입력칸이 반폭으로 짜부라지는 버그 수정 */
+@media (max-width: 575px) {
+  .form-grid .form-group {
+    grid-column: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* ── 1) 성능: 모바일에서 체감 불가한 대형 장식 레이어 제거 ──
+     130px 자이언트 마퀴 텍스트, 600px 링, 블러 셰이프는
+     투명도 2~4%로 거의 보이지 않지만 매 프레임 페인트 비용을 유발 */
+  body { animation: none; }
+  .hero::before,
+  .hero::after,
+  .about::before,
+  .programs::before,
+  .doctors::before,
+  .doctors::after { display: none; }
+  .about::after,
+  .programs::after { animation: none; }
+
+  /* ── 2) iOS 입력 포커스 자동 확대(줌) 방지: 입력 요소는 16px 이상 ── */
+  .form-input,
+  .form-select,
+  .form-textarea,
+  .board-search__input,
+  .board-search__select,
+  .board-comment__name-input,
+  .board-comment__textarea,
+  fieldset#captcha #captcha_key {
+    font-size: 16px !important;
+  }
+
+  /* ── 3) 노치/홈바 세이프에어리어 대응 ── */
+  .quick-menu {
+    right: calc(16px + env(safe-area-inset-right, 0px));
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+  .nav-overlay .nav-content {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  }
+  .site-footer {
+    padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* ── 4) 인라인 style이 박힌 서브 페이지 레이아웃 교정 ── */
+  /* 의료진 소개(sub1_3): 카드 인라인 padding 48px → 모바일 축소 */
+  .sub-main .doctor-card { padding: 28px 20px !important; }
+  /* 원장 인사말(sub1_2): 인라인 height 450px 초상 사진 축소 */
+  .sub-main .about-img-1 img { height: 320px !important; }
+  /* 오시는 길(sub1_5): 우측 카드 인라인 padding 40px 축소 */
+  .sub-main .contact-right { padding: 28px 20px !important; }
+  /* 푸터 마퀴: 인라인 24px → 모바일 축소 */
+  .loop-text { font-size: 20px !important; }
+
+  /* ── 5) 회원/글쓰기 폼 — 모바일 밀도 최적화 ── */
+  .auth-card-wrap,
+  .write-form-wrap { margin: 24px auto 40px; }
+  .auth-card,
+  .write-form-card { padding: 36px 24px; }
+  .auth-card-title,
+  .write-form-title { font-size: 24px; }
+  /* '로그인 상태 유지'와 '아이디/비밀번호 찾기'가 좁은 폭에서 자연스럽게 줄바꿈 */
+  .form-helper {
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+  /* 링크 탭 타깃 확보 */
+  .find-link,
+  .join-link {
+    display: inline-block;
+    padding: 6px 2px;
+    margin: -6px -2px;
+  }
+  .mobile-auth-link { padding: 10px 6px; }
+
+  /* ── 6) 캡차(자동등록방지) — 고정폭 가로 나열 → 유연한 줄바꿈 배치 ── */
+  fieldset#captcha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+  }
+  fieldset#captcha #captcha_img,
+  fieldset#captcha #captcha_key,
+  fieldset#captcha button {
+    margin: 0 !important;
+    height: 44px !important;
+  }
+  fieldset#captcha #captcha_key {
+    flex: 1 1 110px;
+    width: auto !important;
+    min-width: 0;
+  }
+  fieldset#captcha #captcha_info {
+    flex-basis: 100%;
+    margin-top: 2px !important;
+  }
+
+  /* ── 7) 병원 소개(sub1_1) 모듈 모바일 보정 ── */
+  .sub11_sect1 { padding: 60px 0 40px; }
+  .sub11_sect1_img {
+    height: 280px;
+    border-radius: 40px 0 40px 0;
+    margin: 32px auto;
+  }
+  .sub11_sect2_contWrap { gap: 72px; padding: 48px 0; }
+  .sub11_sect2_item, .sub11_sect2_item.imgLeft { gap: 32px; }
+  .descBox .item_subTitle { font-size: 20px; margin-bottom: 20px; }
+  .imgBox .item_img { height: 260px; }
+  .imgBox .bgText { font-size: 48px; bottom: -20px; right: 0; }
+  .sub11_sect1_desc b { font-size: 17px; }
+
+  /* ── 8) 터치 피드백: hover가 없는 환경에서 누름 반응 제공 ── */
+  .btn-submit:active,
+  .contact-btn:active,
+  .map-btn:active,
+  .ed-pill:active,
+  .hero-btn:active,
+  .quick-btn:active,
+  .lock-btn:active,
+  .board-view__listbtn:active {
+    transform: scale(0.97);
+    transition-duration: 0.1s;
+  }
+  .program-card,
+  .sub-card,
+  .case-card,
+  .board-gallery__item {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 메인 연락 버튼: 좁은 폭에서 텍스트 잘림 방지 */
+  .contact-btn { padding: 12px 8px; font-size: 12.5px; }
+  .ed-pill { padding: 13px 30px; }
+
+  /* 길찾기 버튼 3개: 아이콘·여백 축소로 한 줄 유지 */
+  .map-btn { font-size: 11.5px; padding: 10px 4px; gap: 4px; }
+  .map-btn .map-icon { width: 13px; height: 13px; margin-right: 4px !important; }
+
+  /* 회원가입 취소/완료 버튼: 인라인 고정폭(140/180px) 대신 균등 분할 */
+  .btn_confirm .btn-cancel,
+  .btn_confirm .btn-submit {
+    width: auto !important;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  /* 회원/글쓰기 폼 추가 축소 */
+  .auth-card,
+  .write-form-card { padding: 30px 18px; border-radius: 10px; }
+
+  /* 글쓰기 하단 버튼: 풀폭 균등 분할로 탭 편의 확보 */
+  .write-actions { gap: 10px; }
+  .write-actions .btn-cancel,
+  .write-actions .btn-submit { flex: 1 1 0; padding: 0; }
+
+  /* 푸터 마퀴 추가 축소 */
+  .loop-text { font-size: 17px !important; }
+
+  /* 진료시간 셀 여백 최적화 */
+  .ed-hours__time { font-size: 26px; }
+}
+
+/* ── 모션 최소화 선호 사용자: 장식 애니메이션 전면 정지 ── */
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .hero-bg,
+  .loop-text-track,
+  .footer-slogan-track,
+  .about::before,
+  .about::after,
+  .programs::before,
+  .programs::after,
+  .doctors::after,
+  .hero::before,
+  .hero::after {
+    animation: none !important;
+  }
+  .reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
 }
 
 
