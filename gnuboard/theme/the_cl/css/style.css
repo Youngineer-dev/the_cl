@@ -246,7 +246,7 @@ ul, ol {
 }
 
 .logo-img {
-  height: 65px;
+  height: 48px;
   width: auto;
   transition: all 0.4s var(--ease-out);
   filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.4));
@@ -254,7 +254,7 @@ ul, ol {
 
 .site-header.scrolled .logo-img {
   filter: none;
-  height: 55px;
+  height: 40px;
 }
 
 /* Header Right - Location + Hamburger */

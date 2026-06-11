@@ -14,7 +14,7 @@ if (!isset($G5_URL)) {
       </div>
       <div class="header-center">
         <a href="<?php echo G5_URL; ?>/index.php" class="logo-link">
-          <img src="<?php echo $G5_URL; ?>/img/brand_logo.png" alt="삼성더클성장의원" class="logo-img">
+          <img src="<?php echo $G5_URL; ?>/img/brand_logo.png?v=3" alt="삼성더클성장의원" class="logo-img">
         </a>
       </div>
       <div class="header-right">
