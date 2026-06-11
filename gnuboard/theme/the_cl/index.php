@@ -275,8 +275,8 @@ include_once(G5_THEME_PATH.'/head.php');
             <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="클리닉 외관">
           </div>
           <p class="address">
-            <span class="star">✦</span> 서울 강남구 테헤란로 123 그린빌딩 4층<br>
-            <span style="padding-left: 18px;">강남역 3번출구 도보 3분</span>
+            <span class="star">✦</span> 서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호<br>
+            <span style="padding-left: 18px;">잠실역 9번출구 도보 3분</span>
           </p>
           <p class="address" style="margin-top: 8px;">
             <span class="star">✦</span> 주차 &nbsp; 건물 내 주차장 이용 가능 (1시간 무료)
