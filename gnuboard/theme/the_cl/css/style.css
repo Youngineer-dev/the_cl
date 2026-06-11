@@ -1602,6 +1602,10 @@ ul, ol {
 
 /* Tablet */
 @media (max-width: 1024px) {
+  .desktop-gnb-wrap {
+    display: none;
+  }
+
   :root {
     --section-pad: 80px;
   }
