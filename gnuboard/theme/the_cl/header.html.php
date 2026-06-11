@@ -18,7 +18,7 @@ if (!isset($G5_URL)) {
         </a>
       </div>
       <div class="header-right">
-        <span class="header-location">강남역 3번출구 도보 3분</span>
+        <span class="header-location">잠실역 9번출구 도보 3분</span>
         <div class="header-contact">
           <a href="tel:02-1234-5678" class="header-phone">02.1234.5678</a>
         </div>
@@ -37,6 +37,60 @@ if (!isset($G5_URL)) {
         </div>
       </div>
     </div>
+    <!-- Desktop Navigation GNB (로고 아래 가로 펼침형) -->
+    <nav class="desktop-gnb-wrap">
+      <div class="desktop-gnb-inner">
+        <ul class="gnb-menu">
+          <li class="gnb-item">
+            <a href="<?php echo $G5_URL; ?>/sub/sub1_1.php" class="gnb-title">ABOUT</a>
+            <div class="gnb-dropdown">
+              <ul class="gnb-sub-menu">
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub1_1.php">병원 소개</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub1_2.php">원장 인사말</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub1_3.php">의료진 소개</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub1_4.php">둘러보기</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub1_5.php">오시는 길</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb-item">
+            <a href="<?php echo $G5_URL; ?>/sub/sub2_1.php" class="gnb-title">CLINIC</a>
+            <div class="gnb-dropdown">
+              <ul class="gnb-sub-menu">
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_1.php">성장 평가</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_2.php">저신장</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_3.php">성조숙</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_4.php">소아 비만</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_5.php">갑상선 질환</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_6.php">당뇨</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_7.php">영양수액</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb-item">
+            <a href="<?php echo $G5_URL; ?>/sub/sub3_1.php" class="gnb-title">INFO</a>
+            <div class="gnb-dropdown">
+              <ul class="gnb-sub-menu">
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub3_1.php">진료 시간</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub3_2.php">진료 절차</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub3_3.php">검사 항목</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub3_4.php">비급여 안내</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="gnb-item">
+            <a href="<?php echo $G5_URL; ?>/sub/sub4_1.php" class="gnb-title">COMMUNITY</a>
+            <div class="gnb-dropdown">
+              <ul class="gnb-sub-menu">
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub4_1.php">치료 사례</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub4_2.php">FAQ</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub4_3.php">공지사항</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <!-- NAV OVERLAY -->
