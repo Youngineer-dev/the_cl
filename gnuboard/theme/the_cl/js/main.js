@@ -58,15 +58,6 @@
       header.classList.remove('scrolled');
     }
 
-    // Quick menu visibility
-    if (quickMenu) {
-      if (scrollY > 400) {
-        quickMenu.classList.add('visible');
-      } else {
-        quickMenu.classList.remove('visible');
-      }
-    }
-
     // Reveal animations
     // (IntersectionObserver가 처리하므로 여기서는 호출하지 않음)
   };
@@ -206,6 +197,15 @@
       if (e.key === 'Escape' && navOverlay.classList.contains('open')) {
         closeNav();
       }
+    });
+  }
+
+  // --- Quick Menu Toggle ---
+  const quickToggle = document.querySelector('#quickToggle');
+  const quickMenuWrap = document.querySelector('#quickMenu');
+  if (quickToggle && quickMenuWrap) {
+    quickToggle.addEventListener('click', () => {
+      quickMenuWrap.classList.toggle('is-closed');
     });
   }
 
