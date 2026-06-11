@@ -11,7 +11,7 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-content reveal">
     <p class="sub-hero-category">About</p>
     <h1 class="sub-hero-title">오시는 길</h1>
-    <p class="sub-hero-subtitle">강남역 3번출구 도보 3분</p>
+    <p class="sub-hero-subtitle">잠실역 9번출구 도보 3분</p>
   </div>
 </section>
 
@@ -34,10 +34,10 @@ include_once(G5_PATH.'/head.php');
     
 <div class="sub-intro-text">
   <p class="section-en reveal">Directions</p>
-  <h2 class="section-title reveal reveal-delay-1">
-    강남역 도보 3분 거리,<br>
-    <strong>가장 쾌적하게 방문하시는 길</strong>
-  </h2>
+  <h2 class="ed-split__title">
+      잠실역 도보 3분 거리,<br>
+      <strong>가장 쾌적하게 방문하시는 길</strong>
+    </h2>
 </div>
 
 <div class="contact-inner" style="margin-top: 60px;">
@@ -46,7 +46,7 @@ include_once(G5_PATH.'/head.php');
       <div style="width: 100%; height: 100%; background-color: var(--c-primary-pale); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--c-primary-dark);">
         <span style="font-size: 50px; margin-bottom: 16px;">📍</span>
         <strong style="font-size: 18px; margin-bottom: 8px;">삼성더클성장의원 약도</strong>
-        <p style="font-size: 13px; color: var(--c-text-light);">서울시 강남구 테헤란로 123 그린빌딩 4층</p>
+        <p style="font-size: 13px; color: var(--c-text-light);">서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</p>
       </div>
     </div>
     
@@ -73,22 +73,22 @@ include_once(G5_PATH.'/head.php');
     <div style="margin-bottom: 30px;">
       <strong style="font-size: 18px; color: var(--c-primary-dark); display: block; margin-bottom: 12px;">🚇 지하철 이용 시</strong>
       <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 300;">
-        <strong>2호선, 신분당선 강남역 3번 출구</strong> 나오셔서 스타벅스 골목으로 우회전 후 100m 도보 이동하시면 우측에 그린빌딩 4층 간판이 보입니다.
+        <strong>2호선, 8호선 잠실역 9번 출구</strong>로 나오셔서 송파구청 방향으로 약 200m 직진하시면 위치해 있습니다.
       </p>
     </div>
 
     <div style="margin-bottom: 30px;">
       <strong style="font-size: 18px; color: var(--c-primary-dark); display: block; margin-bottom: 12px;">🚌 버스 이용 시</strong>
       <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 300;">
-        <strong>강남역.강남역사거리 정류장</strong> 하차<br>
-        간선: 140, 144, 360, 420, 740 / 광역: 9404, 9700 등 다수 노선 운행
+        <strong>송파구청.교통회관 정류장</strong> 또는 <strong>잠실역9번출구 정류장</strong> 하차<br>
+        간선: 302, 303, 320, 341 / 지선: 3216, 3303, 3313, 3315, 3414 등 운행
       </p>
     </div>
 
     <div>
       <strong style="font-size: 18px; color: var(--c-primary-dark); display: block; margin-bottom: 12px;">🚗 자가용 & 주차 안내</strong>
       <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 300;">
-        건물 지하 1~2층에 대형 타워 주차장이 완비되어 있으며, 진료받으신 모든 분께 <strong>2시간 무료 주차권</strong>을 지급해 드립니다. SUV 차량의 경우 기계식 입고가 불가할 수 있으니 외부 지정 주차장 요금을 대신 정산해 드립니다.
+        건물 내 주차장이 완비되어 있으며, 진료받으신 모든 분께 <strong>1시간 무료 주차권</strong>을 지급해 드립니다. SUV 차량의 타워 기계식 주차 가능 여부는 입차 시 주차 안내원에게 문의하시기 바랍니다.
       </p>
     </div>
   </div>

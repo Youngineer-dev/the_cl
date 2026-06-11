@@ -83,6 +83,48 @@ include_once(G5_PATH.'/head.php');
   </div>
 </article>
 
+<!-- 
+============================================================
+추가 의료진 (부원장) 예시 카드 - 의료진이 여러 명일 경우 주석을 해제하고 복사하여 사용하세요.
+============================================================
+<article class="doctor-card reveal" style="background: white; border-radius: 8px; border: 1px solid var(--c-border); padding: 48px; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.01);">
+  <div class="doctor-photo">
+    <img src="<?php echo $G5_URL; ?>/img/doctor_sub.png" alt="부원장 프로필">
+  </div>
+  <div class="doctor-info">
+    <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
+    <h3 class="doctor-name"><strong>홍 길 동</strong> 부원장</h3>
+
+    <p class="desc" style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
+      체계적이고 정밀한 진단과 따뜻한 소통으로 아동의 올바른 성장 로드맵을 설계합니다.
+    </p>
+
+    <div class="history-section">
+      <div>
+        <div class="history-title">
+          <span class="star">✦</span> 학력 및 약력
+        </div>
+        <ul class="history-list">
+          <li>서울대학교병원 소아청소년과 소아내분비 전임의</li>
+          <li>서울대학교병원 소아청소년과 전공의</li>
+          <li>현 삼성더클성장의원 부원장</li>
+        </ul>
+      </div>
+      <div>
+        <div class="history-title">
+          <span class="star">✦</span> 학회 및 학술 활동
+        </div>
+        <ul class="history-list">
+          <li>대한소아청소년과학회 정회원</li>
+          <li>대한소아내분비학회 정회원</li>
+          <li>소아내분비 관련 국외 논문 다수 수록</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+-->
+
   </div>
 </main>
 
