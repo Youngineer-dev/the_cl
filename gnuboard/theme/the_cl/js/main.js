@@ -272,4 +272,164 @@
     handleScroll();
     initReveal();
   });
+
+  /* ============================================================
+     MAIN POPUP
+     - 드래그 이동 / 자동 슬라이드 / 이전·다음 / 오늘 하루 그만보기
+     ============================================================ */
+  (function initPopup() {
+    const popup = document.getElementById('themePopup');
+    if (!popup) return; // 메인 페이지에만 존재
+
+    const popupKey = 'thecl_popup_hide_' + (popup.dataset.popupKey || 'default');
+
+    // '오늘 하루 그만보기'가 유효하면 노출하지 않음
+    try {
+      const until = parseInt(localStorage.getItem(popupKey) || '0', 10);
+      if (until && Date.now() < until) {
+        popup.remove();
+        return;
+      }
+    } catch (e) { /* localStorage 비활성 환경 무시 */ }
+
+    const slides = Array.prototype.slice.call(popup.querySelectorAll('.popup-slide'));
+    const counterEl = popup.querySelector('.popup-cur');
+    const total = slides.length;
+    let current = 0;
+    let autoTimer = null;
+    const AUTO_MS = 5000;
+
+    const goTo = (idx) => {
+      current = (idx + total) % total;
+      slides.forEach((el, i) => el.classList.toggle('is-active', i === current));
+      if (counterEl) counterEl.textContent = String(current + 1);
+    };
+
+    const next = () => goTo(current + 1);
+    const prev = () => goTo(current - 1);
+
+    // --- 자동 슬라이드 ---
+    const startAuto = () => {
+      if (total < 2) return;
+      stopAuto();
+      autoTimer = setInterval(next, AUTO_MS);
+    };
+    const stopAuto = () => {
+      if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+    };
+    // 사용자 조작 시 타이머 리셋
+    const restartAuto = () => { startAuto(); };
+
+    const prevBtn = popup.querySelector('.popup-prev');
+    const nextBtn = popup.querySelector('.popup-next');
+    if (prevBtn) prevBtn.addEventListener('click', () => { prev(); restartAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { next(); restartAuto(); });
+
+    // 마우스 올리면 일시정지
+    popup.addEventListener('mouseenter', stopAuto);
+    popup.addEventListener('mouseleave', startAuto);
+
+    // --- 드래그 이동 (이미지 스테이지를 핸들로 사용) ---
+    const handle = document.getElementById('popupHandle');
+    let dragging = false;
+    let startX = 0, startY = 0;
+    let baseX = 0, baseY = 0; // 드래그 시작 시점의 오프셋(px)
+    let offX = 0, offY = 0;   // 현재 오프셋(px)
+    let moved = false;
+
+    const applyOffset = () => {
+      popup.style.setProperty('--px', offX + 'px');
+      popup.style.setProperty('--py', offY + 'px');
+    };
+
+    // 팝업이 화면 밖으로 나가지 않도록 오프셋 범위 제한
+    const clamp = () => {
+      const margin = 12;
+      const maxX = Math.max(0, (window.innerWidth - popup.offsetWidth) / 2 - margin);
+      const maxY = Math.max(0, (window.innerHeight - popup.offsetHeight) / 2 - margin);
+      offX = Math.max(-maxX, Math.min(maxX, offX));
+      offY = Math.max(-maxY, Math.min(maxY, offY));
+    };
+
+    if (handle) {
+      handle.addEventListener('pointerdown', (e) => {
+        // 닫기 버튼 위에서는 드래그 시작하지 않음
+        if (e.target.closest('.popup-close')) return;
+        dragging = true;
+        moved = false;
+        startX = e.clientX;
+        startY = e.clientY;
+        baseX = offX;
+        baseY = offY;
+        popup.classList.add('is-dragging');
+        stopAuto();
+        if (handle.setPointerCapture) {
+          try { handle.setPointerCapture(e.pointerId); } catch (err) {}
+        }
+      });
+
+      handle.addEventListener('pointermove', (e) => {
+        if (!dragging) return;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
+        offX = baseX + dx;
+        offY = baseY + dy;
+        clamp();
+        applyOffset();
+      });
+
+      const endDrag = (e) => {
+        if (!dragging) return;
+        dragging = false;
+        popup.classList.remove('is-dragging');
+        if (handle.releasePointerCapture && e) {
+          try { handle.releasePointerCapture(e.pointerId); } catch (err) {}
+        }
+        startAuto();
+      };
+      handle.addEventListener('pointerup', endDrag);
+      handle.addEventListener('pointercancel', endDrag);
+      // 드래그 후 헤더 내 의도치 않은 클릭 방지
+      handle.addEventListener('click', (e) => {
+        if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
+      }, true);
+    }
+
+    // 창 크기 변경 시 위치 보정
+    window.addEventListener('resize', () => {
+      clamp();
+      applyOffset();
+    }, { passive: true });
+
+    // --- 닫기 / 오늘 하루 그만보기 ---
+    const hideCheckbox = document.getElementById('popupHideToday');
+
+    const closePopup = () => {
+      stopAuto();
+      if (hideCheckbox && hideCheckbox.checked) {
+        try {
+          const endOfDay = new Date();
+          endOfDay.setHours(23, 59, 59, 999);
+          localStorage.setItem(popupKey, String(endOfDay.getTime()));
+        } catch (e) { /* 무시 */ }
+      }
+      popup.style.transition = 'opacity 0.3s, transform 0.3s';
+      popup.style.opacity = '0';
+      popup.style.pointerEvents = 'none';
+      setTimeout(() => popup.remove(), 300);
+    };
+
+    const closeX = document.getElementById('popupCloseX');
+    if (closeX) closeX.addEventListener('click', closePopup);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.body.contains(popup)) closePopup();
+    });
+
+    // --- 표시 시작 ---
+    popup.hidden = false;
+    goTo(0);
+    startAuto();
+  })();
 })();

@@ -339,5 +339,8 @@ include_once(G5_THEME_PATH.'/head.php');
   </section>
 
 <?php
+// 메인 팝업 (드래그 이동 / 자동 슬라이드 / 제목 선택 / 오늘 하루 그만보기)
+include_once(G5_THEME_PATH.'/popup.html.php');
+
 include_once(G5_THEME_PATH.'/tail.php');
 ?>
