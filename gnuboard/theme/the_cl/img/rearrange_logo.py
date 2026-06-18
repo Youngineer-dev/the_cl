@@ -33,6 +33,17 @@ def rearrange_logo():
     symbol_bbox = symbol.getbbox()
     symbol_cropped = symbol.crop(symbol_bbox)
     
+    # Recolor the symbol to the new primary sage green color (152, 169, 158)
+    sym_data = symbol_cropped.getdata()
+    new_sym_data = []
+    new_sym_color = (152, 169, 158)
+    for item in sym_data:
+        if item[3] > 0:
+            new_sym_data.append((new_sym_color[0], new_sym_color[1], new_sym_color[2], item[3]))
+        else:
+            new_sym_data.append(item)
+    symbol_cropped.putdata(new_sym_data)
+    
     # Resize symbol to target canvas height (300px)
     canvas_height = 300
     sym_w, sym_h = symbol_cropped.size
@@ -56,8 +67,8 @@ def rearrange_logo():
     english_text = "SAMSUNG THE CL GROWTH CLINIC"
     
     # Colors (RGBA)
-    color_green = (46, 139, 87, 255) # Primary Green #2E8B57
-    color_gold = (184, 150, 62, 255) # Accent Warm Gold #B8963E
+    color_green = (92, 110, 99, 255) # Dark Sage Green #5C6E63 (for high readability)
+    color_gold = (192, 206, 197, 255) # Light Sage Green #C0CEC5 (accent color)
     
     # Calculate exact widths to align texts
     w_p1 = get_text_width(part1, hangul_font)

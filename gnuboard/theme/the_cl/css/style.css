@@ -5,24 +5,24 @@
 
 /* --- CSS Variables --- */
 :root {
-  /* Primary Palette - Vivid Green Theme */
-  --c-primary: #2E8B57;
-  --c-primary-light: #3CB371;
-  --c-primary-dark: #1B6B3A;
-  --c-primary-pale: #E0F2E9;
+  /* Primary Palette - Sage Green Theme */
+  --c-primary: #98A99E;
+  --c-primary-light: #C0CEC5;
+  --c-primary-dark: #5C6E63;
+  --c-primary-pale: #EEF2EF;
   
-  /* Accent - Warm Gold */
-  --c-accent: #B8963E;
-  --c-accent-light: #D4B96A;
+  /* Accent - Sage Green Accent */
+  --c-accent: #98A99E;
+  --c-accent-light: #C0CEC5;
   
   /* Neutrals */
-  --c-bg: #F9FBF9;
-  --c-bg-cream: #F0F5F1;
-  --c-bg-dark: #1E2D24;
+  --c-bg: #FCFDFD;
+  --c-bg-cream: #EDF1EE;
+  --c-bg-dark: #2D3631;
   --c-text: #2A2A2A;
-  --c-text-light: #6B7B72;
+  --c-text-light: #697A70;
   --c-text-white: #FFFFFF;
-  --c-border: #D5E0D8;
+  --c-border: #E1E7E3;
   
   /* Typography */
   --font-serif: 'Cormorant', 'Georgia', serif;
@@ -59,11 +59,11 @@ body {
   background-color: var(--c-bg);
   /* 24px 간격의 정밀 도트 그리드 + 고요하게 일렁이는 은은한 오로라 물결 배경 */
   background-image: 
-    radial-gradient(rgba(46, 139, 87, 0.02) 1.5px, transparent 1.5px), /* 도트 */
-    radial-gradient(circle at 10% 20%, rgba(224, 242, 233, 0.45) 0%, transparent 45%), /* Sage Green Wave */
-    radial-gradient(circle at 90% 80%, rgba(212, 185, 106, 0.12) 0%, transparent 45%), /* Gold Wave */
+    radial-gradient(rgba(152, 169, 158, 0.02) 1.5px, transparent 1.5px), /* 도트 */
+    radial-gradient(circle at 10% 20%, rgba(238, 242, 239, 0.45) 0%, transparent 45%), /* Sage Green Wave */
+    radial-gradient(circle at 90% 80%, rgba(192, 206, 197, 0.12) 0%, transparent 45%), /* Gold Wave */
     radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 0%, transparent 60%),
-    linear-gradient(180deg, #F9FBF9 0%, #F0F5F1 50%, #F9FBF9 100%);
+    linear-gradient(180deg, #FCFDFD 0%, #EDF1EE 50%, #FCFDFD 100%);
   background-size: 24px 24px, 200% 200%, 200% 200%, 200% 200%, 100% 100%;
   background-attachment: fixed;
   animation: aurora-move 32s ease infinite alternate; /* 32초 주기로 은은히 일렁이며 이동 */
@@ -432,7 +432,7 @@ ul, ol {
   background: rgba(30, 45, 36, 0.95);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(212, 185, 106, 0.2);
+  border: 1px solid rgba(192, 206, 197, 0.2);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   padding: 16px 0;
   min-width: 170px;
@@ -479,7 +479,7 @@ ul, ol {
 
 .gnb-sub-menu li a:hover {
   color: var(--c-text-white);
-  background-color: rgba(46, 139, 87, 0.20);
+  background-color: rgba(152, 169, 158, 0.20);
   font-weight: 500;
   transform: translateY(-1px);
 }
@@ -1508,7 +1508,7 @@ ul, ol {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 1px solid rgba(212, 185, 106, 0.25);
+  border: 1px solid rgba(192, 206, 197, 0.25);
   background: rgba(30, 45, 36, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1526,7 +1526,7 @@ ul, ol {
   color: var(--c-text-white);
   background: var(--c-primary);
   border-color: var(--c-primary);
-  box-shadow: 0 12px 30px rgba(46, 139, 87, 0.25);
+  box-shadow: 0 12px 30px rgba(152, 169, 158, 0.25);
 }
 
 .quick-btn.phone:hover {
@@ -1556,14 +1556,14 @@ ul, ol {
   background: var(--c-accent);
   border-color: var(--c-accent);
   color: var(--c-text-white);
-  box-shadow: 0 12px 30px rgba(184, 150, 62, 0.25);
+  box-shadow: 0 12px 30px rgba(152, 169, 158, 0.25);
 }
 
 .quick-btn.top-btn:hover {
   background: var(--c-accent);
   border-color: var(--c-accent);
   color: var(--c-text-white);
-  box-shadow: 0 12px 30px rgba(184, 150, 62, 0.25);
+  box-shadow: 0 12px 30px rgba(152, 169, 158, 0.25);
 }
 
 .quick-toggle-btn {
@@ -1577,7 +1577,7 @@ ul, ol {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 8px 25px rgba(46, 139, 87, 0.15);
+  box-shadow: 0 8px 25px rgba(152, 169, 158, 0.15);
   transition: all 0.3s;
   transform: rotate(45deg);
 }
@@ -1590,7 +1590,7 @@ ul, ol {
 
 .quick-menu.is-closed .quick-toggle-btn {
   background: rgba(30, 45, 36, 0.95);
-  border-color: rgba(212, 185, 106, 0.35);
+  border-color: rgba(192, 206, 197, 0.35);
   color: var(--c-accent-light);
   transform: rotate(0deg);
 }
@@ -2110,11 +2110,11 @@ ul, ol {
   /* 밋밋한 단색 대신: 코너 세이지/골드 글로우 + 은은한 그리드 텍스처 */
   background-color: var(--c-bg);
   background-image:
-    radial-gradient(circle at 0% 0%, rgba(224, 242, 233, 0.55) 0%, transparent 38%),   /* 좌상단 세이지 */
-    radial-gradient(circle at 100% 12%, rgba(212, 185, 106, 0.09) 0%, transparent 32%), /* 우상단 골드 */
-    radial-gradient(circle at 85% 100%, rgba(224, 242, 233, 0.45) 0%, transparent 40%), /* 우하단 세이지 */
-    linear-gradient(rgba(46, 139, 87, 0.022) 1px, transparent 1px),                     /* 가로 그리드 */
-    linear-gradient(90deg, rgba(46, 139, 87, 0.022) 1px, transparent 1px);              /* 세로 그리드 */
+    radial-gradient(circle at 0% 0%, rgba(238, 242, 239, 0.55) 0%, transparent 38%),   /* 좌상단 세이지 */
+    radial-gradient(circle at 100% 12%, rgba(192, 206, 197, 0.09) 0%, transparent 32%), /* 우상단 골드 */
+    radial-gradient(circle at 85% 100%, rgba(238, 242, 239, 0.45) 0%, transparent 40%), /* 우하단 세이지 */
+    linear-gradient(rgba(152, 169, 158, 0.022) 1px, transparent 1px),                     /* 가로 그리드 */
+    linear-gradient(90deg, rgba(152, 169, 158, 0.022) 1px, transparent 1px);              /* 세로 그리드 */
   background-size: 100% 100%, 100% 100%, 100% 100%, 34px 34px, 34px 34px;
   background-attachment: fixed, fixed, fixed, scroll, scroll;
 }
@@ -2135,7 +2135,7 @@ ul, ol {
   height: 480px;
   top: -130px;
   right: -110px;
-  background: radial-gradient(circle, rgba(60, 179, 113, 0.16) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(192, 206, 197, 0.16) 0%, transparent 70%);
   animation: sub-orb-a 22s ease-in-out infinite alternate;
 }
 
@@ -2144,7 +2144,7 @@ ul, ol {
   height: 420px;
   bottom: -120px;
   left: -130px;
-  background: radial-gradient(circle, rgba(212, 185, 106, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(192, 206, 197, 0.15) 0%, transparent 70%);
   animation: sub-orb-b 27s ease-in-out infinite alternate;
 }
 
@@ -2236,7 +2236,7 @@ ul, ol {
 
 .sub-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(46, 139, 87, 0.08);
+  box-shadow: 0 20px 50px rgba(152, 169, 158, 0.08);
   border-color: var(--c-primary-light);
 }
 
@@ -2316,7 +2316,7 @@ ul, ol {
 
 .timeline-step:hover .timeline-content {
   border-color: var(--c-primary-light);
-  box-shadow: 0 15px 40px rgba(46, 139, 87, 0.05);
+  box-shadow: 0 15px 40px rgba(152, 169, 158, 0.05);
 }
 
 .timeline-badge {
@@ -2381,7 +2381,7 @@ ul, ol {
   border-radius: 8px;
   padding: 48px;
   margin-top: 50px;
-  border: 1px solid rgba(46, 139, 87, 0.08);
+  border: 1px solid rgba(152, 169, 158, 0.08);
 }
 
 .checklist-title {
@@ -2570,7 +2570,7 @@ ul, ol {
 .case-card:hover {
   transform: translateY(-6px);
   border-color: var(--c-primary-light);
-  box-shadow: 0 20px 50px rgba(46, 139, 87, 0.08);
+  box-shadow: 0 20px 50px rgba(152, 169, 158, 0.08);
 }
 
 .case-card-body {
@@ -2770,15 +2770,15 @@ ul, ol {
   border: 1px solid rgba(255, 255, 255, 0.6) !important;
   border-radius: 24px 8px 24px 8px !important; /* 창의적인 비대칭 모서리 */
   padding: 40px 30px !important;
-  box-shadow: 0 15px 35px rgba(46, 139, 87, 0.04) !important;
+  box-shadow: 0 15px 35px rgba(152, 169, 158, 0.04) !important;
   transition: all 0.4s var(--ease-elegant) !important;
 }
 
 .sub-card:hover {
   transform: translateY(-8px) scale(1.01) !important;
   background: rgba(255, 255, 255, 0.85) !important;
-  border-color: rgba(60, 179, 113, 0.4) !important;
-  box-shadow: 0 25px 50px rgba(46, 139, 87, 0.08) !important;
+  border-color: rgba(192, 206, 197, 0.4) !important;
+  box-shadow: 0 25px 50px rgba(152, 169, 158, 0.08) !important;
 }
 
 /* 체크리스트 박스의 창의적 변형 */
@@ -2804,9 +2804,9 @@ ul, ol {
 }
 
 .timeline-step:hover .timeline-content {
-  border-color: rgba(184, 150, 62, 0.35) !important;
+  border-color: rgba(152, 169, 158, 0.35) !important;
   background: rgba(255, 255, 255, 0.93) !important;
-  box-shadow: 0 18px 40px rgba(46, 139, 87, 0.07) !important;
+  box-shadow: 0 18px 40px rgba(152, 169, 158, 0.07) !important;
 }
 
 /* 단계 뱃지 — 그라데이션 제거, 흰 원 + 얇은 링 + 세리프 숫자의 절제된 디자인 */
@@ -2817,7 +2817,7 @@ ul, ol {
   font-family: var(--font-serif);
   font-weight: 600;
   font-size: 18px;
-  box-shadow: 0 6px 18px rgba(46, 139, 87, 0.10) !important;
+  box-shadow: 0 6px 18px rgba(152, 169, 158, 0.10) !important;
 }
 
 .timeline-step:hover .timeline-badge {
@@ -2838,7 +2838,7 @@ ul, ol {
 }
 
 .accordion-item:hover {
-  border-color: rgba(60, 179, 113, 0.3) !important;
+  border-color: rgba(192, 206, 197, 0.3) !important;
 }
 
 /* ============================================================
@@ -2885,7 +2885,7 @@ ul, ol {
   width: 180px;
   height: 180px;
   border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; /* 유기적 잎사귀 셰이프 */
-  background: linear-gradient(135deg, rgba(60, 179, 113, 0.06), rgba(184, 150, 62, 0.03));
+  background: linear-gradient(135deg, rgba(192, 206, 197, 0.06), rgba(152, 169, 158, 0.03));
   filter: blur(8px);
   z-index: -1;
   animation: float-slow 16s ease-in-out infinite;
@@ -2914,7 +2914,7 @@ ul, ol {
   font-size: 130px;
   font-weight: 300;
   font-style: italic;
-  color: rgba(46, 139, 87, 0.02); /* 극도로 투명하여 메인 정보 가독성을 방해하지 않음 */
+  color: rgba(152, 169, 158, 0.02); /* 극도로 투명하여 메인 정보 가독성을 방해하지 않음 */
   white-space: nowrap;
   pointer-events: none;
   z-index: -1;
@@ -2932,7 +2932,7 @@ ul, ol {
   height: 380px;
   border-radius: 50%;
   /* 120px 이상의 초광폭 블러 Sage Green Aura */
-  background: radial-gradient(circle, rgba(224, 242, 233, 0.5) 0%, transparent 75%);
+  background: radial-gradient(circle, rgba(238, 242, 239, 0.5) 0%, transparent 75%);
   filter: blur(120px);
   z-index: -2;
   animation: pulse-gentle 12s ease-in-out infinite;
@@ -2947,7 +2947,7 @@ ul, ol {
   transform: translate(-50%, -50%);
   width: 600px;
   height: 600px;
-  border: 1px solid rgba(46, 139, 87, 0.03);
+  border: 1px solid rgba(152, 169, 158, 0.03);
   border-radius: 50%;
   pointer-events: none;
   z-index: -1;
@@ -2960,7 +2960,7 @@ ul, ol {
   left: 50%;
   width: 580px;
   height: 580px;
-  border: 1px dashed rgba(184, 150, 62, 0.04);
+  border: 1px dashed rgba(152, 169, 158, 0.04);
   border-radius: 50%;
   pointer-events: none;
   z-index: -1;
@@ -2978,7 +2978,7 @@ ul, ol {
   font-size: 130px;
   font-weight: 300;
   font-style: italic;
-  color: rgba(184, 150, 62, 0.015);
+  color: rgba(152, 169, 158, 0.015);
   white-space: nowrap;
   pointer-events: none;
   z-index: -1;
@@ -3033,7 +3033,7 @@ ul, ol {
   transform: translateX(-50%);
   width: 900px;
   height: 900px;
-  border: 1px dashed rgba(184, 150, 62, 0.05); /* 은은한 대형 기하학 그리드 선 */
+  border: 1px dashed rgba(152, 169, 158, 0.05); /* 은은한 대형 기하학 그리드 선 */
   border-radius: 50%;
   pointer-events: none;
   z-index: -1;
@@ -3096,8 +3096,8 @@ ul, ol {
   transform: translateX(-50%);
   width: 800px;
   height: 1200px;
-  border-left: 1px dashed rgba(46, 139, 87, 0.04);
-  border-right: 1px dashed rgba(46, 139, 87, 0.04);
+  border-left: 1px dashed rgba(152, 169, 158, 0.04);
+  border-right: 1px dashed rgba(152, 169, 158, 0.04);
   pointer-events: none;
   z-index: -2;
 }
@@ -3193,7 +3193,7 @@ ul, ol {
 .imgBox::before {
   content: '';
   position: absolute;
-  border: 1px solid rgba(184, 150, 62, 0.18);
+  border: 1px solid rgba(152, 169, 158, 0.18);
   border-radius: inherit;
   pointer-events: none;
   z-index: -1;
@@ -3243,7 +3243,7 @@ ul, ol {
   font-size: 90px;
   font-style: italic;
   font-weight: 300;
-  color: rgba(184, 150, 62, 0.04);
+  color: rgba(152, 169, 158, 0.04);
   pointer-events: none;
   z-index: 2;
   transition: transform 0.6s var(--ease-elegant);
@@ -3479,7 +3479,7 @@ ul, ol {
   position: absolute;
   top: 5%; right: -4%;
   width: 300px; height: 300px;
-  border: 1px solid rgba(184,150,62,0.16);
+  border: 1px solid rgba(152, 169, 158,0.16);
   border-radius: 50%;
   z-index: 1;
 }
@@ -3492,7 +3492,7 @@ ul, ol {
   background: var(--c-bg-cream);
   border-radius: 4px;
   padding: 60px 56px;
-  border: 1px solid rgba(46,139,87,0.07);
+  border: 1px solid rgba(152, 169, 158,0.07);
 }
 .ed-check__label {
   font-size: 25px;
@@ -3685,7 +3685,7 @@ ul, ol {
   position: absolute;
   left: 48px; top: 30px; bottom: 30px;
   width: 1px;
-  background: linear-gradient(var(--c-primary-light), rgba(46,139,87,0.05));
+  background: linear-gradient(var(--c-primary-light), rgba(152, 169, 158,0.05));
 }
 .ed-step {
   display: grid;
@@ -3710,7 +3710,7 @@ ul, ol {
   border-radius: 50%;
   background: #fff;
   border: 1px solid var(--c-border);
-  box-shadow: 0 8px 22px rgba(46,139,87,0.06);
+  box-shadow: 0 8px 22px rgba(152, 169, 158,0.06);
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 28px;
@@ -3741,7 +3741,7 @@ ul, ol {
   position: relative;
   transition: transform .4s var(--ease-out), box-shadow .4s, border-color .4s;
 }
-.ed-card2:hover { transform: translateY(-8px); border-color: var(--c-primary-light); box-shadow: 0 24px 50px rgba(46,139,87,0.08); }
+.ed-card2:hover { transform: translateY(-8px); border-color: var(--c-primary-light); box-shadow: 0 24px 50px rgba(152, 169, 158,0.08); }
 .ed-card2__no {
   font-family: var(--font-serif); font-style: italic; font-size: 46px;
   color: var(--c-primary-pale); line-height: 1; margin-bottom: 22px; transition: color .4s;
@@ -3887,7 +3887,7 @@ ul, ol {
   transition: background 0.25s, padding-left 0.25s;
 }
 .board-list__row:hover { background: rgba(240, 245, 241, 0.55); }
-.board-list__row.is-notice { background: rgba(46, 139, 87, 0.035); }
+.board-list__row.is-notice { background: rgba(152, 169, 158, 0.035); }
 
 .board-list__num {
   text-align: center;
@@ -3966,7 +3966,7 @@ ul, ol {
 .board-gallery__item:hover {
   transform: translateY(-8px);
   border-color: var(--c-primary-light);
-  box-shadow: 0 24px 50px rgba(46, 139, 87, 0.1);
+  box-shadow: 0 24px 50px rgba(152, 169, 158, 0.1);
 }
 .board-gallery__thumb { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
 .board-gallery__thumb img {
@@ -4384,7 +4384,7 @@ ul, ol {
   border: 1px solid var(--c-border);
   border-radius: 12px;
   padding: 48px 40px;
-  box-shadow: 0 15px 40px rgba(46, 139, 87, 0.03);
+  box-shadow: 0 15px 40px rgba(152, 169, 158, 0.03);
 }
 
 .auth-card-header,
@@ -4455,13 +4455,13 @@ ul, ol {
   outline: none;
   border-color: var(--c-primary);
   background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.08);
+  box-shadow: 0 0 0 3px rgba(152, 169, 158, 0.08);
 }
 
 /* Specific Inputs */
 .form-select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='%232E8B57' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='%2398A99E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
   background-size: 16px;
@@ -5210,7 +5210,7 @@ fieldset#captcha #captcha_info {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid rgba(212, 185, 106, 0.3);
+  border: 1px solid rgba(192, 206, 197, 0.3);
   background: rgba(255, 255, 255, 0.07);
   color: var(--c-accent-light);
   display: flex;
@@ -5264,7 +5264,7 @@ fieldset#captcha #captcha_info {
   width: 18px;
   height: 18px;
   border-radius: 5px;
-  border: 1.5px solid rgba(212, 185, 106, 0.5);
+  border: 1.5px solid rgba(192, 206, 197, 0.5);
   background: rgba(255, 255, 255, 0.06);
   display: inline-flex;
   align-items: center;
@@ -5291,7 +5291,7 @@ fieldset#captcha #captcha_info {
 }
 
 .popup-hide-today input:focus-visible + .popup-check-box {
-  box-shadow: 0 0 0 3px rgba(212, 185, 106, 0.3);
+  box-shadow: 0 0 0 3px rgba(192, 206, 197, 0.3);
 }
 
 /* --- Popup 반응형 (비율은 정사각 그대로, 컨트롤 여백만 조정) --- */
