@@ -1108,8 +1108,8 @@ ul, ol {
    ============================================================ */
 .space {
   padding: var(--section-pad) 0;
-  background: var(--c-bg-dark);
-  color: var(--c-text-white);
+  background: var(--c-bg);
+  color: var(--c-text);
 }
 
 .space-header {
@@ -1129,7 +1129,7 @@ ul, ol {
 .space-header .section-title {
   font-size: 20px;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--c-text-light);
 }
 
 .space-gallery {
