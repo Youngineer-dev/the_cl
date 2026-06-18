@@ -336,19 +336,38 @@
     let baseX = 0, baseY = 0; // 드래그 시작 시점의 오프셋(px)
     let offX = 0, offY = 0;   // 현재 오프셋(px)
     let moved = false;
+    // 드래그 시작 시 1회 측정해 두는 이동 한계(px). pointermove 중 레이아웃을 다시 읽지 않는다.
+    let maxX = 0, maxY = 0;
+    let rafId = 0;
 
+    // 오프셋을 transform 에 직접 기록한다.
+    // (CSS 변수 --px/--py 애니메이션 대신 transform 직접 write — compositor 친화적)
     const applyOffset = () => {
-      popup.style.setProperty('--px', offX + 'px');
-      popup.style.setProperty('--py', offY + 'px');
+      popup.style.transform =
+        'translate3d(calc(-50% + ' + offX + 'px), calc(-50% + ' + offY + 'px), 0)';
     };
 
-    // 팝업이 화면 밖으로 나가지 않도록 오프셋 범위 제한
-    const clamp = () => {
-      const margin = 12;
-      const maxX = Math.max(0, (window.innerWidth - popup.offsetWidth) / 2 - margin);
-      const maxY = Math.max(0, (window.innerHeight - popup.offsetHeight) / 2 - margin);
+    // pointermove 마다 동기 write 하지 않고 프레임당 1회로 배칭한다.
+    const scheduleApply = () => {
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+        rafId = 0;
+        applyOffset();
+      });
+    };
+
+    // 현재 한계값 기준으로 오프셋을 범위 안에 가둔다 (레이아웃 읽기 없음).
+    const clampToBounds = () => {
       offX = Math.max(-maxX, Math.min(maxX, offX));
       offY = Math.max(-maxY, Math.min(maxY, offY));
+    };
+
+    // 이동 한계를 1회 측정 (드래그 시작·리사이즈 시에만 호출 — 단일 읽기).
+    const measureBounds = () => {
+      const margin = 12;
+      const rect = popup.getBoundingClientRect();
+      maxX = Math.max(0, (window.innerWidth - rect.width) / 2 - margin);
+      maxY = Math.max(0, (window.innerHeight - rect.height) / 2 - margin);
     };
 
     if (handle) {
@@ -361,6 +380,7 @@
         startY = e.clientY;
         baseX = offX;
         baseY = offY;
+        measureBounds(); // 한계는 드래그당 1회만 측정 (move 중 레이아웃 thrash 방지)
         popup.classList.add('is-dragging');
         stopAuto();
         if (handle.setPointerCapture) {
@@ -375,13 +395,15 @@
         if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
         offX = baseX + dx;
         offY = baseY + dy;
-        clamp();
-        applyOffset();
+        clampToBounds();   // 캐시된 한계값만 사용 — DOM 읽기 없음
+        scheduleApply();   // 프레임당 1회 transform write
       });
 
       const endDrag = (e) => {
         if (!dragging) return;
         dragging = false;
+        if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+        applyOffset(); // 마지막 위치 확정
         popup.classList.remove('is-dragging');
         if (handle.releasePointerCapture && e) {
           try { handle.releasePointerCapture(e.pointerId); } catch (err) {}
@@ -396,9 +418,10 @@
       }, true);
     }
 
-    // 창 크기 변경 시 위치 보정
+    // 창 크기 변경 시 위치 보정 (드래그 중이 아닐 때 1회 측정)
     window.addEventListener('resize', () => {
-      clamp();
+      measureBounds();
+      clampToBounds();
       applyOffset();
     }, { passive: true });
 
