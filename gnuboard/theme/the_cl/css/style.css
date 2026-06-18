@@ -3,6 +3,14 @@
    Design Reference: lapisclinic.com
    ============================================================ */
 
+/* --- Web Font: GyeonggiMillenniumBackground --- */
+@font-face {
+  font-family: 'GyeonggiMillenniumBackground';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Batang_Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+
 /* --- CSS Variables --- */
 :root {
   /* Primary Palette - Sage Green Theme */
@@ -25,8 +33,8 @@
   --c-border: #E1E7E3;
   
   /* Typography */
-  --font-serif: 'Cormorant', 'Georgia', serif;
-  --font-sans: 'Noto Sans KR', -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'GyeonggiMillenniumBackground', 'Cormorant', 'Georgia', serif;
+  --font-sans: 'GyeonggiMillenniumBackground', 'Noto Sans KR', -apple-system, 'Segoe UI', sans-serif;
   
   /* Spacing */
   --section-pad: 120px;
@@ -67,7 +75,7 @@ body {
   background-size: 24px 24px, 200% 200%, 200% 200%, 200% 200%, 100% 100%;
   background-attachment: fixed;
   animation: aurora-move 32s ease infinite alternate; /* 32초 주기로 은은히 일렁이며 이동 */
-  line-height: 1.7;
+  line-height: 1.8;
   overflow-x: hidden;
   /* 한글이 단어 중간에서 끊기지 않도록 (좁은 화면 가독성 핵심) */
   word-break: keep-all;
