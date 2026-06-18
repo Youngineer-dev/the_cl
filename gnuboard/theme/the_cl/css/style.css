@@ -1597,6 +1597,13 @@ ul, ol {
 }
 
 /* ============================================================
+   모바일 하단 퀵 메뉴 (기본은 숨김 — 모바일 미디어쿼리에서 노출)
+   ============================================================ */
+.mobile-quick-bar {
+  display: none;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 
@@ -1828,29 +1835,97 @@ ul, ol {
     text-align: center;
   }
 
+  /* 모바일에서는 우측 플로팅 퀵메뉴 대신 하단 고정 바를 사용 */
   .quick-menu {
-    right: 16px;
-    bottom: 16px;
-    gap: 8px;
+    display: none;
   }
 
-  .quick-items {
-    gap: 8px;
+  /* --- 모바일 하단 고정 퀵 바 --- */
+  .mobile-quick-bar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: var(--c-text-white);
+    border-top: 1px solid var(--c-border);
+    box-shadow: 0 -6px 20px rgba(30, 45, 36, 0.08);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    font-family: var(--font-sans);
   }
 
-  .quick-menu.is-closed .quick-items {
-    margin-bottom: -8px;
+  .mqb-item {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 9px 2px 8px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--c-text);
+    -webkit-tap-highlight-color: transparent;
   }
 
-  .quick-btn,
-  .quick-toggle-btn {
-    width: 42px;
-    height: 42px;
+  .mqb-item:active {
+    background: var(--c-bg-cream);
   }
 
-  .q-icon {
-    width: 16px;
-    height: 16px;
+  .mqb-ico {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-primary);
+  }
+
+  .mqb-ico svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+  .mqb-ico-kakao { color: #FAE100; }
+  .mqb-ico-naver svg { width: 17px; height: 17px; color: #03C75A; }
+  .mqb-ico-tel { color: var(--c-primary); }
+  .mqb-ico-map { color: var(--c-accent); }
+
+  .mqb-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--c-text);
+  }
+
+  /* TOP 버튼 — 어두운 배경의 강조 블록 */
+  .mqb-item.mqb-top {
+    flex: 0 0 64px;
+    background: var(--c-bg-dark);
+  }
+
+  .mqb-item.mqb-top .mqb-ico {
+    color: var(--c-accent-light);
+  }
+
+  .mqb-item.mqb-top .mqb-label {
+    color: var(--c-text-white);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .mqb-item.mqb-top:active {
+    background: #16221b;
+  }
+
+  /* 하단 바에 가려지지 않도록 본문 하단 여백 확보 */
+  body {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
   }
 }
 
@@ -5005,7 +5080,7 @@ fieldset#captcha #captcha_info {
   transform: translate(calc(-50% + var(--px, 0px)), calc(-50% + var(--py, 0px)));
   width: min(var(--popup-w), calc(100vw - 32px));
   background: var(--c-bg-dark);
-  border-radius: 14px;
+  border-radius: 0;
   box-shadow: 0 30px 80px rgba(30, 45, 36, 0.3), 0 8px 24px rgba(0, 0, 0, 0.14);
   z-index: 10000;
   overflow: hidden;

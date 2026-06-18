@@ -209,17 +209,17 @@
     });
   }
 
-  // --- Scroll to Top ---
-  const topBtn = document.querySelector('.quick-btn.top-btn');
-  if (topBtn) {
-    topBtn.addEventListener('click', () => {
-      if (lenis) {
-        lenis.scrollTo(0);
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
-  }
+  // --- Scroll to Top (데스크톱 플로팅 + 모바일 하단 바) ---
+  const scrollToTop = () => {
+    if (lenis) {
+      lenis.scrollTo(0);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+  document.querySelectorAll('.quick-btn.top-btn, #mobileTopBtn').forEach((btn) => {
+    btn.addEventListener('click', scrollToTop);
+  });
 
   // --- Smooth Scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -429,6 +429,13 @@
 
     // --- 표시 시작 ---
     popup.hidden = false;
+    // 등장 애니메이션이 끝나면 애니메이션을 해제한다.
+    // (드래그 종료 시 is-dragging 클래스가 제거되며 animation 속성이 다시
+    //  적용되어 popup-in 이 재생되는 깜빡임 현상을 방지)
+    popup.addEventListener('animationend', () => {
+      popup.style.animation = 'none';
+      popup.style.opacity = '1';
+    }, { once: true });
     goTo(0);
     startAuto();
   })();
