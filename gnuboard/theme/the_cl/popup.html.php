@@ -15,20 +15,12 @@ if (!isset($G5_URL)) {
    ============================================================ */
 $popup_slides = array(
     array(
-        'title' => '성장 클리닉 안내',
-        'image' => $G5_URL.'/img/hero.png',
+        'title' => '신제품 출시 안내',
+        'image' => $G5_URL.'/img/popup_1.png?v=1',
     ),
     array(
-        'title' => '성조숙증 검사',
-        'image' => $G5_URL.'/img/doctor.png?v=3',
-    ),
-    array(
-        'title' => '진료시간 안내',
-        'image' => $G5_URL.'/img/interior.png',
-    ),
-    array(
-        'title' => '오시는 길',
-        'image' => $G5_URL.'/img/programs.png',
+        'title' => '진료일정 안내',
+        'image' => $G5_URL.'/img/popup_2.png?v=1',
     ),
 );
 
@@ -41,7 +33,7 @@ $popup_width = '440px';
 
 /* 팝업 식별 키 — 콘텐츠가 바뀌어 다시 노출하고 싶을 때 값을 변경하면
    '오늘 하루 그만보기'를 누른 사용자에게도 새 팝업이 다시 표시됩니다. */
-$popup_key = 'thecl-popup-2025-01';
+$popup_key = 'thecl-popup-2026-06';
 
 $popup_total = count($popup_slides);
 ?>
