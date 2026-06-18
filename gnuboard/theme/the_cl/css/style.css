@@ -356,12 +356,7 @@ ul, ol {
 .desktop-gnb-wrap {
   display: block;
   width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
   transition: border-color 0.4s var(--ease-out);
-}
-
-.site-header.scrolled .desktop-gnb-wrap {
-  border-top: 1px solid var(--c-border);
 }
 
 .desktop-gnb-inner {
