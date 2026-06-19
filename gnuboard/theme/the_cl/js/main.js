@@ -405,28 +405,26 @@
     }, { passive: true });
 
     // --- 닫기 / 오늘 하루 그만보기 ---
-    const hideCheckbox = document.getElementById('popupHideToday');
+    const hideTodayBtn = document.getElementById('popupHideToday');
 
-    const closePopup = () => {
+    const closePopup = (savePreference = false) => {
       stopAuto();
-      if (hideCheckbox && hideCheckbox.checked) {
+      if (savePreference) {
         try {
           const endOfDay = new Date();
           endOfDay.setHours(23, 59, 59, 999);
           localStorage.setItem(popupKey, String(endOfDay.getTime()));
         } catch (e) { /* 무시 */ }
       }
-      popup.style.transition = 'opacity 0.3s, transform 0.3s';
-      popup.style.opacity = '0';
-      popup.style.pointerEvents = 'none';
-      setTimeout(() => popup.remove(), 300);
+      popup.remove();
     };
 
     const closeX = document.getElementById('popupCloseX');
-    if (closeX) closeX.addEventListener('click', closePopup);
+    if (closeX) closeX.addEventListener('click', () => closePopup(false));
+    if (hideTodayBtn) hideTodayBtn.addEventListener('click', () => closePopup(true));
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && document.body.contains(popup)) closePopup();
+      if (e.key === 'Escape' && document.body.contains(popup)) closePopup(false);
     });
 
     // --- 표시 시작 ---

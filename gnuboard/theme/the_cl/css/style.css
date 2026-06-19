@@ -6332,55 +6332,31 @@ fieldset#captcha #captcha_info {
   font-size: 16px;
 }
 
-.popup-hide-today {
+.theme-popup .popup-hide-today {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+  line-height: normal !important;
+  box-shadow: none !important;
+  font-family: inherit;
   font-size: 12.5px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.85) !important;
   cursor: pointer;
   user-select: none;
+  transition: color 0.25s var(--ease-out);
 }
 
-.popup-hide-today input {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
+.theme-popup .popup-hide-today:hover {
+  color: var(--c-accent-light) !important;
 }
 
-.popup-check-box {
-  width: 18px;
-  height: 18px;
-  border-radius: 5px;
-  border: 1.5px solid rgba(192, 206, 197, 0.5);
-  background: rgba(255, 255, 255, 0.06);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--c-bg-dark);
-  transition: all 0.2s var(--ease-out);
-  flex-shrink: 0;
-}
-
-.popup-check-box svg {
-  opacity: 0;
-  transform: scale(0.6);
-  transition: all 0.2s var(--ease-out);
-}
-
-.popup-hide-today input:checked + .popup-check-box {
-  background: var(--c-accent-light);
-  border-color: var(--c-accent-light);
-}
-
-.popup-hide-today input:checked + .popup-check-box svg {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.popup-hide-today input:focus-visible + .popup-check-box {
-  box-shadow: 0 0 0 3px rgba(192, 206, 197, 0.3);
+.theme-popup .popup-hide-today:focus-visible {
+  outline: 2px solid var(--c-accent-light);
+  outline-offset: 2px;
 }
 
 /* --- Popup 반응형 (비율은 정사각 그대로, 컨트롤 여백만 조정) --- */
@@ -6400,9 +6376,8 @@ fieldset#captcha #captcha_info {
   .popup-counter .popup-cur {
     font-size: 15px;
   }
-  .popup-hide-today {
-    font-size: 12px;
-    gap: 6px;
+  .theme-popup .popup-hide-today {
+    font-size: 12px !important;
   }
   .popup-close {
     width: 32px;

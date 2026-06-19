@@ -73,12 +73,8 @@ $popup_total = count($popup_slides);
       </button>
     </div>
 
-    <label class="popup-hide-today">
-      <input type="checkbox" id="popupHideToday">
-      <span class="popup-check-box" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      </span>
+    <button type="button" class="popup-hide-today" id="popupHideToday">
       오늘 하루 그만보기
-    </label>
+    </button>
   </div>
 </div>
