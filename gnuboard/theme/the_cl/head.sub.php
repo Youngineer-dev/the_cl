@@ -49,7 +49,7 @@ if($config['cf_add_meta'])
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="shortcut icon" href="<?php echo G5_THEME_URL; ?>/img/favicon.ico?v=3" type="image/x-icon">
 <link rel="icon" href="<?php echo G5_THEME_URL; ?>/img/favicon.png?v=3" type="image/png">
-<link rel="stylesheet" href="<?php echo G5_THEME_URL; ?>/css/style.css?v=45">
+<link rel="stylesheet" href="<?php echo G5_THEME_URL; ?>/css/style.css?v=46">
 <!--[if lte IE 8]>
 <script src="<?php echo G5_JS_URL ?>/html5.js"></script>
 <![endif]-->
