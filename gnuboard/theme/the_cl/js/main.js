@@ -171,6 +171,7 @@
       hamburger.classList.toggle('active');
       const isOpen = navOverlay.classList.toggle('open');
       document.body.style.overflow = isOpen ? 'hidden' : '';
+      document.body.classList.toggle('nav-open', isOpen);
       if (isOpen) {
         navTarget = navCurrent = 0;
         applyNav();
@@ -183,6 +184,7 @@
       hamburger.classList.remove('active');
       navOverlay.classList.remove('open');
       document.body.style.overflow = '';
+      document.body.classList.remove('nav-open');
       isDragging = false;
     };
 

@@ -542,6 +542,27 @@ ol {
   transform: translateY(-1px);
 }
 
+/* Nav Open Header Styles */
+body.nav-open .site-header {
+  background-color: rgba(45, 54, 49, 0.75) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body.nav-open .site-header .logo-img {
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4)) !important;
+}
+
+body.nav-open .site-header .header-phone {
+  color: var(--c-text-white) !important;
+}
+
+body.nav-open .site-header .hamburger span {
+  background-color: var(--c-text-white) !important;
+}
+
 /* ============================================================
    FULL SCREEN NAVIGATION
    ============================================================ */
