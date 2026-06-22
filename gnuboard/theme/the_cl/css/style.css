@@ -314,7 +314,6 @@ ol {
   font-weight: 600;
   font-style: italic;
   color: var(--c-accent-light);
-  font-size: 14px;
   transition: color 0.4s;
 }
 
