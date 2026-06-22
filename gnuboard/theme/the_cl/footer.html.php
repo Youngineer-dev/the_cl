@@ -19,6 +19,13 @@ if (!isset($G5_URL)) {
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-links" style="margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; font-weight: 500; letter-spacing: -0.3px;">
+        <a href="<?php echo $G5_URL; ?>/sub/privacy.php" style="color: var(--c-primary-dark); text-decoration: none; font-weight: 600;">개인정보처리방침</a>
+        <span style="color: var(--c-border); opacity: 0.6;">|</span>
+        <a href="<?php echo $G5_URL; ?>/sub/terms.php" style="color: var(--c-text-light); text-decoration: none;">이용약관</a>
+        <span style="color: var(--c-border); opacity: 0.6;">|</span>
+        <a href="<?php echo $G5_URL; ?>/sub/uninsured.php" style="color: var(--c-text-light); text-decoration: none;">비급여항목</a>
+      </div>
       <div class="footer-inner">
         <div class="footer-info">
           <span>삼성더클성장의원</span><br>

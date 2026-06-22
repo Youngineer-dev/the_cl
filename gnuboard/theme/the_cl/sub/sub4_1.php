@@ -98,7 +98,6 @@ function custom_paging($total_pages, $page) {
     </div>
     <p class="board-intro reveal">
       모든 치료 사례는 의료법과 개인정보 보호 기준에 따라 철저히 익명화하여 게시됩니다.
-      개별 성장 그래프 등 상세 데이터는 본인 인증을 마친 회원에 한해 열람하실 수 있습니다.
     </p>
 
     <!-- 게시판 상단: 총 건수 + 검색 -->

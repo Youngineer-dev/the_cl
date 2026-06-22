@@ -22,16 +22,6 @@ if (!isset($G5_URL)) {
         <div class="header-contact">
           <a href="tel:02-1234-5678" class="header-phone">02.1234.5678</a>
         </div>
-        <div class="header-auth">
-          <?php if ($is_member) { ?>
-            <span class="auth-welcome" style="font-size: 11px; color: var(--c-accent-light); font-weight: 500;">[<?php echo get_text($member['mb_name']); ?>님]</span>
-            <a href="<?php echo G5_BBS_URL; ?>/logout.php" class="auth-link auth-logout">로그아웃</a>
-          <?php } else { ?>
-            <a href="<?php echo G5_BBS_URL; ?>/login.php" class="auth-link auth-login">로그인</a>
-            <span class="auth-divider">|</span>
-            <a href="<?php echo G5_BBS_URL; ?>/register.php" class="auth-link auth-register">회원가입</a>
-          <?php } ?>
-        </div>
         <div class="hamburger" id="hamburger" aria-label="메뉴 열기">
           <span></span><span></span><span></span>
         </div>
@@ -46,8 +36,8 @@ if (!isset($G5_URL)) {
             <div class="gnb-dropdown">
               <ul class="gnb-sub-menu">
                 <li><a href="<?php echo $G5_URL; ?>/sub/sub1_1.php">병원 소개</a></li>
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub1_2.php">원장 인사말</a></li>
                 <li><a href="<?php echo $G5_URL; ?>/sub/sub1_3.php">의료진 소개</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub3_1.php">진료 시간</a></li>
                 <li><a href="<?php echo $G5_URL; ?>/sub/sub1_4.php">둘러보기</a></li>
                 <li><a href="<?php echo $G5_URL; ?>/sub/sub1_5.php">오시는 길</a></li>
               </ul>
@@ -68,22 +58,11 @@ if (!isset($G5_URL)) {
             </div>
           </li>
           <li class="gnb-item">
-            <a href="<?php echo $G5_URL; ?>/sub/sub3_1.php" class="gnb-title">INFO</a>
-            <div class="gnb-dropdown">
-              <ul class="gnb-sub-menu">
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub3_1.php">진료 시간</a></li>
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub3_2.php">진료 절차</a></li>
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub3_3.php">검사 항목</a></li>
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub3_4.php">비급여 안내</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="gnb-item">
             <a href="<?php echo $G5_URL; ?>/sub/sub4_1.php" class="gnb-title">COMMUNITY</a>
             <div class="gnb-dropdown">
               <ul class="gnb-sub-menu">
                 <li><a href="<?php echo $G5_URL; ?>/sub/sub4_1.php">치료 사례</a></li>
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub4_2.php">FAQ</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub4_2.php">자주묻는 질문</a></li>
                 <li><a href="<?php echo $G5_URL; ?>/sub/sub4_3.php">공지사항</a></li>
               </ul>
             </div>
@@ -96,25 +75,14 @@ if (!isset($G5_URL)) {
   <!-- NAV OVERLAY -->
   <nav class="nav-overlay" id="navOverlay">
     <div class="nav-content">
-      <div class="nav-mobile-auth">
-        <?php if ($is_member) { ?>
-          <span class="mobile-auth-welcome" style="font-size: 14px; color: var(--c-accent-light); font-weight: 500;">[<?php echo get_text($member['mb_name']); ?>님]</span>
-          <span class="mobile-auth-divider">|</span>
-          <a href="<?php echo G5_BBS_URL; ?>/logout.php" class="mobile-auth-link">로그아웃</a>
-        <?php } else { ?>
-          <a href="<?php echo G5_BBS_URL; ?>/login.php" class="mobile-auth-link">로그인</a>
-          <span class="mobile-auth-divider">|</span>
-          <a href="<?php echo G5_BBS_URL; ?>/register.php" class="mobile-auth-link">회원가입</a>
-        <?php } ?>
-      </div>
-      <p class="nav-slogan">Grow Together, Grow Healthy</p>
+      <p class="nav-slogan" style="margin-top: 40px;">Grow Together, Grow Healthy</p>
       <div class="nav-menu">
         <div class="nav-menu-group">
           <h3 class="nav-menu-title">About</h3>
           <ul class="nav-menu-items">
             <li><a href="<?php echo $G5_URL; ?>/sub/sub1_1.php">병원 소개</a></li>
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub1_2.php">원장 인사말</a></li>
             <li><a href="<?php echo $G5_URL; ?>/sub/sub1_3.php">의료진 소개</a></li>
+            <li><a href="<?php echo $G5_URL; ?>/sub/sub3_1.php">진료 시간</a></li>
             <li><a href="<?php echo $G5_URL; ?>/sub/sub1_4.php">둘러보기</a></li>
             <li><a href="<?php echo $G5_URL; ?>/sub/sub1_5.php">오시는 길</a></li>
           </ul>
@@ -132,17 +100,10 @@ if (!isset($G5_URL)) {
           </ul>
         </div>
         <div class="nav-menu-group">
-          <h3 class="nav-menu-title">Info</h3>
-          <ul class="nav-menu-items">
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub3_1.php">진료 시간</a></li>
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub3_2.php">진료 절차</a></li>
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub3_3.php">검사 항목</a></li>
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub3_4.php">비급여</a></li>
-          </ul>
-          <h3 class="nav-menu-title" style="margin-top: 20px;">Community</h3>
+          <h3 class="nav-menu-title">Community</h3>
           <ul class="nav-menu-items">
             <li><a href="<?php echo $G5_URL; ?>/sub/sub4_1.php">치료 사례</a></li>
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub4_2.php">FAQ</a></li>
+            <li><a href="<?php echo $G5_URL; ?>/sub/sub4_2.php">자주묻는 질문</a></li>
             <li><a href="<?php echo $G5_URL; ?>/sub/sub4_3.php">공지사항</a></li>
           </ul>
         </div>
