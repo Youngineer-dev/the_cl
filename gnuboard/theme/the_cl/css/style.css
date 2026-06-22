@@ -454,7 +454,7 @@ ol {
   justify-content: center;
   align-items: center;
   height: 48px;
-  gap: 90px; /* 메인 메뉴 항목 사이의 간격 */
+  gap: 60px; /* 메인 메뉴 항목 사이의 간격 */
 }
 
 .gnb-item {
@@ -462,6 +462,8 @@ ol {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 150px;
 }
 
 .gnb-title {
@@ -471,8 +473,10 @@ ol {
   letter-spacing: 2px;
   color: var(--c-text-white);
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   transition: color 0.3s var(--ease-out);
 }
@@ -2147,7 +2151,8 @@ body.nav-open .site-header .hamburger span {
 /* Sub Hero */
 .sub-hero {
   position: relative;
-  height: 380px;
+  height: 450px;
+  padding-top: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2923,7 +2928,8 @@ body.nav-open .site-header .hamburger span {
 
 @media (max-width: 768px) {
   .sub-hero {
-    height: 280px;
+    height: 300px;
+    padding-top: 60px;
   }
 
   .sub-hero-title {
@@ -3691,7 +3697,8 @@ body.nav-open .site-header .hamburger span {
 
 @media (max-width: 480px) {
   .sub-hero {
-    height: 240px;
+    height: 250px;
+    padding-top: 50px;
   }
   .sub-hero-title {
     font-size: 23px;
