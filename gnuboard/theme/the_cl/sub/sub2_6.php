@@ -1,5 +1,5 @@
 <?php
-$page_title = "당뇨";
+$page_title = "알레르기";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -10,8 +10,8 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-overlay"></div>
   <div class="sub-hero-content reveal">
     <p class="sub-hero-category">Clinic</p>
-    <h1 class="sub-hero-title">당뇨</h1>
-    <p class="sub-hero-subtitle">소아 당뇨의 체계적 관리</p>
+    <h1 class="sub-hero-title">알레르기</h1>
+    <p class="sub-hero-subtitle">면역 균형과 편안한 호흡</p>
   </div>
 </section>
 
@@ -23,7 +23,7 @@ include_once(G5_PATH.'/head.php');
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Clinic</span></li>
       <li class="separator">></li>
-      <li class="current">당뇨</li>
+      <li class="current">알레르기</li>
     </ul>
   </div>
 </div>
@@ -35,24 +35,24 @@ include_once(G5_PATH.'/head.php');
 <!-- 스플릿 인트로 (미러형: 이미지 좌 / 텍스트 우) -->
 <section class="ed-split ed-split--reverse reveal">
   <div class="ed-split__text">
-    <span class="ed-eyebrow">Pediatric Diabetes</span>
+    <span class="ed-eyebrow">Allergy Clinic</span>
     <h2 class="ed-split__title">
-      <span class="i1">성장과 혈당을</span>
-      <span class="i2">함께 살피는</span>
-      <span class="i3"><strong>소아 맞춤 케어</strong></span>
+      <span class="i1">면역의 균형을</span>
+      <span class="i2">되찾아</span>
+      <span class="i3"><strong>건강하게 자라도록</strong></span>
     </h2>
     <div class="ed-split__body">
       <p class="lead">
-        소아 당뇨는 성인 당뇨와 성격이 다르고, 지속적인 성장 발달을 동시에 고려해야 합니다.
+        소아청소년기 알레르기 질환은 아이의 깊은 수면을 방해하고 성장을 저해하는 요인이 됩니다.
       </p>
       <p>
-        인슐린 의존성을 정밀하게 파악하여, 아이가 낙인 효과 없이 학교생활을 활발히
-        영위하도록 일상에 밀착해 정성껏 돌봅니다.
+        삼성더클성장의원에서는 면역 과민 반응의 원인을 명확하게 진단합니다.
+        비염, 아토피, 천식 등 악순환이 반복되는 알레르기 증상을 완화하고 일상 생활의 질을 높여 건강한 성장을 도모합니다.
       </p>
     </div>
   </div>
   <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="혈당 관리" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="알레르기 관리" class="ed-collage__main">
     <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="소아 진료" class="ed-collage__sub">
   </div>
 </section>
@@ -61,36 +61,33 @@ include_once(G5_PATH.'/head.php');
 <section class="ed-features">
   <div class="ed-sectlabel reveal">
     <span class="ed-kicker">Care Program</span>
-    <h2>일상을 지키는 <strong>3가지 관리</strong></h2>
+    <h2>일상을 지키는 <strong>3가지 알레르기 케어</strong></h2>
   </div>
 
   <div class="ed-feat reveal">
     <div class="ed-feat__num">01</div>
     <div class="ed-feat__body">
-      <h3 class="ed-feat__title">1형 당뇨 특화 인슐린 매니지먼트</h3>
+      <h3 class="ed-feat__title">정밀 알레르기 검사 (MAST)</h3>
       <p class="ed-feat__desc">
-        췌장 인슐린 분비 결핍이 원인인 1형 당뇨 아동을 위해 안전한 인슐린 펜 투여법 교육과
-        실시간 연속혈당측정기(CGM) 데이터 모니터링을 통합 지도합니다.
+        한 번의 채혈로 호흡기 및 음식물 등 수십 가지의 대표적인 알레르기 유발 물질을 동시에 정확하게 스크리닝합니다.
       </p>
     </div>
   </div>
   <div class="ed-feat reveal reveal-delay-1">
     <div class="ed-feat__num">02</div>
     <div class="ed-feat__body">
-      <h3 class="ed-feat__title">인슐린 저항성 개선 (2형 당뇨)</h3>
+      <h3 class="ed-feat__title">소아 아토피 피부염 & 피부 진정</h3>
       <p class="ed-feat__desc">
-        서구화된 식생활로 증가하는 소아 2형 당뇨를 완화하기 위해 복부 비만을 해소하고
-        췌장의 인슐린 저항성을 떨어뜨리는 라이프 코칭을 적용합니다.
+        피부 장벽을 복구하는 보습제 처방과 약물 요법, 생활 습관 피드백을 통해 아토피 가려움증의 악순환을 예방합니다.
       </p>
     </div>
   </div>
   <div class="ed-feat reveal reveal-delay-2">
     <div class="ed-feat__num">03</div>
     <div class="ed-feat__body">
-      <h3 class="ed-feat__title">학교 및 가정 연계 네트워크</h3>
+      <h3 class="ed-feat__title">알레르기 비염 & 천식 맞춤 치료</h3>
       <p class="ed-feat__desc">
-        아이가 학교나 유치원에서 저혈당 응급 상황에 처하지 않도록 가정통신 안내 가이드를
-        보완해 드리고, 대처 약물 상비 매뉴얼을 수립해 드립니다.
+        환절기마다 아이를 괴롭히는 기침과 코막힘을 완화하기 위해 소아 호흡기 특성에 최적화된 흡입기 및 약물 치료를 안내합니다.
       </p>
     </div>
   </div>

@@ -47,13 +47,12 @@ if (!isset($G5_URL)) {
             <a href="<?php echo $G5_URL; ?>/sub/sub2_1.php" class="gnb-title">CLINIC</a>
             <div class="gnb-dropdown">
               <ul class="gnb-sub-menu">
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_1.php">성장 평가</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_1.php">성장평가 · 예상키</a></li>
                 <li><a href="<?php echo $G5_URL; ?>/sub/sub2_2.php">저신장</a></li>
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_3.php">성조숙</a></li>
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_4.php">소아 비만</a></li>
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_5.php">갑상선 질환</a></li>
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_6.php">당뇨</a></li>
-                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_7.php">영양수액</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_3.php">성조숙증</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_4.php">소아비만</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_5.php">저체중</a></li>
+                <li><a href="<?php echo $G5_URL; ?>/sub/sub2_6.php">알레르기</a></li>
               </ul>
             </div>
           </li>
@@ -90,13 +89,12 @@ if (!isset($G5_URL)) {
         <div class="nav-menu-group">
           <h3 class="nav-menu-title">Clinic</h3>
           <ul class="nav-menu-items">
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub2_1.php">성장 평가</a></li>
+            <li><a href="<?php echo $G5_URL; ?>/sub/sub2_1.php">성장평가 · 예상키</a></li>
             <li><a href="<?php echo $G5_URL; ?>/sub/sub2_2.php">저신장</a></li>
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub2_3.php">성조숙</a></li>
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub2_4.php">소아 비만</a></li>
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub2_5.php">갑상선 질환</a></li>
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub2_6.php">당뇨</a></li>
-            <li><a href="<?php echo $G5_URL; ?>/sub/sub2_7.php">영양수액</a></li>
+            <li><a href="<?php echo $G5_URL; ?>/sub/sub2_3.php">성조숙증</a></li>
+            <li><a href="<?php echo $G5_URL; ?>/sub/sub2_4.php">소아비만</a></li>
+            <li><a href="<?php echo $G5_URL; ?>/sub/sub2_5.php">저체중</a></li>
+            <li><a href="<?php echo $G5_URL; ?>/sub/sub2_6.php">알레르기</a></li>
           </ul>
         </div>
         <div class="nav-menu-group">
