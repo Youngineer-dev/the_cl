@@ -147,18 +147,18 @@ include_once(G5_THEME_PATH.'/head.php');
 
       <div class="programs-grid">
         <!-- Card 1 -->
-        <div class="program-card reveal">
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_1.php" class="program-card reveal">
           <div class="program-icon">📏</div>
-          <h3 class="card-title">성장 평가</h3>
+          <h3 class="card-title">성장평가 · 예상키</h3>
           <p class="card-desc">
             정밀 성장 평가를 통해<br>
             아이의 현재 성장 상태와<br>
             최종 예상 키를 진단합니다
           </p>
-        </div>
+        </a>
 
         <!-- Card 2 -->
-        <div class="program-card reveal reveal-delay-1">
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_2.php" class="program-card reveal reveal-delay-1">
           <div class="program-icon">📐</div>
           <h3 class="card-title">저신장</h3>
           <p class="card-desc">
@@ -166,51 +166,51 @@ include_once(G5_THEME_PATH.'/head.php');
             근거 기반의 맞춤 성장 치료를<br>
             제공합니다
           </p>
-        </div>
+        </a>
 
         <!-- Card 3 -->
-        <div class="program-card reveal reveal-delay-2">
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_3.php" class="program-card reveal reveal-delay-2">
           <div class="program-icon">⏱️</div>
-          <h3 class="card-title">성조숙</h3>
+          <h3 class="card-title">성조숙증</h3>
           <p class="card-desc">
             또래보다 빠른 사춘기 발달을<br>
-            조기에 발견하고<br>
-            적절한 치료를 시작합니다
+            조기에 발견하고 적기 치료를 통해<br>
+            성장을 돕습니다
           </p>
-        </div>
+        </a>
 
         <!-- Card 4 -->
-        <div class="program-card reveal reveal-delay-3">
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_4.php" class="program-card reveal reveal-delay-3">
           <div class="program-icon">⚖️</div>
-          <h3 class="card-title">소아 비만</h3>
+          <h3 class="card-title">소아비만</h3>
           <p class="card-desc">
             과학적 체성분 분석과<br>
-            영양 상담을 통해<br>
-            건강한 체중을 관리합니다
+            맞춤 생활습관 관리를 통해<br>
+            건강한 성장을 돕습니다
           </p>
-        </div>
+        </a>
 
         <!-- Card 5 -->
-        <div class="program-card reveal reveal-delay-4">
-          <div class="program-icon">🦋</div>
-          <h3 class="card-title">갑상선 질환</h3>
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_5.php" class="program-card reveal reveal-delay-4">
+          <div class="program-icon">🍎</div>
+          <h3 class="card-title">저체중</h3>
           <p class="card-desc">
-            소아·청소년의<br>
-            갑상선 기능 이상을<br>
-            전문적으로 진단하고 치료합니다
+            식사 습관 및 대사 분석을 통해<br>
+            살이 안 찌는 원인을 감별하고<br>
+            건강하게 증량하도록 돕습니다
           </p>
-        </div>
+        </a>
 
         <!-- Card 6 -->
-        <div class="program-card reveal reveal-delay-5">
-          <div class="program-icon">💉</div>
-          <h3 class="card-title">당뇨 · 영양수액</h3>
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_6.php" class="program-card reveal reveal-delay-5">
+          <div class="program-icon">🤧</div>
+          <h3 class="card-title">알레르기</h3>
           <p class="card-desc">
-            소아 당뇨 관리와<br>
-            성장기 필수 영양 수액 치료를<br>
-            제공합니다
+            비염과 아토피 등 성장을 저해하는<br>
+            면역 질환을 개선하고<br>
+            건강한 성장 환경을 만듭니다
           </p>
-        </div>
+        </a>
       </div>
     </div>
   </section>
