@@ -14,12 +14,13 @@ include_once(G5_THEME_PATH.'/head.php');
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-deco"></div>
-      <p class="hero-subtitle">Grow Together, Grow Healthy</p>
+      <p class="hero-subtitle">1:1 개별 맞춤 성장 클리닉</p>
       <h1 class="hero-title"><strong>삼성더클</strong>성장의원</h1>
       <p class="hero-desc">
-        아이의 건강한 성장을 세심하게 돌보는<br><br>
-        소아 내분비 전문 클리닉입니다<br><br>
-        과학적 근거와 따뜻한 진심을 담아 함께합니다
+        데이터로 정밀하게,<br>
+        공감으로 따뜻하게.<br><br>
+        대학병원 교수 출신,<br>
+        소아내분비 전문의 진료
       </p>
       <a href="#contact" class="hero-btn">
         상담 / 예약 문의 →

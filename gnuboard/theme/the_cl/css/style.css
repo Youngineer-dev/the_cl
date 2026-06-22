@@ -798,11 +798,11 @@ body.nav-open .site-header .hamburger span {
 }
 
 .hero-desc {
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.95);
   line-height: 1.8;
-  max-width: 500px;
+  max-width: 600px;
   margin-bottom: 40px;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
@@ -1887,7 +1887,7 @@ body.nav-open .site-header .hamburger span {
   }
 
   .hero-desc {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .about-text .section-en {
@@ -2096,7 +2096,7 @@ body.nav-open .site-header .hamburger span {
   }
 
   .hero-desc {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .hero-btn {
