@@ -32,87 +32,129 @@ include_once(G5_PATH.'/head.php');
 <main class="sub-main">
   <div class="container">
     
-<!-- ============================================================
-     PHILOSOPHY SECTION (Sect 1)
-     ============================================================ -->
-<div class="sub11_sect1 flexCol_aiCenter">
-  <div class="sub-intro-text" style="text-align: center; margin-bottom: 0;">
-    <p class="section-en reveal" style="font-family: var(--font-serif); font-size: 14px; letter-spacing: 4px; color: var(--c-primary); text-transform: uppercase;">Philosophy</p>
-    <h2 class="section-title reveal reveal-delay-1" style="font-size: 32px; font-weight: 300; line-height: 1.5; color: var(--c-primary-dark); margin-top: 12px;">
-      Grow Together, Grow Healthy
-    </h2>
-  </div>
-  
-  <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="삼성더클성장의원 전경" class="reveal reveal-delay-2 sub11_sect1_img">
-  
-  <div class="sub11_sect1_descWrap reveal reveal-delay-3">
-    <p class="sub11_sect1_desc desc1">
-      푸른 성장의 에너지를 담은 더클(The CL)의 진심 속에<br>
-      과학적이고 정직한 진료, 따뜻한 신뢰가 깃들어 있습니다
-    </p>
-    <p class="sub11_sect1_desc desc2">
-      잠시 고민을 나누는 진료에 그치지 않고, 아이의 성장 템포를 끝까지 책임지도록<br>
-      진단은 신중하고 엄격하지만, 과정과 소통은 부모님 품처럼 한없이 따뜻하도록<br>
-      성장의 모든 계절을 함께 통과하며 우리 아이의 잠재력을 믿는 진료
-    </p>
-    <p class="sub11_sect1_desc"><b class="ptd_sb">삼성더클성장의원, 진심과 최고의 전문성이 만나는 공간입니다</b></p>
-  </div>
-</div>
-
-<!-- ============================================================
-     THREE CORE VALUES SECTION (Sect 2)
-     ============================================================ -->
-<div class="sub11_sect2_contWrap">
-  
-  <!-- Value 1: Carefully (세심하게) - Image Right -->
-  <div class="sub11_sect2_item item1 imgRight reveal">
-    <div class="descBox">
-      <h3 class="item_title">
-        <span class="marcell">Carefully</span>
-        <span class="line"></span>
-        <span class="kpb_l">세심하게</span>
-      </h3>
-      <p class="item_subTitle">소아 내분비 세부 전문의의<br>정교한 진료로 아동의 성장 골든타임을 확보하다</p>
-      <div class="item_desc_wrap">
-        <p class="item_desc">
-          아이의 성장은 뼈나이, 유전 신장, 호르몬 대사 등 수많은 요인들이 결합된 정교한 퍼즐입니다.<br>
-          삼성서울병원 및 서울대병원 출신의 풍부한 세부전문의 임상 경력이<br>
-          이곳의 흔들리지 않는 전문성의 기초이자 약속입니다.
-        </p>
-        <p class="item_desc">
-          삼성더클은 아주 미세한 성장 인자의 이상이나 작은 뼈나이 오차율조차 절대로 놓치지 않고,<br>
-          언제나 우리 아동의 건강 앞에 가장 정성스럽고 세심하게 서 있겠습니다.
+    <!-- ============================================================
+         PHILOSOPHY INTRO (Sect 1)
+         ============================================================ -->
+    <div class="sub11_sect1 flexCol_aiCenter">
+      <div class="sub-intro-text" style="text-align: center; margin-bottom: 0;">
+        <p class="section-en reveal" style="font-family: var(--font-serif); font-size: 14px; letter-spacing: 4px; color: var(--c-primary); text-transform: uppercase;">Philosophy</p>
+        <h2 class="section-title reveal reveal-delay-1" style="font-size: 32px; font-weight: 300; line-height: 1.5; color: var(--c-primary-dark); margin-top: 12px; word-break: keep-all;">
+          더 클 아이를 위한 THE CL, Care & Long 성장 클리닉
+        </h2>
+      </div>
+      
+      <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="삼성더클성장의원 전경" class="reveal reveal-delay-2 sub11_sect1_img">
+      
+      <div class="sub11_sect1_descWrap reveal reveal-delay-3" style="margin-top: 40px;">
+        <p class="sub11_sect1_desc desc1" style="font-size: 19px; line-height: 1.8; color: var(--c-primary-dark); text-align: center; font-weight: 400; word-break: keep-all;">
+          ‘더클’은 아이가 더 건강하게, 더 크게 자라날 가능성을 믿는 이름입니다.<br>
+          동시에 THE CL은 Care & Long의 마음을 담고 있습니다.
         </p>
       </div>
     </div>
-    <div class="imgBox">
-      <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="세심한 성장 정밀 진단" class="item_img">
-      <i class="bgText marcell">Carefully</i>
-    </div>
-  </div>
+    
+    <!-- ============================================================
+         CORE VALUES: CARE & LONG (Sect 2)
+         ============================================================ -->
+    <div class="sub11_sect2_contWrap" style="gap: 150px; padding: 80px 0 20px;">
+      
+      <!-- Value 1: Care (세심하게) - Image Right -->
+      <div class="sub11_sect2_item item1 imgRight reveal">
+        <div class="descBox">
+          <h3 class="item_title">
+            <span class="marcell">Care</span>
+            <span class="line"></span>
+            <span class="kpb_l">세심하게</span>
+          </h3>
+          <p class="item_subTitle">아이의 작은 성장 변화까지<br>세심하게 살피는 진료</p>
+          <div class="item_desc_wrap">
+            <p class="item_desc">
+              성장은 단 한 번의 키 숫자가 아닌, 아이의 신체 템포와 속도에 따라 이어지는 흐름입니다.
+              삼성더클은 아이의 현재 키와 체중만으로 성급히 판단하지 않고,
+              성장 속도, 사춘기 진행 단계, 뼈나이, 체성분 및 대사 상태까지
+              아이의 작은 지표 변화 하나하나 세심하게 관찰하여 정확한 가능성을 도출합니다.
+            </p>
+          </div>
+        </div>
+        <div class="imgBox">
+          <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="세심한 성장 정밀 진단" class="item_img">
+          <i class="bgText marcell">Care</i>
+        </div>
+      </div>
 
-  <!-- Value 2: Gracefully (정직하게) - Image Left -->
-  <div class="sub11_sect2_item item2 imgLeft reveal">
-    <div class="imgBox">
-      <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="정직하고 올바른 성장 호르몬 처방" class="item_img">
-      <i class="bgText marcell">Gracefully</i>
+      <!-- Value 2: Long (오래 함께) - Image Left -->
+      <div class="sub11_sect2_item item2 imgLeft reveal">
+        <div class="imgBox">
+          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="성장기 아동 라이프스타일 동행" class="item_img">
+          <i class="bgText marcell">Long</i>
+        </div>
+        <div class="descBox">
+          <h3 class="item_title">
+            <span class="marcell">Long</span>
+            <span class="line"></span>
+            <span class="kpb_l">오래 함께</span>
+          </h3>
+          <p class="item_subTitle">한 번의 검사로 끝나지 않고,<br>성장의 시간을 오래 함께하는 관리</p>
+          <div class="item_desc_wrap">
+            <p class="item_desc">
+              성장 진료는 단기 치료가 아니라, 아이의 일상과 습관을 공유하며 오랜 여정을 동행하는 과정입니다.
+              예전에 한 번 "괜찮다"는 이야기를 듣고 방치하다가 골든타임을 놓치지 않도록,
+              정기적인 추적 검사와 일상 라이프스타일 관리로 긴 시간 동안 든든하고 안전하게 함께 걷겠습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      
     </div>
-    <div class="descBox">
-      <h3 class="item_title">
-        <span class="marcell">Gracefully</span>
-        <span class="line"></span>
-        <span class="kpb_l">정직하게</span>
-      </h3>
-      <p class="item_subTitle">과잉 진료를 철저히 배제하고<br>객관적 근거에 기반한 올바른 치료를 제안합니다</p>
-      <div class="item_desc_wrap">
-        <p class="item_desc">
-          성장호르몬 주사나 사춘기 지연제는 유행이나 남을 따라 하는 결정이 되어선 안 됩니다.<br>
-          삼성더클은 부모님의 불안감을 악용하는 과잉 처방을 완벽히 차단하고,<br>
-          철저한 혈액 호르몬 검출 및 AI 골연령 정량 데이터만을 근거로 정직하게 진단합니다.
-        </p>
-        <p class="item_desc">
-          아이에게 꼭 필요한 가장 정직한 치료만을 권장하여,<br>
-          아이의 건강과 성장판을 부작용 우려 없이 올바르게 지켜내겠습니다.
+
+    <!-- ============================================================
+         PHILOSOPHY ESSAY SECTION (원장 에세이)
+         ============================================================ -->
+    <section class="sub11_essay_section reveal">
+      <div class="sub11_essay_container">
+        <h3 class="sub11_essay_quote">
+          “성장은 한 번의 키 숫자가 아니라,<br>
+          시간에 따라 이어지는 과정입니다.”
+        </h3>
+        
+        <div class="sub11_essay_body">
+          <p>
+            대학병원에서 성장 진료를 하며, 여러 의료기관을 거쳐 뒤늦게 저를 찾아오는 아이들을 참 많이 만났습니다.<br>
+            예전에 한 번 “괜찮다”는 이야기를 듣고 더 이상 정밀 추적을 하지 않았거나,<br>
+            키가 작다는 것을 알고서도 언제 다시 확인해야 할지 몰라 헤매다가<br>
+            정작 가장 중요한 치료 적기를 아쉽게 놓쳐버린 경우도 있었습니다.
+          </p>
+          <p>
+            그때마다 제가 마음 깊이 느꼈던 것은 너무나 분명했습니다.<br>
+            성장 진료에서 정말 중요한 것은 처음부터 치료나 주사 처방을 서두르는 것이 아니라,<br>
+            <strong>아이의 고유한 성장 흐름을 과학적으로 정확하게 평가하고, 꾸준히 동행하며,<br>
+            필요한 바로 그 최적의 시점에 적절한 치료를 유연하게 결정하는 일련의 과정</strong>이라는 점입니다.
+          </p>
+          <p>
+            삼성서울병원 소아청소년과 및 소아내분비·유전대사 전임의, 그리고 대학병원 분과 교수로서<br>
+            수많은 아동의 성장·성조숙증·소아비만을 진료하고 깊이 연구해 온 모든 임상 경험을 담았습니다.<br>
+            우리는 무분별한 과잉 치료보다는 과학적이고 정확한 평가를 먼저 약속하고,<br>
+            획일화된 매뉴얼식 치료보다 오직 이 아이에게만 맞는 올바른 방향을 제시하고자 노력합니다.
+          </p>
+          <p>
+            동시에 남매를 직접 키워 나가는 엄마의 진솔한 마음으로,<br>
+            아이와 부모님의 걱정 섞인 이야기에 정성을 다해 귀 기울이고,<br>
+            검사 결과와 치료 과정을 충분히 소통하며 건강한 성장 여정을 끝까지 따뜻하게 동행하겠습니다.
+          </p>
+        </div>
+        
+        <div class="sub11_essay_outro">
+          삼성더클성장의원은 정확한 평가와 따뜻한 공감이 만나는 1:1 맞춤 성장 클리닉입니다.
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<?php
+include_once(G5_PATH.'/tail.php');
+?>��려 없이 올바르게 지켜내겠습니다.
         </p>
       </div>
     </div>
