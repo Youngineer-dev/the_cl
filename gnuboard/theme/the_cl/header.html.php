@@ -10,7 +10,7 @@ if (!isset($G5_URL)) {
   <header class="site-header" id="header">
     <div class="header-inner">
       <div class="header-left">
-        <p class="slogan">아이의 건강한 성장을 함께하는 곳 — <span class="accent">Samsung The CL</span></p>
+        <p class="slogan">아이의 건강한 성장을 함께하는 곳 — <span class="accent">Samsung The CL (Care & Long)</span></p>
       </div>
       <div class="header-center">
         <a href="<?php echo G5_URL; ?>/index.php" class="logo-link">
