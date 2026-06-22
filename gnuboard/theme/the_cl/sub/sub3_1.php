@@ -65,17 +65,22 @@ include_once(G5_PATH.'/head.php');
   </div>
   <div class="ed-hours reveal">
     <div class="ed-hours__cell">
-      <p class="ed-hours__day">Mon — Fri</p>
-      <p class="ed-hours__time">09:00 — 18:30</p>
+      <p class="ed-hours__day">화 · 수 · 금</p>
+      <p class="ed-hours__time">10:00 — 18:30</p>
       <p class="ed-hours__note">점심시간 13:00 ~ 14:00<br>접수 마감 18:00</p>
     </div>
     <div class="ed-hours__cell">
-      <p class="ed-hours__day">Saturday</p>
-      <p class="ed-hours__time">09:00 — 13:00</p>
-      <p class="ed-hours__note">점심시간 없이 연속 진료<br>접수 마감 12:30</p>
+      <p class="ed-hours__day">목요일</p>
+      <p class="ed-hours__time">13:00 — 20:30</p>
+      <p class="ed-hours__note">휴게시간 17:00 ~ 17:30<br>접수 마감 20:00</p>
+    </div>
+    <div class="ed-hours__cell">
+      <p class="ed-hours__day">토요일</p>
+      <p class="ed-hours__time">08:30 — 15:00</p>
+      <p class="ed-hours__note">휴게시간 12:00 ~ 12:30<br>접수 마감 14:30</p>
     </div>
     <div class="ed-hours__cell is-off">
-      <p class="ed-hours__day">Sun · Holiday</p>
+      <p class="ed-hours__day">일 · 월 · 공휴일</p>
       <p class="ed-hours__time">휴 진</p>
       <p class="ed-hours__note">카카오톡 채널로<br>예약 문의 가능</p>
     </div>

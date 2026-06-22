@@ -320,20 +320,20 @@ include_once(G5_THEME_PATH.'/head.php');
             <span class="star">✦</span> 진료시간
           </div>
           <div class="schedule-table">
-            <div class="schedule-row">
-              <span class="schedule-day">월 — 금</span>
-              <span class="schedule-time">09:00 ~ 18:30</span>
+            <div class="schedule-row" style="flex-wrap: wrap;">
+              <span class="schedule-day">화·수·금</span>
+              <span class="schedule-time">10:00 ~ 18:30 <small style="display:block; font-size:10px; opacity:0.7;">(점심 13:00 ~ 14:00)</small></span>
             </div>
-            <div class="schedule-row">
+            <div class="schedule-row" style="flex-wrap: wrap;">
+              <span class="schedule-day">목 요 일</span>
+              <span class="schedule-time">13:00 ~ 20:30 <small style="display:block; font-size:10px; opacity:0.7;">(휴게 17:00 ~ 17:30)</small></span>
+            </div>
+            <div class="schedule-row" style="flex-wrap: wrap;">
               <span class="schedule-day">토 요 일</span>
-              <span class="schedule-time">09:00 ~ 13:00</span>
-            </div>
-            <div class="schedule-row">
-              <span class="schedule-day">점심시간</span>
-              <span class="schedule-time">13:00 ~ 14:00</span>
+              <span class="schedule-time">08:30 ~ 15:00 <small style="display:block; font-size:10px; opacity:0.7;">(휴게 12:00 ~ 12:30)</small></span>
             </div>
           </div>
-          <p class="schedule-note">※ 일요일, 공휴일 휴진</p>
+          <p class="schedule-note">※ 월요일, 일요일, 공휴일 휴진</p>
         </div>
       </div>
     </div>
