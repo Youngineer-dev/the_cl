@@ -1,5 +1,5 @@
 <?php
-$page_title = "성조숙";
+$page_title = "성조숙증";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -10,8 +10,8 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-overlay"></div>
   <div class="sub-hero-content reveal">
     <p class="sub-hero-category">Clinic</p>
-    <h1 class="sub-hero-title">성조숙</h1>
-    <p class="sub-hero-subtitle">빠른 사춘기를 위한 적기 치료</p>
+    <h1 class="sub-hero-title">성조숙증</h1>
+    <p class="sub-hero-subtitle">성조숙증 · 빠른 사춘기 클리닉</p>
   </div>
 </section>
 
@@ -23,7 +23,7 @@ include_once(G5_PATH.'/head.php');
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Clinic</span></li>
       <li class="separator">></li>
-      <li class="current">성조숙</li>
+      <li class="current">성조숙증</li>
     </ul>
   </div>
 </div>
@@ -32,80 +32,168 @@ include_once(G5_PATH.'/head.php');
 <main class="sub-main">
   <div class="container">
 
-<!-- 스플릿 인트로 (미러형: 이미지 좌 / 텍스트 우) -->
-<section class="ed-split ed-split--reverse reveal">
-  <div class="ed-split__text">
-    <span class="ed-eyebrow">Precocious Puberty</span>
-    <h2 class="ed-split__title">
-      <span class="i1">이른 사춘기는</span>
-      <span class="i2">성장을 일찍</span>
-      <span class="i3"><strong>마감시킵니다</strong></span>
-    </h2>
-    <div class="ed-split__body">
-      <p class="lead">
-        성조숙증은 일시적으로 급성장하는 듯 보이나, 성장판을 빨리 닫아 성인 키를 저해합니다.
-      </p>
-      <p>
-        또래보다 일찍 성호르몬이 분비되면 신체 변화로 인한 심리적 불안까지 동반됩니다.
-        그래서 성조숙증은 무엇보다 <strong>치료 시기(타이밍)</strong>가 결정적인 질환입니다.
-      </p>
-    </div>
-  </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="성조숙 진단" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="호르몬 검사" class="ed-collage__sub">
-  </div>
-</section>
+    <!-- ============================================================
+         SPLIT INTRO (성조숙증 인트로)
+         ============================================================ -->
+    <section class="ed-split reveal">
+      <div class="ed-split__text">
+        <span class="ed-eyebrow">Precocious Puberty</span>
+        <h2 class="ed-split__title" style="font-size: 32px; font-weight: 300; line-height: 1.45; color: var(--c-primary-dark); letter-spacing: -0.5px;">
+          우리 아이 사춘기,<br>너무 빠른 걸까요?
+        </h2>
+        <div class="ed-split__body" style="margin-top: 24px;">
+          <p class="lead">
+            아이의 사춘기 진행 단계, 성장 속도, 뼈나이와 호르몬 상태를 종합적으로 평가하여 성조숙증인지, 빠른 사춘기인지, 치료가 필요한 시점인지 신중하게 판단하고 최종키 손실을 줄일 수 있는 중요한 시기를 놓치지 않도록 확인합니다.
+          </p>
+        </div>
+      </div>
+      <div class="ed-collage reveal reveal-delay-2">
+        <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="성조숙증 진단" class="ed-collage__main">
+        <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="성장 클리닉 공간" class="ed-collage__sub">
+      </div>
+    </section>
 
-<!-- 자가체크 밴드 -->
-<section class="ed-check reveal">
-  <div class="ed-check__head">
-    <span class="ed-kicker">Self Check</span>
-    <p class="ed-check__label">성조숙증<br>의심 신호</p>
-  </div>
-  <ul class="ed-check__list">
-    <li class="ed-check__item"><span class="ed-check__num">01</span><p>여아: 만 8세 이전 가슴 몽우리가 잡히고 통증을 느낄 때</p></li>
-    <li class="ed-check__item"><span class="ed-check__num">02</span><p>남아: 만 9세 이전 고환이 메추리알 크기 이상 커질 때</p></li>
-    <li class="ed-check__item"><span class="ed-check__num">03</span><p>또래보다 갑자기 1년에 7~8cm 이상 급격히 클 때</p></li>
-    <li class="ed-check__item"><span class="ed-check__num">04</span><p>여드름이 나고 머리·정수리 체취가 심해질 때</p></li>
-    <li class="ed-check__item"><span class="ed-check__num">05</span><p>음모나 액모가 발달하기 시작할 때</p></li>
-    <li class="ed-check__item"><span class="ed-check__num">06</span><p>피하 지방이 빠르게 단단해지며 골격이 드러날 때</p></li>
-  </ul>
-</section>
+    <!-- ============================================================
+         SELF CHECK (성조숙증 자가진찰 고민)
+         ============================================================ -->
+    <section class="ed-check reveal" style="margin-top: 60px;">
+      <div class="ed-check__head">
+        <span class="ed-kicker">Self Check</span>
+        <p class="ed-check__label">이런 경우<br>평가가 필요합니다</p>
+      </div>
+      <ul class="ed-check__list">
+        <li class="ed-check__item"><span class="ed-check__num">01</span><p>여아 만 8세 전 유방 발달이 보이는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">02</span><p>남아 만 9세 전 고환 크기 증가가 의심되는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">03</span><p>또래보다 체형 변화가 빠른 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">04</span><p>키가 갑자기 빨리 크기 시작한 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">05</span><p>뼈나이가 실제 나이보다 빠르다고 들은 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">06</span><p>성장판이 빨리 닫히거나 최종키가 줄어들까 걱정되는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">07</span><p>성억제 치료가 필요한지 궁금한 경우</p></li>
+      </ul>
+    </section>
 
-<!-- 세로 프로세스 (3단계) -->
-<section class="ed-features" style="padding-top: 70px;">
-  <div class="ed-sectlabel reveal">
-    <span class="ed-kicker">Treatment Flow</span>
-    <h2>속도를 늦추는 <strong>3단계 치료</strong></h2>
-  </div>
-  <div class="ed-steps" style="margin-top: 30px;">
-    <div class="ed-step reveal">
-      <div class="ed-step__num"><span>01</span></div>
-      <div class="ed-step__body">
-        <span class="ed-step__eyebrow">Diagnosis</span>
-        <h3 class="ed-step__title">GnRHa 자극 검사</h3>
-        <p class="ed-step__desc">일정 간격으로 호르몬 자극 반응을 평가하여 시상하부-뇌하수체-성선 축이 조기에 활성화되었는지 정밀 감별합니다.</p>
+    <!-- ============================================================
+         EVALUATION PROCESS (성조숙증 평가 과정 Step 1 ~ 7)
+         ============================================================ -->
+    <section class="ed-features" style="padding-top: 60px; padding-bottom: 20px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px;">
+        <span class="ed-kicker">Evaluation Flow</span>
+        <h2>더클만의 <strong>성조숙증·빠른 사춘기 평가 과정</strong></h2>
       </div>
-    </div>
-    <div class="ed-step reveal reveal-delay-1">
-      <div class="ed-step__num"><span>02</span></div>
-      <div class="ed-step__body">
-        <span class="ed-step__eyebrow">Suppression</span>
-        <h3 class="ed-step__title">성조숙증 억제 주사 요법</h3>
-        <p class="ed-step__desc">4주 또는 3달 간격으로 성호르몬 억제 주사를 처방하여 성장판의 뼈 노화 진행을 감속시키고 완만한 성장 속도를 회복시킵니다.</p>
+
+      <div class="ed-steps" style="margin-top: 30px;">
+        <!-- Step 1 -->
+        <div class="ed-step reveal">
+          <div class="ed-step__num"><span>01</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 1</span>
+            <h3 class="ed-step__title">병력 및 가족력 분석</h3>
+            <p class="ed-step__desc">
+              사춘기 변화가 시작된 시점, 진행 속도, 키 성장 변화, 가족의 사춘기 시기, 환경 요인 등을 확인합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="ed-step reveal reveal-delay-1">
+          <div class="ed-step__num"><span>02</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 2</span>
+            <h3 class="ed-step__title">성장곡선 및 성장속도 분석</h3>
+            <p class="ed-step__desc">
+              현재 키와 체중뿐 아니라 과거 성장 기록을 함께 확인하여 최근 키가 갑자기 빨라졌는지, 성장 속도가 사춘기 진행과 맞물려 변화했는지 평가합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="ed-step reveal reveal-delay-2">
+          <div class="ed-step__num"><span>03</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 3</span>
+            <h3 class="ed-step__title">사춘기 신체진찰</h3>
+            <p class="ed-step__desc">
+              여아의 유방 발달, 남아의 고환 크기, 체모, 여드름, 체형 변화 등 사춘기 진행 정도를 전문의가 직접 확인합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="ed-step reveal reveal-delay-3">
+          <div class="ed-step__num"><span>04</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 4</span>
+            <h3 class="ed-step__title">뼈나이·성장판 평가</h3>
+            <p class="ed-step__desc">
+              X-ray를 통해 실제 나이보다 뼈나이가 얼마나 앞서 있는지 확인하고, 사춘기 진행이 잔여 성장 가능성에 미치는 영향을 함께 평가합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="ed-step reveal reveal-delay-4">
+          <div class="ed-step__num"><span>05</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 5</span>
+            <h3 class="ed-step__title">사춘기 호르몬 검사</h3>
+            <p class="ed-step__desc">
+              LH, FSH, Estradiol 또는 Testosterone 등 기초 호르몬을 확인합니다. 필요한 경우 GnRH 자극검사를 통해 치료가 필요한 성조숙증인지 평가합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 6 -->
+        <div class="ed-step reveal reveal-delay-5">
+          <div class="ed-step__num"><span>06</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 6</span>
+            <h3 class="ed-step__title">필요 시 초음파 평가</h3>
+            <p class="ed-step__desc">
+              여아에서는 자궁·난소 상태를 확인하기 위해 필요 시 골반 초음파를 시행할 수 있습니다. 남아에서는 진찰 소견에 따라 고환 평가가 필요할 수 있습니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 7 -->
+        <div class="ed-step reveal reveal-delay-6">
+          <div class="ed-step__num"><span>07</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 7</span>
+            <h3 class="ed-step__title">치료 필요성 및 추적 계획 수립</h3>
+            <p class="ed-step__desc">
+              검사 결과를 종합하여 성조숙증 여부, 사춘기 진행 속도, 예상 성인키 변화를 평가하고 성억제 치료가 필요한지, 일정 간격으로 추적 관찰할지 결정합니다.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="ed-step reveal reveal-delay-2">
-      <div class="ed-step__num"><span>03</span></div>
-      <div class="ed-step__body">
-        <span class="ed-step__eyebrow">Care</span>
-        <h3 class="ed-step__title">정서 및 신체 밸런스 케어</h3>
-        <p class="ed-step__desc">이른 사춘기 변화로 위축될 수 있는 소아의 심리 상태를 위로하고 건강한 또래 관계를 유지하도록 돕습니다.</p>
+    </section>
+
+    <!-- ============================================================
+         COMPREHENSIVE GOALS (종합 사춘기·성장판 분석)
+         ============================================================ -->
+    <section style="padding-top: 60px; padding-bottom: 40px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px; text-align: center;">
+        <span class="ed-kicker">Diagnostic Plan</span>
+        <h2>종합 사춘기·<strong>성장판 분석</strong></h2>
+        <p style="font-size: 15px; color: var(--c-text-light); margin-top: 10px; line-height: 1.6; word-break: keep-all;">
+          앞선 평가 결과를 바탕으로 아이의 사춘기 진행 상태와 성장판 영향을 종합적으로 판단합니다.
+        </p>
       </div>
-    </div>
-  </div>
-</section>
+
+      <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">성조숙증 진단 여부 확인</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">빠른 사춘기와 정상 변이 감별</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">사춘기 진행 속도 평가</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">뼈나이와 잔여 성장 가능성 확인</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">예상 성인키 변화 분석</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">성억제 치료 필요성 판단</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">아이 맞춤형 추적 관찰 계획 수립</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TREATMENT STATEMENT (성억제 치료 고민 해결 밴드)
+         ============================================================ -->
+    <section class="ed-statement reveal" style="margin-top: 40px; padding: 50px 40px; background-color: var(--c-primary-dark); border-radius: 12px; color: var(--c-text-white); text-align: center; box-shadow: 0 8px 30px rgba(92, 110, 99, 0.15); margin-bottom: 80px;">
+      <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--c-primary-light); margin-bottom: 18px; letter-spacing: 0.5px;">성억제 치료가 필요한지 고민되시나요?</h3>
+      <p style="font-size: 15px; line-height: 1.8; font-weight: 300; max-width: 720px; margin: 0 auto; word-break: keep-all; color: rgba(255, 255, 255, 0.9);">
+        모든 빠른 사춘기 아이에게 성억제 치료가 필요한 것은 아닙니다. 더클은 사춘기 시작 나이, 진행 속도, 뼈나이, 성장속도, 예상 성인키 변화를 종합적으로 분석하여 치료가 도움이 될 아이를 신중하게 선별합니다.
+      </p>
+    </section>
 
   </div>
 </main>

@@ -1,5 +1,5 @@
 <?php
-$page_title = "소아 비만";
+$page_title = "소아비만";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -10,8 +10,8 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-overlay"></div>
   <div class="sub-hero-content reveal">
     <p class="sub-hero-category">Clinic</p>
-    <h1 class="sub-hero-title">소아 비만</h1>
-    <p class="sub-hero-subtitle">건강한 성장의 첫걸음</p>
+    <h1 class="sub-hero-title">소아비만</h1>
+    <p class="sub-hero-subtitle">소아 비만 클리닉</p>
   </div>
 </section>
 
@@ -23,7 +23,7 @@ include_once(G5_PATH.'/head.php');
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Clinic</span></li>
       <li class="separator">></li>
-      <li class="current">소아 비만</li>
+      <li class="current">소아비만</li>
     </ul>
   </div>
 </div>
@@ -32,96 +32,143 @@ include_once(G5_PATH.'/head.php');
 <main class="sub-main">
   <div class="container">
 
-<!-- 중앙 에디토리얼 인트로 -->
-<div class="sub11_sect1" style="padding: 30px 0 30px;">
-  <div class="sub-intro-text" style="margin-bottom: 0;">
-    <span class="ed-kicker">Pediatric Obesity</span>
-    <h2 class="section-title reveal reveal-delay-1" style="font-size: 34px; font-weight: 300; margin-top: 14px; line-height: 1.45;">
-      소아비만은 성장의 효율을 떨어뜨립니다<br><strong>체성분 개선으로 건강한 키를 확보</strong>
-    </h2>
-    <p class="desc reveal reveal-delay-2" style="margin-top: 24px; font-weight: 300; color: var(--c-text-light); line-height: 2;">
-      체지방에서 분비되는 호르몬은 성조숙증을 촉진하고, 성장 호르몬을 지방 대사에 소모시킵니다.<br>
-      굶지 않고 키 성장과 건강을 동시에 관리하는 정밀 체성분 매니지먼트를 가동합니다.
-    </p>
-  </div>
-</div>
+    <!-- ============================================================
+         SPLIT INTRO (소아비만 인트로)
+         ============================================================ -->
+    <section class="ed-split reveal">
+      <div class="ed-split__text">
+        <span class="ed-eyebrow">Pediatric Obesity</span>
+        <h2 class="ed-split__title" style="font-size: 32px; font-weight: 300; line-height: 1.45; color: var(--c-primary-dark); letter-spacing: -0.5px;">
+          소아비만은 성장의 효율을 떨어뜨립니다<br>체성분 개선으로 건강한 키를 확보
+        </h2>
+        <div class="ed-split__body" style="margin-top: 24px;">
+          <p class="lead">
+            체지방에서 분비되는 호르몬은 성조숙증을 촉진하고, 성장 호르몬을 지방 대사에 소모시킵니다. 굶지 않고 키 성장과 건강을 동시에 관리하는 정밀 체성분 매니지먼트를 가동합니다.
+          </p>
+        </div>
+      </div>
+      <div class="ed-collage reveal reveal-delay-2">
+        <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="소아비만 정밀 진단" class="ed-collage__main">
+        <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="성장 클리닉 공간" class="ed-collage__sub">
+      </div>
+    </section>
 
-<!-- 교차 이미지 행 (지그재그) -->
-<div class="sub11_sect2_contWrap">
+    <!-- ============================================================
+         SELF CHECK (소아비만 자가진찰 고민)
+         ============================================================ -->
+    <section class="ed-check reveal" style="margin-top: 60px;">
+      <div class="ed-check__head">
+        <span class="ed-kicker">Self Check</span>
+        <p class="ed-check__label">이런 경우<br>평가가 필요합니다</p>
+      </div>
+      <ul class="ed-check__list">
+        <li class="ed-check__item"><span class="ed-check__num">01</span><p>키 성장에 비해 체중 증가 속도가 너무 빠른 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">02</span><p>소아 성장도표에서 체질량지수(BMI) 백분위가 높은 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">03</span><p>편식, 야식, 폭식, 단 음료 다량 섭취 등 식사 패턴이 불균형한 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">04</span><p>또래보다 활동량이 현저히 적고 운동 시 쉽게 피로해하는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">05</span><p>목덜미나 겨드랑이선 피부가 어둡고 두꺼워지는 현상이 의심되는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">06</span><p>과다한 체중으로 인해 아이가 심리적으로 위축되거나 자존감이 저하된 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">07</span><p>부모 비만 가족력이 있고, 성조숙증이나 대사 합병증이 염려되는 경우</p></li>
+      </ul>
+    </section>
 
-  <div class="sub11_sect2_item item1 imgRight reveal">
-    <div class="descBox">
-      <h3 class="item_title">
-        <span class="marcell">Diet</span>
-        <span class="line"></span>
-        <span class="kpb_l">맞춤 식단</span>
-      </h3>
-      <p class="item_subTitle">키는 크고 지방만 줄이는<br>1:1 과학적 식단 가이드</p>
-      <div class="item_desc_wrap">
-        <p class="item_desc">
-          기초대사량과 활동량을 과학적으로 연산하여, 성장에 방해되지 않도록 필수 미네랄과
-          단백질은 충분히 섭취하면서 칼로리 밀도만 줄이는 맞춤형 식단을 설계합니다.
-        </p>
-        <p class="item_desc">
-          무리한 절식이 아니라, 평생 가져갈 건강한 식습관의 기준을 함께 만들어 갑니다.
+    <!-- ============================================================
+         EVALUATION PROCESS (소아비만 평가 과정 Step 1 ~ 5)
+         ============================================================ -->
+    <section class="ed-features" style="padding-top: 60px; padding-bottom: 20px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px;">
+        <span class="ed-kicker">Evaluation Flow</span>
+        <h2>더클만의 <strong>소아비만 평가 과정</strong></h2>
+      </div>
+
+      <div class="ed-steps" style="margin-top: 30px;">
+        <!-- Step 1 -->
+        <div class="ed-step reveal">
+          <div class="ed-step__num"><span>01</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 1</span>
+            <h3 class="ed-step__title">체중 증가 원인 평가</h3>
+            <p class="ed-step__desc">
+              최근 체중 증가 시점, 식사 패턴, 간식·음료 섭취, 활동량, 스크린 타임, 수면 습관, 스트레스 요인을 확인합니다. 아이에게 부담이나 낙인이 되지 않도록 건강 중심의 상담을 진행합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="ed-step reveal reveal-delay-1">
+          <div class="ed-step__num"><span>02</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 2</span>
+            <h3 class="ed-step__title">성장도표 분석</h3>
+            <p class="ed-step__desc">
+              키, 체중, BMI를 소아 성장도표에 맞춰 분석하고, 과거 성장 곡선과 비교하여 체중 증가의 흐름을 확인합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="ed-step reveal reveal-delay-2">
+          <div class="ed-step__num"><span>03</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 3</span>
+            <h3 class="ed-step__title">체성분 분석</h3>
+            <p class="ed-step__desc">
+              InBody 검사를 통해 체지방률, 근육량, 체수분 상태를 확인합니다. 단순히 체중 숫자만 보는 것이 아니라, 아이의 몸 구성을 함께 평가합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="ed-step reveal reveal-delay-3">
+          <div class="ed-step__num"><span>04</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 4</span>
+            <h3 class="ed-step__title">대사·합병증 혈액검사</h3>
+            <p class="ed-step__desc">
+              공복혈당, HbA1c, 인슐린, 지질검사, 간수치, 요산, 갑상선 기능, 염증 지표 등을 확인합니다. 이를 통해 체중 증가와 관련된 대사 이상이 동반되어 있는지 평가합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="ed-step reveal reveal-delay-4">
+          <div class="ed-step__num"><span>05</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 5</span>
+            <h3 class="ed-step__title">맞춤 생활습관 관리</h3>
+            <p class="ed-step__desc">
+              아이의 나이, 성장 단계, 가족의 생활 패턴에 맞춰 식사, 수면, 활동량을 현실적으로 조정합니다. 필요한 경우 의학적 기준에 따라 약물치료 가능성도 함께 상담합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         COMPREHENSIVE GOALS (최종 관리 방향)
+         ============================================================ -->
+    <section style="padding-top: 60px; padding-bottom: 40px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px; text-align: center;">
+        <span class="ed-kicker">Diagnostic Plan</span>
+        <h2>최종 <strong>관리 방향</strong></h2>
+        <p style="font-size: 15px; color: var(--c-text-light); margin-top: 10px; line-height: 1.6; word-break: keep-all;">
+          정밀 진단 결과를 종합하여 아이의 건강을 지키며 효율적인 성장이 이루어지도록 돕습니다.
         </p>
       </div>
-    </div>
-    <div class="imgBox">
-      <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="맞춤 식단 가이드" class="item_img">
-      <i class="bgText marcell">Diet</i>
-    </div>
-  </div>
 
-  <div class="sub11_sect2_item item2 imgLeft reveal">
-    <div class="imgBox">
-      <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="성장판 자극 운동" class="item_img">
-      <i class="bgText marcell">Exercise</i>
-    </div>
-    <div class="descBox">
-      <h3 class="item_title">
-        <span class="marcell">Exercise</span>
-        <span class="line"></span>
-        <span class="kpb_l">운동 처방</span>
-      </h3>
-      <p class="item_subTitle">성장판을 자극하는<br>관절 친화형 유산소 프로그램</p>
-      <div class="item_desc_wrap">
-        <p class="item_desc">
-          과도한 체중이 관절과 성장판에 주는 충격을 방지하는 무릎 친화형 유산소 재활 요법과
-          코어 단련 스트레칭을 병행하여 비만 해소와 뼈 성장 활성화를 동시에 돕습니다.
-        </p>
-        <p class="item_desc">
-          움직임이 즐거워지는 순간, 아이의 체성분과 키 그래프가 함께 달라집니다.
-        </p>
+      <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">성장을 지키는 건강한 체중 관리 목표 설정</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">인슐린 저항성, 지방간, 이상지질혈증 등 대사 위험 조기 확인</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">아이에게 부담을 주지 않는 가족 중심 생활습관 개선</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">3개월 또는 6개월 단위의 성장·체성분·대사 지표 추적 관리</span>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="sub11_sect2_item item3 imgRight reveal">
-    <div class="descBox">
-      <h3 class="item_title">
-        <span class="marcell">Coaching</span>
-        <span class="line"></span>
-        <span class="kpb_l">생활 코칭</span>
-      </h3>
-      <p class="item_subTitle">즐겁게 지속하는<br>아동 행동 교정 동기 부여</p>
-      <div class="item_desc_wrap">
-        <p class="item_desc">
-          아이가 흥미를 잃지 않고 건강 습관을 교정할 수 있도록 스티커 보드, 보상 칭찬 시스템 등
-          아동 행동 교정 심리학을 가미하여 지도합니다.
-        </p>
-        <p class="item_desc">
-          꾸준함이 가장 큰 처방입니다. 아이 스스로 해내는 성취의 경험을 설계합니다.
-        </p>
-      </div>
-    </div>
-    <div class="imgBox">
-      <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="생활 코칭" class="item_img">
-      <i class="bgText marcell">Coaching</i>
-    </div>
-  </div>
-
-</div>
+    <!-- ============================================================
+         TREATMENT STATEMENT (체중 감량 걱정 해결 밴드)
+         ============================================================ -->
+    <section class="ed-statement reveal" style="margin-top: 40px; padding: 50px 40px; background-color: var(--c-primary-dark); border-radius: 12px; color: var(--c-text-white); text-align: center; box-shadow: 0 8px 30px rgba(92, 110, 99, 0.15); margin-bottom: 80px;">
+      <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--c-primary-light); margin-bottom: 18px; letter-spacing: 0.5px;">체중 감량이 아이의 키 성장에 방해가 될까 걱정되시나요?</h3>
+      <p style="font-size: 15px; line-height: 1.8; font-weight: 300; max-width: 720px; margin: 0 auto; word-break: keep-all; color: rgba(255, 255, 255, 0.9);">
+        소아 비만 관리는 성인 다이어트와 다릅니다. 성장기 아이에게 무리한 절식을 유도하지 않으며, 키 성장을 위한 필수 영양은 충분히 채우면서 체지방률만 개선해 건강한 키 성장을 확보하도록 돕습니다.
+      </p>
+    </section>
 
   </div>
 </main>

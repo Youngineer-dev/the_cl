@@ -11,7 +11,7 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-content reveal">
     <p class="sub-hero-category">Clinic</p>
     <h1 class="sub-hero-title">알레르기</h1>
-    <p class="sub-hero-subtitle">면역 균형과 편안한 호흡</p>
+    <p class="sub-hero-subtitle">성장 방해 알레르기 관리 클리닉</p>
   </div>
 </section>
 
@@ -32,66 +32,141 @@ include_once(G5_PATH.'/head.php');
 <main class="sub-main">
   <div class="container">
 
-<!-- 스플릿 인트로 (미러형: 이미지 좌 / 텍스트 우) -->
-<section class="ed-split ed-split--reverse reveal">
-  <div class="ed-split__text">
-    <span class="ed-eyebrow">Allergy Clinic</span>
-    <h2 class="ed-split__title">
-      <span class="i1">면역의 균형을</span>
-      <span class="i2">되찾아</span>
-      <span class="i3"><strong>건강하게 자라도록</strong></span>
-    </h2>
-    <div class="ed-split__body">
-      <p class="lead">
-        소아청소년기 알레르기 질환은 아이의 깊은 수면을 방해하고 성장을 저해하는 요인이 됩니다.
-      </p>
-      <p>
-        삼성더클성장의원에서는 면역 과민 반응의 원인을 명확하게 진단합니다.
-        비염, 아토피, 천식 등 악순환이 반복되는 알레르기 증상을 완화하고 일상 생활의 질을 높여 건강한 성장을 도모합니다.
-      </p>
-    </div>
-  </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="알레르기 관리" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="소아 진료" class="ed-collage__sub">
-  </div>
-</section>
+    <!-- ============================================================
+         SPLIT INTRO (알레르기 인트로)
+         ============================================================ -->
+    <section class="ed-split reveal">
+      <div class="ed-split__text">
+        <span class="ed-eyebrow">Allergy</span>
+        <h2 class="ed-split__title" style="font-size: 32px; font-weight: 300; line-height: 1.45; color: var(--c-primary-dark); letter-spacing: -0.5px;">
+          알레르기 비염과 아토피,<br>아이의 성장을 방해할 수 있습니다
+        </h2>
+        <div class="ed-split__body" style="margin-top: 24px;">
+          <p class="lead">
+            알레르기 비염과 아토피로 인한 코막힘, 수면장애, 가려움, 잦은 불편감은 아이의 생활 리듬과 성장 환경에 영향을 줄 수 있습니다. 더클은 성장기 아이의 수면과 일상생활을 방해하는 알레르기 요인을 확인하고, 아이에게 맞는 관리 방향을 함께 찾아갑니다.
+          </p>
+        </div>
+      </div>
+      <div class="ed-collage reveal reveal-delay-2">
+        <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="알레르기 정밀 진단" class="ed-collage__main">
+        <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="성장 클리닉 공간" class="ed-collage__sub">
+      </div>
+    </section>
 
-<!-- 빅넘버 리스트 -->
-<section class="ed-features">
-  <div class="ed-sectlabel reveal">
-    <span class="ed-kicker">Care Program</span>
-    <h2>일상을 지키는 <strong>3가지 알레르기 케어</strong></h2>
-  </div>
+    <!-- ============================================================
+         SELF CHECK (알레르기 자가진찰 고민)
+         ============================================================ -->
+    <section class="ed-check reveal" style="margin-top: 60px;">
+      <div class="ed-check__head">
+        <span class="ed-kicker">Self Check</span>
+        <p class="ed-check__label">이런 경우<br>평가를 권합니다</p>
+      </div>
+      <ul class="ed-check__list">
+        <li class="ed-check__item"><span class="ed-check__num">01</span><p>코막힘 때문에 입으로 숨을 쉬는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">02</span><p>밤에 코가 막혀 자주 깨는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">03</span><p>재채기, 콧물, 코가려움이 반복되는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">04</span><p>아토피로 가려움과 수면장애가 있는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">05</span><p>알레르기 면역치료가 가능한지 궁금한 경우</p></li>
+      </ul>
+    </section>
 
-  <div class="ed-feat reveal">
-    <div class="ed-feat__num">01</div>
-    <div class="ed-feat__body">
-      <h3 class="ed-feat__title">정밀 알레르기 검사 (MAST)</h3>
-      <p class="ed-feat__desc">
-        한 번의 채혈로 호흡기 및 음식물 등 수십 가지의 대표적인 알레르기 유발 물질을 동시에 정확하게 스크리닝합니다.
+    <!-- ============================================================
+         EVALUATION PROCESS (알레르기 평가 과정 Step 1 ~ 5)
+         ============================================================ -->
+    <section class="ed-features" style="padding-top: 60px; padding-bottom: 20px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px;">
+        <span class="ed-kicker">Evaluation Flow</span>
+        <h2>더클만의 <strong>알레르기 평가 과정</strong></h2>
+      </div>
+
+      <div class="ed-steps" style="margin-top: 30px;">
+        <!-- Step 1 -->
+        <div class="ed-step reveal">
+          <div class="ed-step__num"><span>01</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 1</span>
+            <h3 class="ed-step__title">증상 확인</h3>
+            <p class="ed-step__desc">
+              재채기, 콧물, 코막힘, 코골이, 입호흡, 눈·피부 가려움 등 반복되는 증상을 확인합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="ed-step reveal reveal-delay-1">
+          <div class="ed-step__num"><span>02</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 2</span>
+            <h3 class="ed-step__title">알레르기 가능성 평가</h3>
+            <p class="ed-step__desc">
+              증상 양상, 반복 시기, 가족력, 생활환경을 바탕으로 알레르기 비염과 아토피 가능성을 살핍니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="ed-step reveal reveal-delay-2">
+          <div class="ed-step__num"><span>03</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 3</span>
+            <h3 class="ed-step__title">원인 알레르겐 검사</h3>
+            <p class="ed-step__desc">
+              필요 시 MAST 또는 특이 IgE 검사로 주요 알레르겐 감작 여부를 확인합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="ed-step reveal reveal-delay-3">
+          <div class="ed-step__num"><span>04</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 4</span>
+            <h3 class="ed-step__title">생활환경 관리</h3>
+            <p class="ed-step__desc">
+              침구, 실내 먼지, 반려동물, 꽃가루, 피부 보습 등 아이에게 필요한 관리 방법을 안내합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="ed-step reveal reveal-delay-4">
+          <div class="ed-step__num"><span>05</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 5</span>
+            <h3 class="ed-step__title">맞춤 치료 상담</h3>
+            <p class="ed-step__desc">
+              증상 정도와 원인에 따라 약물치료, 환경관리, 피부관리, 필요 시 면역치료 가능성을 상담합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         COMPREHENSIVE GOALS (관리 방향)
+         ============================================================ -->
+    <section style="padding-top: 60px; padding-bottom: 40px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px; text-align: center;">
+        <span class="ed-kicker">Diagnostic Plan</span>
+        <h2>관리 <strong>방향</strong></h2>
+        <p style="font-size: 15px; color: var(--c-text-light); margin-top: 10px; line-height: 1.6; word-break: keep-all;">
+          알레르기 유발 요인을 체계적으로 관리하여 아이가 깊은 수면을 취하고 건강한 일상을 보낼 수 있도록 지원합니다.
+        </p>
+      </div>
+
+      <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">알레르기 원인 확인</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">비염·아토피 증상 관리</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">수면과 생활 리듬 개선</span>
+        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">성장기 아이의 건강한 성장 환경 관리</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TREATMENT STATEMENT (알레르기 걱정 해결 밴드)
+         ============================================================ -->
+    <section class="ed-statement reveal" style="margin-top: 40px; padding: 50px 40px; background-color: var(--c-primary-dark); border-radius: 12px; color: var(--c-text-white); text-align: center; box-shadow: 0 8px 30px rgba(92, 110, 99, 0.15); margin-bottom: 80px;">
+      <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--c-primary-light); margin-bottom: 18px; letter-spacing: 0.5px;">비염이나 아토피가 아이의 성장을 방해할까 염려되시나요?</h3>
+      <p style="font-size: 15px; line-height: 1.8; font-weight: 300; max-width: 720px; margin: 0 auto; word-break: keep-all; color: rgba(255, 255, 255, 0.9);">
+        잦은 코막힘으로 인한 구호흡(입호흡)과 아토피 가려움증은 깊은 잠을 방해하여 성장호르몬 분비 효율을 떨어뜨릴 수 있습니다. 정확한 알레르겐 원인을 분석해 일상과 수면의 질을 회복시켜 최상의 성장 환경을 구축합니다.
       </p>
-    </div>
-  </div>
-  <div class="ed-feat reveal reveal-delay-1">
-    <div class="ed-feat__num">02</div>
-    <div class="ed-feat__body">
-      <h3 class="ed-feat__title">소아 아토피 피부염 & 피부 진정</h3>
-      <p class="ed-feat__desc">
-        피부 장벽을 복구하는 보습제 처방과 약물 요법, 생활 습관 피드백을 통해 아토피 가려움증의 악순환을 예방합니다.
-      </p>
-    </div>
-  </div>
-  <div class="ed-feat reveal reveal-delay-2">
-    <div class="ed-feat__num">03</div>
-    <div class="ed-feat__body">
-      <h3 class="ed-feat__title">알레르기 비염 & 천식 맞춤 치료</h3>
-      <p class="ed-feat__desc">
-        환절기마다 아이를 괴롭히는 기침과 코막힘을 완화하기 위해 소아 호흡기 특성에 최적화된 흡입기 및 약물 치료를 안내합니다.
-      </p>
-    </div>
-  </div>
-</section>
+    </section>
 
   </div>
 </main>
