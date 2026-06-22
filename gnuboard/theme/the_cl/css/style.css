@@ -855,7 +855,7 @@ body.nav-open .site-header .hamburger span {
   align-items: center;
   gap: 8px;
   color: rgba(255, 255, 255, 0.5);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 2px;
   animation: scrollBounce 2s infinite;
 }
@@ -920,8 +920,8 @@ body.nav-open .site-header .hamburger span {
 }
 
 .about-text .desc {
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   color: var(--c-text-light);
   line-height: 2;
 }
@@ -930,7 +930,7 @@ body.nav-open .site-header .hamburger span {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--c-primary);
   letter-spacing: 1px;
@@ -1078,7 +1078,7 @@ body.nav-open .site-header .hamburger span {
 }
 
 .doctor-info .doctor-position {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--c-primary);
   letter-spacing: 2px;
@@ -1119,8 +1119,8 @@ body.nav-open .site-header .hamburger span {
 }
 
 .history-list li {
-  font-size: 13px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 400;
   color: var(--c-text-light);
   line-height: 2;
   padding-left: 14px;
@@ -1165,7 +1165,7 @@ body.nav-open .site-header .hamburger span {
 }
 
 .programs-header .section-desc {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--c-text-light);
 }
 
@@ -1236,8 +1236,8 @@ body.nav-open .site-header .hamburger span {
 }
 
 .program-card .card-desc {
-  font-size: 13px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 400;
   color: var(--c-text-light);
   line-height: 1.7;
 }
@@ -1321,8 +1321,8 @@ body.nav-open .site-header .hamburger span {
 }
 
 .gallery-caption .caption-kr {
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 13px;
+  font-weight: 400;
   opacity: 0.85;
   color: var(--c-text-white);
 }
@@ -1403,8 +1403,8 @@ body.nav-open .site-header .hamburger span {
 }
 
 .contact-left .address {
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 400;
   color: var(--c-text-light);
   line-height: 1.8;
 }
@@ -1429,7 +1429,7 @@ body.nav-open .site-header .hamburger span {
   justify-content: center;
   gap: 8px;
   padding: 10px 16px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1; /* 텍스트의 상하 여백 공간을 제거하여 정렬 중심선을 맞춤 */
   border: 1px solid var(--c-border);
@@ -1463,8 +1463,8 @@ body.nav-open .site-header .hamburger span {
 }
 
 .contact-right .phone-desc {
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 400;
   color: var(--c-text-light);
   margin-bottom: 24px;
 }
@@ -1481,7 +1481,7 @@ body.nav-open .site-header .hamburger span {
   text-align: center;
   white-space: nowrap;
   padding: 12px 24px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   border-radius: 4px;
   background: var(--c-primary);
@@ -1531,20 +1531,20 @@ body.nav-open .site-header .hamburger span {
 }
 
 .schedule-day {
-  width: 100px;
-  font-size: 14px;
+  width: 110px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 3px;
 }
 
 .schedule-time {
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 400;
   color: var(--c-text-light);
 }
 
 .schedule-note {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--c-text-light);
   margin-top: 8px;
 }
@@ -1563,7 +1563,7 @@ body.nav-open .site-header .hamburger span {
 }
 
 .footer-info {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.8;
 }
 
@@ -1573,7 +1573,7 @@ body.nav-open .site-header .hamburger span {
 }
 
 .footer-links a {
-  font-size: 12px;
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.5);
   transition: color 0.3s;
 }
