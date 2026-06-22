@@ -4224,18 +4224,28 @@ body.nav-open .site-header .hamburger span {
     padding-top: 60px;
   }
   .ed-feat {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 34px 0;
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+    padding: 24px 0;
   }
   .ed-feat:hover {
     padding-left: 0;
   }
   .ed-feat__num {
-    font-size: 54px;
+    font-size: 36px;
+    line-height: 1.1;
   }
   .ed-feat__title {
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .ed-feat__desc {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .ed-feat__desc strong {
+    font-size: 14.5px;
+    margin-bottom: 6px;
   }
   .ed-aside__title {
     font-size: 28px;
@@ -6455,9 +6465,8 @@ fieldset#captcha #captcha_info {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 2.1;
-  color: var(--c-text-light);
-  text-align: justify;
-  text-align-last: center;
+  color: var(--c-text);
+  text-align: center;
   margin-bottom: 50px;
   word-break: keep-all;
 }

@@ -54,7 +54,7 @@ include_once(G5_PATH.'/head.php');
     </div>
     
     <!-- ============================================================
-         CORE VALUES: CARE & LONG (Sect 2)
+         CORE VALUES: CARE, LONG, TOGETHER (Sect 2)
          ============================================================ -->
     <div class="sub11_sect2_contWrap" style="gap: 150px; padding: 80px 0 20px;">
       
@@ -104,8 +104,119 @@ include_once(G5_PATH.'/head.php');
           </div>
         </div>
       </div>
+
+      <!-- Value 3: Together (함께) - Image Right -->
+      <div class="sub11_sect2_item item3 imgRight reveal">
+        <div class="descBox">
+          <h3 class="item_title">
+            <span class="marcell">Together</span>
+            <span class="line"></span>
+            <span class="kpb_l">함께</span>
+          </h3>
+          <p class="item_subTitle">성장판이 닫히는 그날까지,<br>아이와 부모님 곁을 변함없이 동행하는 등대지기</p>
+          <div class="item_desc_wrap">
+            <p class="item_desc">
+              키 성장은 몇 달 만에 끝나는 과제가 아니라, 수년에 걸쳐 생활 습관과 성격을 형성해 나가는 긴 여정입니다.<br>
+              삼성더클성장의원은 단순한 치료제 처방을 넘어 식단, 수면, 운동, 그리고 성장기 아동의 정서적 피로까지<br>
+              토탈 라이프스타일 융합 매니지먼트를 병행하여 종합 돌봄을 선사합니다.
+            </p>
+            <p class="item_desc">
+              외롭고 걱정스러운 성장의 여정 속에서,<br>
+              아이와 부모님 모두의 손을 꼭 쥐고 한 걸음씩 성장의 축하를 함께 만들어 가겠습니다.
+            </p>
+          </div>
+        </div>
+        <div class="imgBox">
+          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="따뜻한 성장 라이프스타일 동행" class="item_img">
+          <i class="bgText marcell">Together</i>
+        </div>
+      </div>
       
     </div>
+
+    <!-- ============================================================
+         THE CL SPECIALITY (더클만의 특별함)
+         ============================================================ -->
+    <section class="sub11_speciality_section reveal" style="padding: 100px 0 60px;">
+      <div class="ed-sectlabel" style="margin-bottom: 50px; text-align: center;">
+        <span class="ed-kicker" style="letter-spacing: 3px;">Speciality</span>
+        <h2 style="font-size: 32px; font-weight: 300; color: var(--c-primary-dark);">더클만의 <strong>특별함</strong></h2>
+      </div>
+      
+      <div class="ed-features" style="padding-top: 0;">
+        <!-- 01 -->
+        <div class="ed-feat reveal">
+          <div class="ed-feat__num">01</div>
+          <div>
+            <h3 class="ed-feat__title">삼성서울병원식 전인적 성장진료</h3>
+            <div class="ed-feat__desc">
+              <strong style="display: block; font-size: 16px; font-weight: 500; color: var(--c-primary-dark); margin-bottom: 8px;">키만 보는 진료가 아닙니다.</strong>
+              삼성서울병원 소아청소년과 및 소아내분비·유전대사 진료 경험을 바탕으로 성장, 사춘기, 영양, 대사, 수면, 운동까지 함께 살핍니다.
+            </div>
+          </div>
+        </div>
+        
+        <!-- 02 -->
+        <div class="ed-feat reveal">
+          <div class="ed-feat__num">02</div>
+          <div>
+            <h3 class="ed-feat__title">전문의 판독 × AI 보조 성장분석</h3>
+            <div class="ed-feat__desc">
+              <strong style="display: block; font-size: 16px; font-weight: 500; color: var(--c-primary-dark); margin-bottom: 8px;">뼈나이는 판독 경험과 해석 방식에 따라 차이가 날 수 있습니다.</strong>
+              더클은 수만 건의 뼈나이 판독 경험을 가진 소아내분비 전문의가 직접 확인하고, 추가로 AI 보조 분석을 함께 활용해 판독 편차를 줄이고 성장잠재력을 다각도로 평가합니다.
+            </div>
+          </div>
+        </div>
+        
+        <!-- 03 -->
+        <div class="ed-feat reveal">
+          <div class="ed-feat__num">03</div>
+          <div>
+            <h3 class="ed-feat__title">정확한 평가, 꾸준한 추적, 필요시 치료</h3>
+            <div class="ed-feat__desc">
+              <strong style="display: block; font-size: 16px; font-weight: 500; color: var(--c-primary-dark); margin-bottom: 8px;">무조건 치료부터 시작하지 않습니다.</strong>
+              아이의 성장 흐름을 꾸준히 확인하며, 지켜볼 시점과 치료가 필요한 시점을 구분합니다.
+            </div>
+          </div>
+        </div>
+        
+        <!-- 04 -->
+        <div class="ed-feat reveal">
+          <div class="ed-feat__num">04</div>
+          <div>
+            <h3 class="ed-feat__title">성장의 모든 요소 관리</h3>
+            <div class="ed-feat__desc">
+              <strong style="display: block; font-size: 16px; font-weight: 500; color: var(--c-primary-dark); margin-bottom: 8px;">성장에는 호르몬만 중요한 것이 아닙니다.</strong>
+              영양, 운동, 수면, 체성분, 알레르기, 대사 상태까지 함께 보며 건강한 성장 방향을 안내합니다.
+            </div>
+          </div>
+        </div>
+        
+        <!-- 05 -->
+        <div class="ed-feat reveal">
+          <div class="ed-feat__num">05</div>
+          <div>
+            <h3 class="ed-feat__title">아이도 오고 싶은 성장클리닉</h3>
+            <div class="ed-feat__desc">
+              <strong style="display: block; font-size: 16px; font-weight: 500; color: var(--c-primary-dark); margin-bottom: 8px;">아이의 성장은 편안한 마음에서 더 잘 시작됩니다.</strong>
+              더클은 쾌적한 공간, 따뜻한 말 한마디, 아이의 눈높이에 맞춘 설명으로 병원이 좋은 경험이 될 수 있도록 함께합니다.
+            </div>
+          </div>
+        </div>
+        
+        <!-- 06 -->
+        <div class="ed-feat reveal">
+          <div class="ed-feat__num">06</div>
+          <div>
+            <h3 class="ed-feat__title">함께 배우는 더클 성장 라운지</h3>
+            <div class="ed-feat__desc">
+              <strong style="display: block; font-size: 16px; font-weight: 500; color: var(--c-primary-dark); margin-bottom: 8px;">더클은 진료실 안에서만 끝나는 병원이 아닙니다.</strong>
+              분기별 최신 성장 정보를 나누고, 보호자들이 궁금해하는 성장 주제를 함께 이야기합니다.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ============================================================
          PHILOSOPHY ESSAY SECTION (원장 에세이)
@@ -148,46 +259,6 @@ include_once(G5_PATH.'/head.php');
         </div>
       </div>
     </section>
-
-  </div>
-</main>
-
-<?php
-include_once(G5_PATH.'/tail.php');
-?>��려 없이 올바르게 지켜내겠습니다.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Value 3: Together (함께) - Image Right -->
-  <div class="sub11_sect2_item item3 imgRight reveal">
-    <div class="descBox">
-      <h3 class="item_title">
-        <span class="marcell">Together</span>
-        <span class="line"></span>
-        <span class="kpb_l">함께</span>
-      </h3>
-      <p class="item_subTitle">성장판이 닫히는 그날까지,<br>아이와 부모님 곁을 변함없이 동행하는 등대지기</p>
-      <div class="item_desc_wrap">
-        <p class="item_desc">
-          키 성장은 몇 달 만에 끝나는 과제가 아니라, 수년에 걸쳐 생활 습관과 성격을 형성해 나가는 긴 여정입니다.<br>
-          삼성더클성장의원은 단순한 치료제 처방을 넘어 식단, 수면, 운동, 그리고 성장기 아동의 정서적 피로까지<br>
-          토탈 라이프스타일 융합 매니지먼트를 병행하여 종합 돌봄을 선사합니다.
-        </p>
-        <p class="item_desc">
-          외롭고 걱정스러운 성장의 여정 속에서,<br>
-          아이와 부모님 모두의 손을 꼭 쥐고 한 걸음씩 성장의 축하를 함께 만들어 가겠습니다.
-        </p>
-      </div>
-    </div>
-    <div class="imgBox">
-      <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="따뜻한 성장 라이프스타일 동행" class="item_img">
-      <i class="bgText marcell">Together</i>
-    </div>
-  </div>
-
-</div>
 
   </div>
 </main>
