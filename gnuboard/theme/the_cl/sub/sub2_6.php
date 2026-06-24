@@ -38,7 +38,7 @@ include_once(G5_PATH.'/head.php');
     <section class="ed-split reveal">
       <div class="ed-split__text">
         <span class="ed-eyebrow">Allergy</span>
-        <h2 class="ed-split__title" style="font-size: 32px; font-weight: 300; line-height: 1.45; color: var(--c-primary-dark); letter-spacing: -0.5px;">
+        <h2 class="ed-split__title ed-split__title--simple">
           알레르기 비염과 아토피,<br>아이의 성장을 방해할 수 있습니다
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
@@ -151,19 +151,19 @@ include_once(G5_PATH.'/head.php');
       </div>
 
       <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">알레르기 원인 확인</span>
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">비염·아토피 증상 관리</span>
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">수면과 생활 리듬 개선</span>
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">성장기 아이의 건강한 성장 환경 관리</span>
+        <span class="ed-pill-badge">알레르기 원인 확인</span>
+        <span class="ed-pill-badge">비염·아토피 증상 관리</span>
+        <span class="ed-pill-badge">수면과 생활 리듬 개선</span>
+        <span class="ed-pill-badge">성장기 아이의 건강한 성장 환경 관리</span>
       </div>
     </section>
 
     <!-- ============================================================
          TREATMENT STATEMENT (알레르기 걱정 해결 밴드)
          ============================================================ -->
-    <section class="ed-statement reveal" style="margin-top: 40px; padding: 50px 40px; background-color: var(--c-primary-dark); border-radius: 12px; color: var(--c-text-white); text-align: center; box-shadow: 0 8px 30px rgba(92, 110, 99, 0.15); margin-bottom: 80px;">
-      <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--c-primary-light); margin-bottom: 18px; letter-spacing: 0.5px;">비염이나 아토피가 아이의 성장을 방해할까 염려되시나요?</h3>
-      <p style="font-size: 15px; line-height: 1.8; font-weight: 300; max-width: 720px; margin: 0 auto; word-break: keep-all; color: rgba(255, 255, 255, 0.9);">
+    <section class="ed-statement-band reveal">
+      <h3>비염이나 아토피가 아이의 성장을 방해할까 염려되시나요?</h3>
+      <p>
         잦은 코막힘으로 인한 구호흡(입호흡)과 아토피 가려움증은 깊은 잠을 방해하여 성장호르몬 분비 효율을 떨어뜨릴 수 있습니다. 정확한 알레르겐 원인을 분석해 일상과 수면의 질을 회복시켜 최상의 성장 환경을 구축합니다.
       </p>
     </section>

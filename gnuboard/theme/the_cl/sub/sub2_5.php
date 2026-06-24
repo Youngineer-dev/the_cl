@@ -38,7 +38,7 @@ include_once(G5_PATH.'/head.php');
     <section class="ed-split reveal">
       <div class="ed-split__text">
         <span class="ed-eyebrow">Underweight</span>
-        <h2 class="ed-split__title" style="font-size: 32px; font-weight: 300; line-height: 1.45; color: var(--c-primary-dark); letter-spacing: -0.5px;">
+        <h2 class="ed-split__title ed-split__title--simple">
           살이 안 찌는 아이,<br>원인에 맞는 영양 평가가 필요합니다
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
@@ -161,19 +161,19 @@ include_once(G5_PATH.'/head.php');
       </div>
 
       <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">아이에게 맞는 건강한 체중 증가 목표 설정</span>
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">부족한 영양소가 있다면 근거에 기반한 보충 계획</span>
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">부모와 아이 모두 부담을 줄이는 식사 습관 개선</span>
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">성장 흐름에 따른 주기적 추적 관리</span>
+        <span class="ed-pill-badge">아이에게 맞는 건강한 체중 증가 목표 설정</span>
+        <span class="ed-pill-badge">부족한 영양소가 있다면 근거에 기반한 보충 계획</span>
+        <span class="ed-pill-badge">부모와 아이 모두 부담을 줄이는 식사 습관 개선</span>
+        <span class="ed-pill-badge">성장 흐름에 따른 주기적 추적 관리</span>
       </div>
     </section>
 
     <!-- ============================================================
          TREATMENT STATEMENT (영양/대사 걱정 해결 밴드)
          ============================================================ -->
-    <section class="ed-statement reveal" style="margin-top: 40px; padding: 50px 40px; background-color: var(--c-primary-dark); border-radius: 12px; color: var(--c-text-white); text-align: center; box-shadow: 0 8px 30px rgba(92, 110, 99, 0.15); margin-bottom: 80px;">
-      <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--c-primary-light); margin-bottom: 18px; letter-spacing: 0.5px;">무리하게 억지로 먹이려고 애쓰고 계시진 않나요?</h3>
-      <p style="font-size: 15px; line-height: 1.8; font-weight: 300; max-width: 720px; margin: 0 auto; word-break: keep-all; color: rgba(255, 255, 255, 0.9);">
+    <section class="ed-statement-band reveal">
+      <h3>무리하게 억지로 먹이려고 애쓰고 계시진 않나요?</h3>
+      <p>
         단순히 섭취량만 늘리는 것은 아이에게 스트레스가 되고 대사 불균형을 초래할 수 있습니다. 섭식 행동의 원인을 분석하고 영양의 밀도를 효율적으로 높여, 부모와 아이가 편안한 식사 환경 속에서 건강하게 증량하도록 돕습니다.
       </p>
     </section>

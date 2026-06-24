@@ -38,7 +38,7 @@ include_once(G5_PATH.'/head.php');
     <section class="ed-split reveal">
       <div class="ed-split__text">
         <span class="ed-eyebrow">Pediatric Obesity</span>
-        <h2 class="ed-split__title" style="font-size: 32px; font-weight: 300; line-height: 1.45; color: var(--c-primary-dark); letter-spacing: -0.5px;">
+        <h2 class="ed-split__title ed-split__title--simple">
           소아비만은 성장의 효율을 떨어뜨립니다<br>체성분 개선으로 건강한 키를 확보
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
@@ -153,19 +153,19 @@ include_once(G5_PATH.'/head.php');
       </div>
 
       <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">성장을 지키는 건강한 체중 관리 목표 설정</span>
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">인슐린 저항성, 지방간, 이상지질혈증 등 대사 위험 조기 확인</span>
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">아이에게 부담을 주지 않는 가족 중심 생활습관 개선</span>
-        <span style="background: var(--c-primary-pale); color: var(--c-primary-dark); padding: 14px 24px; border-radius: 50px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--c-border);">3개월 또는 6개월 단위의 성장·체성분·대사 지표 추적 관리</span>
+        <span class="ed-pill-badge">성장을 지키는 건강한 체중 관리 목표 설정</span>
+        <span class="ed-pill-badge">인슐린 저항성, 지방간, 이상지질혈증 등 대사 위험 조기 확인</span>
+        <span class="ed-pill-badge">아이에게 부담을 주지 않는 가족 중심 생활습관 개선</span>
+        <span class="ed-pill-badge">3개월 또는 6개월 단위의 성장·체성분·대사 지표 추적 관리</span>
       </div>
     </section>
 
     <!-- ============================================================
          TREATMENT STATEMENT (체중 감량 걱정 해결 밴드)
          ============================================================ -->
-    <section class="ed-statement reveal" style="margin-top: 40px; padding: 50px 40px; background-color: var(--c-primary-dark); border-radius: 12px; color: var(--c-text-white); text-align: center; box-shadow: 0 8px 30px rgba(92, 110, 99, 0.15); margin-bottom: 80px;">
-      <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--c-primary-light); margin-bottom: 18px; letter-spacing: 0.5px;">체중 감량이 아이의 키 성장에 방해가 될까 걱정되시나요?</h3>
-      <p style="font-size: 15px; line-height: 1.8; font-weight: 300; max-width: 720px; margin: 0 auto; word-break: keep-all; color: rgba(255, 255, 255, 0.9);">
+    <section class="ed-statement-band reveal">
+      <h3>체중 감량이 아이의 키 성장에 방해가 될까 걱정되시나요?</h3>
+      <p>
         소아 비만 관리는 성인 다이어트와 다릅니다. 성장기 아이에게 무리한 절식을 유도하지 않으며, 키 성장을 위한 필수 영양은 충분히 채우면서 체지방률만 개선해 건강한 키 성장을 확보하도록 돕습니다.
       </p>
     </section>

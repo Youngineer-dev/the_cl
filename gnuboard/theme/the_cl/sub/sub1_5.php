@@ -34,7 +34,7 @@ include_once(G5_PATH.'/head.php');
     
 <div class="sub-intro-text">
   <p class="section-en reveal">Directions</p>
-  <h2 class="ed-split__title">
+  <h2 class="ed-split__title ed-split__title--simple">
       잠실역 도보 3분 거리,<br>
       <strong>가장 쾌적하게 방문하시는 길</strong>
     </h2>

@@ -38,7 +38,7 @@ include_once(G5_PATH.'/head.php');
     <section class="ed-split reveal">
       <div class="ed-split__text">
         <span class="ed-eyebrow">Growth Potential</span>
-        <h2 class="ed-split__title" style="font-size: 32px; font-weight: 300; line-height: 1.45; color: var(--c-primary-dark); letter-spacing: -0.5px;">
+        <h2 class="ed-split__title ed-split__title--simple">
           현재 키보다 중요한 것은<br>아이의 <strong>성장 잠재력</strong>입니다
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
@@ -154,22 +154,22 @@ include_once(G5_PATH.'/head.php');
         </p>
       </div>
       
-      <div class="ed-cards reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px;">
-        <div class="ed-card-item" style="background: var(--c-primary-pale); padding: 40px 30px; border-radius: 12px; text-align: center; border: 1px solid var(--c-border); box-shadow: 0 4px 20px rgba(152, 169, 158, 0.05);">
-          <h3 style="font-size: 19px; font-weight: 600; color: var(--c-primary-dark); margin-bottom: 12px; font-family: var(--font-serif);">예상 성인키 예측</h3>
-          <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.7; font-weight: 300; word-break: keep-all;">
+      <div class="ed-cards reveal" style="margin-top: 40px;">
+        <div class="ed-card-item">
+          <h3>예상 성인키 예측</h3>
+          <p>
             골성숙도와 유전적 요인, 성장 속도 데이터를 정밀 분석하여 미래의 예상 성인 신장을 높은 정확도로 산출합니다.
           </p>
         </div>
-        <div class="ed-card-item" style="background: var(--c-primary-pale); padding: 40px 30px; border-radius: 12px; text-align: center; border: 1px solid var(--c-border); box-shadow: 0 4px 20px rgba(152, 169, 158, 0.05);">
-          <h3 style="font-size: 19px; font-weight: 600; color: var(--c-primary-dark); margin-bottom: 12px; font-family: var(--font-serif);">성장을 가로막는 방해요인 감별</h3>
-          <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.7; font-weight: 300; word-break: keep-all;">
+        <div class="ed-card-item">
+          <h3>성장을 가로막는 방해요인 감별</h3>
+          <p>
             성장 판독 및 호르몬 균형, 자세 및 대사 상태 분석을 통해 성장을 지연시키는 근본적인 방해 요인을 규명합니다.
           </p>
         </div>
-        <div class="ed-card-item" style="background: var(--c-primary-pale); padding: 40px 30px; border-radius: 12px; text-align: center; border: 1px solid var(--c-border); box-shadow: 0 4px 20px rgba(152, 169, 158, 0.05);">
-          <h3 style="font-size: 19px; font-weight: 600; color: var(--c-primary-dark); margin-bottom: 12px; font-family: var(--font-serif);">아이 맞춤형 1:1 성장전략 수립</h3>
-          <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.7; font-weight: 300; word-break: keep-all;">
+        <div class="ed-card-item">
+          <h3>아이 맞춤형 1:1 성장전략 수립</h3>
+          <p>
             도출된 종합 환경 지표를 바탕으로 영양, 수면, 운동부터 필요시 맞춤 의학적 치료까지 아우르는 1:1 플랜을 제공합니다.
           </p>
         </div>

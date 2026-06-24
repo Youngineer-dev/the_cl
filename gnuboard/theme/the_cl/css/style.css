@@ -6523,3 +6523,347 @@ fieldset#captcha #captcha_info {
   }
 }
 
+/* --- Subpage Redesign & Mobile UX Optimization --- */
+
+/* 1. Simple Title Class for Clinic Subpages */
+.ed-split__title--simple {
+  font-size: 32px !important;
+  font-weight: 300 !important;
+  line-height: 1.45 !important;
+  color: var(--c-primary-dark) !important;
+  letter-spacing: -0.5px !important;
+  margin: 24px 0 36px !important;
+}
+
+/* 2. Responsive Tag Badges for Solutions/Plans */
+.ed-pill-badge {
+  background: var(--c-primary-pale) !important;
+  color: var(--c-primary-dark) !important;
+  padding: 14px 24px !important;
+  border-radius: 50px !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  border: 1px solid var(--c-border) !important;
+  display: inline-block !important;
+  transition: all 0.3s var(--ease-elegant) !important;
+  box-shadow: 0 4px 10px rgba(152, 169, 158, 0.05) !important;
+}
+.ed-pill-badge:hover {
+  background: var(--c-primary) !important;
+  color: #fff !important;
+  border-color: var(--c-primary) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 15px rgba(92, 110, 99, 0.15) !important;
+}
+
+/* 3. Responsive Highlight Statement Band */
+.ed-statement-band {
+  margin-top: 40px !important;
+  padding: 50px 40px !important;
+  background-color: var(--c-primary-dark) !important;
+  border-radius: 12px !important;
+  color: var(--c-text-white) !important;
+  text-align: center !important;
+  box-shadow: 0 8px 30px rgba(92, 110, 99, 0.15) !important;
+  margin-bottom: 80px !important;
+}
+.ed-statement-band h3 {
+  font-family: var(--font-serif) !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: var(--c-primary-light) !important;
+  margin-bottom: 18px !important;
+  letter-spacing: 0.5px !important;
+}
+.ed-statement-band p {
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+  font-weight: 300 !important;
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  word-break: keep-all !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* 4. Global Responsive Overrides */
+@media (max-width: 960px) {
+  .ed-collage {
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-hero {
+    height: 280px !important; /* height optimization */
+  }
+  .sub-main {
+    padding: 40px 0 60px !important; /* spacing adjustment */
+  }
+  .ed-split__title--simple {
+    font-size: 26px !important;
+    margin: 16px 0 24px !important;
+  }
+  .ed-pill-badge {
+    padding: 10px 18px !important;
+    font-size: 13px !important;
+  }
+  .ed-statement-band {
+    padding: 36px 24px !important;
+    margin-bottom: 50px !important;
+  }
+  .ed-statement-band h3 {
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+  }
+  .ed-statement-band p {
+    font-size: 13.5px !important;
+    line-height: 1.7 !important;
+  }
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-popup {
+    animation: none;
+    opacity: 1;
+  }
+  .popup-slide {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   ABOUT - HOSPITAL PHILOSOPHY ESSAY SECTION
+   ============================================================ */
+.sub11_essay_section {
+  padding: 100px 0;
+  background-color: var(--c-primary-pale);
+  border-radius: 16px;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(152, 169, 158, 0.03);
+}
+.sub11_essay_container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+.sub11_essay_quote {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--c-primary-dark);
+  margin-bottom: 48px;
+  letter-spacing: -0.5px;
+  word-break: keep-all;
+}
+.sub11_essay_body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 2.1;
+  color: var(--c-text);
+  text-align: center;
+  margin-bottom: 50px;
+  word-break: keep-all;
+}
+.sub11_essay_body p {
+  margin-bottom: 28px;
+}
+.sub11_essay_body p:last-child {
+  margin-bottom: 0;
+}
+.sub11_essay_outro {
+  background-color: var(--c-primary-dark);
+  color: var(--c-text-white);
+  padding: 26px 40px;
+  border-radius: 8px;
+  font-family: var(--font-serif);
+  font-size: 17.5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 40px;
+  display: inline-block;
+  box-shadow: 0 6px 20px rgba(92, 110, 99, 0.15);
+  word-break: keep-all;
+}
+
+@media (max-width: 960px) {
+  .sub11_essay_section {
+    padding: 70px 0;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+  }
+  .sub11_essay_container {
+    padding: 0 24px;
+  }
+  .sub11_essay_quote {
+    font-size: 22px;
+    margin-bottom: 36px;
+  }
+  .sub11_essay_body {
+    font-size: 14.5px;
+    line-height: 1.9;
+  }
+  .sub11_essay_outro {
+    font-size: 15px;
+    padding: 20px 24px;
+    width: 100%;
+  }
+}
+
+/* --- Subpage Redesign & Mobile UX Optimization --- */
+
+/* 1. Simple Title Class for Clinic Subpages */
+.ed-split__title--simple {
+  font-size: 32px !important;
+  font-weight: 300 !important;
+  line-height: 1.45 !important;
+  color: var(--c-primary-dark) !important;
+  letter-spacing: -0.5px !important;
+  margin: 24px 0 36px !important;
+}
+
+/* 2. Responsive Tag Badges for Solutions/Plans */
+.ed-pill-badge {
+  background: var(--c-primary-pale) !important;
+  color: var(--c-primary-dark) !important;
+  padding: 14px 24px !important;
+  border-radius: 50px !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  border: 1px solid var(--c-border) !important;
+  display: inline-block !important;
+  transition: all 0.3s var(--ease-elegant) !important;
+  box-shadow: 0 4px 10px rgba(152, 169, 158, 0.05) !important;
+}
+.ed-pill-badge:hover {
+  background: var(--c-primary) !important;
+  color: #fff !important;
+  border-color: var(--c-primary) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 15px rgba(92, 110, 99, 0.15) !important;
+}
+
+/* 3. Responsive Highlight Statement Band */
+.ed-statement-band {
+  margin-top: 40px !important;
+  padding: 50px 40px !important;
+  background-color: var(--c-primary-dark) !important;
+  border-radius: 12px !important;
+  color: var(--c-text-white) !important;
+  text-align: center !important;
+  box-shadow: 0 8px 30px rgba(92, 110, 99, 0.15) !important;
+  margin-bottom: 80px !important;
+}
+.ed-statement-band h3 {
+  font-family: var(--font-serif) !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: var(--c-primary-light) !important;
+  margin-bottom: 18px !important;
+  letter-spacing: 0.5px !important;
+}
+.ed-statement-band p {
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+  font-weight: 300 !important;
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  word-break: keep-all !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* 4. Global Responsive Overrides */
+@media (max-width: 960px) {
+  .ed-collage {
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-hero {
+    height: 280px !important; /* height optimization */
+  }
+  .sub-main {
+    padding: 40px 0 60px !important; /* spacing adjustment */
+  }
+  .ed-split__title--simple {
+    font-size: 26px !important;
+    margin: 16px 0 24px !important;
+  }
+  .ed-pill-badge {
+    padding: 10px 18px !important;
+    font-size: 13px !important;
+  }
+  .ed-statement-band {
+    padding: 36px 24px !important;
+    margin-bottom: 50px !important;
+  }
+  .ed-statement-band h3 {
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+  }
+  .ed-statement-band p {
+    font-size: 13.5px !important;
+    line-height: 1.7 !important;
+  }
+  .timeline-content {
+    padding: 24px 20px !important; /* timeline text spacing */
+  }
+}
+
+@media (max-width: 560px) {
+  .ed-split__title--simple {
+    font-size: 22px !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* 5. Comprehensive solution cards */
+.ed-card-item {
+  background: var(--c-primary-pale) !important;
+  padding: 40px 30px !important;
+  border-radius: 12px !important;
+  text-align: center !important;
+  border: 1px solid var(--c-border) !important;
+  box-shadow: 0 4px 20px rgba(152, 169, 158, 0.05) !important;
+  transition: all 0.3s var(--ease-elegant) !important;
+}
+.ed-card-item:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 25px rgba(152, 169, 158, 0.12) !important;
+  background: #ffffff !important;
+  border-color: var(--c-primary-light) !important;
+}
+.ed-card-item h3 {
+  font-size: 19px !important;
+  font-weight: 600 !important;
+  color: var(--c-primary-dark) !important;
+  margin-bottom: 12px !important;
+  font-family: var(--font-serif) !important;
+}
+.ed-card-item p {
+  font-size: 14px !important;
+  color: var(--c-text-light) !important;
+  line-height: 1.7 !important;
+  font-weight: 300 !important;
+  word-break: keep-all !important;
+}
+@media (max-width: 768px) {
+  .ed-card-item {
+    padding: 30px 20px !important;
+  }
+  .ed-card-item h3 {
+    font-size: 17px !important;
+  }
+  .ed-card-item p {
+    font-size: 13.5px !important;
+  }
+}
