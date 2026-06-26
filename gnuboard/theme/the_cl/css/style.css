@@ -3851,6 +3851,7 @@ body.nav-open .site-header .hamburger span {
 .ed-collage {
   position: relative;
   min-height: 520px;
+  width: 100%;
 }
 .ed-collage img {
   position: absolute;
