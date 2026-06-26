@@ -81,6 +81,142 @@ include_once(G5_PATH.'/head.php');
       </div>
     </div>
   </div>
+
+  <!-- 학술 논문 -->
+  <div class="publications-section">
+    <div class="history-title">
+      <span class="star">✦</span> 주요 학술 논문 (SCI / PubMed)
+    </div>
+    <ul class="publications-list">
+      <li class="pub-item">
+        <span class="pub-journal">Front Endocrinol (Lausanne). 2025</span>
+        <p class="pub-title">Exosomal miRNAs as potential biomarkers for insulin resistance and metabolic dysfunction-associated steatotic liver disease in children with obesity.</p>
+        <p class="pub-authors">Noh ES, Yeum Y, Jin HY, Ryu S, Hwang IT.</p>
+      </li>
+      <li class="pub-item">
+        <span class="pub-journal">J Clin Endocrinol Metab. 2026</span>
+        <p class="pub-title">Genomic Insights into Short Stature in Children Born Small for Gestational Age: A Korean Multicenter Exome Study.</p>
+        <p class="pub-authors">Lee Y, Jeong HR, Kim EY, Noh ES, Jin HY, et al.</p>
+      </li>
+      <li class="pub-item">
+        <span class="pub-journal">Int J Mol Sci. 2026</span>
+        <p class="pub-title">Differential microRNA Expression Profiles in Girls with Idiopathic Central Precocious Puberty and Premature Thelarche.</p>
+        <p class="pub-authors">Lee HJ, Bae SJ, Noh ES, Jin HY, Hwang IT, Ryu S, Jeong HR.</p>
+      </li>
+      <li class="pub-item">
+        <span class="pub-journal">J Pediatr Endocrinol Metab. 2025</span>
+        <p class="pub-title">Serum α-Klotho and its association with testosterone in boys with central precocious puberty.</p>
+        <p class="pub-authors">Noh ES, Jin HY, Hwang IT.</p>
+      </li>
+      <!-- 더보기 영역 -->
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">J Korean Med Sci. 2025</span>
+        <p class="pub-title">Endocrine Disorders in Patients With Inborn Errors of Immunity.</p>
+        <p class="pub-authors">Noh ES, Kim DR, Im M, Kim I, Sung J, Ahn YJ, Shin A, Kim KR, et al.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">J Clin Res Pediatr Endocrinol. 2026</span>
+        <p class="pub-title">Floating-Harbor Syndrome in a Korean Patient with Short Stature and Early Puberty: A Case Report.</p>
+        <p class="pub-authors">Jeon J, Noh ES, Hwang IT.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">BMC Pediatr. 2024</span>
+        <p class="pub-title">Prediction of hepatic fibrosis using the aspartate transaminase-to-platelet ratio index in children and adolescents with metabolic dysfunction-associated steatotic liver disease.</p>
+        <p class="pub-authors">Jin HY, Noh ES, Jeong H, Hwang IT.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">J Clin Res Pediatr Endocrinol. 2024</span>
+        <p class="pub-title">Triglyceride Glucose Index is Associated with Ultrasonographic Fatty Liver Indicator in Children and Adolescents with Non-alcoholic Fatty Liver Disease.</p>
+        <p class="pub-authors">Kim B, Jin HY, Yoon JS, Noh ES, Hwang IT.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Medicine (Baltimore). 2024</span>
+        <p class="pub-title">Triglyceride-glucose-alanine aminotransferase index: A noninvasive serum predictor for identifying the severity of pediatric nonalcoholic fatty liver disease.</p>
+        <p class="pub-authors">Noh ES, Hwang IT.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Front Endocrinol (Lausanne). 2024</span>
+        <p class="pub-title">α-Klotho levels in girls with central precocious puberty: potential as a diagnostic and monitoring marker.</p>
+        <p class="pub-authors">Park JH, Noh ES, Hwang IT.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Ann Pediatr Endocrinol Metab. 2024</span>
+        <p class="pub-title">Resistance to thyroid hormone and nonfunctioning pituitary microadenoma in a 13-year-old boy with THRB mutation.</p>
+        <p class="pub-authors">Kim J, Noh ES, Kim MS, Choi JM, Lee SM, Cho SY.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Ann Pediatr Endocrinol Metab. 2023</span>
+        <p class="pub-title">Mixed diabetic ketoacidosis and hyperglycemic hyperosmolarity in a girl with nephronophthisis 4 presenting with rhabdomyolysis and pancreatitis.</p>
+        <p class="pub-authors">Noh ES, Kim C, Cho SY.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Ann Pediatr Endocrinol Metab. 2023</span>
+        <p class="pub-title">A Korean boy with a CHD8 mutation who presented with overgrowth, intellectual disability, and autism.</p>
+        <p class="pub-authors">Kim C, Noh ES, Cho SY.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Ewha Med J. 2023</span>
+        <p class="pub-title">Diagnosis and Management of Osteoporosis in Children and Adolescents.</p>
+        <p class="pub-authors">Jin HY, Noh ES, Hwang IT.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Ann Pediatr Endocrinol Metab. 2023</span>
+        <p class="pub-title">First female Korean child with Coffin-Lowry syndrome: a novel variant in RPS6KA3 diagnosed by exome sequencing and a literature review.</p>
+        <p class="pub-authors">Song A, Im M, Kim MS, Noh ES, Kim C, Jang J, Lee SM, Ki CS, Cho SY, Jin DK.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Medicine (Baltimore). 2023</span>
+        <p class="pub-title">Six-year clinical outcomes of enzyme replacement therapy for perinatal lethal and infantile hypophosphatasia in Korea: Two case reports.</p>
+        <p class="pub-authors">Kim I, Noh ES, Kim MS, Jang JH, Jeon TY, Choi HW, Cho SY.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Ann Hum Genet. 2022</span>
+        <p class="pub-title">A novel splicing variant in GALNS in mucopolysaccharidosis IVA and the necessity of re-evaluating primer sequences.</p>
+        <p class="pub-authors">Kim SM, Noh ES, Park JH, Park HD, Lee SY, Jang JH, Cho SY.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Endocr J. 2022</span>
+        <p class="pub-title">Multiple endocrine neoplasia type 2 and autoimmune polyendocrine syndromes in a 16-year-old male with Kabuki syndrome.</p>
+        <p class="pub-authors">Park E, Kim MS, Noh ES, Lee JE, Kim SJ, Kwon YS, Cho SY.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">J Pers Med. 2022</span>
+        <p class="pub-title">Endocrine and Metabolic Illnesses in Young Adults with Prader-Willi Syndrome.</p>
+        <p class="pub-authors">Noh ES, Kim MS, Kim C, Jeon K, Kim S, Cho SY, Jin DK.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Ann Clin Lab Sci. 2022</span>
+        <p class="pub-title">The Youngest Infant to Be Diagnosed with Autosomal Dominant Hypocalcemia Type 2 Harboring a Novel Variant of GNA11.</p>
+        <p class="pub-authors">Kwon EJ, Kim MS, Noh ES, Kim CW, Jang J, Choi JH, Cho SY, Jin DK.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">J Pers Med. 2022</span>
+        <p class="pub-title">Natural History and Molecular Characteristics of Korean Patients with Mucopolysaccharidosis Type III.</p>
+        <p class="pub-authors">Kim MS, Yang A, Noh ES, Kim C, Bae GY, Lim HH, Park HD, Cho SY, Jin DK.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Epidemiol Health. 2022</span>
+        <p class="pub-title">Development and validation of the Pediatric-Youth Hyperphagia Assessment for Prader-Willi syndrome.</p>
+        <p class="pub-authors">Cho SY, Kang D, Im M, Yang A, Kim MS, Kim J, Noh ES, et al.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Medicine (Baltimore). 2022</span>
+        <p class="pub-title">Late-infantile GM1 gangliosidosis: A case report.</p>
+        <p class="pub-authors">Noh ES, Park HM, Kim MS, Park HD, Cho SY, Jin DK.</p>
+      </li>
+      <li class="pub-item pub-hidden">
+        <span class="pub-journal">Yonsei Med J. 2019</span>
+        <p class="pub-title">Continuous Renal Replacement Therapy in Preterm Infants.</p>
+        <p class="pub-authors">Noh ES, Kim HH, Kim HS, Han YS, Yang M, Ahn SY, Sung SI, Chang YS, Park WS.</p>
+      </li>
+    </ul>
+    <div class="pub-toggle-wrap">
+      <button type="button" class="pub-toggle-btn" onclick="(function(b){var h=b.closest('.publications-section').querySelectorAll('.pub-hidden');var o=b.classList.toggle('is-open');h.forEach(function(e){e.classList.toggle('is-expanded',o)});b.querySelector('.btn-text').textContent=o?'논문 접기':'논문 더보기 (총 24편)';if(!o){b.closest('.publications-section').scrollIntoView({behavior:'smooth',block:'start'})}})(this)">
+        <span class="btn-text">논문 더보기 (총 24편)</span>
+        <span class="arrow">▼</span>
+      </button>
+    </div>
+  </div>
 </article>
 
 <!-- 

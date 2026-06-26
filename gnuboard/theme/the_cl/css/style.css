@@ -6868,3 +6868,108 @@ fieldset#captcha #captcha_info {
     font-size: 13.5px !important;
   }
 }
+
+/* ============================================================
+   PUBLICATIONS (학술 논문 목록)
+   ============================================================ */
+.publications-section {
+  grid-column: 1 / -1;
+  margin-top: 48px;
+  border-top: 1px solid var(--c-border);
+  padding-top: 40px;
+  width: 100%;
+}
+.publications-section .history-title {
+  margin-bottom: 28px;
+}
+.publications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pub-item {
+  position: relative;
+  padding-left: 18px;
+  border-left: 2px solid var(--c-primary-light);
+  transition: border-color 0.3s ease;
+}
+.pub-item:hover {
+  border-left-color: var(--c-primary);
+}
+.pub-journal {
+  display: block;
+  font-size: 11.5px;
+  color: var(--c-primary);
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+}
+.pub-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--c-text);
+  line-height: 1.55;
+  margin: 0 0 3px;
+  word-break: keep-all;
+}
+.pub-authors {
+  font-size: 12.5px;
+  color: var(--c-text-light);
+  font-weight: 300;
+  margin: 0;
+}
+/* 더보기 접힘/펼침 */
+.pub-hidden {
+  display: none;
+}
+.pub-hidden.is-expanded {
+  display: block;
+}
+.pub-toggle-wrap {
+  margin-top: 30px;
+  text-align: center;
+}
+.pub-toggle-btn {
+  background: none;
+  border: 1px solid var(--c-border);
+  color: var(--c-primary-dark);
+  padding: 11px 30px;
+  font-size: 13.5px;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-elegant);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+}
+.pub-toggle-btn:hover {
+  background: var(--c-primary-pale);
+  border-color: var(--c-primary-light);
+}
+.pub-toggle-btn .arrow {
+  display: inline-block;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+.pub-toggle-btn.is-open .arrow {
+  transform: rotate(180deg);
+}
+@media (max-width: 960px) {
+  .publications-section {
+    margin-top: 36px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 560px) {
+  .pub-title {
+    font-size: 13px;
+  }
+  .pub-authors {
+    font-size: 12px;
+  }
+}
