@@ -39,34 +39,28 @@ include_once(G5_THEME_PATH.'/head.php');
     <div class="container">
       <div class="about-inner">
         <div class="about-text">
-          <p class="section-en reveal">Care &amp; Long</p>
+          <p class="section-en reveal">Care & Long</p>
           <h2 class="section-title reveal reveal-delay-1">
             <strong>THE CL</strong>은<br>
-            세심한 케어와<br>
-            긴 성장 여정을 함께하는<br>
-            마음에서 시작되었습니다
+            세심한 케어와 긴 성장 여정을<br>
+            함께하겠다는 마음에서<br>
+            시작되었습니다
           </h2>
           <div class="desc-group reveal reveal-delay-2">
             <p class="desc">
-              아이의 성장은 한 번의 키 숫자로<br>
-              판단할 수 있는 결과가 아닌<br>
-              시간과 함께 만들어가는 과정입니다
+              아이의 성장은 한 번의 키 숫자로 판단할 수 있는 결과가 아닌,<br>
+              시간과 함께 만들어가는 과정입니다.
             </p>
           </div>
           <div class="desc-group reveal reveal-delay-3">
             <p class="desc">
-              대학병원 교수 출신 소아내분비 전문의의<br>
-              깊이 있는 진료와<br>
-              두 남매를 키우는 엄마의 따뜻한 공감을 더해
+              대학병원 교수 출신 소아내분비 전문의의 깊이 있는 진료와 <br>
+              두 남매를 키우는 엄마의 따뜻한 공감을 더해, <br>
+              근거 있는 평가와 충분한 설명으로 <br>
+              아이에게 꼭 맞는 성장 진료를 이어갑니다.
             </p>
           </div>
-          <div class="desc-group reveal reveal-delay-4">
-            <p class="desc">
-              근거 있는 평가와 충분한 설명으로<br>
-              아이에게 꼭 맞는 성장 진료를 이어갑니다
-            </p>
-          </div>
-          <a href="#doctors" class="view-more reveal reveal-delay-5">view more →</a>
+          <a href="#doctors" class="view-more reveal reveal-delay-4">view more →</a>
         </div>
 
         <div class="about-images">

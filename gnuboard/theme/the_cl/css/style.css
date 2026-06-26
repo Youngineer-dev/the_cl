@@ -942,6 +942,7 @@ body.nav-open .site-header .hamburger span {
   gap: 14px;
 }
 
+/* 이미지 콜라주 */
 .about-images {
   position: relative;
   height: 520px;
