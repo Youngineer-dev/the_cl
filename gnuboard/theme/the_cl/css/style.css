@@ -720,7 +720,6 @@ body.nav-open .site-header .hamburger span {
   background-image: url("../img/hero_main.png");
   background-size: cover;
   background-position: center;
-  filter: brightness(0.6);
   transform: scale(1.05);
   animation: heroZoom 12s var(--ease-elegant) infinite alternate;
 }
@@ -735,6 +734,7 @@ body.nav-open .site-header .hamburger span {
 }
 
 .hero-overlay {
+  display: none;
   position: absolute;
   inset: 0;
   background: linear-gradient(
