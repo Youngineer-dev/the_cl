@@ -11,6 +11,7 @@ include_once(G5_THEME_PATH.'/head.php');
        ============================================================ -->
   <section class="hero" id="hero">
     <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-deco"></div>
       <p class="hero-subtitle">1:1 개별 맞춤 성장 클리닉</p>
