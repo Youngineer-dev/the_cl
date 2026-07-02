@@ -11,7 +11,7 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-overlay"></div>
   <div class="sub-hero-content reveal">
     <p class="sub-hero-category">About</p>
-    <h1 class="sub-hero-title">병원 소개</h1>
+    <h1 class="sub-hero-title">소아 성장 클리닉 - 병원 소개</h1>
     <p class="sub-hero-subtitle">아이의 성장은 한순간이 아닌 긴 여정입니다</p>
   </div>
 </section>
@@ -48,8 +48,8 @@ include_once(G5_PATH.'/head.php');
       
       <div class="sub11_sect1_descWrap reveal reveal-delay-3" style="margin-top: 40px;">
         <p class="sub11_sect1_desc desc1" style="font-size: 19px; line-height: 1.8; color: var(--c-primary-dark); text-align: center; font-weight: 400; word-break: keep-all;">
-          ‘더클’은 아이가 더 건강하게, 더 크게 자라날 가능성을 믿는 이름입니다.<br>
-          동시에 THE CL은 Care & Long의 마음을 담고 있습니다.
+          <strong>송파구 잠실에 위치한 삼성더클성장의원</strong>은 대학병원 분과 교수 출신의 소아내분비 세부전문의가 1:1 맞춤 성장 클리닉을 제공합니다. 아이가 건강하게, 더 크게 자라날 가능성을 믿고 세심한 치료(Care)와 성장의 긴 여정(Long)을 오래도록 함께 동행합니다.<br>
+          <span style="font-size: 13px; color: var(--c-text-light); display: inline-block; margin-top: 16px; opacity: 0.85; font-weight: 300;">※ 본 클리닉은 질병관리청 소아청소년 성장표준치(2017) 및 대한소아내분비학회 표준 임상 지침을 근거로 정밀 검사 결과를 판독합니다.</span>
         </p>
       </div>
     </section>

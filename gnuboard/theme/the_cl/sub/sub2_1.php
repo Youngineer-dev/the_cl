@@ -11,7 +11,7 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-overlay"></div>
   <div class="sub-hero-content reveal">
     <p class="sub-hero-category">Clinic</p>
-    <h1 class="sub-hero-title">성장평가 · 예상키</h1>
+    <h1 class="sub-hero-title">소아 성장평가 · 예상키 진단</h1>
     <p class="sub-hero-subtitle">더클 성장잠재력 분석 클리닉</p>
   </div>
 </section>
@@ -44,7 +44,8 @@ include_once(G5_PATH.'/head.php');
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead">
-            더클은 성장곡선, 성장속도, 사춘기, 뼈나이, 부모키를 종합적으로 분석하여 아이에게 맞는 성장 전략을 제시합니다.
+            <strong>잠실 삼성더클성장의원</strong>의 성장평가 및 예상키 진단은 아이의 현재 성장 템포를 정확하게 측정합니다. 소아내분비 세부전문의가 뼈나이(골연령)와 유전적 요인을 다각도로 분석하여, 성장 골든타임을 놓치지 않도록 과학적인 솔루션을 제시합니다.<br>
+            <span style="font-size: 13px; color: var(--c-text-light); display: inline-block; margin-top: 12px; opacity: 0.85; font-weight: 300;">※ 분석 데이터는 질병관리청이 제시한 대한민국 소아청소년 백분위수 성장 차트를 기준으로 정밀 매핑됩니다.</span>
           </p>
         </div>
       </div>
