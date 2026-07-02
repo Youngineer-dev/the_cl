@@ -22,9 +22,9 @@ if (!isset($G5_URL)) {
         <div class="header-contact">
           <a href="tel:02-1234-5678" class="header-phone">02.1234.5678</a>
         </div>
-        <div class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기" style="background:none; border:none; padding:0; cursor:pointer;">
           <span></span><span></span><span></span>
-        </div>
+        </button>
       </div>
     </div>
     <!-- Desktop Navigation GNB (로고 아래 가로 펼침형) -->

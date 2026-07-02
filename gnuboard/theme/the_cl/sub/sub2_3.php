@@ -1,6 +1,28 @@
 <?php
 $page_title = "성조숙증";
 $page_description = "송파구 잠실 성조숙증 검사 및 치료. 아이의 뼈나이와 성장 판독을 통해 2차 성징의 속도를 조절하고 건강한 성장을 도모합니다.";
+$page_schema_json = [
+    "@context" => "https://schema.org",
+    "@type" => "MedicalCondition",
+    "name" => "성조숙증",
+    "alternateName" => "Precocious Puberty",
+    "description" => "또래 평균보다 사춘기 발달이 비정상적으로 빠르게 나타나는 소아 내분비 질환으로, 뼈나이(골연령)가 가속화되어 잔여 성장 가능 키가 감소할 수 있습니다.",
+    "possibleTreatment" => [
+        [
+            "@type" => "MedicalTherapy",
+            "name" => "사춘기 지연 치료 (성호르몬 억제 주사 치료)"
+        ],
+        [
+            "@type" => "MedicalTherapy",
+            "name" => "성장호르몬 병합 치료"
+        ]
+    ],
+    "associatedAnatomy" => [
+        "@type" => "AnatomicalStructure",
+        "name" => "내분비계"
+    ],
+    "medicalSpecialty" => "Pediatrics"
+];
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
