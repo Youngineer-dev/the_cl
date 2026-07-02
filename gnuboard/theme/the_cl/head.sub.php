@@ -55,6 +55,21 @@ if($config['cf_add_meta'])
 <title><?php echo $g5_head_title; ?></title>
 <meta name="description" content="<?php echo htmlspecialchars($g5_head_description, ENT_QUOTES, 'UTF-8'); ?>">
 <?php
+// 현재 접속 프로토콜 및 도메인, 경로 기반으로 대표 URL 정의
+$canonical_proto = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
+$canonical_host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
+$canonical_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$canonical_url = $canonical_proto . '://' . $canonical_host . $canonical_path;
+$og_url = $canonical_proto . '://' . $canonical_host . $_SERVER['REQUEST_URI'];
+$og_image = G5_THEME_URL . '/img/brand_logo.png'; // 기본 대표 이미지
+?>
+<link rel="canonical" href="<?php echo htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8'); ?>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="<?php echo htmlspecialchars($g5_head_title, ENT_QUOTES, 'UTF-8'); ?>">
+<meta property="og:description" content="<?php echo htmlspecialchars($g5_head_description, ENT_QUOTES, 'UTF-8'); ?>">
+<meta property="og:image" content="<?php echo htmlspecialchars($og_image, ENT_QUOTES, 'UTF-8'); ?>">
+<meta property="og:url" content="<?php echo htmlspecialchars($og_url, ENT_QUOTES, 'UTF-8'); ?>">
+<?php
 // 기본 MedicalClinic 스키마 생성 (GSO / AI 최적화)
 $clinic_schema = [
     "@context" => "https://schema.org",
