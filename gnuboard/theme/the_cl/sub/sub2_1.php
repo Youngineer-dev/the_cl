@@ -1,5 +1,6 @@
 <?php
 $page_title = "성장평가 · 예상키";
+$page_description = "잠실 삼성더클성장의원의 과학적인 성장 평가 및 예상키 측정 프로그램을 통해 우리 아이의 성장 템포와 정밀 데이터를 진단하세요.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -48,8 +49,8 @@ include_once(G5_PATH.'/head.php');
         </div>
       </div>
       <div class="ed-collage reveal reveal-delay-2">
-        <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="성장 평가 데이터" class="ed-collage__main">
-        <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="정밀 계측" class="ed-collage__sub">
+        <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="잠실 삼성더클성장의원 소아 예상키 및 성장 발달 정밀 분석 데이터" class="ed-collage__main">
+        <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="송파 삼성더클성장의원 소아내분비 세부전문의 정밀 신체 계측 과정" class="ed-collage__sub">
       </div>
     </section>
 

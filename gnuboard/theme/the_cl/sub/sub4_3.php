@@ -1,5 +1,6 @@
 <?php
 $page_title = "공지사항";
+$page_description = "삼성더클성장의원의 최신 소식, 진료 일정 변경 및 다양한 성장 건강 정보를 신속하게 전해드립니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 

@@ -17,6 +17,15 @@ if (defined('_INDEX_')) {
     $g5_head_title = ($g5['title'] ? $g5['title'] . ' - ' : '') . '삼성더클성장의원';
 }
 
+// 메타 디스크립션 설정 (SEO / GSO 최적화)
+if (isset($g5['description']) && $g5['description']) {
+    $g5_head_description = strip_tags($g5['description']);
+} else if (isset($page_description) && $page_description) {
+    $g5_head_description = strip_tags($page_description);
+} else {
+    $g5_head_description = "송파구 잠실역에 위치한 삼성더클성장의원입니다. 대학병원 교수 출신 소아내분비 세부전문의가 소아 성장 클리닉, 성조숙증, 소아 비만, 예상키 및 뼈나이 검사를 1:1 맞춤 진료합니다.";
+}
+
 // 현재 접속자
 // 게시판 제목에 ' 포함되면 오류 발생
 $g5['lo_location'] = addslashes($g5['title']);
@@ -44,6 +53,7 @@ if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
 ?>
 <title><?php echo $g5_head_title; ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($g5_head_description, ENT_QUOTES, 'UTF-8'); ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">

@@ -1,5 +1,6 @@
 <?php
 $page_title = "비급여항목";
+$page_description = "잠실 삼성더클성장의원의 비급여 진료 항목과 비용을 관련 법령에 의거하여 투명하게 안내해 드립니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -52,8 +53,8 @@ include_once(G5_PATH.'/head.php');
     </div>
   </div>
   <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="진료비 안내" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="상담 데스크" class="ed-collage__sub">
+    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="삼성더클성장의원의 비급여 항목 안내 및 의료 규정 준수 서류" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="잠실 삼성더클성장의원 입구 프론트 및 수납 상담 데스크 전경" class="ed-collage__sub">
   </div>
 </section>
 

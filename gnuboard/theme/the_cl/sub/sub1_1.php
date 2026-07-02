@@ -1,5 +1,6 @@
 <?php
 $page_title = "병원 소개";
+$page_description = "송파 잠실 삼성더클성장의원은 아이의 소중한 성장의 여정을 오래도록 함께하며 세심한 정밀 진료를 지향하는 소아 성장 클리닉입니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -35,7 +36,7 @@ include_once(G5_PATH.'/head.php');
     <!-- ============================================================
          PHILOSOPHY INTRO (Sect 1)
          ============================================================ -->
-    <div class="sub11_sect1 flexCol_aiCenter">
+    <section class="sub11_sect1 flexCol_aiCenter">
       <div class="sub-intro-text" style="text-align: center; margin-bottom: 0;">
         <p class="section-en reveal" style="font-family: var(--font-serif); font-size: 14px; letter-spacing: 4px; color: var(--c-primary); text-transform: uppercase;">Philosophy</p>
         <h2 class="section-title reveal reveal-delay-1" style="font-size: 32px; font-weight: 300; line-height: 1.5; color: var(--c-primary-dark); margin-top: 12px; word-break: keep-all;">
@@ -43,7 +44,7 @@ include_once(G5_PATH.'/head.php');
         </h2>
       </div>
       
-      <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="삼성더클성장의원 전경" class="reveal reveal-delay-2 sub11_sect1_img">
+      <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="송파구 잠실역 인근 삼성더클성장의원 입구 및 쾌적한 내부 전경" class="reveal reveal-delay-2 sub11_sect1_img">
       
       <div class="sub11_sect1_descWrap reveal reveal-delay-3" style="margin-top: 40px;">
         <p class="sub11_sect1_desc desc1" style="font-size: 19px; line-height: 1.8; color: var(--c-primary-dark); text-align: center; font-weight: 400; word-break: keep-all;">
@@ -51,7 +52,7 @@ include_once(G5_PATH.'/head.php');
           동시에 THE CL은 Care & Long의 마음을 담고 있습니다.
         </p>
       </div>
-    </div>
+    </section>
     
     <!-- ============================================================
          CORE VALUES: CARE, LONG, TOGETHER (Sect 2)
@@ -59,7 +60,7 @@ include_once(G5_PATH.'/head.php');
     <div class="sub11_sect2_contWrap" style="gap: 150px; padding: 80px 0 20px;">
       
       <!-- Value 1: Care (세심하게) - Image Right -->
-      <div class="sub11_sect2_item item1 imgRight reveal">
+      <article class="sub11_sect2_item item1 imgRight reveal">
         <div class="descBox">
           <h3 class="item_title">
             <span class="marcell">Care</span>
@@ -77,15 +78,15 @@ include_once(G5_PATH.'/head.php');
           </div>
         </div>
         <div class="imgBox">
-          <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="세심한 성장 정밀 진단" class="item_img">
+          <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="소아내분비 전문의의 세심한 성장 발달 및 예상키 정밀 진단 과정" class="item_img">
           <i class="bgText marcell">Care</i>
         </div>
-      </div>
+      </article>
 
       <!-- Value 2: Long (오래 함께) - Image Left -->
-      <div class="sub11_sect2_item item2 imgLeft reveal">
+      <article class="sub11_sect2_item item2 imgLeft reveal">
         <div class="imgBox">
-          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="성장기 아동 라이프스타일 동행" class="item_img">
+          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="성장기 아동의 일상 습관과 예상 키 성장을 위한 일대일 라이프스타일 동행" class="item_img">
           <i class="bgText marcell">Long</i>
         </div>
         <div class="descBox">
@@ -103,10 +104,10 @@ include_once(G5_PATH.'/head.php');
             </p>
           </div>
         </div>
-      </div>
+      </article>
 
       <!-- Value 3: Together (함께) - Image Right -->
-      <div class="sub11_sect2_item item3 imgRight reveal">
+      <article class="sub11_sect2_item item3 imgRight reveal">
         <div class="descBox">
           <h3 class="item_title">
             <span class="marcell">Together</span>
@@ -127,10 +128,10 @@ include_once(G5_PATH.'/head.php');
           </div>
         </div>
         <div class="imgBox">
-          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="따뜻한 성장 라이프스타일 동행" class="item_img">
+          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="아이들의 뼈나이 분석과 균형 잡힌 신체 성장을 돕는 따뜻한 진료 공간" class="item_img">
           <i class="bgText marcell">Together</i>
         </div>
-      </div>
+      </article>
       
     </div>
 

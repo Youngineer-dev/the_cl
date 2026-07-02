@@ -1,5 +1,6 @@
 <?php
 $page_title = "검사 항목";
+$page_description = "뼈나이 X-ray 검사, 성장호르몬 자극검사, 체성분 및 혈액 검사 등 삼성더클이 보유한 최신 성장 정밀 검사 항목 안내입니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>

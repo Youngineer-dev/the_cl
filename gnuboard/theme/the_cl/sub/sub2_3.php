@@ -1,5 +1,6 @@
 <?php
 $page_title = "성조숙증";
+$page_description = "송파구 잠실 성조숙증 검사 및 치료. 아이의 뼈나이와 성장 판독을 통해 2차 성징의 속도를 조절하고 건강한 성장을 도모합니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -48,8 +49,8 @@ include_once(G5_PATH.'/head.php');
         </div>
       </div>
       <div class="ed-collage reveal reveal-delay-2">
-        <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="성조숙증 진단" class="ed-collage__main">
-        <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="성장 클리닉 공간" class="ed-collage__sub">
+        <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="잠실 삼성더클성장의원 소아내분비 전문의의 성조숙증 정밀 호르몬 및 뼈나이 진단" class="ed-collage__main">
+        <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="송파구 삼성더클성장의원 성조숙증 진단용 성장 클리닉 공간" class="ed-collage__sub">
       </div>
     </section>
 

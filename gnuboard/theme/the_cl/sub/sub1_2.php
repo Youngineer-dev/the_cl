@@ -1,5 +1,6 @@
 <?php
 $page_title = "원장 인사말";
+$page_description = "송파구 잠실역 삼성더클성장의원 노유선 대표원장의 인사말. 대학병원 교수 경력과 두 남매를 키우는 엄마의 마음으로 정직하고 세심한 소아 성장 진료를 약속드립니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -58,7 +59,7 @@ include_once(G5_PATH.'/head.php');
 
   <div class="about-images reveal reveal-delay-1" style="height: 480px;">
     <div class="about-img-1" style="width: 100%; position: relative;">
-      <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="노유선 원장" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.06);">
+      <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="삼성더클성장의원 소아내분비 세부전문의 노유선 대표원장 프로필 이미지" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.06);">
     </div>
   </div>
 </div>

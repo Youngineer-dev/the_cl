@@ -1,5 +1,6 @@
 <?php
 $page_title = "FAQ";
+$page_description = "성장 진료, 예상키 검사, 성조숙증 치료 등에 대해 가장 자주 물으시는 질문과 소아내분비 세부전문의의 명쾌한 답변을 모았습니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -52,8 +53,8 @@ include_once(G5_PATH.'/head.php');
     </div>
   </div>
   <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="상담" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="진료실" class="ed-collage__sub">
+    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="잠실 삼성더클성장의원 소아청소년과 전문의 1대1 소아 성장 및 예상키 상담" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="송파구 삼성더클성장의원 소아내분비 진료 및 처방전 조제 안내" class="ed-collage__sub">
   </div>
 </section>
 

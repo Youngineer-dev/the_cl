@@ -1,5 +1,6 @@
 <?php
 $page_title = "저체중";
+$page_description = "소아청소년 저체중의 원인을 정확하게 분석하고, 성장에 필요한 영양 공급과 흡수 능력을 개선하는 맞춤 영양 관리 프로그램입니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -48,8 +49,8 @@ include_once(G5_PATH.'/head.php');
         </div>
       </div>
       <div class="ed-collage reveal reveal-delay-2">
-        <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="저체중 정밀 진단" class="ed-collage__main">
-        <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="성장 클리닉 공간" class="ed-collage__sub">
+        <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="잠실 삼성더클성장의원 소아내분비 전문의의 소아 저체중 원인 규명 및 영양 상태 정밀 진단" class="ed-collage__main">
+        <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="송파구 삼성더클성장의원 소아 저체중 케어용 성장 클리닉 공간" class="ed-collage__sub">
       </div>
     </section>
 

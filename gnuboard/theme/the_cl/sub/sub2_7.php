@@ -1,5 +1,6 @@
 <?php
 $page_title = "영양수액";
+$page_description = "성장기 면역력 증진 및 영양 불균형 해소를 돕는 잠실 삼성더클성장의원의 안전하고 정밀하게 조제된 영양수액 클리닉입니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -53,8 +54,8 @@ include_once(G5_PATH.'/head.php');
     <a href="<?php echo $G5_URL; ?>/sub/sub3_1.php" class="ed-pill ed-split__cta">진료 시간 확인 →</a>
   </div>
   <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="영양수액 치료실" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="프리미엄 케어" class="ed-collage__sub">
+    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="잠실 삼성더클성장의원 소아청소년 프라이빗 영양 수액 치료 공간" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="송파 삼성더클성장의원 소아내분비 전문의의 밀착 성장 케어" class="ed-collage__sub">
   </div>
 </section>
 

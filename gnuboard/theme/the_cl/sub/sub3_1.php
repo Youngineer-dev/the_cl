@@ -1,5 +1,6 @@
 <?php
 $page_title = "진료 시간";
+$page_description = "송파구 잠실역 삼성더클성장의원의 진료 시간(평일 및 토요일 진료)과 예약 방법을 편리하게 확인하세요.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -52,8 +53,8 @@ include_once(G5_PATH.'/head.php');
     </div>
   </div>
   <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="진료 공간" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="상담실" class="ed-collage__sub">
+    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="잠실 삼성더클성장의원 쾌적하고 편안한 진료 대기 및 로비 인테리어" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="송파 삼성더클성장의원 소아내분비 전문의 1대1 성장 상담실 내부" class="ed-collage__sub">
   </div>
 </section>
 

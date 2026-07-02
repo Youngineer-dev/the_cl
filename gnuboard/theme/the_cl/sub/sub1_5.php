@@ -1,5 +1,6 @@
 <?php
 $page_title = "오시는 길";
+$page_description = "송파구 잠실역 9번 출구 인근에 위치한 삼성더클성장의원 찾아오시는 길, 주차 안내 및 진료 문의 정보입니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>

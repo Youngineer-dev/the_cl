@@ -1,5 +1,6 @@
 <?php
 $page_title = "의료진 소개";
+$page_description = "소아청소년과 전문의 및 소아내분비 세부전문의 자격을 갖춘 잠실 삼성더클성장의원 의료진의 깊이 있는 전문 이력을 소개합니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
@@ -42,7 +43,7 @@ include_once(G5_PATH.'/head.php');
 
 <article class="doctor-card reveal" style="background: white; border-radius: 8px; border: 1px solid var(--c-border); padding: 48px; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.01);">
   <div class="doctor-photo">
-    <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="노유선 대표원장">
+    <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="잠실 삼성더클성장의원 소아내분비 세부전문의 노유선 대표원장 프로필">
   </div>
   <div class="doctor-info">
     <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
@@ -225,7 +226,7 @@ include_once(G5_PATH.'/head.php');
 ============================================================
 <article class="doctor-card reveal" style="background: white; border-radius: 8px; border: 1px solid var(--c-border); padding: 48px; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.01);">
   <div class="doctor-photo">
-    <img src="<?php echo $G5_URL; ?>/img/doctor_sub.png" alt="부원장 프로필">
+    <img src="<?php echo $G5_URL; ?>/img/doctor_sub.png" alt="삼성더클성장의원 소아청소년과 전문의 부원장 프로필 이미지">
   </div>
   <div class="doctor-info">
     <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>

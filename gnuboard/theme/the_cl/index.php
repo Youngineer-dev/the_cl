@@ -3,6 +3,7 @@ if (!defined('_INDEX_')) define('_INDEX_', true);
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 $g5['title'] = "삼성더클성장의원 - 소아 내분비 전문";
+$page_description = "송파구 잠실역 9번 출구 인근 삼성더클성장의원. 대학병원 교수 출신 소아내분비 세부전문의가 진료하는 소아 성장 클리닉으로 성조숙증, 예상키 및 골연령 검사, 소아 비만 등을 정밀하게 진단합니다.";
 include_once(G5_THEME_PATH.'/head.php');
 ?>
 
@@ -65,10 +66,10 @@ include_once(G5_THEME_PATH.'/head.php');
 
         <div class="about-images">
           <div class="about-img-1 reveal">
-            <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="클리닉 진료 모습">
+            <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="잠실 삼성더클성장의원 소아내분비 전문의의 세심한 성장 진료 모습">
           </div>
           <div class="about-img-2 reveal reveal-delay-2">
-            <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="클리닉 내부">
+            <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="송파구 삼성더클성장의원의 쾌적하고 편안한 클리닉 인테리어 내부">
           </div>
         </div>
       </div>
@@ -87,7 +88,7 @@ include_once(G5_THEME_PATH.'/head.php');
       <!-- Doctor 1 -->
       <article class="doctor-card reveal">
         <div class="doctor-photo">
-          <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="노유선 원장">
+          <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="삼성더클성장의원 소아청소년과 전문의 및 소아내분비 세부전문의 노유선 대표원장 프로필 사진">
         </div>
         <div class="doctor-info">
           <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
@@ -124,7 +125,7 @@ include_once(G5_THEME_PATH.'/head.php');
         </div>
 
         <!-- 학술 논문 -->
-        <div class="publications-section">
+        <section class="publications-section">
           <div class="history-title">
             <span class="star">✦</span> 주요 학술 논문 (SCI / PubMed)
           </div>
@@ -257,7 +258,7 @@ include_once(G5_THEME_PATH.'/head.php');
               <span class="arrow">▼</span>
             </button>
           </div>
-        </div>
+        </section>
 
       </article>
     </div>
@@ -368,21 +369,21 @@ include_once(G5_THEME_PATH.'/head.php');
 
       <div class="space-gallery">
         <div class="space-gallery-item reveal">
-          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="대기실">
+          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="잠실 삼성더클성장의원 소아과 대기 공간 및 따뜻한 인테리어 대기실">
           <div class="gallery-caption">
             <p class="caption-en">Waiting Area</p>
             <p class="caption-kr">편안하고 따뜻한 대기 공간</p>
           </div>
         </div>
         <div class="space-gallery-item reveal reveal-delay-1">
-          <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="진료실">
+          <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="송파 삼성더클성장의원 소아 성장 클리닉의 1대1 맞춤 진료실 내부">
           <div class="gallery-caption">
             <p class="caption-en">Consultation</p>
             <p class="caption-kr">1:1 맞춤 진료실</p>
           </div>
         </div>
         <div class="space-gallery-item reveal reveal-delay-2">
-          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="검사실">
+          <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="삼성더클성장의원 뼈나이 및 골연령 측정, 예상키 분석을 위한 성장 정밀 검사실">
           <div class="gallery-caption">
             <p class="caption-en">Examination</p>
             <p class="caption-kr">정밀 검사 공간</p>
@@ -402,7 +403,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <div class="contact-left reveal">
           <p class="section-en">Contact Us</p>
           <div class="contact-img">
-            <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="클리닉 외관">
+            <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="송파구 잠실역 인근 삼성더클성장의원 내부 클리닉 외관 및 입구">
           </div>
           <p class="address">
             <span class="star">✦</span> 서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호<br>
