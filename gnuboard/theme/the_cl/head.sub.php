@@ -54,6 +54,60 @@ if($config['cf_add_meta'])
 ?>
 <title><?php echo $g5_head_title; ?></title>
 <meta name="description" content="<?php echo htmlspecialchars($g5_head_description, ENT_QUOTES, 'UTF-8'); ?>">
+<?php
+// 기본 MedicalClinic 스키마 생성 (GSO / AI 최적화)
+$clinic_schema = [
+    "@context" => "https://schema.org",
+    "@type" => "MedicalClinic",
+    "name" => "삼성더클성장의원",
+    "alternateName" => "더클성장의원, THE CL",
+    "description" => "송파구 잠실에 위치한 소아 성장 클리닉으로, 소아내분비 세부전문의가 성조숙증, 저신장, 소아비만, 예상키 진단, 뼈나이 분석 등을 정밀 진료합니다.",
+    "url" => G5_URL . "/",
+    "telephone" => "02-1234-5678",
+    "logo" => G5_THEME_URL . "/img/brand_logo.png",
+    "image" => G5_THEME_URL . "/img/interior.png",
+    "address" => [
+        "@type" => "PostalAddress",
+        "streetAddress" => "올림픽로 329, 3층 329, 330, 331호",
+        "addressLocality" => "서울특별시",
+        "addressRegion" => "송파구",
+        "postalCode" => "05510",
+        "addressCountry" => "KR"
+    ],
+    "geo" => [
+        "@type" => "GeoCoordinates",
+        "latitude" => "37.5165",
+        "longitude" => "127.1025"
+    ],
+    "openingHoursSpecification" => [
+        [
+            "@type" => "OpeningHoursSpecification",
+            "dayOfWeek" => ["Tuesday", "Wednesday", "Friday"],
+            "opens" => "10:00",
+            "closes" => "18:30"
+        ],
+        [
+            "@type" => "OpeningHoursSpecification",
+            "dayOfWeek" => ["Thursday"],
+            "opens" => "13:00",
+            "closes" => "20:30"
+        ],
+        [
+            "@type" => "OpeningHoursSpecification",
+            "dayOfWeek" => ["Saturday"],
+            "opens" => "08:30",
+            "closes" => "15:00"
+        ]
+    ],
+    "medicalSpecialty" => "Pediatrics"
+];
+echo '<script type="application/ld+json">' . json_encode($clinic_schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . '</script>' . PHP_EOL;
+
+// 페이지 특화 추가 스키마 출력 (예: FAQPage)
+if (isset($page_schema_json) && $page_schema_json) {
+    echo '<script type="application/ld+json">' . json_encode($page_schema_json, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . '</script>' . PHP_EOL;
+}
+?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
