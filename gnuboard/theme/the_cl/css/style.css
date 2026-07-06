@@ -2683,16 +2683,25 @@ body.nav-open .site-header .hamburger span {
 }
 
 .accordion-panel {
-  max-height: 0;
+  /* max-height 방식은 실제 내용 높이와 무관한 값(1600px)을 애니메이션해
+     닫힐 때 뚝 끊기듯 보이므로, 내용 높이에 정확히 맞춰 움직이는
+     grid-template-rows(0fr ↔ 1fr) 방식으로 부드럽게 처리 */
+  display: grid;
+  grid-template-rows: 0fr;
   overflow: hidden;
   transition:
-    max-height 0.4s var(--ease-elegant),
-    padding 0.4s var(--ease-elegant);
+    grid-template-rows 0.45s var(--ease-elegant),
+    padding 0.45s var(--ease-elegant);
   padding: 0 12px;
 }
 
+.accordion-panel > * {
+  overflow: hidden;
+  min-height: 0;
+}
+
 .accordion-panel.open {
-  max-height: 600px;
+  grid-template-rows: 1fr;
   padding: 0 12px 28px;
 }
 
@@ -2710,9 +2719,10 @@ body.nav-open .site-header .hamburger span {
   line-height: 1.8;
   color: var(--c-text-light);
   font-weight: 400;
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
+  /* flex 를 쓰면 답변 속 <strong> 이 별도의 플렉스 아이템으로 쪼개져
+     텍스트가 칸 나뉘듯 배치되므로, 'A' 는 absolute 배치로 처리 */
+  position: relative;
+  padding-left: 36px;
 }
 
 .accordion-a::before {
@@ -2721,6 +2731,53 @@ body.nav-open .site-header .hamburger span {
   font-size: 22px;
   font-weight: 700;
   color: var(--c-accent);
+  position: absolute;
+  left: 2px;
+  top: 0; /* 패널 overflow:hidden 에 글자 윗부분이 잘리지 않도록 */
+  line-height: 1.4;
+}
+
+/* 다단락 답변의 문단 간격 */
+.accordion-a p + p {
+  margin-top: 12px;
+}
+
+/* FAQ 하단 블로그 유도 버튼 */
+.faq-blog-cta {
+  text-align: center;
+  margin-top: 56px;
+}
+
+.faq-blog-cta .cta-label {
+  display: block;
+  font-size: 15px;
+  color: var(--c-text-light);
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+}
+
+.faq-blog-cta .cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 38px;
+  border: 1px solid var(--c-primary);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--c-primary-dark);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-elegant);
+}
+
+.faq-blog-cta .cta-btn:hover {
+  background: var(--c-primary-dark);
+  border-color: var(--c-primary-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(92, 110, 99, 0.25);
 }
 
 /* Premium Table UI */
