@@ -325,7 +325,7 @@ ol {
   font-family: var(--font-serif);
   font-weight: 600;
   font-style: italic;
-  color: var(--c-accent-light);
+  color: #ffffff;
   transition: color 0.4s;
 }
 
@@ -335,6 +335,22 @@ ol {
 
 .site-header.scrolled .header-left .slogan .accent {
   color: var(--c-primary);
+}
+
+/* 투명 헤더 상태에서 배경 사진 위 글씨 가독성용 그림자
+   (스크롤 후 흰 헤더에서는 제거) */
+.header-left .slogan,
+.header-location,
+.header-phone,
+.gnb-title {
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.site-header.scrolled .header-left .slogan,
+.site-header.scrolled .header-location,
+.site-header.scrolled .header-phone,
+.site-header.scrolled .gnb-title {
+  text-shadow: none;
 }
 
 /* Header Center - Logo */
@@ -748,12 +764,19 @@ body.nav-open .site-header .hamburger span {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 0, 0, 0.35) 0%,
-    rgba(0, 0, 0, 0.15) 45%,
-    rgba(0, 0, 0, 0) 75%
-  );
+  /* 상단 스크림: 헤더(슬로건·메뉴·전화번호) 글씨 가독성 확보 */
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.22) 0%,
+      rgba(0, 0, 0, 0) 20%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.15) 45%,
+      rgba(0, 0, 0, 0) 75%
+    );
   pointer-events: none;
 }
 
@@ -793,7 +816,7 @@ body.nav-open .site-header .hamburger span {
   font-size: 20px;
   font-weight: 400;
   font-style: italic;
-  color: var(--c-accent-light);
+  color: #ffffff;
   letter-spacing: 4px;
   margin-bottom: 16px;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
@@ -2209,12 +2232,26 @@ body.nav-open .site-header .hamburger span {
 .sub-hero-overlay {
   position: absolute;
   inset: 0;
-  /* 테마 컬러(Sage Green) 그라데이션 — 어둡고 답답한 느낌 없이 흰 글씨 가독성 확보 */
-  background: linear-gradient(
-    180deg,
-    rgba(92, 110, 99, 0.22) 0%,
-    rgba(61, 77, 68, 0.45) 100%
-  );
+  /* 테마 컬러(Sage Green) 그라데이션 — 어둡고 답답한 느낌 없이 흰 글씨 가독성 확보
+     + 메인 히어로처럼 글씨가 놓이는 중앙만 어둡게 하는 radial 비네트
+     + 상단 스크림: 헤더(슬로건·메뉴·전화번호) 글씨 가독성 확보 */
+  background:
+    linear-gradient(
+      180deg,
+      rgba(45, 54, 49, 0.26) 0%,
+      rgba(45, 54, 49, 0) 26%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(45, 54, 49, 0.42) 0%,
+      rgba(45, 54, 49, 0.18) 45%,
+      rgba(45, 54, 49, 0) 72%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(92, 110, 99, 0.22) 0%,
+      rgba(61, 77, 68, 0.45) 100%
+    );
 }
 
 .sub-hero-content {
