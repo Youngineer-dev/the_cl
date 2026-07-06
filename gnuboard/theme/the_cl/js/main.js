@@ -247,23 +247,13 @@
     });
   });
 
-  // --- Parallax effect on hero ---
-  const heroBg = document.querySelector('.hero-bg');
-  const heroParallax = () => {
-    if (!heroBg) return;
-    const scrollY = window.scrollY;
-    const heroH = document.querySelector('.hero')?.offsetHeight || 600;
-
-    if (scrollY < heroH) {
-      heroBg.style.transform = `scale(${1.05 + scrollY * 0.0002}) translateY(${scrollY * 0.3}px)`;
-    }
-  };
+  /* 히어로 패럴랙스(JS)는 제거됨
+     — CSS heroZoom 애니메이션이 transform 을 덮어써 시각 효과가 없었고,
+     스크롤마다 offsetHeight 를 읽어 강제 레이아웃(재계산)만 유발해
+     PC 스크롤 버벅임의 원인이 되었음 */
 
   // --- Event Listeners ---
-  window.addEventListener('scroll', () => {
-    handleScroll();
-    heroParallax();
-  }, { passive: true });
+  window.addEventListener('scroll', handleScroll, { passive: true });
 
   window.addEventListener('resize', () => {
     // 뷰포트 변경 시 필요한 로직 (현재는 옵저버가 자동 처리)

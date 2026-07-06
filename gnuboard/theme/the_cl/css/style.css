@@ -92,7 +92,30 @@ body {
   font-family: var(--font-sans);
   color: var(--c-text);
   background-color: var(--c-bg);
-  /* 24px 간격의 정밀 도트 그리드 + 고요하게 일렁이는 은은한 오로라 물결 배경 */
+  line-height: 1.8;
+  overflow-x: hidden;
+  /* 한글이 단어 중간에서 끊기지 않도록 (좁은 화면 가독성 핵심) */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+
+  /* 전역 드래그 및 선택 차단 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 24px 간격의 정밀 도트 그리드 + 고요하게 일렁이는 은은한 오로라 물결 배경
+   — body에 직접 background-attachment: fixed 를 주면 브라우저가 GPU 합성
+   스크롤을 포기하고 매 프레임 배경 전체를 다시 그려 PC에서 스크롤이
+   버벅거린다. position: fixed 된 별도 레이어로 분리하면 시각적으로 동일하면서
+   스크롤과 완전히 무관해진다. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background-image:
     radial-gradient(rgba(152, 169, 158, 0.02) 1.5px, transparent 1.5px),
     /* 도트 */
@@ -120,19 +143,7 @@ body {
     200% 200%,
     200% 200%,
     100% 100%;
-  background-attachment: fixed;
   animation: aurora-move 32s ease infinite alternate; /* 32초 주기로 은은히 일렁이며 이동 */
-  line-height: 1.8;
-  overflow-x: hidden;
-  /* 한글이 단어 중간에서 끊기지 않도록 (좁은 화면 가독성 핵심) */
-  word-break: keep-all;
-  overflow-wrap: break-word;
-
-  /* 전역 드래그 및 선택 차단 */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 /* 오로라 물결 일렁임 애니메이션 */
@@ -217,9 +228,9 @@ ol {
   transform: translateY(40px);
   filter: blur(8px);
   transition:
-    opacity 0.8s var(--ease-elegant),
-    transform 0.8s var(--ease-elegant),
-    filter 0.8s var(--ease-elegant);
+    opacity 0.7s var(--ease-elegant),
+    transform 0.7s var(--ease-elegant),
+    filter 0.7s var(--ease-elegant);
 }
 
 .reveal.revealed {
@@ -2294,7 +2305,8 @@ body.nav-open .site-header .hamburger span {
     100% 100%,
     34px 34px,
     34px 34px;
-  background-attachment: fixed, fixed, fixed, scroll, scroll;
+  /* background-attachment: fixed 는 PC에서 GPU 합성 스크롤을 막아
+     스크롤 버벅임을 유발하므로 사용하지 않는다 (모바일과 동일한 scroll 방식) */
 }
 
 /* 본문 위로 천천히 떠다니는 블러 그라데이션 오브 (장식) */
@@ -3553,13 +3565,8 @@ body.nav-open .site-header .hamburger span {
    (소스 순서상 글래스·장식 규칙보다 뒤에 두어 확실히 우선 적용)
    ============================================================ */
 @media (max-width: 768px) {
-  /* 1) 배경 성능: fixed 배경은 iOS에서 깨지고 스크롤이 무거움 → scroll */
-  body {
-    background-attachment: scroll;
-  }
-  .sub-main {
-    background-attachment: scroll;
-  }
+  /* 1) 배경 성능: fixed 배경 이슈는 body::before 고정 레이어 방식으로
+     전역 해결됨 (background-attachment: fixed 미사용) */
 
   /* 떠다니는 장식 오브 크기·블러 경감 (GPU 부담 완화 + 화면 침범 방지) */
   .sub-main::before {
