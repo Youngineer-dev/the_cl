@@ -68,55 +68,42 @@ include_once(G5_PATH.'/head.php');
     <table class="premium-table">
       <thead>
         <tr>
-          <th>대분류</th>
-          <th>수가 항목명</th>
-          <th>규격 및 용량</th>
-          <th>비용 (원)</th>
-          <th>비고</th>
+          <th>분류</th>
+          <th>비급여 항목</th>
+          <th>세부 내용</th>
+          <th>금액</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td rowspan="2" class="pt-cat" data-label="대분류">정밀 성장 검사</td>
-          <td data-label="수가 항목명" class="pt-name">골연령 AI 정밀 판독 검사</td>
-          <td data-label="규격 및 용량">1회 촬영</td>
-          <td data-label="비용 (원)" class="pt-price">50,000</td>
-          <td data-label="비고">판독 및 레포트 포함</td>
+          <td rowspan="2" class="pt-cat" data-label="분류">성장검진</td>
+          <td data-label="비급여 항목" class="pt-name">더클 기본 성장검진</td>
+          <td data-label="세부 내용">진료, 성장판(X-ray), 골연령 판독, 체성분(InBody) 평가</td>
+          <td data-label="금액" class="pt-price">80,000원</td>
         </tr>
         <tr>
-          <td class="pt-cat-m" data-label="대분류">정밀 성장 검사</td>
-          <td data-label="수가 항목명" class="pt-name">성장호르몬 자극 정밀유발 검사</td>
-          <td data-label="규격 및 용량">1회 세트 (채혈 5회)</td>
-          <td data-label="비용 (원)" class="pt-price">220,000</td>
-          <td data-label="비고">약물 비용 별도</td>
+          <td class="pt-cat-m" data-label="분류">성장검진</td>
+          <td data-label="비급여 항목" class="pt-name">더클 정밀 성장검진</td>
+          <td data-label="세부 내용"><strong>기본 성장 검진</strong> + 혈구(빈혈 등), 일반화학(간·신장 기능, 콜레스테롤, 단백질, 칼슘 등), 내분비(갑상선 기능, 성장/사춘기 관련 호르몬 등), 비타민 D, 소변 검사<br>※ 필요 시 검사 항목 추가</td>
+          <td data-label="금액" class="pt-price">230,000 ~ 330,000원</td>
         </tr>
         <tr>
-          <td rowspan="2" class="pt-cat" data-label="대분류">성장호르몬 치료제</td>
-          <td data-label="수가 항목명" class="pt-name">그로우트로핀투 주사</td>
-          <td data-label="규격 및 용량">16 IU 1펜</td>
-          <td data-label="비용 (원)" class="pt-price">145,000</td>
-          <td data-label="비고">용량에 따른 비례 단가</td>
+          <td class="pt-cat" data-label="분류">척추</td>
+          <td data-label="비급여 항목" class="pt-name">척추측만 평가</td>
+          <td data-label="세부 내용">척추 정렬 및 측만 평가</td>
+          <td data-label="금액" class="pt-price">10,000원</td>
         </tr>
         <tr>
-          <td class="pt-cat-m" data-label="대분류">성장호르몬 치료제</td>
-          <td data-label="수가 항목명" class="pt-name">지노트로핀 주사</td>
-          <td data-label="규격 및 용량">36 IU 1카트리지</td>
-          <td data-label="비용 (원)" class="pt-price">290,000</td>
-          <td data-label="비고">오리지널 제제</td>
+          <td rowspan="2" class="pt-cat" data-label="분류">제증명</td>
+          <td data-label="비급여 항목" class="pt-name">진단서 또는 소견서</td>
+          <td data-label="세부 내용">-</td>
+          <td data-label="금액" class="pt-price">20,000원</td>
         </tr>
         <tr>
-          <td rowspan="2" class="pt-cat" data-label="대분류">프리미엄 수액</td>
-          <td data-label="수가 항목명" class="pt-name">성장 아미노산 에너지 주사</td>
-          <td data-label="규격 및 용량">100 ml</td>
-          <td data-label="비용 (원)" class="pt-price">80,000</td>
-          <td data-label="비고">성장 필수 아미노산 조합</td>
-        </tr>
-        <tr>
-          <td class="pt-cat-m" data-label="대분류">프리미엄 수액</td>
-          <td data-label="수가 항목명" class="pt-name">고농축 비타민 면역 부스터</td>
-          <td data-label="규격 및 용량">150 ml</td>
-          <td data-label="비용 (원)" class="pt-price">120,000</td>
-          <td data-label="비고">피로 회복 및 면역 증강</td>
+          <td class="pt-cat-m" data-label="분류">제증명</td>
+          <td data-label="비급여 항목" class="pt-name">통원확인서</td>
+          <td data-label="세부 내용">-</td>
+          <td data-label="금액" class="pt-price">3,000원</td>
         </tr>
       </tbody>
     </table>

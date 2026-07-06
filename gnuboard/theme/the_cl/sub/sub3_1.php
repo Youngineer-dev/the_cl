@@ -10,7 +10,7 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-bg"></div>
   <div class="sub-hero-overlay"></div>
   <div class="sub-hero-content reveal">
-    <p class="sub-hero-category">Info</p>
+    <p class="sub-hero-category">About</p>
     <h1 class="sub-hero-title">진료 시간</h1>
     <p class="sub-hero-subtitle">내원에 참고해 주세요</p>
   </div>
@@ -22,7 +22,7 @@ include_once(G5_PATH.'/head.php');
     <ul class="breadcrumb">
       <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
-      <li><span style="text-transform: uppercase;">Info</span></li>
+      <li><span style="text-transform: uppercase;">About</span></li>
       <li class="separator">></li>
       <li class="current">진료 시간</li>
     </ul>

@@ -95,49 +95,53 @@ include_once(G5_THEME_PATH.'/head.php');
           <h3 class="doctor-name"><strong>노 유 선</strong> 대표원장</h3>
 
           <div class="history-section">
-            <div>
-              <div class="history-title">
-                <span class="star">✦</span> 주요 약력
+            <div class="history-col">
+              <div>
+                <div class="history-title">
+                  <span class="star">✦</span> 주요 약력
+                </div>
+                <ul class="history-list">
+                  <li>前 강동성심병원 소아청소년과 소아내분비분과 교수</li>
+                  <li>삼성서울병원 인턴</li>
+                  <li>삼성서울병원 소아청소년과 전공의</li>
+                  <li>삼성서울병원 소아내분비·유전대사 임상강사 (모범상 수상)</li>
+                  <li>삼성서울병원 소아청소년과 외래교수</li>
+                </ul>
               </div>
-              <ul class="history-list">
-                <li>前 강동성심병원 소아청소년과 소아내분비분과 교수</li>
-                <li>삼성서울병원 인턴</li>
-                <li>삼성서울병원 소아청소년과 전공의</li>
-                <li>삼성서울병원 소아내분비·유전대사 임상강사 (모범상 수상)</li>
-                <li>삼성서울병원 소아청소년과 외래교수</li>
-              </ul>
+              <div>
+                <div class="history-title">
+                  <span class="star">✦</span> 연수 및 수료
+                </div>
+                <ul class="history-list">
+                  <li>Asia Pacific Paediatric Endocrine Society (APPES) Fellow School 수료</li>
+                  <li>KRDMS 소아 초음파 과정 수료</li>
+                  <li>소아 성장운동(Growth Fit) 필라테스 지도자과정 (Level 6) 수료</li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <div class="history-title">
-                <span class="star">✦</span> 학회 활동
+            <div class="history-col">
+              <div>
+                <div class="history-title">
+                  <span class="star">✦</span> 학회 활동
+                </div>
+                <ul class="history-list">
+                  <li>대한소아내분비학회 기획위원회 간사</li>
+                  <li>前 대한소아내분비학회 연구위원회 위원</li>
+                  <li>대한소아내분비학회 정회원</li>
+                  <li>Asia Pacific Paediatric Endocrine Society (APPES) 정회원</li>
+                  <li>European Society for Paediatric Endocrinology (ESPE) 정회원</li>
+                  <li>대한유전성대사질환학회 정회원</li>
+                  <li>대한소아알레르기호흡기학회 정회원</li>
+                </ul>
               </div>
-              <ul class="history-list">
-                <li>대한소아내분비학회 기획위원회 간사</li>
-                <li>前 대한소아내분비학회 연구위원회 위원</li>
-                <li>대한소아내분비학회 정회원</li>
-                <li>Asia Pacific Paediatric Endocrine Society (APPES) 정회원</li>
-                <li>European Society for Paediatric Endocrinology (ESPE) 정회원</li>
-                <li>대한유전성대사질환학회 정회원</li>
-                <li>대한소아알레르기호흡기학회 정회원</li>
-              </ul>
-            </div>
-            <div>
-              <div class="history-title">
-                <span class="star">✦</span> 연수 및 수료
+              <div>
+                <div class="history-title">
+                  <span class="star">✦</span> 학술 연구
+                </div>
+                <ul class="history-list">
+                  <li>성장·성조숙증·비만·유전대사 관련 SCI 논문 다수 발표</li>
+                </ul>
               </div>
-              <ul class="history-list">
-                <li>Asia Pacific Paediatric Endocrine Society (APPES) Fellow School 수료</li>
-                <li>KRDMS 소아 초음파 과정 수료</li>
-                <li>소아 성장운동(Growth Fit) 필라테스 지도자과정 (Level 6) 수료</li>
-              </ul>
-            </div>
-            <div>
-              <div class="history-title">
-                <span class="star">✦</span> 학술 연구
-              </div>
-              <ul class="history-list">
-                <li>성장·성조숙증·비만·유전대사 관련 SCI 논문 다수 발표</li>
-              </ul>
             </div>
           </div>
         </div>

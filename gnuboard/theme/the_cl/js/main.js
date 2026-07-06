@@ -266,6 +266,133 @@
   });
 
   /* ============================================================
+     BREADCRUMB DROPDOWN
+     - 카테고리 클릭 → 전체 카테고리 팝업
+     - 현재 페이지 클릭 → 해당 카테고리 내 메뉴 팝업
+     ============================================================ */
+  (function initBreadcrumbDropdown() {
+    const bc = document.querySelector('.breadcrumb');
+    if (!bc) return;
+
+    // 브레드크럼은 /sub/ 안의 페이지에만 존재하므로 상대 경로로 링크
+    // ※ 상단 GNB 메뉴(header.html.php) + 하단 Policy 링크(footer.html.php)와
+    //    동일한 구조를 유지할 것 — 메뉴 변경 시 여기도 함께 수정
+    const CATEGORIES = [
+      { label: 'About', href: 'sub1_1.php' },
+      { label: 'Clinic', href: 'sub2_1.php' },
+      { label: 'Community', href: 'sub4_2.php' },
+      { label: 'Policy', href: 'privacy.php' }
+    ];
+    const PAGES = {
+      about: [
+        { label: '병원 소개', href: 'sub1_1.php' },
+        { label: '의료진 소개', href: 'sub1_3.php' },
+        { label: '진료 시간', href: 'sub3_1.php' },
+        { label: '둘러보기', href: 'sub1_4.php' },
+        { label: '오시는 길', href: 'sub1_5.php' }
+      ],
+      clinic: [
+        { label: '성장평가 · 예상키', href: 'sub2_1.php' },
+        { label: '저신장', href: 'sub2_2.php' },
+        { label: '성조숙증', href: 'sub2_3.php' },
+        { label: '소아비만', href: 'sub2_4.php' },
+        { label: '저체중', href: 'sub2_5.php' },
+        { label: '알레르기', href: 'sub2_6.php' }
+      ],
+      community: [
+        { label: '자주묻는 질문', href: 'sub4_2.php' },
+        { label: '공지사항', href: 'sub4_3.php' }
+      ],
+      policy: [
+        { label: '개인정보처리방침', href: 'privacy.php' },
+        { label: '이용약관', href: 'terms.php' },
+        { label: '비급여항목', href: 'uninsured.php' }
+      ]
+    };
+
+    const items = Array.prototype.filter.call(
+      bc.children,
+      (li) => !li.classList.contains('separator')
+    );
+    if (items.length < 3) return;
+
+    const catLi = items[1];
+    const curLi = items[items.length - 1];
+    const catKey = (catLi.textContent || '').trim().toLowerCase();
+    const curFile = (location.pathname.split('/').pop() || '').toLowerCase();
+
+    const closeAll = () => {
+      document.querySelectorAll('.bc-dropdown.open').forEach((d) => d.classList.remove('open'));
+      document.querySelectorAll('.bc-trigger.open').forEach((t) => {
+        t.classList.remove('open');
+        t.setAttribute('aria-expanded', 'false');
+      });
+    };
+
+    const attach = (li, list, isActive) => {
+      if (!list || !list.length) return;
+      li.classList.add('bc-trigger');
+      li.setAttribute('tabindex', '0');
+      li.setAttribute('role', 'button');
+      li.setAttribute('aria-haspopup', 'true');
+      li.setAttribute('aria-expanded', 'false');
+
+      const caret = document.createElement('span');
+      caret.className = 'bc-caret';
+      caret.textContent = '▾';
+      li.appendChild(caret);
+
+      const drop = document.createElement('ul');
+      drop.className = 'bc-dropdown';
+      list.forEach((item) => {
+        const a = document.createElement('a');
+        a.href = item.href;
+        a.textContent = item.label;
+        if (isActive(item)) a.classList.add('active');
+        const w = document.createElement('li');
+        w.appendChild(a);
+        drop.appendChild(w);
+      });
+      li.appendChild(drop);
+
+      const toggle = () => {
+        const wasOpen = drop.classList.contains('open');
+        closeAll();
+        if (!wasOpen) {
+          drop.classList.add('open');
+          li.classList.add('open');
+          li.setAttribute('aria-expanded', 'true');
+        }
+      };
+      li.addEventListener('click', (e) => {
+        if (e.target.closest('.bc-dropdown')) return; // 팝업 내 링크는 그대로 이동
+        e.preventDefault();
+        toggle();
+      });
+      li.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    };
+
+    // 카테고리 → 전체 카테고리 목록
+    attach(catLi, CATEGORIES, (it) => it.label.toLowerCase() === catKey);
+    // 현재 페이지 → 현재 카테고리 내 메뉴 목록
+    if (curLi !== catLi) {
+      attach(curLi, PAGES[catKey] || [], (it) => it.href.toLowerCase() === curFile);
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.bc-trigger')) closeAll();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAll();
+    });
+  })();
+
+  /* ============================================================
      MAIN POPUP
      - 드래그 이동 / 자동 슬라이드 / 이전·다음 / 오늘 하루 그만보기
      ============================================================ */
