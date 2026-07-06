@@ -581,19 +581,19 @@ ol {
   display: block;
   padding: 8px 24px;
   font-family: var(--font-sans);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   color: var(--c-text-light);
   white-space: nowrap;
-  transition: all 0.3s var(--ease-out);
+  /* 트랜지션 없이 즉각 반응 (이전 하이라이트가 잔상처럼 남지 않도록) */
+  transition: none;
   text-align: center;
 }
 
 .gnb-sub-menu li a:hover {
-  color: var(--c-primary);
+  color: var(--c-primary-dark);
   background-color: var(--c-primary-pale);
-  font-weight: 500;
-  transform: translateY(-1px);
+  font-weight: 600;
 }
 
 /* Nav Open Header Styles */
