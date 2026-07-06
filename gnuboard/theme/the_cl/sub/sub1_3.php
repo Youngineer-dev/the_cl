@@ -49,7 +49,7 @@ include_once(G5_PATH.'/head.php');
     <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
     <h3 class="doctor-name"><strong>노 유 선</strong> 대표원장</h3>
 
-    <p class="desc" style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
+    <p class="desc" style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; margin-bottom: 30px; font-weight: 400;">
       대학병원 소아내분비분과 교수 출신으로, 삼성서울병원에서의 풍부한 임상경험과 글로벌 학술적 네트워크를 기반으로 저신장과 성조숙증 진료에 탁월한 해법을 제시합니다.
     </p>
 
@@ -250,7 +250,7 @@ include_once(G5_PATH.'/head.php');
     <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
     <h3 class="doctor-name"><strong>홍 길 동</strong> 부원장</h3>
 
-    <p class="desc" style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
+    <p class="desc" style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; margin-bottom: 30px; font-weight: 400;">
       체계적이고 정밀한 진단과 따뜻한 소통으로 아동의 올바른 성장 로드맵을 설계합니다.
     </p>
 

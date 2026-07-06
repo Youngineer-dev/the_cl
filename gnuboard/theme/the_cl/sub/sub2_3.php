@@ -67,7 +67,7 @@ include_once(G5_PATH.'/head.php');
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead">
             <strong>삼성더클성장의원 성조숙증 클리닉</strong>은 또래 평균보다 빠르게 나타나는 소아청소년의 2차 성징과 신체적 변화를 면밀히 점검합니다. 소아내분비 세부전문의가 직접 뼈나이(골연령) 및 호르몬 분비 반응 속도를 정밀 분석하여, 성조숙증 억제 치료가 필요한지 혹은 주기적 추적 관찰을 해야 하는지 명확한 가이드를 제공합니다.<br>
-            <span style="font-size: 13px; color: var(--c-text-light); display: inline-block; margin-top: 12px; opacity: 0.85; font-weight: 300;">※ 성조숙증 진단 가이드라인은 대한소아내분비학회 표준 지침에 의거하여 정밀하고 투명하게 적용됩니다.</span>
+            <span style="font-size: 13px; color: var(--c-text-light); display: inline-block; margin-top: 12px; opacity: 0.85; font-weight: 400;">※ 성조숙증 진단 가이드라인은 대한소아내분비학회 표준 지침에 의거하여 정밀하고 투명하게 적용됩니다.</span>
           </p>
         </div>
       </div>

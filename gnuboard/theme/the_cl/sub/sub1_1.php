@@ -39,7 +39,7 @@ include_once(G5_PATH.'/head.php');
     <section class="sub11_sect1 flexCol_aiCenter">
       <div class="sub-intro-text" style="text-align: center; margin-bottom: 0;">
         <p class="section-en reveal" style="font-family: var(--font-serif); font-size: 14px; letter-spacing: 4px; color: var(--c-primary); text-transform: uppercase;">Philosophy</p>
-        <h2 class="section-title reveal reveal-delay-1" style="font-size: 32px; font-weight: 300; line-height: 1.5; color: var(--c-primary-dark); margin-top: 12px; word-break: keep-all;">
+        <h2 class="section-title reveal reveal-delay-1" style="font-size: 32px; font-weight: 400; line-height: 1.5; color: var(--c-primary-dark); margin-top: 12px; word-break: keep-all;">
           더 클 아이를 위한 THE CL, Care & Long 성장 클리닉
         </h2>
       </div>
@@ -49,7 +49,7 @@ include_once(G5_PATH.'/head.php');
       <div class="sub11_sect1_descWrap reveal reveal-delay-3" style="margin-top: 40px;">
         <p class="sub11_sect1_desc desc1" style="font-size: 19px; line-height: 1.8; color: var(--c-primary-dark); text-align: center; font-weight: 400; word-break: keep-all;">
           <strong>송파구 잠실에 위치한 삼성더클성장의원</strong>은 대학병원 분과 교수 출신의 소아내분비 세부전문의가 1:1 맞춤 성장 클리닉을 제공합니다. 아이가 건강하게, 더 크게 자라날 가능성을 믿고 세심한 치료(Care)와 성장의 긴 여정(Long)을 오래도록 함께 동행합니다.<br>
-          <span style="font-size: 13px; color: var(--c-text-light); display: inline-block; margin-top: 16px; opacity: 0.85; font-weight: 300;">※ 본 클리닉은 질병관리청 소아청소년 성장표준치(2017) 및 대한소아내분비학회 표준 임상 지침을 근거로 정밀 검사 결과를 판독합니다.</span>
+          <span style="font-size: 13px; color: var(--c-text-light); display: inline-block; margin-top: 16px; opacity: 0.85; font-weight: 400;">※ 본 클리닉은 질병관리청 소아청소년 성장표준치(2017) 및 대한소아내분비학회 표준 임상 지침을 근거로 정밀 검사 결과를 판독합니다.</span>
         </p>
       </div>
     </section>
@@ -141,7 +141,7 @@ include_once(G5_PATH.'/head.php');
     <section class="sub11_speciality_section reveal" style="padding: 100px 0 60px;">
       <div class="ed-sectlabel" style="margin-bottom: 50px; text-align: center;">
         <span class="ed-kicker" style="letter-spacing: 3px;">Speciality</span>
-        <h2 style="font-size: 32px; font-weight: 300; color: var(--c-primary-dark);">더클만의 <strong>특별함</strong></h2>
+        <h2 style="font-size: 32px; font-weight: 400; color: var(--c-primary-dark);">더클만의 <strong>특별함</strong></h2>
       </div>
       
       <div class="ed-features" style="padding-top: 0;">

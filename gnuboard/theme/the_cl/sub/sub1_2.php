@@ -44,7 +44,7 @@ include_once(G5_PATH.'/head.php');
 <div class="about-inner" style="margin-top: 60px;">
   <div class="about-text" style="text-align: left;">
     <div class="desc-group reveal">
-      <p class="desc" style="font-size: 15px; line-height: 2.2; color: var(--c-text-light); font-weight: 300;">
+      <p class="desc" style="font-size: 15px; line-height: 2.2; color: var(--c-text-light); font-weight: 400;">
         안녕하세요. 삼성더클성장의원 대표원장 노유선입니다.<br><br>
         아이들의 웃음소리가 울려 퍼지는 건강한 성장을 관찰하는 것은 참으로 경이로운 일이지만, 다른 아이들보다 성장이 조금 더디거나 사춘기가 너무 일찍 올 때 부모님의 속앓이와 걱정 또한 무겁다는 것을 잘 알고 있습니다.<br><br>
         소아 내분비학 전문의로서 수많은 아이들을 지켜보며 깨달은 점은, <strong>모든 아동은 저마다의 고유한 성장 템포와 건강한 가능성</strong>을 내포하고 있다는 사실입니다. 우리의 임무는 그 템포를 적시에 과학적으로 분석하여 올바른 골든타임을 놓치지 않도록 이끄는 것입니다.<br><br>

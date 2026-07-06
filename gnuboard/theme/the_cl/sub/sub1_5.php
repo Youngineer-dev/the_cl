@@ -73,14 +73,14 @@ include_once(G5_PATH.'/head.php');
   <div class="contact-right reveal reveal-delay-2" style="background: white; border-radius: 8px; border: 1px solid var(--c-border); padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.01);">
     <div style="margin-bottom: 30px;">
       <strong style="font-size: 18px; color: var(--c-primary-dark); display: block; margin-bottom: 12px;">🚇 지하철 이용 시</strong>
-      <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 300;">
+      <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 400;">
         <strong>2호선, 8호선 잠실역 9번 출구</strong>로 나오셔서 송파구청 방향으로 약 200m 직진하시면 위치해 있습니다.
       </p>
     </div>
 
     <div style="margin-bottom: 30px;">
       <strong style="font-size: 18px; color: var(--c-primary-dark); display: block; margin-bottom: 12px;">🚌 버스 이용 시</strong>
-      <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 300;">
+      <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 400;">
         <strong>송파구청.교통회관 정류장</strong> 또는 <strong>잠실역9번출구 정류장</strong> 하차<br>
         간선: 302, 303, 320, 341 / 지선: 3216, 3303, 3313, 3315, 3414 등 운행
       </p>
@@ -88,7 +88,7 @@ include_once(G5_PATH.'/head.php');
 
     <div>
       <strong style="font-size: 18px; color: var(--c-primary-dark); display: block; margin-bottom: 12px;">🚗 자가용 & 주차 안내</strong>
-      <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 300;">
+      <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 400;">
         건물 내 주차장이 완비되어 있으며, 진료받으신 모든 분께 <strong>1시간 무료 주차권</strong>을 지급해 드립니다. SUV 차량의 타워 기계식 주차 가능 여부는 입차 시 주차 안내원에게 문의하시기 바랍니다.
       </p>
     </div>

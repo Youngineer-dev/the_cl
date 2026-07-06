@@ -38,7 +38,7 @@ include_once(G5_PATH.'/head.php');
         <h2>삼성더클성장의원 <strong>개인정보처리방침</strong></h2>
       </div>
 
-      <div class="privacy-body" style="font-size: 15px; line-height: 1.8; color: var(--c-text); font-weight: 300;">
+      <div class="privacy-body" style="font-size: 15px; line-height: 1.8; color: var(--c-text); font-weight: 400;">
         <p style="margin-bottom: 20px; font-weight: 400;">
           삼성더클성장의원(이하 "본원")은 환자의 개인정보를 중요시하며, "개인정보보호법" 및 "의료법" 등 관련 법령을 준수하고 있습니다. 본원은 개인정보처리방침을 통하여 환자분들이 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
         </p>

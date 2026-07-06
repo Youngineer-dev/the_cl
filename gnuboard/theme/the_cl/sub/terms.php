@@ -38,7 +38,7 @@ include_once(G5_PATH.'/head.php');
         <h2>삼성더클성장의원 <strong>홈페이지 이용약관</strong></h2>
       </div>
 
-      <div class="terms-body" style="font-size: 15px; line-height: 1.8; color: var(--c-text); font-weight: 300;">
+      <div class="terms-body" style="font-size: 15px; line-height: 1.8; color: var(--c-text); font-weight: 400;">
         <p style="margin-bottom: 20px; font-weight: 400;">
           본 약관은 삼성더클성장의원(이하 "본원")이 제공하는 인터넷 홈페이지 서비스(이하 "서비스")의 이용조건 및 절차, 이용자와 본원의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
         </p>

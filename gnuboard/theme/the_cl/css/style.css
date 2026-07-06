@@ -51,8 +51,9 @@
   --c-bg: #fcfdfd;
   --c-bg-cream: #edf1ee;
   --c-bg-dark: #2d3631;
-  --c-text: #2a2a2a;
-  --c-text-light: #697a70;
+  /* 가독성: 어르신 피드백 반영 — 본문/보조 텍스트를 더 진하게 */
+  --c-text: #1c1c1c;
+  --c-text-light: #4d5c53;
   --c-text-white: #ffffff;
   --c-border: #e1e7e3;
 
@@ -314,7 +315,7 @@ ol {
 .header-left .slogan {
   font-family: var(--font-sans);
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-white);
   letter-spacing: 0.5px;
   transition: color 0.4s;
@@ -371,7 +372,7 @@ ol {
 
 .header-location {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-white);
   display: flex;
   align-items: center;
@@ -397,7 +398,7 @@ ol {
 
 .header-phone {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-white);
   transition: color 0.4s;
 }
@@ -565,7 +566,7 @@ ol {
   padding: 8px 24px;
   font-family: var(--font-sans);
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
   white-space: nowrap;
   transition: all 0.3s var(--ease-out);
@@ -687,7 +688,7 @@ body.nav-open .site-header .hamburger span {
 
 .nav-menu-items a {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   transition:
     color 0.3s,
@@ -916,7 +917,7 @@ body.nav-open .site-header .hamburger span {
 
 .about-text .section-title {
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   margin-bottom: 32px;
   letter-spacing: -0.5px;
@@ -1011,7 +1012,7 @@ body.nav-open .site-header .hamburger span {
   transform: translateY(-50%) rotate(90deg);
   font-family: var(--font-serif);
   font-size: 120px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-primary-pale);
   opacity: 0.3;
   pointer-events: none;
@@ -1035,7 +1036,7 @@ body.nav-open .site-header .hamburger span {
 
 .doctors-header .section-title {
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
 }
 
@@ -1100,7 +1101,7 @@ body.nav-open .site-header .hamburger span {
 
 .doctor-info .doctor-name {
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 32px;
 }
 
@@ -1173,7 +1174,7 @@ body.nav-open .site-header .hamburger span {
 
 .programs-header .section-title {
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 8px;
 }
 
@@ -1272,7 +1273,7 @@ body.nav-open .site-header .hamburger span {
 .space-header .section-en {
   font-family: var(--font-serif);
   font-size: 48px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   opacity: 0.3;
   margin-bottom: 8px;
@@ -1280,7 +1281,7 @@ body.nav-open .site-header .hamburger span {
 
 .space-header .section-title {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
 }
 
@@ -1358,7 +1359,7 @@ body.nav-open .site-header .hamburger span {
 .loop-text {
   font-family: var(--font-serif);
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   color: var(--c-primary);
   opacity: 0.5;
@@ -1397,7 +1398,7 @@ body.nav-open .site-header .hamburger span {
 .contact-left .section-en {
   font-family: var(--font-serif);
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   color: var(--c-primary);
   margin-bottom: 24px;
@@ -1463,7 +1464,7 @@ body.nav-open .site-header .hamburger span {
 
 .contact-right .phone-number {
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -1611,7 +1612,7 @@ body.nav-open .site-header .hamburger span {
 .footer-slogan-text {
   font-family: var(--font-serif);
   font-size: 40px;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.06);
   white-space: nowrap;
   padding-right: 80px;
@@ -2182,7 +2183,8 @@ body.nav-open .site-header .hamburger span {
   background-image: url("../img/interior.png");
   background-size: cover;
   background-position: center;
-  filter: brightness(0.35) contrast(1.05);
+  /* 검은 마스킹 대신 밝기를 살리고, 색감은 아래 세이지 그린 오버레이가 담당 */
+  filter: brightness(0.8) contrast(1.02) saturate(0.9);
   transform: scale(1.02);
   transition: transform 10s var(--ease-elegant);
 }
@@ -2194,10 +2196,11 @@ body.nav-open .site-header .hamburger span {
 .sub-hero-overlay {
   position: absolute;
   inset: 0;
+  /* 테마 컬러(Sage Green) 그라데이션 — 어둡고 답답한 느낌 없이 흰 글씨 가독성 확보 */
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.45) 100%
+    rgba(92, 110, 99, 0.35) 0%,
+    rgba(61, 77, 68, 0.6) 100%
   );
 }
 
@@ -2211,10 +2214,11 @@ body.nav-open .site-header .hamburger span {
   font-family: var(--font-serif);
   font-size: 14px;
   font-style: italic;
-  color: var(--c-accent-light);
+  color: rgba(255, 255, 255, 0.9);
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 12px;
+  text-shadow: 0 1px 10px rgba(45, 54, 49, 0.4);
 }
 
 .sub-hero-title {
@@ -2225,13 +2229,15 @@ body.nav-open .site-header .hamburger span {
   color: var(--c-text-white);
   margin-bottom: 16px;
   line-height: 1.3;
+  text-shadow: 0 2px 14px rgba(45, 54, 49, 0.45);
 }
 
 .sub-hero-subtitle {
   font-size: 15px;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
   letter-spacing: 0.5px;
+  text-shadow: 0 1px 10px rgba(45, 54, 49, 0.4);
 }
 
 /* Breadcrumb */
@@ -2262,7 +2268,7 @@ body.nav-open .site-header .hamburger span {
 .breadcrumb .separator {
   color: var(--c-border);
   font-size: 10px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .breadcrumb .current {
@@ -2386,7 +2392,7 @@ body.nav-open .site-header .hamburger span {
 
 .sub-intro-text .section-title {
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 24px;
   letter-spacing: -0.5px;
 }
@@ -2400,7 +2406,7 @@ body.nav-open .site-header .hamburger span {
   font-size: 16px;
   line-height: 2.2;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .sub-intro-divider {
@@ -2478,7 +2484,7 @@ body.nav-open .site-header .hamburger span {
   font-size: 14px;
   line-height: 1.8;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Timeline/Step Progress UI */
@@ -2585,7 +2591,7 @@ body.nav-open .site-header .hamburger span {
   font-size: 14px;
   line-height: 1.8;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Checklist/Symptom UI */
@@ -2703,7 +2709,7 @@ body.nav-open .site-header .hamburger span {
   font-size: 14px;
   line-height: 1.8;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
   display: flex;
   align-items: flex-start;
   gap: 14px;
@@ -2830,7 +2836,7 @@ body.nav-open .site-header .hamburger span {
 .case-meta-item {
   font-size: 13px;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .case-meta-item strong {
@@ -2843,7 +2849,7 @@ body.nav-open .site-header .hamburger span {
   font-size: 14px;
   line-height: 1.8;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .case-lock-container {
@@ -2896,7 +2902,7 @@ body.nav-open .site-header .hamburger span {
   color: var(--c-text-light);
   margin-bottom: 24px;
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .lock-btn {
@@ -3170,7 +3176,7 @@ body.nav-open .site-header .hamburger span {
   width: 200%;
   font-family: var(--font-serif);
   font-size: 130px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   color: rgba(
     152,
@@ -3243,7 +3249,7 @@ body.nav-open .site-header .hamburger span {
   width: 200%;
   font-family: var(--font-serif);
   font-size: 130px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   color: rgba(152, 169, 158, 0.015);
   white-space: nowrap;
@@ -3340,7 +3346,7 @@ body.nav-open .site-header .hamburger span {
   line-height: 2.1;
   color: var(--c-text-light);
   margin-bottom: 28px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .sub11_sect1_desc.desc2 {
@@ -3448,7 +3454,7 @@ body.nav-open .site-header .hamburger span {
   font-size: 14.5px;
   line-height: 1.9;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* 입체 엇갈림 오프셋 이미지 프레임 워크 */
@@ -3527,7 +3533,7 @@ body.nav-open .site-header .hamburger span {
   font-family: var(--font-serif);
   font-size: 90px;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(152, 169, 158, 0.04);
   pointer-events: none;
   z-index: 2;
@@ -3823,7 +3829,7 @@ body.nav-open .site-header .hamburger span {
 
 .ed-split__title {
   font-size: 44px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.32;
   letter-spacing: -1px;
   color: var(--c-text);
@@ -3846,7 +3852,7 @@ body.nav-open .site-header .hamburger span {
 .ed-split__body p {
   font-size: 15px;
   line-height: 2.05;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
   margin-bottom: 20px;
 }
@@ -3908,7 +3914,7 @@ body.nav-open .site-header .hamburger span {
 }
 .ed-check__label {
   font-size: 25px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.45;
   color: var(--c-primary-dark);
   letter-spacing: -0.5px;
@@ -3962,7 +3968,7 @@ body.nav-open .site-header .hamburger span {
 .ed-feat__num {
   font-family: var(--font-serif);
   font-size: 84px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   line-height: 1;
   color: var(--c-primary);
@@ -3978,7 +3984,7 @@ body.nav-open .site-header .hamburger span {
 .ed-feat__desc {
   font-size: 15px;
   line-height: 1.95;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
   max-width: 640px;
 }
@@ -3997,7 +4003,7 @@ body.nav-open .site-header .hamburger span {
 }
 .ed-aside__title {
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.32;
   color: var(--c-text);
   margin: 18px 0 24px;
@@ -4030,7 +4036,7 @@ body.nav-open .site-header .hamburger span {
 .ed-aside__desc {
   font-size: 14.5px;
   line-height: 1.95;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
   max-width: 320px;
 }
@@ -4082,7 +4088,7 @@ body.nav-open .site-header .hamburger span {
   font-size: 70px;
   color: var(--c-primary);
   opacity: 0.18;
-  font-weight: 300;
+  font-weight: 400;
 }
 .ed-case__badge {
   display: inline-block;
@@ -4127,7 +4133,7 @@ body.nav-open .site-header .hamburger span {
 .ed-case__desc {
   font-size: 15px;
   line-height: 2;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
 }
 
@@ -4151,7 +4157,7 @@ body.nav-open .site-header .hamburger span {
 }
 .ed-lock__txt p {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.78);
 }
@@ -4363,7 +4369,7 @@ body.nav-open .site-header .hamburger span {
 .ed-step__desc {
   font-size: 14.5px;
   line-height: 1.9;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
   max-width: 620px;
 }
@@ -4416,7 +4422,7 @@ body.nav-open .site-header .hamburger span {
 .ed-card2__desc {
   font-size: 14px;
   line-height: 1.85;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
 }
 
@@ -4459,7 +4465,7 @@ body.nav-open .site-header .hamburger span {
   font-size: 12.5px;
   color: var(--c-text-light);
   margin-top: 12px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
 }
 
@@ -4507,7 +4513,7 @@ body.nav-open .site-header .hamburger span {
 .ed-notice__date {
   font-size: 13px;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
@@ -4537,7 +4543,7 @@ body.nav-open .site-header .hamburger span {
 }
 .ed-sectlabel h2 {
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text);
   margin-top: 14px;
   letter-spacing: -0.5px;
@@ -4603,7 +4609,7 @@ body.nav-open .site-header .hamburger span {
 .board-intro {
   font-size: 14.5px;
   line-height: 1.9;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
   max-width: 760px;
   margin-bottom: 36px;
@@ -4620,7 +4626,7 @@ body.nav-open .site-header .hamburger span {
 }
 .board-total {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
 }
 .board-total strong {
@@ -4784,7 +4790,7 @@ body.nav-open .site-header .hamburger span {
   text-align: center;
   font-size: 13px;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
 }
 .board-list__mlabel {
   display: none;
@@ -4864,7 +4870,7 @@ body.nav-open .site-header .hamburger span {
 .board-gallery__excerpt {
   font-size: 13.5px;
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
   margin-bottom: 20px;
   display: -webkit-box;
@@ -4880,7 +4886,7 @@ body.nav-open .site-header .hamburger span {
   padding-top: 16px;
   border-top: 1px solid var(--c-border);
   font-size: 12.5px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
 }
 .board-gallery__meta span {
@@ -5075,7 +5081,7 @@ body.nav-open .site-header .hamburger span {
   flex-wrap: wrap;
   gap: 8px 22px;
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
 }
 .board-view__metakey {
@@ -5089,7 +5095,7 @@ body.nav-open .site-header .hamburger span {
   border-bottom: 1px solid var(--c-border);
   font-size: 15.5px;
   line-height: 1.95;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text);
 }
 .board-view__body p {
@@ -5163,7 +5169,7 @@ body.nav-open .site-header .hamburger span {
 }
 .board-view__navtitle {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -5238,13 +5244,13 @@ body.nav-open .site-header .hamburger span {
 }
 .board-comment__date {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
 }
 .board-comment__text {
   font-size: 14px;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
 }
 .board-comment__empty {
@@ -5252,7 +5258,7 @@ body.nav-open .site-header .hamburger span {
   margin-bottom: 28px;
   text-align: center;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--c-text-light);
   border-top: 1px solid var(--c-border);
   border-bottom: 1px solid var(--c-border);
@@ -5454,7 +5460,7 @@ body.nav-open .site-header .hamburger span {
 .write-form-desc {
   font-size: 13px;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Fields & Labels */
@@ -5495,7 +5501,7 @@ body.nav-open .site-header .hamburger span {
 
 .form-input::placeholder {
   color: #a5b5ab;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .form-input:focus {
@@ -5536,7 +5542,7 @@ body.nav-open .site-header .hamburger span {
   gap: 8px;
   cursor: pointer;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -5610,7 +5616,7 @@ body.nav-open .site-header .hamburger span {
   border-top: 1px solid var(--c-border);
   font-size: 13px;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -5653,7 +5659,7 @@ body.nav-open .site-header .hamburger span {
   font-size: 12px;
   line-height: 1.6;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .terms-agree {
@@ -5725,7 +5731,7 @@ body.nav-open .site-header .hamburger span {
 .file-name-text {
   font-size: 13px;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -6539,7 +6545,7 @@ fieldset#captcha #captcha_info {
 /* 1. Simple Title Class for Clinic Subpages */
 .ed-split__title--simple {
   font-size: 32px !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   line-height: 1.45 !important;
   color: var(--c-primary-dark) !important;
   letter-spacing: -0.5px !important;
@@ -6589,7 +6595,7 @@ fieldset#captcha #captcha_info {
 .ed-statement-band p {
   font-size: 15px !important;
   line-height: 1.8 !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   max-width: 720px !important;
   margin: 0 auto !important;
   word-break: keep-all !important;
@@ -6734,7 +6740,7 @@ fieldset#captcha #captcha_info {
 /* 1. Simple Title Class for Clinic Subpages */
 .ed-split__title--simple {
   font-size: 32px !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   line-height: 1.45 !important;
   color: var(--c-primary-dark) !important;
   letter-spacing: -0.5px !important;
@@ -6784,7 +6790,7 @@ fieldset#captcha #captcha_info {
 .ed-statement-band p {
   font-size: 15px !important;
   line-height: 1.8 !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   max-width: 720px !important;
   margin: 0 auto !important;
   word-break: keep-all !important;
@@ -6864,7 +6870,7 @@ fieldset#captcha #captcha_info {
   font-size: 14px !important;
   color: var(--c-text-light) !important;
   line-height: 1.7 !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   word-break: keep-all !important;
 }
 @media (max-width: 768px) {
@@ -6928,7 +6934,7 @@ fieldset#captcha #captcha_info {
 .pub-authors {
   font-size: 12.5px;
   color: var(--c-text-light);
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
 }
 /* 더보기 접힘/펼침 */
