@@ -4,6 +4,29 @@ $page_description = "잠실 삼성더클성장의원의 비급여 진료 항목�
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* 모바일 비급여 테이블 가독성 극대화 최적화 */
+@media (max-width: 768px) {
+    /* 글자량이 많은 세부내용 셀은 레이블 아래로 줄바꿈하여 100% 가로공간 확보 */
+    .premium-table td[data-label="세부 내용"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+    }
+    /* 모바일 세부내용 본문 정렬 교정 */
+    .premium-table td .pt-desc {
+        text-align: left !important;
+        width: 100% !important;
+        line-height: 1.6 !important;
+        font-size: 13.5px !important;
+        color: var(--c-text) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+</style>
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -78,19 +101,19 @@ include_once(G5_PATH.'/head.php');
         <tr>
           <td rowspan="2" class="pt-cat" data-label="분류">성장검진</td>
           <td data-label="비급여 항목" class="pt-name">더클 기본 성장검진</td>
-          <td data-label="세부 내용">진료, 성장판(X-ray), 골연령 판독, 체성분(InBody) 평가</td>
+          <td data-label="세부 내용"><div class="pt-desc">진료, 성장판(X-ray), 골연령 판독, 체성분(InBody) 평가</div></td>
           <td data-label="금액" class="pt-price">80,000원</td>
         </tr>
         <tr>
           <td class="pt-cat-m" data-label="분류">성장검진</td>
           <td data-label="비급여 항목" class="pt-name">더클 정밀 성장검진</td>
-          <td data-label="세부 내용"><strong>기본 성장 검진</strong> + 혈구(빈혈 등), 일반화학(간·신장 기능, 콜레스테롤, 단백질, 칼슘 등), 내분비(갑상선 기능, 성장/사춘기 관련 호르몬 등), 비타민 D, 소변 검사<br>※ 필요 시 검사 항목 추가</td>
+          <td data-label="세부 내용"><div class="pt-desc"><strong>기본 성장 검진</strong> + 혈구(빈혈 등), 일반화학(간·신장 기능, 콜레스테롤, 단백질, 칼슘 등), 내분비(갑상선 기능, 성장/사춘기 관련 호르몬 등), 비타민 D, 소변 검사<br>※ 필요 시 검사 항목 추가</div></td>
           <td data-label="금액" class="pt-price">230,000 ~ 330,000원</td>
         </tr>
         <tr>
           <td class="pt-cat" data-label="분류">척추</td>
           <td data-label="비급여 항목" class="pt-name">척추측만 평가</td>
-          <td data-label="세부 내용">척추 정렬 및 측만 평가</td>
+          <td data-label="세부 내용"><div class="pt-desc">척추 정렬 및 측만 평가</div></td>
           <td data-label="금액" class="pt-price">10,000원</td>
         </tr>
         <tr>
