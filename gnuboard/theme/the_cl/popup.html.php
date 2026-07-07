@@ -17,10 +17,12 @@ $popup_slides = array(
     array(
         'title' => '사전 예약 안내',
         'image' => $G5_URL.'/img/popup_notice.png?v=1',
+        'link'  => $G5_URL.'/sub/sub4_3_view.php?id=3',
     ),
     array(
         'title' => '진료일정 안내',
         'image' => $G5_URL.'/img/popup_2.png?v=1',
+        'link'  => '',
     ),
 );
 
@@ -33,7 +35,7 @@ $popup_width = '440px';
 
 /* 팝업 식별 키 — 콘텐츠가 바뀌어 다시 노출하고 싶을 때 값을 변경하면
    '오늘 하루 그만보기'를 누른 사용자에게도 새 팝업이 다시 표시됩니다. */
-$popup_key = 'thecl-popup-2026-07-07';
+$popup_key = 'thecl-popup-2026-07-07-v2';
 
 $popup_total = count($popup_slides);
 ?>
@@ -50,7 +52,13 @@ $popup_total = count($popup_slides);
     <div class="popup-slides">
       <?php foreach ($popup_slides as $i => $slide) { ?>
         <div class="popup-slide<?php echo $i === 0 ? ' is-active' : ''; ?>" data-index="<?php echo $i; ?>">
-          <img src="<?php echo $slide['image']; ?>" alt="<?php echo $slide['title']; ?>" draggable="false">
+          <?php if (!empty($slide['link'])) { ?>
+            <a href="<?php echo $slide['link']; ?>" style="display: block; width: 100%; height: 100%;">
+              <img src="<?php echo $slide['image']; ?>" alt="<?php echo $slide['title']; ?>" draggable="false" style="cursor: pointer; width: 100%; height: 100%; object-fit: cover;">
+            </a>
+          <?php } else { ?>
+            <img src="<?php echo $slide['image']; ?>" alt="<?php echo $slide['title']; ?>" draggable="false">
+          <?php } ?>
         </div>
       <?php } ?>
     </div>

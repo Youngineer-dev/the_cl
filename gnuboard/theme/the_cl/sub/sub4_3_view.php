@@ -4,6 +4,24 @@ include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+$action = isset($_GET['action']) ? $_GET['action'] : '';
+
+// 삭제 요청 처리
+if ($action === 'delete' && $id) {
+    if (isset($is_member) && $is_member) {
+        // 실제 데이터베이스 글 및 댓글 삭제
+        sql_query(" DELETE FROM {$g5['write_prefix']}notice WHERE wr_id = '$id' ");
+        sql_query(" DELETE FROM {$g5['write_prefix']}notice WHERE wr_parent = '$id' ");
+        
+        // 게시판 총 글 수 동기화 감소
+        sql_query(" UPDATE {$g5['board_table']} SET bo_count_write = IF(bo_count_write > 0, bo_count_write - 1, 0) WHERE bo_table = 'notice' ");
+        
+        alert('성공적으로 삭제되었습니다.', G5_THEME_URL . '/sub/sub4_3.php');
+    } else {
+        alert('삭제 권한이 없습니다.');
+    }
+}
+
 $post = sql_fetch(" SELECT * FROM {$g5['write_prefix']}notice WHERE wr_id = '$id' AND wr_is_comment = 0 ");
 if (!$post) {
     alert('존재하지 않는 게시글입니다.', G5_URL.'/theme/the_cl/sub/sub4_3.php');
@@ -21,7 +39,7 @@ $post['writer'] = get_text($post['wr_name']);
 $post['date'] = date('Y.m.d', strtotime($post['wr_datetime']));
 $post['hit'] = $post['wr_hit'];
 $post['comments'] = $post['wr_comment'];
-$post['content'] = conv_content($post['wr_content'], 1);
+$post['content'] = conv_content($post['wr_content'], 2);
 
 // 이전/다음 글
 $prev_post = sql_fetch(" SELECT wr_id, wr_subject FROM {$g5['write_prefix']}notice WHERE wr_is_comment = 0 AND wr_num < '{$post['wr_num']}' ORDER BY wr_num DESC, wr_id DESC LIMIT 1 ");
@@ -112,12 +130,15 @@ $list_url = G5_THEME_URL . '/sub/sub4_3.php';
         <?php endif; ?>
       </nav>
 
-      <!-- 하단 버튼 -->
-      <div class="board-view__foot" style="gap: 12px;">
-        <a href="<?php echo $list_url; ?>" class="board-view__listbtn" style="background: var(--c-text-light); border-color: var(--c-text-light);">목록으로</a>
+      <!-- 하단 버튼 (좌측: 목록, 우측: 수정/삭제) -->
+      <div class="board-view__foot" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <a href="<?php echo $list_url; ?>" class="board-view__listbtn" style="background: var(--c-text-light); border-color: var(--c-text-light); margin: 0;">목록으로</a>
+        
         <?php if (isset($is_member) && $is_member) { ?>
-        <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=notice&id=<?php echo $post['id']; ?>" class="board-view__listbtn">수정</a>
-        <a href="javascript:alert('프로토타입 단계로 삭제 기능은 그누보드 이식 후 작동합니다.');" class="board-view__listbtn" style="background: #e63c3c; border-color: #e63c3c;">삭제</a>
+        <div class="board-view__admin-actions" style="display: flex; gap: 8px;">
+          <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=notice&w=u&id=<?php echo $post['wr_id']; ?>" class="board-view__listbtn" style="margin: 0;">수정</a>
+          <a href="javascript:if(confirm('한번 삭제한 자료는 복구할 수 없습니다.\n\n정말 삭제하시겠습니까?')) { location.href='<?php echo G5_THEME_URL; ?>/sub/sub4_3_view.php?id=<?php echo $post['wr_id']; ?>&action=delete'; }" class="board-view__listbtn" style="background: #e63c3c; border-color: #e63c3c; margin: 0;">삭제</a>
+        </div>
         <?php } ?>
       </div>
 
