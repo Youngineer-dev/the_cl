@@ -44,8 +44,7 @@ include_once(G5_PATH.'/head.php');
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead">
-            <strong>잠실 삼성더클성장의원</strong>의 성장평가 및 예상키 진단은 아이의 현재 성장 템포를 정확하게 측정합니다. 소아내분비 세부전문의가 뼈나이(골연령)와 유전적 요인을 다각도로 분석하여, 성장 골든타임을 놓치지 않도록 과학적인 솔루션을 제시합니다.<br>
-            <span style="font-size: 14px; color: var(--c-text-light); display: inline-block; margin-top: 12px; opacity: 0.95; font-weight: 400;">※ 분석 데이터는 질병관리청이 제시한 대한민국 소아청소년 백분위수 성장 차트를 기준으로 정밀 매핑됩니다.</span>
+            더클은 성장곡선, 성장속도, 사춘기, 뼈나이, 부모키를 종합적으로 분석하여 아이에게 맞는 성장 전략을 제시합니다.
           </p>
         </div>
       </div>
@@ -156,25 +155,10 @@ include_once(G5_PATH.'/head.php');
         </p>
       </div>
       
-      <div class="ed-cards reveal" style="margin-top: 40px;">
-        <div class="ed-card-item">
-          <h3>예상 성인키 예측</h3>
-          <p>
-            골성숙도와 유전적 요인, 성장 속도 데이터를 정밀 분석하여 미래의 예상 성인 신장을 높은 정확도로 산출합니다.
-          </p>
-        </div>
-        <div class="ed-card-item">
-          <h3>성장을 가로막는 방해요인 감별</h3>
-          <p>
-            성장 판독 및 호르몬 균형, 자세 및 대사 상태 분석을 통해 성장을 지연시키는 근본적인 방해 요인을 규명합니다.
-          </p>
-        </div>
-        <div class="ed-card-item">
-          <h3>아이 맞춤형 1:1 성장전략 수립</h3>
-          <p>
-            도출된 종합 환경 지표를 바탕으로 영양, 수면, 운동부터 필요시 맞춤 의학적 치료까지 아우르는 1:1 플랜을 제공합니다.
-          </p>
-        </div>
+      <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <span class="ed-pill-badge">예상 성인키 예측</span>
+        <span class="ed-pill-badge">성장을 가로막는 방해요인 감별</span>
+        <span class="ed-pill-badge">아이 맞춤형 1:1 성장전략 수립</span>
       </div>
     </section>
 

@@ -44,8 +44,7 @@ include_once(G5_PATH.'/head.php');
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead">
-            <strong>삼성더클성장의원 저신장 클리닉</strong>은 또래 평균 키의 하위 3% 미만이거나 성장 발달 속도가 매년 4cm 이하로 더딘 소아·청소년을 위해 정확한 원인을 분석합니다. 소아내분비 전문의의 뼈나이 검사 및 정밀 평가를 기초로 하여, 성장호르몬 자극검사를 거쳐 과학적 근거가 확보되었을 때 안전하게 성장호르몬 치료를 개시합니다.<br>
-            <span style="font-size: 14px; color: var(--c-text-light); display: inline-block; margin-top: 12px; opacity: 0.95; font-weight: 400;">※ 저신장 기준 및 성장호르몬 치료 급여 기준은 건강보험심사평가원 및 대한소아내분비학회 표준 지침을 따릅니다.</span>
+            아이의 성장곡선과 성장속도를 면밀히 확인하고, 저신장의 원인을 감별하여 성장호르몬 치료가 필요한지, 꾸준한 추적이 필요한지, 생활 관리가 우선인지 판단합니다.
           </p>
         </div>
       </div>

@@ -40,11 +40,14 @@ include_once(G5_PATH.'/head.php');
       <div class="ed-split__text">
         <span class="ed-eyebrow">Pediatric Obesity</span>
         <h2 class="ed-split__title ed-split__title--simple">
-          소아비만은 성장의 효율을 떨어뜨립니다<br>체성분 개선으로 건강한 키를 확보
+          아이의 체중 증가는 단순한 의지 문제가 아닐 수 있습니다.
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
+          <p class="lead" style="margin-bottom: 16px;">
+            소아 비만은 식습관, 수면, 활동량, 가족력, 호르몬 변화, 대사 상태가 함께 영향을 주는 경우가 많습니다. 무조건 적게 먹이거나 갑자기 운동량을 늘리는 방식보다, 아이의 성장 흐름과 대사 상태를 함께 평가하며 건강하게 관리하는 것이 중요합니다.
+          </p>
           <p class="lead">
-            체지방에서 분비되는 호르몬은 성조숙증을 촉진하고, 성장 호르몬을 지방 대사에 소모시킵니다. 굶지 않고 키 성장과 건강을 동시에 관리하는 정밀 체성분 매니지먼트를 가동합니다.
+            더클은 아이에게 상처를 주는 체중 압박이 아닌, 성장을 지키면서 대사 건강을 회복하는 방향으로 진료합니다.
           </p>
         </div>
       </div>
@@ -60,16 +63,13 @@ include_once(G5_PATH.'/head.php');
     <section class="ed-check reveal" style="margin-top: 60px;">
       <div class="ed-check__head">
         <span class="ed-kicker">Self Check</span>
-        <p class="ed-check__label">이런 경우<br>평가가 필요합니다</p>
+        <p class="ed-check__label">우리 아이,<br>이런 모습이 있나요?</p>
       </div>
       <ul class="ed-check__list">
-        <li class="ed-check__item"><span class="ed-check__num">01</span><p>키 성장에 비해 체중 증가 속도가 너무 빠른 경우</p></li>
-        <li class="ed-check__item"><span class="ed-check__num">02</span><p>소아 성장도표에서 체질량지수(BMI) 백분위가 높은 경우</p></li>
-        <li class="ed-check__item"><span class="ed-check__num">03</span><p>편식, 야식, 폭식, 단 음료 다량 섭취 등 식사 패턴이 불균형한 경우</p></li>
-        <li class="ed-check__item"><span class="ed-check__num">04</span><p>또래보다 활동량이 현저히 적고 운동 시 쉽게 피로해하는 경우</p></li>
-        <li class="ed-check__item"><span class="ed-check__num">05</span><p>목덜미나 겨드랑이선 피부가 어둡고 두꺼워지는 현상이 의심되는 경우</p></li>
-        <li class="ed-check__item"><span class="ed-check__num">06</span><p>과다한 체중으로 인해 아이가 심리적으로 위축되거나 자존감이 저하된 경우</p></li>
-        <li class="ed-check__item"><span class="ed-check__num">07</span><p>부모 비만 가족력이 있고, 성조숙증이나 대사 합병증이 염려되는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">01</span><p>체중이 빠르게 늘고 있다</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">02</span><p>목덜미나 겨드랑이 피부가 거뭇하게 보인다</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">03</span><p>또래보다 체중 또는 BMI 백분위가 높다</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">04</span><p>체중 문제로 식사 시간이 가족 모두에게 스트레스가 된다</p></li>
       </ul>
     </section>
 
