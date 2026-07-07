@@ -5,13 +5,26 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 if (!isset($G5_URL)) {
     $G5_URL = G5_THEME_URL;
 }
-
+?>
+<style>
+/* PC 화면일 때 팝업창을 좌측 10% 영역으로 살짝 치워두는 정렬 (애니메이션 충돌 방지 포함) */
+@media (min-width: 1024px) {
+    .theme-popup {
+        top: 50% !important;
+        left: 10vw !important;
+        transform: translate(0, -50%) !important;
+        animation: none !important;
+        opacity: 1 !important;
+    }
+}
+</style>
+<?php
 /* ============================================================
    메인 팝업 콘텐츠 데이터 (정사각 이미지형)
    - 모든 정보를 이미지 한 장에 담습니다.
    - title : 접근성용 대체텍스트(alt)로 사용됩니다.
    - image : 슬라이드 이미지 (테마 /img 경로 기준)
-   - 항목을 추가/수정하면 슬라이드와 카운터가 자동으로 갱신됩니다.
+   - link : 클릭 시 이동할 URL 주소 (빈 값으로 두면 링크가 비활성화됩니다)
    ============================================================ */
 $popup_slides = array(
     array(
@@ -26,8 +39,7 @@ $popup_slides = array(
     ),
 );
 
-/* 이미지 비율 (width / height) — PC·모바일 어디서든 동일하게 유지됩니다.
-   기본은 정사각(1/1). 준비한 팝업 이미지 비율에 맞춰 변경하세요. (예: '1 / 1', '3 / 4', '16 / 9') */
+/* 이미지 비율 (width / height) — PC·모바일 어디서든 동일하게 유지됩니다. */
 $popup_ratio = '1 / 1';
 
 /* 팝업 너비 (px) — 비율에 따라 높이는 자동 계산됩니다. */
@@ -35,19 +47,20 @@ $popup_width = '440px';
 
 /* 팝업 식별 키 — 콘텐츠가 바뀌어 다시 노출하고 싶을 때 값을 변경하면
    '오늘 하루 그만보기'를 누른 사용자에게도 새 팝업이 다시 표시됩니다. */
-$popup_key = 'thecl-popup-2026-07-07-v4';
+$popup_key = 'thecl-popup-2026-07-07-v7'; // 캐시 락 완전 리셋을 위해 v7 상향
 
 $popup_total = count($popup_slides);
 ?>
+
 <!-- ============================================================
-     MAIN POPUP (정사각 이미지형 / 드래그 이동 / 자동 슬라이드)
+     MAIN POPUP (정사각 이미지형 / 자동 슬라이드)
      ============================================================ -->
 <div class="theme-popup" id="themePopup"
      data-popup-key="<?php echo $popup_key; ?>"
      style="--popup-ratio: <?php echo $popup_ratio; ?>; --popup-w: <?php echo $popup_width; ?>;"
      role="dialog" aria-label="삼성더클 소식 팝업" hidden>
 
-  <!-- 이미지 스테이지 (정사각 + 꽉 채움 + 드래그 핸들) -->
+  <!-- 이미지 스테이지 (정사각 + 꽉 채움) -->
   <div class="popup-stage" id="popupHandle">
     <div class="popup-slides">
       <?php foreach ($popup_slides as $i => $slide) { ?>
