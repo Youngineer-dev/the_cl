@@ -111,7 +111,7 @@ include_once(G5_PATH.'/head.php');
             <span class="ed-step__eyebrow">Step 3</span>
             <h3 class="ed-step__title">유전적 성장 범위 평가</h3>
             <p class="ed-step__desc">
-              부모님의 키를 바탕으로 목표키와 유전적 성장 범위를 확인합니다. 아이의 현재 키와 성장 흐름이 가족적 기대 범위 안에 있는지 분석합니다.
+              부모님의 키를 바탕으로 목표키와 유전적 성장 범위를 확인합니다.<br>아이의 현재 키와 성장 흐름이 가족적 기대 범위 안에 있는지 분석합니다.
             </p>
           </div>
         </div>
@@ -122,7 +122,7 @@ include_once(G5_PATH.'/head.php');
             <span class="ed-step__eyebrow">Step 4</span>
             <h3 class="ed-step__title">정밀 신체진찰</h3>
             <p class="ed-step__desc">
-              체형, 신체 비율, 자세, 사춘기 진행 상태, 성장 관련 이상 소견을 확인합니다. 저신장과 관련된 신체적 단서가 있는지 전문의가 직접 평가합니다.
+              체형, 신체 비율, 자세, 사춘기 진행 상태, 성장 관련 이상 소견을 확인합니다.<br>저신장과 관련된 신체적 단서가 있는지 전문의가 직접 평가합니다.
             </p>
           </div>
         </div>
@@ -133,7 +133,7 @@ include_once(G5_PATH.'/head.php');
             <span class="ed-step__eyebrow">Step 5</span>
             <h3 class="ed-step__title">뼈나이·성장판 평가</h3>
             <p class="ed-step__desc">
-              X-ray를 통해 뼈나이와 성장판 성숙도를 확인합니다. 실제 나이와 뼈나이의 차이, 잔여 성장 가능성, 사춘기 진행과의 균형을 함께 봅니다.
+              X-ray를 통해 뼈나이와 성장판 성숙도를 확인합니다.<br>실제 나이와 뼈나이의 차이, 잔여 성장 가능성, 사춘기 진행과의 균형을 함께 봅니다.
             </p>
           </div>
         </div>

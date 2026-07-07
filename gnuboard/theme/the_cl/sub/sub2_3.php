@@ -156,7 +156,7 @@ include_once(G5_PATH.'/head.php');
             <span class="ed-step__eyebrow">Step 5</span>
             <h3 class="ed-step__title">사춘기 호르몬 검사</h3>
             <p class="ed-step__desc">
-              LH, FSH, Estradiol 또는 Testosterone 등 기초 호르몬을 확인합니다. 필요한 경우 GnRH 자극검사를 통해 치료가 필요한 성조숙증인지 평가합니다.
+              LH, FSH, Estradiol 또는 Testosterone 등 기초 호르몬을 확인합니다.<br>필요한 경우 GnRH 자극검사를 통해 치료가 필요한 성조숙증인지 평가합니다.
             </p>
           </div>
         </div>
@@ -167,7 +167,7 @@ include_once(G5_PATH.'/head.php');
             <span class="ed-step__eyebrow">Step 6</span>
             <h3 class="ed-step__title">필요 시 초음파 평가</h3>
             <p class="ed-step__desc">
-              여아에서는 자궁·난소 상태를 확인하기 위해 필요 시 골반 초음파를 시행할 수 있습니다. 남아에서는 진찰 소견에 따라 고환 평가가 필요할 수 있습니다.
+              여아에서는 자궁·난소 상태를 확인하기 위해 필요 시 골반 초음파를 시행할 수 있습니다.<br>남아에서는 진찰 소견에 따라 고환 평가가 필요할 수 있습니다.
             </p>
           </div>
         </div>

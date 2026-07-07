@@ -112,7 +112,7 @@ include_once(G5_PATH.'/head.php');
             <span class="ed-step__eyebrow">Step 3</span>
             <h3 class="ed-step__title">체성분 분석</h3>
             <p class="ed-step__desc">
-              InBody 검사를 통해 체지방률, 근육량, 체수분 상태를 확인합니다. 단순히 체중 숫자만 보는 것이 아니라, 아이의 몸 구성을 함께 평가합니다.
+              InBody 검사를 통해 체지방률, 근육량, 체수분 상태를 확인합니다.<br>단순히 체중 숫자만 보는 것이 아니라, 아이의 몸 구성을 함께 평가합니다.
             </p>
           </div>
         </div>
@@ -123,7 +123,7 @@ include_once(G5_PATH.'/head.php');
             <span class="ed-step__eyebrow">Step 4</span>
             <h3 class="ed-step__title">대사·합병증 혈액검사</h3>
             <p class="ed-step__desc">
-              공복혈당, HbA1c, 인슐린, 지질검사, 간수치, 요산, 갑상선 기능, 염증 지표 등을 확인합니다. 이를 통해 체중 증가와 관련된 대사 이상이 동반되어 있는지 평가합니다.
+              공복혈당, HbA1c, 인슐린, 지질검사, 간수치, 요산, 갑상선 기능, 염증 지표 등을 확인합니다.<br>이를 통해 체중 증가와 관련된 대사 이상이 동반되어 있는지 평가합니다.
             </p>
           </div>
         </div>
