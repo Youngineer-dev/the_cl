@@ -474,15 +474,15 @@ include_once(G5_THEME_PATH.'/head.php');
           <div class="schedule-table">
             <div class="schedule-row" style="flex-wrap: wrap;">
               <span class="schedule-day">화·수·금</span>
-              <span class="schedule-time">10:00 ~ 18:30 <small style="display:block; font-size:11px; opacity:0.7;">(점심 13:00 ~ 14:00)</small></span>
+              <span class="schedule-time">10:00 ~ 18:30 <small style="display:block; font-size:12px; opacity:0.85;">(점심 13:00 ~ 14:00)</small></span>
             </div>
             <div class="schedule-row" style="flex-wrap: wrap;">
               <span class="schedule-day">목 요 일</span>
-              <span class="schedule-time">13:00 ~ 20:30 <small style="display:block; font-size:11px; opacity:0.7;">(휴게 17:00 ~ 17:30)</small></span>
+              <span class="schedule-time">13:00 ~ 20:30 <small style="display:block; font-size:12px; opacity:0.85;">(휴게 17:00 ~ 17:30)</small></span>
             </div>
             <div class="schedule-row" style="flex-wrap: wrap;">
               <span class="schedule-day">토 요 일</span>
-              <span class="schedule-time">08:30 ~ 15:00 <small style="display:block; font-size:11px; opacity:0.7;">(휴게 12:00 ~ 12:30)</small></span>
+              <span class="schedule-time">08:30 ~ 15:00 <small style="display:block; font-size:12px; opacity:0.85;">(휴게 12:00 ~ 12:30)</small></span>
             </div>
           </div>
           <p class="schedule-note">※ 월요일, 일요일, 공휴일 휴진</p>

@@ -47,7 +47,7 @@ include_once(G5_PATH.'/head.php');
       <div style="width: 100%; height: 100%; background-color: var(--c-primary-pale); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--c-primary-dark);">
         <span style="font-size: 50px; margin-bottom: 16px;">📍</span>
         <strong style="font-size: 18px; margin-bottom: 8px;">삼성더클성장의원 약도</strong>
-        <p style="font-size: 13px; color: var(--c-text-light);">서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</p>
+        <p style="font-size: 14px; color: var(--c-text-light);">서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</p>
       </div>
     </div>
     

@@ -46,7 +46,7 @@ include_once(G5_THEME_PATH.'/header.html.php');
           </p>
         </div>
 
-        <div style="background: var(--c-primary-pale); border-radius: 6px; padding: 20px; margin-bottom: 30px; text-align: left; font-size: 13px; color: var(--c-text); line-height: 1.8;">
+        <div style="background: var(--c-primary-pale); border-radius: 6px; padding: 20px; margin-bottom: 30px; text-align: left; font-size: 14px; color: var(--c-text); line-height: 1.8;">
           <div style="margin-bottom: 6px;"><strong>아이디:</strong> <span style="color: var(--c-primary-dark); font-weight: 500;"><?php echo $mb['mb_id']; ?></span></div>
           <div><strong>이메일 주소:</strong> <span style="color: var(--c-primary-dark); font-weight: 500;"><?php echo $mb['mb_email']; ?></span></div>
         </div>
