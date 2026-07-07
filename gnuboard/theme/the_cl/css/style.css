@@ -2232,25 +2232,24 @@ body.nav-open .site-header .hamburger span {
 .sub-hero-overlay {
   position: absolute;
   inset: 0;
-  /* 테마 컬러(Sage Green) 그라데이션 — 어둡고 답답한 느낌 없이 흰 글씨 가독성 확보
-     + 메인 히어로처럼 글씨가 놓이는 중앙만 어둡게 하는 radial 비네트
-     + 상단 스크림: 헤더(슬로건·메뉴·전화번호) 글씨 가독성 확보 */
+  /* 맑고 투명한 세이지 그린 마스크 
+     + 뿌연 느낌 없이 뒤편 인테리어가 선명히 비치며, 흰색 글씨 가독성을 확보하는 투명 그린 필터 */
   background:
     linear-gradient(
       180deg,
-      rgba(45, 54, 49, 0.26) 0%,
-      rgba(45, 54, 49, 0) 26%
+      rgba(45, 54, 49, 0.28) 0%,
+      rgba(45, 54, 49, 0) 28%
     ),
     radial-gradient(
       circle at center,
-      rgba(45, 54, 49, 0.42) 0%,
-      rgba(45, 54, 49, 0.18) 45%,
-      rgba(45, 54, 49, 0) 72%
+      rgba(45, 54, 49, 0.25) 0%,
+      rgba(45, 54, 49, 0.08) 55%,
+      rgba(45, 54, 49, 0) 80%
     ),
     linear-gradient(
       180deg,
-      rgba(92, 110, 99, 0.22) 0%,
-      rgba(61, 77, 68, 0.45) 100%
+      rgba(152, 169, 158, 0.12) 0%,
+      rgba(92, 110, 99, 0.25) 100%
     );
 }
 
