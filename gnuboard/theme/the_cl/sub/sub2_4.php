@@ -144,7 +144,7 @@ include_once(G5_PATH.'/head.php');
     <!-- ============================================================
          COMPREHENSIVE GOALS (최종 관리 방향)
          ============================================================ -->
-    <section style="padding-top: 60px; padding-bottom: 40px;">
+    <section style="padding-top: 60px; padding-bottom: 80px;">
       <div class="ed-sectlabel reveal" style="margin-bottom: 30px; text-align: center;">
         <span class="ed-kicker">Diagnostic Plan</span>
         <h2>최종 <strong>관리 방향</strong></h2>
@@ -159,16 +159,6 @@ include_once(G5_PATH.'/head.php');
         <span class="ed-pill-badge">아이에게 부담을 주지 않는 가족 중심 생활습관 개선</span>
         <span class="ed-pill-badge">3개월 또는 6개월 단위의 성장·체성분·대사 지표 추적 관리</span>
       </div>
-    </section>
-
-    <!-- ============================================================
-         TREATMENT STATEMENT (체중 감량 걱정 해결 밴드)
-         ============================================================ -->
-    <section class="ed-statement-band reveal">
-      <h3>체중 감량이 아이의 키 성장에 방해가 될까 걱정되시나요?</h3>
-      <p>
-        소아 비만 관리는 성인 다이어트와 다릅니다. 성장기 아이에게 무리한 절식을 유도하지 않으며, 키 성장을 위한 필수 영양은 충분히 채우면서 체지방률만 개선해 건강한 키 성장을 확보하도록 돕습니다.
-      </p>
     </section>
 
   </div>

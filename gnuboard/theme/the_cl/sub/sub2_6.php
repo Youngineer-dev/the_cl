@@ -142,7 +142,7 @@ include_once(G5_PATH.'/head.php');
     <!-- ============================================================
          COMPREHENSIVE GOALS (관리 방향)
          ============================================================ -->
-    <section style="padding-top: 60px; padding-bottom: 40px;">
+    <section style="padding-top: 60px; padding-bottom: 80px;">
       <div class="ed-sectlabel reveal" style="margin-bottom: 30px; text-align: center;">
         <span class="ed-kicker">Diagnostic Plan</span>
         <h2>관리 <strong>방향</strong></h2>
@@ -157,16 +157,6 @@ include_once(G5_PATH.'/head.php');
         <span class="ed-pill-badge">수면과 생활 리듬 개선</span>
         <span class="ed-pill-badge">성장기 아이의 건강한 성장 환경 관리</span>
       </div>
-    </section>
-
-    <!-- ============================================================
-         TREATMENT STATEMENT (알레르기 걱정 해결 밴드)
-         ============================================================ -->
-    <section class="ed-statement-band reveal">
-      <h3>비염이나 아토피가 아이의 성장을 방해할까 염려되시나요?</h3>
-      <p>
-        잦은 코막힘으로 인한 구호흡(입호흡)과 아토피 가려움증은 깊은 잠을 방해하여 성장호르몬 분비 효율을 떨어뜨릴 수 있습니다. 정확한 알레르겐 원인을 분석해 일상과 수면의 질을 회복시켜 최상의 성장 환경을 구축합니다.
-      </p>
     </section>
 
   </div>

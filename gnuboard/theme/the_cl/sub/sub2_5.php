@@ -152,7 +152,7 @@ include_once(G5_PATH.'/head.php');
     <!-- ============================================================
          COMPREHENSIVE GOALS (최종 관리 방향)
          ============================================================ -->
-    <section style="padding-top: 60px; padding-bottom: 40px;">
+    <section style="padding-top: 60px; padding-bottom: 80px;">
       <div class="ed-sectlabel reveal" style="margin-bottom: 30px; text-align: center;">
         <span class="ed-kicker">Diagnostic Plan</span>
         <h2>최종 <strong>관리 방향</strong></h2>
@@ -167,16 +167,6 @@ include_once(G5_PATH.'/head.php');
         <span class="ed-pill-badge">부모와 아이 모두 부담을 줄이는 식사 습관 개선</span>
         <span class="ed-pill-badge">성장 흐름에 따른 주기적 추적 관리</span>
       </div>
-    </section>
-
-    <!-- ============================================================
-         TREATMENT STATEMENT (영양/대사 걱정 해결 밴드)
-         ============================================================ -->
-    <section class="ed-statement-band reveal">
-      <h3>무리하게 억지로 먹이려고 애쓰고 계시진 않나요?</h3>
-      <p>
-        단순히 섭취량만 늘리는 것은 아이에게 스트레스가 되고 대사 불균형을 초래할 수 있습니다. 섭식 행동의 원인을 분석하고 영양의 밀도를 효율적으로 높여, 부모와 아이가 편안한 식사 환경 속에서 건강하게 증량하도록 돕습니다.
-      </p>
     </section>
 
   </div>
