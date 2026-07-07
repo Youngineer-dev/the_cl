@@ -38,7 +38,7 @@ include_once(G5_PATH.'/head.php');
          ============================================================ -->
     <section class="ed-split reveal">
       <div class="ed-split__text">
-        <span class="ed-eyebrow">Pediatric Obesity</span>
+        <span class="ed-eyebrow">소아 비만 클리닉</span>
         <h2 class="ed-split__title ed-split__title--simple">
           아이의 체중 증가는 단순한 의지 문제가 아닐 수 있습니다.
         </h2>

@@ -38,7 +38,7 @@ include_once(G5_PATH.'/head.php');
          ============================================================ -->
     <section class="ed-split reveal">
       <div class="ed-split__text">
-        <span class="ed-eyebrow">Short Stature</span>
+        <span class="ed-eyebrow">정밀 저신장 클리닉</span>
         <h2 class="ed-split__title ed-split__title--simple">
           왜 우리 아이는<br>또래보다 작을까요?
         </h2>

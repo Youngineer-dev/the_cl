@@ -60,7 +60,7 @@ include_once(G5_PATH.'/head.php');
          ============================================================ -->
     <section class="ed-split reveal">
       <div class="ed-split__text">
-        <span class="ed-eyebrow">Precocious Puberty</span>
+        <span class="ed-eyebrow">성조숙증 · 빠른 사춘기 클리닉</span>
         <h2 class="ed-split__title ed-split__title--simple">
           우리 아이 사춘기,<br>너무 빠른 걸까요?
         </h2>

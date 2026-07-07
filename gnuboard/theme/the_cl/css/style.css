@@ -4113,7 +4113,7 @@ body.nav-open .site-header .hamburger span {
 .ed-check__item {
   display: flex;
   gap: 16px;
-  align-items: baseline;
+  align-items: center;
 }
 .ed-check__num {
   font-family: var(--font-serif);
@@ -4524,6 +4524,7 @@ body.nav-open .site-header .hamburger span {
   font-style: italic;
   font-size: 28px;
   color: var(--c-primary);
+  padding-right: 5px; /* 이탤릭체 시각적 우측 쏠림 보정 */
   transition:
     border-color 0.35s,
     color 0.35s,
@@ -4765,6 +4766,7 @@ body.nav-open .site-header .hamburger span {
     width: 50px;
     height: 50px;
     font-size: 21px;
+    padding-right: 4px; /* 모바일 이탤릭체 시각적 우측 쏠림 보정 */
   }
   .ed-step__title {
     font-size: 18px;

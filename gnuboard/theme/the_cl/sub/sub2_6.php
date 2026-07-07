@@ -38,9 +38,9 @@ include_once(G5_PATH.'/head.php');
          ============================================================ -->
     <section class="ed-split reveal">
       <div class="ed-split__text">
-        <span class="ed-eyebrow">Allergy</span>
+        <span class="ed-eyebrow">알레르기</span>
         <h2 class="ed-split__title ed-split__title--simple">
-          알레르기 비염과 아토피,<br>아이의 성장을 방해할 수 있습니다
+          성장 방해 알레르기 관리 클리닉
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead">

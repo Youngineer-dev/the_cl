@@ -38,7 +38,7 @@ include_once(G5_PATH.'/head.php');
          ============================================================ -->
     <section class="ed-split reveal">
       <div class="ed-split__text">
-        <span class="ed-eyebrow">Underweight</span>
+        <span class="ed-eyebrow">저체중 대사 클리닉</span>
         <h2 class="ed-split__title ed-split__title--simple">
           살이 안 찌는 아이,<br>원인에 맞는 영양 평가가 필요합니다
         </h2>
