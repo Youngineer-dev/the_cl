@@ -29,8 +29,8 @@ if (!isset($G5_URL)) {
       <div class="footer-inner">
         <div class="footer-info">
           <span>삼성더클성장의원</span><br>
-          <span>사업자번호 : 418-90-74970</span> &nbsp;|&nbsp; <span>대표 노유선</span><br>
-          <span>서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</span> &nbsp;|&nbsp; <span>TEL 02-1234-5678</span><br>
+          <span>사업자번호 : 418-90-74970</span><span class="finfo-sep"> &nbsp;|&nbsp; </span><span>대표 노유선</span><br>
+          <span>서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</span><span class="finfo-sep"> &nbsp;|&nbsp; </span><span>TEL 02-1234-5678</span><br>
           <span style="margin-top: 4px; display: inline-block;">COPYRIGHT © 2025 삼성더클성장의원. ALL RIGHTS RESERVED.</span>
         </div>
       </div>

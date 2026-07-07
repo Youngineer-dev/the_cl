@@ -7173,3 +7173,32 @@ fieldset#captcha #captcha_info {
     font-size: 13px;
   }
 }
+
+/* ============================================================
+   모바일 가독성: 데스크톱 폭 기준으로 문장을 강제 개행한 <br>은
+   좁은 화면에서 어색한 짧은 줄을 만들므로, 산문 문단과 긴 제목에
+   한해 자연 줄바꿈(word-break: keep-all)에 맡긴다.
+   히어로 슬로건·카드 3행 문구·진료시간 노트 등 짧은 의도적 개행은 유지.
+   ============================================================ */
+@media (max-width: 768px) {
+  .desc br,
+  .item_desc br,
+  .sub11_essay_body p br,
+  .auth-card-desc br,
+  .section-title br,
+  .ed-split__title br,
+  .ed-check__label br,
+  .item_subTitle br,
+  .sub11_essay_quote br {
+    display: none;
+  }
+
+  /* 푸터: 정보 항목을 한 줄씩 세로로 쌓고 | 구분자는 숨김 */
+  .footer-info span {
+    display: block;
+  }
+  .footer-info .finfo-sep,
+  .footer-info br {
+    display: none;
+  }
+}
