@@ -7,11 +7,11 @@ if (!isset($G5_URL)) {
 }
 ?>
 <style>
-/* PC 화면일 때 팝업창을 좌측 10% 영역으로 살짝 치워두는 정렬 (애니메이션 충돌 방지 포함) */
+/* PC 화면일 때 팝업창을 좌측 영역으로 긴밀히 밀착시키는 정렬 (애니메이션 충돌 방지 포함) */
 @media (min-width: 1024px) {
     .theme-popup {
         top: 50% !important;
-        left: 10vw !important;
+        left: 7vw !important; /* 좌측 여백을 10vw에서 4vw로 더욱 밀착 */
         transform: translate(0, -50%) !important;
         animation: none !important;
         opacity: 1 !important;
@@ -47,7 +47,7 @@ $popup_width = '440px';
 
 /* 팝업 식별 키 — 콘텐츠가 바뀌어 다시 노출하고 싶을 때 값을 변경하면
    '오늘 하루 그만보기'를 누른 사용자에게도 새 팝업이 다시 표시됩니다. */
-$popup_key = 'thecl-popup-2026-07-07-v7'; // 캐시 락 완전 리셋을 위해 v7 상향
+$popup_key = 'thecl-popup-2026-07-07-v8'; // 캐시 락 완전 리셋을 위해 v7 상향
 
 $popup_total = count($popup_slides);
 ?>

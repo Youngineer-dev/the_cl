@@ -37,6 +37,18 @@ if (!isset($G5_URL)) {
     </div>
   </footer>
 
+  <style>
+  /* 네이버 블로그 퀵메뉴 호버 스타일 */
+  .quick-btn.blog:hover {
+    background: #03c75a !important;
+    color: #ffffff !important;
+    border-color: #03c75a !important;
+  }
+  .quick-btn.blog:hover .q-icon {
+    fill: #ffffff !important;
+  }
+  </style>
+
   <div class="quick-menu" id="quickMenu">
     <div class="quick-items" id="quickItems">
       <button class="quick-btn kakao" title="카톡상담">
@@ -44,6 +56,11 @@ if (!isset($G5_URL)) {
       </button>
       <button class="quick-btn naver" title="네이버예약" onclick="window.open('#', '_blank')">
         <svg class="q-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16.273 12.845 7.376 0H0v24h7.726V11.155L16.624 24H24V0h-7.727z"/></svg>
+      </button>
+      <button class="quick-btn blog" title="네이버블로그" onclick="window.open('https://blog.naver.com/', '_blank')">
+        <svg class="q-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7.6 11.5H9.6v-2h2.8c.8 0 1.4-.4 1.4-1.1s-.6-1-1.4-1H9.6V6.6h3.1c1.8 0 3.2.7 3.2 2.4 0 1-.6 1.7-1.5 2.1.9.3 1.5 1 1.5 2.1 0 1.7-1.4 2.3-3.5 2.3z"/>
+        </svg>
       </button>
       <button class="quick-btn phone" title="전화문의" onclick="location.href='tel:02-1234-5678'">
         <svg class="q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
