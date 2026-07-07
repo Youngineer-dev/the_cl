@@ -448,78 +448,7 @@
     popup.addEventListener('mouseenter', stopAuto);
     popup.addEventListener('mouseleave', startAuto);
 
-    // --- 드래그 이동 (이미지 스테이지를 핸들로 사용) ---
-    const handle = document.getElementById('popupHandle');
-    let dragging = false;
-    let startX = 0, startY = 0;
-    let baseX = 0, baseY = 0; // 드래그 시작 시점의 오프셋(px)
-    let offX = 0, offY = 0;   // 현재 오프셋(px)
-    let moved = false;
-
-    const applyOffset = () => {
-      popup.style.setProperty('--px', offX + 'px');
-      popup.style.setProperty('--py', offY + 'px');
-    };
-
-    // 팝업이 화면 밖으로 나가지 않도록 오프셋 범위 제한
-    const clamp = () => {
-      const margin = 12;
-      const maxX = Math.max(0, (window.innerWidth - popup.offsetWidth) / 2 - margin);
-      const maxY = Math.max(0, (window.innerHeight - popup.offsetHeight) / 2 - margin);
-      offX = Math.max(-maxX, Math.min(maxX, offX));
-      offY = Math.max(-maxY, Math.min(maxY, offY));
-    };
-
-    if (handle) {
-      handle.addEventListener('pointerdown', (e) => {
-        // 닫기 버튼 위에서는 드래그 시작하지 않음
-        if (e.target.closest('.popup-close')) return;
-        dragging = true;
-        moved = false;
-        startX = e.clientX;
-        startY = e.clientY;
-        baseX = offX;
-        baseY = offY;
-        popup.classList.add('is-dragging');
-        stopAuto();
-        if (handle.setPointerCapture) {
-          try { handle.setPointerCapture(e.pointerId); } catch (err) {}
-        }
-      });
-
-      handle.addEventListener('pointermove', (e) => {
-        if (!dragging) return;
-        const dx = e.clientX - startX;
-        const dy = e.clientY - startY;
-        if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
-        offX = baseX + dx;
-        offY = baseY + dy;
-        clamp();
-        applyOffset();
-      });
-
-      const endDrag = (e) => {
-        if (!dragging) return;
-        dragging = false;
-        popup.classList.remove('is-dragging');
-        if (handle.releasePointerCapture && e) {
-          try { handle.releasePointerCapture(e.pointerId); } catch (err) {}
-        }
-        startAuto();
-      };
-      handle.addEventListener('pointerup', endDrag);
-      handle.addEventListener('pointercancel', endDrag);
-      // 드래그 후 헤더 내 의도치 않은 클릭 방지
-      handle.addEventListener('click', (e) => {
-        if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
-      }, true);
-    }
-
-    // 창 크기 변경 시 위치 보정
-    window.addEventListener('resize', () => {
-      clamp();
-      applyOffset();
-    }, { passive: true });
+    // (드래그 기능 제거 완료 - 네이버/카카오 예약 및 공지 이동 링크 네이티브 작동 보장)
 
     // --- 닫기 / 오늘 하루 그만보기 ---
     const hideTodayBtn = document.getElementById('popupHideToday');

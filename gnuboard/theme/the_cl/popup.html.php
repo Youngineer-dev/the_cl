@@ -35,7 +35,7 @@ $popup_width = '440px';
 
 /* 팝업 식별 키 — 콘텐츠가 바뀌어 다시 노출하고 싶을 때 값을 변경하면
    '오늘 하루 그만보기'를 누른 사용자에게도 새 팝업이 다시 표시됩니다. */
-$popup_key = 'thecl-popup-2026-07-07-v2';
+$popup_key = 'thecl-popup-2026-07-07-v4';
 
 $popup_total = count($popup_slides);
 ?>
