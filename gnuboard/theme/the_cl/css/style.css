@@ -6309,6 +6309,17 @@ fieldset#captcha #captcha_info {
 }
 
 @media (max-width: 480px) {
+  /* FAQ 하단 블로그 유도 버튼: 모바일에서 한 줄 가독성 유지 */
+  .faq-blog-cta .cta-btn {
+    font-size: 13.5px;
+    padding: 12px 24px;
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
   /* 메인 연락 버튼: 좁은 폭에서 텍스트 잘림 방지 */
   .contact-btn {
     padding: 12px 8px;
