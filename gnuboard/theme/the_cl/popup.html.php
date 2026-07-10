@@ -29,7 +29,7 @@ if (!isset($G5_URL)) {
 $popup_slides = array(
     array(
         'title' => '사전 예약 안내',
-        'image' => $G5_URL.'/img/popup_notice.png?v=1',
+        'image' => $G5_URL.'/img/popup_notice.png?v=2',
         'link'  => $G5_URL.'/sub/sub4_3_view.php?id=3',
     ),
     array(
@@ -47,7 +47,7 @@ $popup_width = '440px';
 
 /* 팝업 식별 키 — 콘텐츠가 바뀌어 다시 노출하고 싶을 때 값을 변경하면
    '오늘 하루 그만보기'를 누른 사용자에게도 새 팝업이 다시 표시됩니다. */
-$popup_key = 'thecl-popup-2026-07-07-v8'; // 캐시 락 완전 리셋을 위해 v7 상향
+$popup_key = 'thecl-popup-2026-07-07-v9'; // 캐시 락 완전 리셋을 위해 v9 상향
 
 $popup_total = count($popup_slides);
 ?>

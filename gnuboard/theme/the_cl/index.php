@@ -15,7 +15,7 @@ include_once(G5_THEME_PATH.'/head.php');
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-deco"></div>
-      <p class="hero-subtitle">1:1 개별 맞춤 성장 클리닉</p>
+      <p class="hero-subtitle">더 클 우리 아이를 위한 선택</p>
       <h1 class="hero-title"><strong>삼성더클</strong>성장의원</h1>
       <p class="hero-desc">
         데이터로 정밀하게,<br>

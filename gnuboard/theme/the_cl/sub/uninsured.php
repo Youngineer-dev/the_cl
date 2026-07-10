@@ -133,7 +133,6 @@ include_once(G5_PATH.'/head.php');
   </div>
   <p class="reveal" style="margin-top: 20px; font-size: 14px; color: var(--c-text-light); font-weight: 400;">
     ※ 상기 비용은 부가세 포함 금액이며, 환자의 개별 상태와 처방 용량에 따라 달라질 수 있습니다.
-    질환 목적의 성장호르몬 치료는 조건 충족 시 실손 보험 적용 대상이 될 수 있습니다.
   </p>
 </section>
 
