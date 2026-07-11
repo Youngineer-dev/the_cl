@@ -355,7 +355,7 @@ include_once(G5_PATH.'/head.php');
           <article class="ph-special-item">
             <span class="ph-special-num">02</span>
             <div class="ph-special-body">
-              <h3>전문의 판독 × AI 보조 성장분석</h3>
+              <h3>전문의 직접 판독, 다각도 분석</h3>
               <p>
                 뼈나이는 판독 경험과 해석 방식에 따라 차이가 날 수 있습니다.<br class="pc-only">
                 더클은 수만 건의 뼈나이 판독 경험을 가진 소아내분비 전문의가 직접 확인하고, 추가로 AI 보조 분석을 함께 활용해 판독 편차를 줄이고 성장잠재력을 다각도로 평가합니다.
