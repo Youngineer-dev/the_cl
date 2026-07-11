@@ -78,9 +78,7 @@ include_once(G5_PATH.'/head.php');
   <div class="ed-split__text">
     <span class="ed-eyebrow">Clinic Hours</span>
     <h2 class="ed-split__title">
-      <span class="i1">예약제로</span>
-      <span class="i2">편안하게</span>
-      <span class="i3"><strong>모십니다</strong></span>
+      <span class="i1">예약제로 편안하게 <strong>모십니다</strong></span>
     </h2>
     <div class="ed-split__body">
       <p class="lead">

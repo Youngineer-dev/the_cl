@@ -95,7 +95,7 @@ include_once(G5_PATH.'/head.php');
 <div class="sub-intro-text">
   <p class="section-en reveal">Director's Message</p>
   <h2 class="section-title reveal reveal-delay-1">
-    부모의 애틋한 마음으로,<br class="pc-only">
+    부모의 애틋한 마음으로,<span class="br-all" aria-hidden="true"></span>
     <strong>아이의 빛나는 내일과 가능성</strong>을 믿습니다
   </h2>
 </div>

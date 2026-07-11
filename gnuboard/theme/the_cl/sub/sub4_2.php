@@ -175,9 +175,7 @@ include_once(G5_PATH.'/head.php');
   <div class="ed-split__text">
     <span class="ed-eyebrow">Frequently Asked</span>
     <h2 class="ed-split__title">
-      <span class="i1">궁금한 점을</span>
-      <span class="i2">먼저</span>
-      <span class="i3"><strong>모았습니다</strong></span>
+      <span class="i1">궁금한 점을 먼저 <strong>모았습니다</strong></span>
     </h2>
     <div class="ed-split__body">
       <p class="lead">

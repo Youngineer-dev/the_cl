@@ -71,7 +71,7 @@ include_once(G5_PATH.'/head.php');
       <div class="ed-split__text">
         <span class="ed-eyebrow">정밀 저신장 클리닉</span>
         <h2 class="ed-split__title ed-split__title--simple">
-          왜 우리 아이는 <br class="pc-only"> 또래보다 작을까요?
+          왜 우리 아이는 <span class="br-all" aria-hidden="true"></span> 또래보다 작을까요?
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead">

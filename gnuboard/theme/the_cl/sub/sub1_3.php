@@ -86,7 +86,7 @@ include_once(G5_PATH.'/head.php');
 <div class="sub-intro-text">
   <p class="section-en reveal">Medical Staff</p>
   <h2 class="section-title reveal reveal-delay-1">
-    학술적 깊이와 현장 리더십,<br class="pc-only">
+    학술적 깊이와 현장 리더십,<span class="br-all" aria-hidden="true"></span>
     <strong>소아 내분비 세부 전문의</strong>가 전담 진료합니다
   </h2>
 </div>

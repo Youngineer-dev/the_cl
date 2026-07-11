@@ -71,7 +71,7 @@ include_once(G5_PATH.'/head.php');
       <div class="ed-split__text">
         <span class="ed-eyebrow">더클 성장잠재력 분석 클리닉</span>
         <h2 class="ed-split__title ed-split__title--simple">
-          현재 키보다 중요한 것은 <br class="pc-only"> 아이의 <strong>성장 잠재력</strong>입니다
+          현재 키보다 중요한 것은 <span class="br-all" aria-hidden="true"></span> 아이의 <strong>성장 잠재력</strong>입니다
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead">
