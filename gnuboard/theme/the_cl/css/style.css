@@ -7020,6 +7020,11 @@ fieldset#captcha #captcha_info {
   .mo-only {
     display: inline !important;
   }
+  /* <br class="mo-only"> — display:inline 이면 줄바꿈이 사라짐 */
+  br.mo-only {
+    display: block !important;
+    content: "" !important;
+  }
   .mo-only.mo-block {
     display: block !important;
   }
