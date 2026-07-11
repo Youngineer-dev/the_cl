@@ -106,11 +106,9 @@ body {
   user-select: none;
 }
 
-/* 24px 간격의 정밀 도트 그리드 + 고요하게 일렁이는 은은한 오로라 물결 배경
-   — body에 직접 background-attachment: fixed 를 주면 브라우저가 GPU 합성
-   스크롤을 포기하고 매 프레임 배경 전체를 다시 그려 PC에서 스크롤이
-   버벅거린다. position: fixed 된 별도 레이어로 분리하면 시각적으로 동일하면서
-   스크롤과 완전히 무관해진다. */
+/* 정적 그라데이션 배경만 유지
+   — 도트 타일·오로라 position 애니메이션은 최대 해상도에서 매 프레임 페인트 비용이 커서 제거.
+   position: fixed 레이어로 스크롤 합성과 분리. */
 body::before {
   content: "";
   position: fixed;
@@ -118,61 +116,25 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-image:
-    radial-gradient(rgba(152, 169, 158, 0.02) 1.5px, transparent 1.5px),
-    /* 도트 */
     radial-gradient(
-        circle at 10% 20%,
-        rgba(238, 242, 239, 0.45) 0%,
-        transparent 45%
-      ),
-    /* Sage Green Wave */
+      circle at 12% 18%,
+      rgba(238, 242, 239, 0.55) 0%,
+      transparent 42%
+    ),
     radial-gradient(
-        circle at 90% 80%,
-        rgba(192, 206, 197, 0.12) 0%,
-        transparent 45%
-      ),
-    /* Gold Wave */
+      circle at 88% 78%,
+      rgba(192, 206, 197, 0.14) 0%,
+      transparent 44%
+    ),
     radial-gradient(
-        circle at 50% 50%,
-        rgba(255, 255, 255, 0.8) 0%,
-        transparent 60%
-      ),
+      circle at 50% 48%,
+      rgba(255, 255, 255, 0.75) 0%,
+      transparent 58%
+    ),
     linear-gradient(180deg, #fcfdfd 0%, #edf1ee 50%, #fcfdfd 100%);
-  background-size:
-    24px 24px,
-    200% 200%,
-    200% 200%,
-    200% 200%,
-    100% 100%;
-  animation: aurora-move 32s ease infinite alternate; /* 32초 주기로 은은히 일렁이며 이동 */
-}
-
-/* 오로라 물결 일렁임 애니메이션 */
-@keyframes aurora-move {
-  0% {
-    background-position:
-      0% 0%,
-      0% 0%,
-      100% 100%,
-      0% 0%,
-      0% 0%;
-  }
-  50% {
-    background-position:
-      0% 0%,
-      80% 20%,
-      20% 80%,
-      0% 0%,
-      0% 0%;
-  }
-  100% {
-    background-position:
-      0% 0%,
-      50% 90%,
-      90% 10%,
-      0% 0%,
-      0% 0%;
-  }
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* 입력 필드만 선택 및 드래그 허용 */

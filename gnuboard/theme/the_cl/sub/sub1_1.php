@@ -153,6 +153,17 @@ include_once(G5_PATH.'/head.php');
   .ph-intro p {
     font-size: 15px;
   }
+  /* 이 문장만 한 줄 유지 — 전역 줄바꿈 유틸/다른 문단에는 영향 없음 */
+  .ph-intro .ph-line-cl {
+    white-space: nowrap;
+  }
+  /* 아주 좁은 기기에서만 이 줄 글자 살짝 축소 (넘침 방지) */
+  @media (max-width: 360px) {
+    .ph-intro .ph-line-cl {
+      font-size: 0.92em;
+      letter-spacing: -0.02em;
+    }
+  }
 
   .ph-essay-card {
     padding: 44px 24px;
@@ -228,10 +239,10 @@ include_once(G5_PATH.'/head.php');
            ============================================================ -->
       <section class="ph-intro reveal">
         <span class="ph-kicker">Philosophy</span>
-        <h2>더 클 아이를 위한 THE CL,<br class="mo-only">Care & Long 성장 클리닉</h2>
+        <h2>더 클 아이를 위한 THE CL, <br class="mo-only">Care & Long 성장 클리닉</h2>
         <p>
           ‘더클’은 아이가 더 건강하게,<br class="mo-only">더 크게 자라날 가능성을 믿는 이름입니다.<br class="pc-only">
-          <br class="mo-only">동시에 THE CL은 Care & Long의 마음을 담고 있습니다.
+          <br class="mo-only"><span class="ph-line-cl">동시에 THE CL은 Care &amp; Long의 마음을 담고 있습니다.</span>
         </p>
       </section>
 
