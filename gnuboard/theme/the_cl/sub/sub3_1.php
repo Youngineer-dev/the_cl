@@ -94,7 +94,7 @@ include_once(G5_PATH.'/head.php');
     <div class="ed-card2 reveal" style="text-align: center;">
       <div class="ed-card2__no" style="margin: 0 auto 18px;">☎</div>
       <h3 class="ed-card2__title">간편 전화 예약</h3>
-      <a href="tel:02-1234-5678" style="display:block; font-family: var(--font-serif); font-size: 30px; font-weight: 500; color: var(--c-primary-dark); margin: 8px 0 16px;">02.1234.5678</a>
+      <a href="tel:02-421-7757" style="display:block; font-family: var(--font-serif); font-size: 30px; font-weight: 500; color: var(--c-primary-dark); margin: 8px 0 16px;">02-421-7757</a>
       <p class="ed-card2__desc">당일 진료 예약이나 주차권 관련 급한 용무는 전화로 연락 주시면 신속히 응대합니다.</p>
     </div>
     <div class="ed-card2 reveal reveal-delay-1" style="text-align: center;">

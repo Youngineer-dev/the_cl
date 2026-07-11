@@ -456,7 +456,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <div class="contact-right reveal reveal-delay-2">
           <p class="phone-number">
             <span class="star">✦</span>
-            <a href="tel:02-1234-5678">02.1234.5678</a>
+            <a href="tel:02-421-7757">02-421-7757</a>
           </p>
           <p class="phone-desc">
             진료예약 후 내방하시면 더 편안하게 진료를 받아보실 수 있습니다

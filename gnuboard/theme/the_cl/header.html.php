@@ -20,7 +20,7 @@ if (!isset($G5_URL)) {
       <div class="header-right">
         <span class="header-location">잠실역 9번출구 도보 3분</span>
         <div class="header-contact">
-          <a href="tel:02-1234-5678" class="header-phone">02.1234.5678</a>
+          <a href="tel:02-421-7757" class="header-phone">02-421-7757</a>
         </div>
         <button class="hamburger" id="hamburger" aria-label="메뉴 열기" style="background:none; border:none; padding:0; cursor:pointer;">
           <span></span><span></span><span></span>

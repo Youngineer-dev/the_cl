@@ -84,7 +84,7 @@ include_once(G5_PATH.'/head.php');
         <p style="margin-bottom: 20px;">
           본원은 개인정보를 보호하고 관련 불만을 처리하기 위하여 아래와 같이 보호책임자를 지정하고 있습니다.<br>
           - <strong>개인정보 보호책임자</strong>: 원장 노유선<br>
-          - <strong>전화번호</strong>: 02-1234-5678
+          - <strong>전화번호</strong>: 02-421-7757
         </p>
       </div>
 

@@ -30,7 +30,7 @@ if (!isset($G5_URL)) {
         <div class="footer-info">
           <span>삼성더클성장의원</span><br>
           <span>사업자번호 : 418-90-74970</span><span class="finfo-sep"> &nbsp;|&nbsp; </span><span>대표 노유선</span><br>
-          <span>서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</span><span class="finfo-sep"> &nbsp;|&nbsp; </span><span>TEL 02-1234-5678</span><br>
+          <span>서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</span><span class="finfo-sep"> &nbsp;|&nbsp; </span><span>TEL 02-421-7757</span><br>
           <span style="margin-top: 4px; display: inline-block;">COPYRIGHT © 2025 삼성더클성장의원. ALL RIGHTS RESERVED<a href="<?php echo G5_BBS_URL; ?>/login.php" style="color: inherit; text-decoration: none; cursor: default;">.</a></span>
         </div>
       </div>
@@ -62,7 +62,7 @@ if (!isset($G5_URL)) {
           <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7.6 11.5H9.6v-2h2.8c.8 0 1.4-.4 1.4-1.1s-.6-1-1.4-1H9.6V6.6h3.1c1.8 0 3.2.7 3.2 2.4 0 1-.6 1.7-1.5 2.1.9.3 1.5 1 1.5 2.1 0 1.7-1.4 2.3-3.5 2.3z"/>
         </svg>
       </button>
-      <button class="quick-btn phone" title="전화문의" onclick="location.href='tel:02-1234-5678'">
+      <button class="quick-btn phone" title="전화문의" onclick="location.href='tel:02-421-7757'">
         <svg class="q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       </button>
       <button class="quick-btn map" title="오시는 길" onclick="location.href='<?php echo $G5_URL; ?>/sub/sub1_5.php'">
@@ -91,7 +91,7 @@ if (!isset($G5_URL)) {
       </span>
       <span class="mqb-label">네이버예약</span>
     </a>
-    <a class="mqb-item" href="tel:02-1234-5678">
+    <a class="mqb-item" href="tel:02-421-7757">
       <span class="mqb-ico mqb-ico-tel">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       </span>
