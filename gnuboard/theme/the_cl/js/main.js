@@ -259,10 +259,135 @@
     // 뷰포트 변경 시 필요한 로직 (현재는 옵저버가 자동 처리)
   }, { passive: true });
 
+  /* ============================================================
+     Programs slider — mobile only (≤768)
+     PC shows all cards in one grid row (CSS)
+     ============================================================ */
+  function initProgramsSlider() {
+    const root = document.querySelector('[data-programs-slider]');
+    if (!root) return;
+
+    const viewport = root.querySelector('.programs-slider__viewport');
+    const track = root.querySelector('.programs-slider__track');
+    const cards = track ? Array.prototype.slice.call(track.querySelectorAll('.program-card')) : [];
+    const btnPrev = root.querySelector('[data-prog-prev]');
+    const btnNext = root.querySelector('[data-prog-next]');
+    const dotsWrap = root.querySelector('[data-prog-dots]');
+    if (!viewport || !cards.length) return;
+
+    const mq = window.matchMedia('(max-width: 768px)');
+
+    // Build dots once
+    if (dotsWrap && !dotsWrap.childElementCount) {
+      cards.forEach((_, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'programs-slider__dot' + (i === 0 ? ' is-active' : '');
+        b.setAttribute('aria-label', (i + 1) + '번째 진료과목');
+        b.addEventListener('click', () => {
+          if (!mq.matches) return;
+          scrollToIndex(i);
+        });
+        dotsWrap.appendChild(b);
+      });
+    }
+    const dots = dotsWrap
+      ? Array.prototype.slice.call(dotsWrap.querySelectorAll('.programs-slider__dot'))
+      : [];
+
+    function getStep() {
+      const card = cards[0];
+      if (!card) return viewport.clientWidth;
+      const styles = window.getComputedStyle(track);
+      const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+      return card.getBoundingClientRect().width + gap;
+    }
+
+    function getIndex() {
+      const step = getStep();
+      if (step <= 0) return 0;
+      return Math.round(viewport.scrollLeft / step);
+    }
+
+    function maxIndex() {
+      const step = getStep();
+      if (step <= 0) return 0;
+      const maxScroll = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+      return Math.max(0, Math.round(maxScroll / step));
+    }
+
+    function scrollToIndex(i) {
+      if (!mq.matches) return;
+      const step = getStep();
+      const clamped = Math.max(0, Math.min(i, cards.length - 1));
+      viewport.scrollTo({ left: clamped * step, behavior: 'smooth' });
+    }
+
+    function updateUI() {
+      if (!mq.matches) {
+        viewport.scrollLeft = 0;
+        return;
+      }
+      const idx = Math.max(0, Math.min(getIndex(), cards.length - 1));
+      const max = maxIndex();
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+      if (btnPrev) btnPrev.disabled = idx <= 0 && viewport.scrollLeft <= 2;
+      if (btnNext) {
+        btnNext.disabled =
+          idx >= max &&
+          viewport.scrollLeft >= viewport.scrollWidth - viewport.clientWidth - 2;
+      }
+    }
+
+    if (btnPrev) {
+      btnPrev.addEventListener('click', () => scrollToIndex(getIndex() - 1));
+    }
+    if (btnNext) {
+      btnNext.addEventListener('click', () => scrollToIndex(getIndex() + 1));
+    }
+
+    let scrollTick = null;
+    viewport.addEventListener('scroll', () => {
+      if (!mq.matches) return;
+      if (scrollTick) return;
+      scrollTick = requestAnimationFrame(() => {
+        scrollTick = null;
+        updateUI();
+      });
+    }, { passive: true });
+
+    const onBreakpoint = () => {
+      if (!mq.matches) {
+        viewport.scrollLeft = 0;
+      } else {
+        updateUI();
+      }
+    };
+
+    if (typeof mq.addEventListener === 'function') {
+      mq.addEventListener('change', onBreakpoint);
+    } else if (typeof mq.addListener === 'function') {
+      mq.addListener(onBreakpoint);
+    }
+
+    window.addEventListener('resize', () => {
+      if (mq.matches) {
+        const idx = getIndex();
+        viewport.scrollLeft = idx * getStep();
+        updateUI();
+      } else {
+        viewport.scrollLeft = 0;
+      }
+    }, { passive: true });
+
+    updateUI();
+  }
+
   // Initial call
   window.addEventListener('DOMContentLoaded', () => {
     handleScroll();
     initReveal();
+    initProgramsSlider();
   });
 
   /* ============================================================
