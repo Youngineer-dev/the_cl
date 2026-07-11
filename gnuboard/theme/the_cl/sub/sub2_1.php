@@ -48,10 +48,6 @@ include_once(G5_PATH.'/head.php');
           </p>
         </div>
       </div>
-      <div class="ed-collage reveal reveal-delay-2">
-        <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="잠실 삼성더클성장의원 소아 예상키 및 성장 발달 정밀 분석 데이터" class="ed-collage__main">
-        <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="송파 삼성더클성장의원 소아내분비 세부전문의 정밀 신체 계측 과정" class="ed-collage__sub">
-      </div>
     </section>
 
     <!-- ============================================================

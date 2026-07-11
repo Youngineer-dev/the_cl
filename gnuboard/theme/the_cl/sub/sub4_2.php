@@ -157,10 +157,7 @@ include_once(G5_PATH.'/head.php');
       </p>
     </div>
   </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="잠실 삼성더클성장의원 소아청소년과 전문의 1대1 소아 성장 및 예상키 상담" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="송파구 삼성더클성장의원 소아내분비 진료 및 처방전 조제 안내" class="ed-collage__sub">
-  </div>
+
 </section>
 
 <!-- 풀폭 아코디언 -->
