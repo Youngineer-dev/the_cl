@@ -6844,201 +6844,6 @@ fieldset#captcha #captcha_info {
     font-size: 14.5px !important;
     line-height: 1.7 !important;
   }
-    top: 10px;
-    right: 10px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .theme-popup {
-    animation: none;
-    opacity: 1;
-  }
-  .popup-slide {
-    transition: none;
-  }
-}
-
-/* ============================================================
-   ABOUT - HOSPITAL PHILOSOPHY ESSAY SECTION
-   ============================================================ */
-.sub11_essay_section {
-  padding: 100px 0;
-  background-color: var(--c-primary-pale);
-  border-radius: 16px;
-  margin-top: 100px;
-  margin-bottom: 80px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: inset 0 0 40px rgba(152, 169, 158, 0.03);
-}
-.sub11_essay_container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 40px;
-  text-align: center;
-}
-.sub11_essay_quote {
-  font-family: var(--font-serif);
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.6;
-  color: var(--c-primary-dark);
-  margin-bottom: 48px;
-  letter-spacing: -0.5px;
-  word-break: keep-all;
-}
-.sub11_essay_body {
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 2.1;
-  color: var(--c-text);
-  text-align: center;
-  margin-bottom: 50px;
-  word-break: keep-all;
-}
-.sub11_essay_body p {
-  margin-bottom: 28px;
-}
-.sub11_essay_body p:last-child {
-  margin-bottom: 0;
-}
-.sub11_essay_outro {
-  background-color: var(--c-primary-dark);
-  color: var(--c-text-white);
-  padding: 26px 40px;
-  border-radius: 8px;
-  font-family: var(--font-serif);
-  font-size: 17.5px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  margin-top: 40px;
-  display: inline-block;
-  box-shadow: 0 6px 20px rgba(92, 110, 99, 0.15);
-  word-break: keep-all;
-}
-
-@media (max-width: 960px) {
-  .sub11_essay_section {
-    padding: 70px 0;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    border-radius: 12px;
-  }
-  .sub11_essay_container {
-    padding: 0 24px;
-  }
-  .sub11_essay_quote {
-    font-size: 22px;
-    margin-bottom: 36px;
-  }
-  .sub11_essay_body {
-    font-size: 14.5px;
-    line-height: 1.9;
-  }
-  .sub11_essay_outro {
-    font-size: 15px;
-    padding: 20px 24px;
-    width: 100%;
-  }
-}
-
-/* --- Subpage Redesign & Mobile UX Optimization --- */
-
-/* 1. Simple Title Class for Clinic Subpages */
-.ed-split__title--simple {
-  font-size: 32px !important;
-  font-weight: 400 !important;
-  line-height: 1.45 !important;
-  color: var(--c-primary-dark) !important;
-  letter-spacing: -0.5px !important;
-  margin: 24px 0 36px !important;
-}
-
-/* 2. Responsive Tag Badges for Solutions/Plans */
-.ed-pill-badge {
-  background: var(--c-primary-pale) !important;
-  color: var(--c-primary-dark) !important;
-  padding: 14px 24px !important;
-  border-radius: 50px !important;
-  font-size: 14.5px !important;
-  font-weight: 500 !important;
-  border: 1px solid var(--c-border) !important;
-  display: inline-block !important;
-  transition: all 0.3s var(--ease-elegant) !important;
-  box-shadow: 0 4px 10px rgba(152, 169, 158, 0.05) !important;
-}
-.ed-pill-badge:hover {
-  background: var(--c-primary) !important;
-  color: #fff !important;
-  border-color: var(--c-primary) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 15px rgba(92, 110, 99, 0.15) !important;
-}
-
-/* 3. Responsive Highlight Statement Band */
-.ed-statement-band {
-  margin-top: 40px !important;
-  padding: 50px 40px !important;
-  background-color: var(--c-primary-dark) !important;
-  border-radius: 12px !important;
-  color: var(--c-text-white) !important;
-  text-align: center !important;
-  box-shadow: 0 8px 30px rgba(92, 110, 99, 0.15) !important;
-  margin-bottom: 80px !important;
-}
-.ed-statement-band h3 {
-  font-family: var(--font-serif) !important;
-  font-size: 20px !important;
-  font-weight: 500 !important;
-  color: var(--c-primary-light) !important;
-  margin-bottom: 18px !important;
-  letter-spacing: 0.5px !important;
-}
-.ed-statement-band p {
-  font-size: 15px !important;
-  line-height: 1.8 !important;
-  font-weight: 400 !important;
-  max-width: 720px !important;
-  margin: 0 auto !important;
-  word-break: keep-all !important;
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-/* 4. Global Responsive Overrides */
-@media (max-width: 960px) {
-  .ed-collage {
-    margin: 0 auto !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .sub-hero {
-    height: 280px !important; /* height optimization */
-  }
-  .sub-main {
-    padding: 40px 0 60px !important; /* spacing adjustment */
-  }
-  .ed-split__title--simple {
-    font-size: 26px !important;
-    margin: 16px 0 24px !important;
-  }
-  .ed-pill-badge {
-    padding: 10px 18px !important;
-    font-size: 14px !important;
-  }
-  .ed-statement-band {
-    padding: 36px 24px !important;
-    margin-bottom: 50px !important;
-  }
-  .ed-statement-band h3 {
-    font-size: 18px !important;
-    margin-bottom: 12px !important;
-  }
-  .ed-statement-band p {
-    font-size: 14.5px !important;
-    line-height: 1.7 !important;
-  }
   .timeline-content {
     padding: 24px 20px !important; /* timeline text spacing */
   }
@@ -7199,21 +7004,47 @@ fieldset#captcha #captcha_info {
 }
 
 /* ============================================================
+   PC / 모바일 줄바꿈 유틸리티
+   - PC: .pc-only 표시, .mo-only 숨김
+   - 모바일(≤768): .pc-only 숨김, .mo-only 표시
+   텍스트 내용은 그대로 두고 줄바꿈 위치만 분기한다.
+   ============================================================ */
+.mo-only {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+  .mo-only {
+    display: inline !important;
+  }
+  .mo-only.mo-block {
+    display: block !important;
+  }
+}
+
+/* ============================================================
    모바일 가독성: 데스크톱 폭 기준으로 문장을 강제 개행한 <br>은
    좁은 화면에서 어색한 짧은 줄을 만들므로, 산문 문단과 긴 제목에
    한해 자연 줄바꿈(word-break: keep-all)에 맡긴다.
    히어로 슬로건·카드 3행 문구·진료시간 노트 등 짧은 의도적 개행은 유지.
+   .pc-only / .mo-only 가 붙은 <br>은 유틸 규칙이 우선한다.
    ============================================================ */
 @media (max-width: 768px) {
-  .desc br,
-  .item_desc br,
-  .sub11_essay_body p br,
-  .auth-card-desc br,
-  .section-title br,
-  .ed-split__title br,
-  .ed-check__label br,
-  .item_subTitle br,
-  .sub11_essay_quote br {
+  .desc br:not(.pc-only):not(.mo-only),
+  .item_desc br:not(.pc-only):not(.mo-only),
+  .sub11_essay_body p br:not(.pc-only):not(.mo-only),
+  .auth-card-desc br:not(.pc-only):not(.mo-only),
+  .section-title br:not(.pc-only):not(.mo-only),
+  .ed-split__title br:not(.pc-only):not(.mo-only),
+  .ed-split__title--simple br:not(.pc-only):not(.mo-only),
+  .ed-check__label br:not(.pc-only):not(.mo-only),
+  .item_subTitle br:not(.pc-only):not(.mo-only),
+  .sub11_essay_quote br:not(.pc-only):not(.mo-only),
+  .ed-aside__title br:not(.pc-only):not(.mo-only),
+  .ph-intro h2 br:not(.pc-only):not(.mo-only),
+  .ed-sectlabel h2 br:not(.pc-only):not(.mo-only) {
     display: none;
   }
 
@@ -7224,5 +7055,450 @@ fieldset#captcha #captcha_info {
   .footer-info .finfo-sep,
   .footer-info br {
     display: none;
+  }
+}
+
+/* ============================================================
+   서브페이지 전역 모바일 폴리시 (index / sub1_1 제외 페이지 대응)
+   PC 레이아웃은 그대로 두고, ≤768  narrow 뷰포트에서만 적용
+   ============================================================ */
+@media (max-width: 768px) {
+  /* —— 공통 타이포 · 여백 —— */
+  .breadcrumb-wrap {
+    padding: 12px 0;
+  }
+  .breadcrumb {
+    font-size: 12px;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    line-height: 1.5;
+  }
+  .sub-hero-title {
+    font-size: 24px !important;
+    letter-spacing: -0.4px;
+    line-height: 1.35;
+    word-break: keep-all;
+  }
+  .sub-hero-subtitle {
+    font-size: 13.5px;
+    letter-spacing: 0.2px;
+    word-break: keep-all;
+  }
+  .sub-intro-text {
+    margin-bottom: 28px;
+  }
+  .sub-intro-text .section-title,
+  .ed-split__title--simple {
+    letter-spacing: -0.4px !important;
+    line-height: 1.4 !important;
+    word-break: keep-all;
+  }
+  .sub-intro-text .desc,
+  .about-text .desc,
+  .ed-split__body p,
+  .ed-step__desc,
+  .ed-card2__desc,
+  .ed-aside__desc,
+  .accordion-a {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    letter-spacing: -0.1px;
+  }
+  .ed-split__body p {
+    font-size: 14.5px;
+    line-height: 1.85;
+  }
+  .ed-split__body p.lead {
+    font-size: 15.5px;
+    line-height: 1.75;
+  }
+
+  /* —— 원장 인사말 (sub1_2): 2열 → 1열, 인라인 고정 높이 해제 —— */
+  .sub-main .about-inner {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+    margin-top: 36px !important;
+  }
+  .sub-main .about-images {
+    height: auto !important;
+    order: -1; /* 모바일에서는 사진을 먼저 노출 */
+  }
+  .sub-main .about-img-1 {
+    position: relative !important;
+    width: 100% !important;
+    right: auto !important;
+    top: auto !important;
+  }
+  .sub-main .about-img-1 img {
+    height: 300px !important;
+    width: 100% !important;
+  }
+  .sub-main .about-text .desc {
+    font-size: 14.5px !important;
+    line-height: 1.9 !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* —— 의료진 소개 (sub1_3) —— */
+  .sub-main .doctor-card {
+    padding: 28px 18px !important;
+    margin-top: 36px !important;
+  }
+  .sub-main .doctor-info .doctor-name {
+    font-size: 24px;
+  }
+  .sub-main .doctor-position {
+    font-size: 12.5px;
+    letter-spacing: 0.2px;
+    word-break: keep-all;
+  }
+  .sub-main .history-list li {
+    font-size: 13.5px;
+    line-height: 1.65;
+    word-break: keep-all;
+  }
+  .publications-section {
+    margin-top: 24px;
+    padding-top: 22px;
+  }
+  .pub-item {
+    padding-left: 14px;
+  }
+  .pub-toggle-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+  }
+
+  /* —— 둘러보기 (sub1_4) 갤러리 —— */
+  .space-gallery {
+    margin-top: 36px !important;
+    gap: 14px;
+  }
+  .space-gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .space-gallery-item[style*="margin-top"] {
+    margin-top: 0 !important;
+  }
+  .gallery-caption {
+    padding: 16px 14px;
+  }
+  .gallery-caption .caption-en {
+    font-size: 15px;
+  }
+  .gallery-caption .caption-kr {
+    font-size: 13px;
+    line-height: 1.55;
+    word-break: keep-all;
+  }
+
+  /* —— 오시는 길 (sub1_5) —— */
+  .contact-inner {
+    margin-top: 36px !important;
+    gap: 28px;
+  }
+  .contact-img {
+    height: 240px !important;
+  }
+  .contact-img p {
+    font-size: 13px !important;
+    padding: 0 16px;
+    text-align: center;
+    word-break: keep-all;
+    line-height: 1.55;
+  }
+  .map-buttons {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+  .map-buttons .map-btn {
+    flex: 1 1 calc(50% - 10px) !important;
+    min-width: 0;
+    padding: 12px 10px !important;
+    font-size: 13px !important;
+    justify-content: center;
+  }
+  .contact-right {
+    padding: 24px 18px !important;
+  }
+  .contact-right strong {
+    font-size: 16px !important;
+  }
+  .contact-right p {
+    font-size: 13.5px !important;
+    line-height: 1.8 !important;
+    word-break: keep-all;
+  }
+
+  /* —— Clinic 에디토리얼 (sub2_*) —— */
+  .ed-split {
+    padding-bottom: 48px !important;
+    gap: 32px !important;
+  }
+  .ed-collage {
+    min-height: 280px !important;
+    max-width: 100% !important;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+    padding: 28px 18px !important;
+  }
+  .ed-check__label {
+    font-size: 20px !important;
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+  .ed-check__item p {
+    font-size: 14px;
+    line-height: 1.55;
+    word-break: keep-all;
+  }
+  .ed-features {
+    padding-top: 36px !important;
+  }
+  .ed-step__title {
+    font-size: 17px !important;
+    word-break: keep-all;
+  }
+  .ed-step__desc {
+    font-size: 13.5px !important;
+    line-height: 1.8 !important;
+  }
+  /* Step 내 다중 항목(<br> 구분)은 모바일에서도 줄 단위 유지 */
+  .ed-step__desc {
+    white-space: normal;
+  }
+  .ed-sectlabel h2 {
+    font-size: 22px !important;
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+  .ed-card2 {
+    padding: 28px 20px !important;
+  }
+  .ed-card2__title {
+    font-size: 17px !important;
+    word-break: keep-all;
+  }
+  .ed-card2__desc {
+    font-size: 13.5px !important;
+    line-height: 1.75 !important;
+  }
+  .ed-pill-badge {
+    font-size: 13px !important;
+    padding: 10px 14px !important;
+    word-break: keep-all;
+  }
+
+  /* —— 진료 시간 (sub3_1) —— */
+  .ed-hours__cell {
+    padding: 28px 18px !important;
+  }
+  .ed-hours__time {
+    font-size: 26px !important;
+  }
+  .ed-hours__note {
+    font-size: 13px !important;
+    line-height: 1.6;
+  }
+  .ed-cards--two {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  /* —— 검사 항목 아코디언 (sub3_3) —— */
+  .ed-aside {
+    gap: 28px !important;
+  }
+  .ed-aside__title {
+    font-size: 24px !important;
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+  .accordion-btn {
+    padding: 16px 14px !important;
+    min-height: 52px;
+  }
+  .accordion-q {
+    font-size: 14.5px !important;
+    line-height: 1.45;
+    word-break: keep-all;
+  }
+  .accordion-panel {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+  .accordion-a {
+    font-size: 13.5px !important;
+    line-height: 1.8 !important;
+  }
+
+  /* —— 비급여 표 보완 —— */
+  .premium-table td {
+    font-size: 13.5px !important;
+    word-break: keep-all;
+  }
+  .premium-table .pt-name {
+    text-align: left !important;
+  }
+
+  /* —— FAQ / 게시판 —— */
+  .faq-list .accordion-item,
+  .accordion-wrap .accordion-item {
+    border-radius: 8px;
+  }
+  .accordion-a p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    word-break: keep-all;
+    margin-bottom: 12px;
+  }
+  .accordion-a p:last-child {
+    margin-bottom: 0;
+  }
+  .faq-blog-cta {
+    margin-top: 36px;
+    padding: 28px 18px;
+    text-align: center;
+  }
+  .faq-blog-cta .cta-label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 14px;
+    word-break: keep-all;
+  }
+  .board-view__title {
+    font-size: 20px !important;
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+  .board-view__content {
+    font-size: 14.5px;
+    line-height: 1.85;
+    word-break: keep-all;
+  }
+  .board-view__meta {
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+  .board-gallery__excerpt {
+    word-break: keep-all;
+    line-height: 1.55;
+  }
+  .board-intro {
+    font-size: 13.5px;
+    line-height: 1.75;
+    word-break: keep-all;
+  }
+
+  /* —— 회원/글쓰기 폼 —— */
+  .auth-card,
+  .write-form-card {
+    padding: 32px 18px !important;
+  }
+  .auth-card-title,
+  .write-form-title {
+    font-size: 22px !important;
+    letter-spacing: 1px;
+  }
+  .auth-card-desc {
+    font-size: 13.5px;
+    word-break: keep-all;
+  }
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .btn-submit {
+    min-height: 48px;
+    font-size: 15px;
+  }
+
+  /* —— 이용약관 / 개인정보처리방침 —— */
+  .privacy-container,
+  .terms-container {
+    padding: 24px 0 !important;
+  }
+  .privacy-body,
+  .terms-body {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    word-break: keep-all;
+  }
+  .privacy-body h3,
+  .terms-body h3 {
+    font-size: 16px !important;
+    margin: 24px 0 10px !important;
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+  .privacy-body ul,
+  .terms-body ul {
+    margin-left: 12px !important;
+    padding-left: 8px !important;
+  }
+  .privacy-body li,
+  .terms-body li {
+    font-size: 13.5px;
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+
+  /* —— 하단 퀵바 여백 확보 (콘텐츠 가림 방지) —— */
+  .sub-main {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sub-hero-title {
+    font-size: 21px !important;
+  }
+  .sub-hero-subtitle {
+    font-size: 12.5px;
+  }
+  .ed-split__title {
+    font-size: 26px !important;
+  }
+  .ed-split__title .i2,
+  .ed-split__title .i3 {
+    padding-left: 0 !important; /* 들여쓰기 해제 → 좁은 폭 가독성 */
+  }
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+  .ed-sectlabel h2 {
+    font-size: 20px !important;
+  }
+  .map-buttons .map-btn {
+    flex: 1 1 100% !important;
+  }
+  .contact-img {
+    height: 200px !important;
+  }
+  .ed-hours__time {
+    font-size: 24px !important;
+  }
+  .sub-main .about-img-1 img {
+    height: 260px !important;
+  }
+  .ed-collage {
+    min-height: 240px !important;
+  }
+  .ed-step {
+    grid-template-columns: 48px 1fr !important;
+    gap: 14px !important;
+  }
+  .ed-steps::before {
+    left: 24px !important;
+  }
+  .ed-step__num {
+    width: 48px !important;
+  }
+  .ed-step__num span {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 18px !important;
   }
 }

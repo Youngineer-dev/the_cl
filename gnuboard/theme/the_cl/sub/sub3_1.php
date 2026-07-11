@@ -4,6 +4,46 @@ $page_description = "송파구 잠실역 삼성더클성장의원의 진료 시�
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* Clinic/Info 서브페이지 모바일 타이포 · 여백 보완 (PC 레이아웃 유지) */
+@media (max-width: 768px) {
+  .ed-split__title--simple,
+  .ed-split__title {
+    word-break: keep-all;
+    letter-spacing: -0.4px;
+  }
+  .ed-split__body .lead {
+    word-break: keep-all;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+  }
+  .ed-features {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-top: 60px"] {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-bottom: 80px"] {
+    padding-bottom: 48px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+  .sub31-tel {
+    font-size: 26px !important;
+  }
+}
+@media (max-width: 768px) {
+  .sub31-tel {
+    font-size: 28px !important;
+    letter-spacing: 0.5px;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -68,7 +108,7 @@ include_once(G5_PATH.'/head.php');
     <div class="ed-hours__cell">
       <p class="ed-hours__day">화 · 수 · 금</p>
       <p class="ed-hours__time">10:00 — 18:30</p>
-      <p class="ed-hours__note">점심시간 13:00 ~ 14:00<br>접수 마감 18:00</p>
+      <p class="ed-hours__note">점심시간 13:00 ~ 14:00 <br class="pc-only"> 접수 마감 18:00</p>
     </div>
     <div class="ed-hours__cell">
       <p class="ed-hours__day">목요일</p>
@@ -94,7 +134,7 @@ include_once(G5_PATH.'/head.php');
     <div class="ed-card2 reveal" style="text-align: center;">
       <div class="ed-card2__no" style="margin: 0 auto 18px;">☎</div>
       <h3 class="ed-card2__title">간편 전화 예약</h3>
-      <a href="tel:02-421-7757" style="display:block; font-family: var(--font-serif); font-size: 30px; font-weight: 500; color: var(--c-primary-dark); margin: 8px 0 16px;">02-421-7757</a>
+      <a href="tel:02-421-7757" class="sub31-tel" style="display:block; font-family: var(--font-serif); font-size: 30px; font-weight: 500; color: var(--c-primary-dark); margin: 8px 0 16px;">02-421-7757</a>
       <p class="ed-card2__desc">당일 진료 예약이나 주차권 관련 급한 용무는 전화로 연락 주시면 신속히 응대합니다.</p>
     </div>
     <div class="ed-card2 reveal reveal-delay-1" style="text-align: center;">

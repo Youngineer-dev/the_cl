@@ -4,6 +4,37 @@ $page_description = "뼈나이 X-ray 검사, 성장호르몬 자극검사, 체�
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* Clinic/Info 서브페이지 모바일 타이포 · 여백 보완 (PC 레이아웃 유지) */
+@media (max-width: 768px) {
+  .ed-split__title--simple,
+  .ed-split__title {
+    word-break: keep-all;
+    letter-spacing: -0.4px;
+  }
+  .ed-split__body .lead {
+    word-break: keep-all;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+  }
+  .ed-features {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-top: 60px"] {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-bottom: 80px"] {
+    padding-bottom: 48px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -42,7 +73,7 @@ include_once(G5_PATH.'/head.php');
   <aside class="ed-aside__index reveal">
     <span class="ed-eyebrow">Clinical Tests</span>
     <h2 class="ed-aside__title">
-      대학병원급 인프라로<br><strong>오차를 줄입니다</strong>
+      대학병원급 인프라로<br class="pc-only"><strong>오차를 줄입니다</strong>
     </h2>
     <div class="ed-aside__count">
       <b>05</b>

@@ -4,6 +4,37 @@ $page_description = "소아청소년 저체중의 원인을 정확하게 분석�
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* Clinic/Info 서브페이지 모바일 타이포 · 여백 보완 (PC 레이아웃 유지) */
+@media (max-width: 768px) {
+  .ed-split__title--simple,
+  .ed-split__title {
+    word-break: keep-all;
+    letter-spacing: -0.4px;
+  }
+  .ed-split__body .lead {
+    word-break: keep-all;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+  }
+  .ed-features {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-top: 60px"] {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-bottom: 80px"] {
+    padding-bottom: 48px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -40,7 +71,7 @@ include_once(G5_PATH.'/head.php');
       <div class="ed-split__text">
         <span class="ed-eyebrow">저체중 대사 클리닉</span>
         <h2 class="ed-split__title ed-split__title--simple">
-          살이 안 찌는 아이,<br>원인에 맞는 영양 평가가 필요합니다
+          살이 안 찌는 아이, <br class="pc-only"> 원인에 맞는 영양 평가가 필요합니다
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead">
@@ -60,7 +91,7 @@ include_once(G5_PATH.'/head.php');
     <section class="ed-check reveal" style="margin-top: 60px;">
       <div class="ed-check__head">
         <span class="ed-kicker">Self Check</span>
-        <p class="ed-check__label">우리 아이,<br>이런 모습이 있나요?</p>
+        <p class="ed-check__label">우리 아이, <br class="pc-only"> 이런 모습이 있나요?</p>
       </div>
       <ul class="ed-check__list">
         <li class="ed-check__item"><span class="ed-check__num">01</span><p>잘 먹이려고 노력해도 체중이 잘 늘지 않는다</p></li>

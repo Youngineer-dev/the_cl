@@ -4,6 +4,37 @@ $page_description = "잠실 삼성더클성장의원의 과학적인 성장 평�
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* Clinic/Info 서브페이지 모바일 타이포 · 여백 보완 (PC 레이아웃 유지) */
+@media (max-width: 768px) {
+  .ed-split__title--simple,
+  .ed-split__title {
+    word-break: keep-all;
+    letter-spacing: -0.4px;
+  }
+  .ed-split__body .lead {
+    word-break: keep-all;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+  }
+  .ed-features {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-top: 60px"] {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-bottom: 80px"] {
+    padding-bottom: 48px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -40,7 +71,7 @@ include_once(G5_PATH.'/head.php');
       <div class="ed-split__text">
         <span class="ed-eyebrow">더클 성장잠재력 분석 클리닉</span>
         <h2 class="ed-split__title ed-split__title--simple">
-          현재 키보다 중요한 것은<br>아이의 <strong>성장 잠재력</strong>입니다
+          현재 키보다 중요한 것은 <br class="pc-only"> 아이의 <strong>성장 잠재력</strong>입니다
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead">
@@ -60,7 +91,7 @@ include_once(G5_PATH.'/head.php');
     <section class="ed-check reveal" style="margin-top: 60px;">
       <div class="ed-check__head">
         <span class="ed-kicker">Self Check</span>
-        <p class="ed-check__label">이런 고민이<br>한 번이라도 있었다면</p>
+        <p class="ed-check__label">이런 고민이 <br class="pc-only"> 한 번이라도 있었다면</p>
       </div>
       <ul class="ed-check__list">
         <li class="ed-check__item"><span class="ed-check__num">01</span><p>우리 아이는 최종적으로 몇 cm까지 클 수 있을까?</p></li>
@@ -151,7 +182,7 @@ include_once(G5_PATH.'/head.php');
         <span class="ed-kicker">Comprehensive Solution</span>
         <h2>종합 <strong>성장잠재력 분석</strong></h2>
         <p style="font-size: 15px; color: var(--c-text-light); margin-top: 10px; line-height: 1.6; word-break: keep-all;">
-          앞선 6단계의 정밀 검사 결과를 종합하여<br>더클만의 최종 성장 솔루션을 도출합니다.
+          앞선 6단계의 정밀 검사 결과를 종합하여 <br class="pc-only"> 더클만의 최종 성장 솔루션을 도출합니다.
         </p>
       </div>
       

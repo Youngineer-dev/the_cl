@@ -5,6 +5,56 @@ include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
 
+<style>
+/* ============================================================
+   ABOUT 1-3 (의료진 소개) 전용 모바일 보완
+   ============================================================ */
+.sub13-doctor-card {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--c-border);
+  padding: 48px;
+  margin-top: 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+}
+.sub13-intro {
+  font-size: 14px;
+  color: var(--c-text-light);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-weight: 400;
+  word-break: keep-all;
+}
+@media (max-width: 768px) {
+  .sub13-doctor-card {
+    padding: 28px 18px;
+    margin-top: 36px;
+  }
+  .sub13-intro {
+    font-size: 13.5px;
+    line-height: 1.85;
+    margin-bottom: 22px;
+  }
+  .sub-intro-text .section-title {
+    font-size: 22px !important;
+  }
+  .doctor-photo img {
+    height: 340px !important;
+  }
+}
+@media (max-width: 480px) {
+  .sub13-doctor-card {
+    padding: 22px 14px;
+  }
+  .doctor-photo img {
+    height: 280px !important;
+  }
+  .sub-intro-text .section-title {
+    font-size: 19px !important;
+  }
+}
+</style>
+
 <!-- SUB HERO -->
 <section class="sub-hero">
   <div class="sub-hero-bg"></div>
@@ -36,12 +86,12 @@ include_once(G5_PATH.'/head.php');
 <div class="sub-intro-text">
   <p class="section-en reveal">Medical Staff</p>
   <h2 class="section-title reveal reveal-delay-1">
-    학술적 깊이와 현장 리더십,<br>
+    학술적 깊이와 현장 리더십,<br class="pc-only">
     <strong>소아 내분비 세부 전문의</strong>가 전담 진료합니다
   </h2>
 </div>
 
-<article class="doctor-card reveal" style="background: white; border-radius: 8px; border: 1px solid var(--c-border); padding: 48px; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.01);">
+<article class="doctor-card reveal sub13-doctor-card">
   <div class="doctor-photo">
     <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="잠실 삼성더클성장의원 소아내분비 세부전문의 노유선 대표원장 프로필">
   </div>
@@ -49,7 +99,7 @@ include_once(G5_PATH.'/head.php');
     <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
     <h3 class="doctor-name"><strong>노 유 선</strong> 대표원장</h3>
 
-    <p class="desc" style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; margin-bottom: 30px; font-weight: 400;">
+    <p class="desc sub13-intro">
       대학병원 소아내분비분과 교수 출신으로, 삼성서울병원에서의 풍부한 임상경험과 글로벌 학술적 네트워크를 기반으로 저신장과 성조숙증 진료에 탁월한 해법을 제시합니다.
     </p>
 

@@ -5,6 +5,109 @@ include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
 
+<style>
+/* ============================================================
+   ABOUT 1-5 (오시는 길) 전용 모바일 보완
+   ============================================================ */
+.sub15-map {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: 350px;
+}
+.sub15-map-inner {
+  width: 100%;
+  height: 100%;
+  background-color: var(--c-primary-pale);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-primary-dark);
+  padding: 20px;
+  text-align: center;
+}
+.sub15-map-inner .pin {
+  font-size: 50px;
+  margin-bottom: 16px;
+}
+.sub15-map-inner strong {
+  font-size: 18px;
+  margin-bottom: 8px;
+  word-break: keep-all;
+}
+.sub15-map-inner p {
+  font-size: 14px;
+  color: var(--c-text-light);
+  word-break: keep-all;
+  line-height: 1.55;
+}
+.sub15-info {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--c-border);
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+}
+.sub15-info-block {
+  margin-bottom: 30px;
+}
+.sub15-info-block:last-child {
+  margin-bottom: 0;
+}
+.sub15-info-block strong {
+  font-size: 18px;
+  color: var(--c-primary-dark);
+  display: block;
+  margin-bottom: 12px;
+  word-break: keep-all;
+}
+.sub15-info-block p {
+  font-size: 14px;
+  color: var(--c-text-light);
+  line-height: 1.8;
+  font-weight: 400;
+  word-break: keep-all;
+}
+@media (max-width: 768px) {
+  .sub15-map {
+    height: 240px;
+  }
+  .sub15-map-inner .pin {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .sub15-map-inner strong {
+    font-size: 16px;
+  }
+  .sub15-map-inner p {
+    font-size: 13px;
+  }
+  .sub15-info {
+    padding: 24px 18px;
+  }
+  .sub15-info-block {
+    margin-bottom: 22px;
+  }
+  .sub15-info-block strong {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .sub15-info-block p {
+    font-size: 13.5px;
+    line-height: 1.75;
+  }
+  .map-buttons {
+    margin-top: 20px !important;
+  }
+}
+@media (max-width: 480px) {
+  .sub15-map {
+    height: 200px;
+  }
+}
+</style>
+
 <!-- SUB HERO -->
 <section class="sub-hero">
   <div class="sub-hero-bg"></div>
@@ -36,18 +139,18 @@ include_once(G5_PATH.'/head.php');
 <div class="sub-intro-text">
   <p class="section-en reveal">Directions</p>
   <h2 class="ed-split__title ed-split__title--simple">
-      잠실역 도보 3분 거리,<br>
+      잠실역 도보 3분 거리,<br class="pc-only">
       <strong>가장 쾌적하게 방문하시는 길</strong>
     </h2>
 </div>
 
 <div class="contact-inner" style="margin-top: 60px;">
   <div class="contact-left reveal">
-    <div class="contact-img" style="border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); height: 350px;">
-      <div style="width: 100%; height: 100%; background-color: var(--c-primary-pale); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--c-primary-dark);">
-        <span style="font-size: 50px; margin-bottom: 16px;">📍</span>
-        <strong style="font-size: 18px; margin-bottom: 8px;">삼성더클성장의원 약도</strong>
-        <p style="font-size: 14px; color: var(--c-text-light);">서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</p>
+    <div class="contact-img sub15-map">
+      <div class="sub15-map-inner">
+        <span class="pin">📍</span>
+        <strong>삼성더클성장의원 약도</strong>
+        <p>서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</p>
       </div>
     </div>
     
@@ -70,25 +173,25 @@ include_once(G5_PATH.'/head.php');
     </div>
   </div>
 
-  <div class="contact-right reveal reveal-delay-2" style="background: white; border-radius: 8px; border: 1px solid var(--c-border); padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.01);">
-    <div style="margin-bottom: 30px;">
-      <strong style="font-size: 18px; color: var(--c-primary-dark); display: block; margin-bottom: 12px;">🚇 지하철 이용 시</strong>
-      <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 400;">
+  <div class="contact-right reveal reveal-delay-2 sub15-info">
+    <div class="sub15-info-block">
+      <strong>🚇 지하철 이용 시</strong>
+      <p>
         <strong>2호선, 8호선 잠실역 9번 출구</strong>로 나오셔서 송파구청 방향으로 약 200m 직진하시면 위치해 있습니다.
       </p>
     </div>
 
-    <div style="margin-bottom: 30px;">
-      <strong style="font-size: 18px; color: var(--c-primary-dark); display: block; margin-bottom: 12px;">🚌 버스 이용 시</strong>
-      <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 400;">
-        <strong>송파구청.교통회관 정류장</strong> 또는 <strong>잠실역9번출구 정류장</strong> 하차<br>
-        간선: 302, 303, 320, 341 / 지선: 3216, 3303, 3313, 3315, 3414 등 운행
+    <div class="sub15-info-block">
+      <strong>🚌 버스 이용 시</strong>
+      <p>
+        <strong>송파구청.교통회관 정류장</strong> 또는 <strong>잠실역9번출구 정류장</strong> 하차<br class="pc-only">
+        <br class="mo-only">간선: 302, 303, 320, 341 / 지선: 3216, 3303, 3313, 3315, 3414 등 운행
       </p>
     </div>
 
-    <div>
-      <strong style="font-size: 18px; color: var(--c-primary-dark); display: block; margin-bottom: 12px;">🚗 자가용 & 주차 안내</strong>
-      <p style="font-size: 14px; color: var(--c-text-light); line-height: 1.8; font-weight: 400;">
+    <div class="sub15-info-block">
+      <strong>🚗 자가용 & 주차 안내</strong>
+      <p>
         건물 내 주차장이 완비되어 있으며, 진료받으신 모든 분께 <strong>1시간 무료 주차권</strong>을 지급해 드립니다. SUV 차량의 타워 기계식 주차 가능 여부는 입차 시 주차 안내원에게 문의하시기 바랍니다.
       </p>
     </div>

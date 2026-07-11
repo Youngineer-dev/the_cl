@@ -5,6 +5,38 @@ include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
 <style>
+/* 정책·회원·커뮤니티 페이지 모바일 가독성 보완 */
+@media (max-width: 768px) {
+  .privacy-container,
+  .terms-container {
+    padding: 20px 0 !important;
+  }
+  .privacy-body,
+  .terms-body,
+  .board-intro {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  .auth-card-wrap,
+  .write-form-wrap {
+    margin-top: 12px;
+  }
+  .sub-intro-text .section-title {
+    word-break: keep-all;
+  }
+  .faq-blog-cta {
+    padding: 28px 18px !important;
+  }
+}
+@media (max-width: 480px) {
+  .auth-card-title,
+  .write-form-title {
+    font-size: 20px !important;
+  }
+}
+</style>
+
+<style>
 /* 모바일 비급여 테이블 가독성 극대화 최적화 */
 @media (max-width: 768px) {
     /* 글자량이 많은 세부내용 셀은 레이블 아래로 줄바꿈하여 100% 가로공간 확보 */

@@ -109,6 +109,38 @@ $page_schema_json = [
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* 정책·회원·커뮤니티 페이지 모바일 가독성 보완 */
+@media (max-width: 768px) {
+  .privacy-container,
+  .terms-container {
+    padding: 20px 0 !important;
+  }
+  .privacy-body,
+  .terms-body,
+  .board-intro {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  .auth-card-wrap,
+  .write-form-wrap {
+    margin-top: 12px;
+  }
+  .sub-intro-text .section-title {
+    word-break: keep-all;
+  }
+  .faq-blog-cta {
+    padding: 28px 18px !important;
+  }
+}
+@media (max-width: 480px) {
+  .auth-card-title,
+  .write-form-title {
+    font-size: 20px !important;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
