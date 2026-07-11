@@ -60,6 +60,7 @@ include_once(G5_PATH.'/head.php');
             <span class="star">✦</span> 주요 약력
           </div>
           <ul class="history-list">
+            <li>現 삼성더클성장의원 대표원장</li>
             <li>前 강동성심병원 소아청소년과 소아내분비분과 교수</li>
             <li>삼성서울병원 인턴</li>
             <li>삼성서울병원 소아청소년과 전공의</li>

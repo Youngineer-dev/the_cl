@@ -61,9 +61,8 @@ include_once(G5_PATH.'/head.php');
   <div class="ed-split__text">
     <span class="ed-eyebrow">Non-Benefit Fees</span>
     <h2 class="ed-split__title">
-      <span class="i1">환자의 권리를</span>
-      <span class="i2">위한</span>
-      <span class="i3"><strong>투명한 비용 공개</strong></span>
+      <span class="i1">환자의 권리를 위한</span>
+      <span class="i2"><strong>투명한 비용 공개</strong></span>
     </h2>
     <div class="ed-split__body">
       <p class="lead">
