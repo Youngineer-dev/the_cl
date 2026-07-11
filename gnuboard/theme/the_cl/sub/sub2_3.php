@@ -93,7 +93,7 @@ include_once(G5_PATH.'/head.php');
       <div class="ed-split__text">
         <span class="ed-eyebrow">성조숙증 · 빠른 사춘기 클리닉</span>
         <h2 class="ed-split__title ed-split__title--simple">
-          우리 아이 사춘기, <span class="br-all" aria-hidden="true"></span> 너무 빠른 걸까요?
+          우리 아이 사춘기, <span class="br-all" aria-hidden="true"></span><strong>너무 빠른 걸까요?</strong>
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead">

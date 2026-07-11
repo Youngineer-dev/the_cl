@@ -71,7 +71,7 @@ include_once(G5_PATH.'/head.php');
       <div class="ed-split__text">
         <span class="ed-eyebrow">알레르기</span>
         <h2 class="ed-split__title ed-split__title--simple">
-          성장 방해 알레르기 관리 클리닉
+          <strong>성장 방해 알레르기</strong> 관리 클리닉
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead">

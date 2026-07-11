@@ -6770,6 +6770,7 @@ fieldset#captcha #captcha_info {
   font-weight: 500 !important;
   border: 1px solid var(--c-border) !important;
   display: inline-block !important;
+  text-align: center !important;
   transition: all 0.3s var(--ease-elegant) !important;
   box-shadow: 0 4px 10px rgba(152, 169, 158, 0.05) !important;
 }
@@ -7223,13 +7224,17 @@ fieldset#captcha #captcha_info {
   .contact-right {
     padding: 24px 18px !important;
   }
-  .contact-right strong {
+  /* 오시는 길 안내 제목만 — 본문 p strong은 본문 크기 유지 */
+  .contact-right .sub15-info-block > strong {
     font-size: 16px !important;
   }
   .contact-right p {
     font-size: 13.5px !important;
     line-height: 1.8 !important;
     word-break: keep-all;
+  }
+  .contact-right p strong {
+    font-size: inherit !important;
   }
 
   /* —— Clinic 에디토리얼 (sub2_*) —— */

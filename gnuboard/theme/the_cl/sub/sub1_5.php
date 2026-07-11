@@ -55,7 +55,8 @@ include_once(G5_PATH.'/head.php');
 .sub15-info-block:last-child {
   margin-bottom: 0;
 }
-.sub15-info-block strong {
+/* 섹션 제목(직계 strong)만 크게 — 본문 안 strong은 크기 유지 */
+.sub15-info-block > strong {
   font-size: 18px;
   color: var(--c-primary-dark);
   display: block;
@@ -68,6 +69,13 @@ include_once(G5_PATH.'/head.php');
   line-height: 1.8;
   font-weight: 400;
   word-break: keep-all;
+}
+.sub15-info-block p strong {
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--c-text);
+  display: inline;
+  margin: 0;
 }
 @media (max-width: 768px) {
   .sub15-map {
@@ -89,13 +97,16 @@ include_once(G5_PATH.'/head.php');
   .sub15-info-block {
     margin-bottom: 22px;
   }
-  .sub15-info-block strong {
+  .sub15-info-block > strong {
     font-size: 16px;
     margin-bottom: 8px;
   }
   .sub15-info-block p {
     font-size: 13.5px;
     line-height: 1.75;
+  }
+  .sub15-info-block p strong {
+    font-size: inherit;
   }
   .map-buttons {
     margin-top: 20px !important;

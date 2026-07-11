@@ -71,7 +71,7 @@ include_once(G5_PATH.'/head.php');
       <div class="ed-split__text">
         <span class="ed-eyebrow">소아 비만 클리닉</span>
         <h2 class="ed-split__title ed-split__title--simple">
-          아이의 체중 증가는<span class="br-all" aria-hidden="true"></span>단순한 의지 문제가 아닐 수 있습니다.
+          아이의 <strong>체중 증가</strong>는<span class="br-all" aria-hidden="true"></span>단순한 의지 문제가 아닐 수 있습니다.
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead" style="margin-bottom: 16px;">
@@ -186,9 +186,9 @@ include_once(G5_PATH.'/head.php');
 
       <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
         <span class="ed-pill-badge">성장을 지키는 건강한 체중 관리 목표 설정</span>
-        <span class="ed-pill-badge">인슐린 저항성, 지방간, 이상지질혈증 등 대사 위험 조기 확인</span>
+        <span class="ed-pill-badge">인슐린 저항성, 지방간, 이상지질혈증 등 <br class="mo-only">대사 위험 조기 확인</span>
         <span class="ed-pill-badge">아이에게 부담을 주지 않는 가족 중심 생활습관 개선</span>
-        <span class="ed-pill-badge">3개월 또는 6개월 단위의 성장·체성분·대사 지표 추적 관리</span>
+        <span class="ed-pill-badge">3개월 또는 6개월 단위의 <br class="mo-only">성장·체성분·대사 지표 추적 관리</span>
       </div>
     </section>
 
