@@ -86,7 +86,31 @@ def edit_popup_notice():
     m_w, m_h = msg_icon.size
     msg_icon = msg_icon.resize((int(m_w * icon_h / m_h), icon_h), Image.Resampling.LANCZOS)
     
-    # 3. Erase old bottom area in the main image using row-based background copy
+    # 3. Erase old logo area and paste brand_logo.png
+    logo_path = os.path.join(script_dir, 'brand_logo.png')
+    if os.path.exists(logo_path):
+        logo_img = Image.open(logo_path).convert("RGBA")
+        # Target height = 110px, keep aspect ratio
+        target_h = 110
+        l_w, l_h = logo_img.size
+        target_w = int(l_w * (target_h / l_h))
+        logo_resized = logo_img.resize((target_w, target_h), Image.Resampling.LANCZOS)
+        
+        # Erase old logo area in img (y=230 to y=365) using background color (232, 220, 198)
+        bg_color = (232, 220, 198)
+        for y in range(230, 365):
+            for x in range(90, 934):
+                img.putpixel((x, y), bg_color)
+                
+        # Paste new logo at the center (centered at X=512, Y=295)
+        logo_x = 512 - target_w // 2
+        logo_y = 295 - target_h // 2
+        img.paste(logo_resized, (logo_x, logo_y), logo_resized)
+        print("New logo replaced at Y:", logo_y)
+    else:
+        print("brand_logo.png not found, skipping logo replacement")
+
+    # 4. Erase old bottom area in the main image using row-based background copy
     # We erase y=545 to y=840, x=90 to x=934
     for y in range(545, 840):
         # Read clean background pixel from x=100 (definitely inside the card)

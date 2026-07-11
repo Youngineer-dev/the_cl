@@ -151,10 +151,6 @@ include_once(G5_PATH.'/head.php');
       <p class="lead">
         보호자분들이 가장 많이 질문해 주시는 성장 클리닉 핵심 Q&A입니다.
       </p>
-      <p>
-        더 궁금한 점은 전화나 카카오톡 채널로 문의해 주세요.
-        세부전문의가 직접 확인하고 정확하게 안내해 드립니다.
-      </p>
     </div>
   </div>
   <div class="ed-collage reveal reveal-delay-2">

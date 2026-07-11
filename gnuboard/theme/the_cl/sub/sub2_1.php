@@ -137,7 +137,7 @@ include_once(G5_PATH.'/head.php');
           <div class="ed-step__body">
             <span class="ed-step__eyebrow">Step 6</span>
             <h3 class="ed-step__title">건강 · 대사 상태 평가</h3>
-            <p class="ed-step__desc"><strong>기초 대사 및 영양 분석</strong>: 빈혈, 비타민D, 갑상선 기능, 간, 신장 기능 검사 및 체성분(InBody) 분석을 통해 내적인 성장 환경 최적화</p>
+            <p class="ed-step__desc"><strong>기초 대사 및 영양 분석</strong>: 빈혈, 비타민D, 갑상선 기능, 간, 신장 기능 검사 및 체성분(InBody) 분석</p>
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@ include_once(G5_PATH.'/head.php');
         <span class="ed-kicker">Comprehensive Solution</span>
         <h2>종합 <strong>성장잠재력 분석</strong></h2>
         <p style="font-size: 15px; color: var(--c-text-light); margin-top: 10px; line-height: 1.6; word-break: keep-all;">
-          앞선 6단계의 정밀 검사 결과를 종합하여 더클만의 최종 성장 솔루션을 도출합니다.
+          앞선 6단계의 정밀 검사 결과를 종합하여<br>더클만의 최종 성장 솔루션을 도출합니다.
         </p>
       </div>
       
