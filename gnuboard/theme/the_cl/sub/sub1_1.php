@@ -75,6 +75,7 @@ include_once(G5_PATH.'/head.php');
   color: var(--c-text-light);
   margin-bottom: 24px;
   word-break: keep-all;
+  text-align: justify;
 }
 .ph-essay-content p:last-child {
   margin-bottom: 0;
@@ -178,6 +179,19 @@ include_once(G5_PATH.'/head.php');
     gap: 28px;
   }
 }
+
+/* PC/모바일 줄바꿈 클래스 제어 */
+.mo-only {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+  .mo-only {
+    display: inline !important;
+  }
+}
 </style>
 
 <!-- SUB HERO -->
@@ -214,10 +228,10 @@ include_once(G5_PATH.'/head.php');
            ============================================================ -->
       <section class="ph-intro reveal">
         <span class="ph-kicker">Philosophy</span>
-        <h2>더 클 아이를 위한 THE CL, Care & Long 성장 클리닉</h2>
+        <h2>더 클 아이를 위한 THE CL,<br class="mo-only">Care & Long 성장 클리닉</h2>
         <p>
-          ‘더클’은 아이가 더 건강하게, 더 크게 자라날 가능성을 믿는 이름입니다.<br>
-          동시에 THE CL은 Care & Long의 마음을 담고 있습니다.
+          ‘더클’은 아이가 더 건강하게,<br class="mo-only">더 크게 자라날 가능성을 믿는 이름입니다.<br class="pc-only">
+          <br class="mo-only">동시에 THE CL은 Care & Long의 마음을 담고 있습니다.
         </p>
       </section>
 
@@ -238,7 +252,7 @@ include_once(G5_PATH.'/head.php');
               <span class="kpb_l">세심하게</span>
             </h3>
             <p class="item_subTitle" style="font-size: 24px; line-height: 1.5; color: var(--c-primary-dark); font-weight: 400; word-break: keep-all; margin-top: 20px;">
-              아이의 작은 성장 변화까지<br>세심하게 살피는 진료
+              아이의 작은 성장 변화까지<br class="pc-only"><br class="mo-only">세심하게 살피는 진료
             </p>
           </div>
           <div class="imgBox">
@@ -260,7 +274,7 @@ include_once(G5_PATH.'/head.php');
               <span class="kpb_l">오래 함께</span>
             </h3>
             <p class="item_subTitle" style="font-size: 24px; line-height: 1.5; color: var(--c-primary-dark); font-weight: 400; word-break: keep-all; margin-top: 20px;">
-              한 번의 검사로 끝나지 않고,<br>성장의 시간을 오래 함께하는 관리
+              한 번의 검사로 끝나지 않고,<br class="pc-only"><br class="mo-only">성장의 시간을 오래 함께하는 관리
             </p>
           </div>
         </article>
@@ -272,45 +286,45 @@ include_once(G5_PATH.'/head.php');
            ============================================================ -->
       <section class="ph-essay-card reveal">
         <h3 class="ph-essay-quote">
-          “성장은 한 번의 키 숫자가 아니라,<br>
+          “성장은 한 번의 키 숫자가 아니라,<br class="pc-only">
           시간에 따라 이어지는 과정입니다.”
         </h3>
 
         <div class="ph-essay-content">
           <p>
-            대학병원에서 성장 진료를 하며, 여러 곳을 거쳐 뒤늦게 찾아오는 아이들을 많이 만났습니다.<br>
-            예전에 한 번 “괜찮다”는 이야기를 듣고 더 이상 추적하지 않았거나,<br>
-            키가 작다는 것을 알고도 언제 다시 확인해야 할지 몰라<br>
+            대학병원에서 성장 진료를 하며, 여러 곳을 거쳐 뒤늦게 찾아오는 아이들을 많이 만났습니다.<br class="pc-only">
+            예전에 한 번 “괜찮다”는 이야기를 듣고 더 이상 추적하지 않았거나,<br class="pc-only">
+            키가 작다는 것을 알고도 언제 다시 확인해야 할지 몰라<br class="pc-only">
             적절한 평가 시기를 놓친 경우도 있었습니다.
           </p>
           <p>
-            그때마다 느낀 것은 분명했습니다.<br>
-            성장 진료에서 중요한 것은 처음부터 치료를 서두르는 것이 아니라,<br>
-            아이의 성장 흐름을 정확히 평가하고 꾸준히 추적하며<br>
+            그때마다 느낀 것은 분명했습니다.<br class="pc-only">
+            성장 진료에서 중요한 것은 처음부터 치료를 서두르는 것이 아니라,<br class="pc-only">
+            아이의 성장 흐름을 정확히 평가하고 꾸준히 추적하며<br class="pc-only">
             필요한 시점에 적절한 치료를 결정하는 과정이라는 점입니다.
           </p>
           <p>
-            삼성더클성장의원은 아이의 현재 키와 체중만 보는 곳이 아닙니다.<br>
-            성장 속도, 사춘기 진행, 뼈나이, 체성분, 영양과 대사 상태까지 함께 살피며<br>
+            삼성더클성장의원은 아이의 현재 키와 체중만 보는 곳이 아닙니다.<br class="pc-only">
+            성장 속도, 사춘기 진행, 뼈나이, 체성분, 영양과 대사 상태까지 함께 살피며<br class="pc-only">
             아이의 현재 성장 상태와 앞으로의 성장 가능성을 정밀하게 평가합니다.
           </p>
           <p>
-            삼성서울병원 소아청소년과 및 소아내분비·유전대사 전임의,<br>
-            대학병원 교수로서 성장·성조숙증·소아비만을 진료하고 연구해온 경험을 바탕으로<br>
-            무분별한 치료보다 정확한 평가를,<br>
+            삼성서울병원 소아청소년과 및 소아내분비·유전대사 전임의,<br class="pc-only">
+            대학병원 교수로서 성장·성조숙증·소아비만을 진료하고 연구해온 경험을 바탕으로<br class="pc-only">
+            무분별한 치료보다 정확한 평가를,<br class="pc-only">
             획일적인 치료보다 아이에게 맞는 방향을 지향합니다.
           </p>
           <p>
-            또한 남매를 키우는 엄마의 마음으로<br>
-            아이와 보호자의 이야기에 귀 기울이고,<br>
-            검사 결과와 치료 방향을 충분히 설명하며<br>
+            또한 남매를 키우는 엄마의 마음으로<br class="pc-only">
+            아이와 보호자의 이야기에 귀 기울이고,<br class="pc-only">
+            검사 결과와 치료 방향을 충분히 설명하며<br class="pc-only">
             건강한 성장 여정을 오래 함께하겠습니다.
           </p>
         </div>
 
         <div class="ph-essay-outro">
-          삼성더클성장의원은<br>
-          정확한 평가와 따뜻한 공감이 만나는<br>
+          삼성더클성장의원은<br class="pc-only">
+          정확한 평가와 따뜻한 공감이 만나는<br class="pc-only">
           1:1 맞춤 성장 클리닉입니다.
         </div>
       </section>
@@ -331,7 +345,7 @@ include_once(G5_PATH.'/head.php');
             <div class="ph-special-body">
               <h3>삼성서울병원식 전인적 성장진료</h3>
               <p>
-                키만 보는 진료가 아닙니다.<br>
+                키만 보는 진료가 아닙니다.<br class="pc-only">
                 삼성서울병원 소아청소년과 및 소아내분비·유전대사 진료 경험을 바탕으로 성장, 사춘기, 영양, 대사, 수면, 운동까지 함께 살핍니다.
               </p>
             </div>
@@ -343,7 +357,7 @@ include_once(G5_PATH.'/head.php');
             <div class="ph-special-body">
               <h3>전문의 판독 × AI 보조 성장분석</h3>
               <p>
-                뼈나이는 판독 경험과 해석 방식에 따라 차이가 날 수 있습니다.<br>
+                뼈나이는 판독 경험과 해석 방식에 따라 차이가 날 수 있습니다.<br class="pc-only">
                 더클은 수만 건의 뼈나이 판독 경험을 가진 소아내분비 전문의가 직접 확인하고, 추가로 AI 보조 분석을 함께 활용해 판독 편차를 줄이고 성장잠재력을 다각도로 평가합니다.
               </p>
             </div>
@@ -355,7 +369,7 @@ include_once(G5_PATH.'/head.php');
             <div class="ph-special-body">
               <h3>정확한 평가, 꾸준한 추적, 필요시 치료</h3>
               <p>
-                무조건 치료부터 시작하지 않습니다.<br>
+                무조건 치료부터 시작하지 않습니다.<br class="pc-only">
                 아이의 성장 흐름을 꾸준히 확인하며, 지켜볼 시점과 치료가 필요한 시점을 구분합니다.
               </p>
             </div>
@@ -367,7 +381,7 @@ include_once(G5_PATH.'/head.php');
             <div class="ph-special-body">
               <h3>성장의 모든 요소 관리</h3>
               <p>
-                성장에는 호르몬만 중요한 것이 아닙니다.<br>
+                성장에는 호르몬만 중요한 것이 아닙니다.<br class="pc-only">
                 영양, 운동, 수면, 체성분, 알레르기, 대사 상태까지 함께 보며 건강한 성장 방향을 안내합니다.
               </p>
             </div>
@@ -379,7 +393,7 @@ include_once(G5_PATH.'/head.php');
             <div class="ph-special-body">
               <h3>아이도 오고 싶은 성장클리닉</h3>
               <p>
-                아이의 성장은 편안한 마음에서 더 잘 시작됩니다.<br>
+                아이의 성장은 편안한 마음에서 더 잘 시작됩니다.<br class="pc-only">
                 더클은 쾌적한 공간, 따뜻한 말 한마디, 아이의 눈높이에 맞춘 설명으로 병원이 좋은 경험이 될 수 있도록 함께합니다.
               </p>
             </div>
@@ -391,7 +405,7 @@ include_once(G5_PATH.'/head.php');
             <div class="ph-special-body">
               <h3>함께 배우는 더클 성장 라운지</h3>
               <p>
-                더클은 진료실 안에서만 끝나는 병원이 아닙니다.<br>
+                더클은 진료실 안에서만 끝나는 병원이 아닙니다.<br class="pc-only">
                 분기별 최신 성장 정보를 나누고, 보호자들이 궁금해하는 성장 주제를 함께 이야기합니다.
               </p>
             </div>
