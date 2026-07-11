@@ -99,6 +99,7 @@ include_once(G5_THEME_PATH.'/head.php');
                   <span class="star">✦</span> 주요 약력
                 </div>
                 <ul class="history-list">
+                  <li>現 삼성더클성장의원 대표원장</li>
                   <li>前 강동성심병원 소아청소년과 소아내분비분과 교수</li>
                   <li>삼성서울병원 인턴</li>
                   <li>삼성서울병원 소아청소년과 전공의</li>
@@ -302,8 +303,8 @@ include_once(G5_THEME_PATH.'/head.php');
           <h3 class="card-title">성장평가 · 예상키</h3>
           <p class="card-desc">
             정밀 성장 평가를 통해<br>
-            아이의 현재 성장 상태와<br>
-            최종 예상 키를 진단합니다
+            현재 성장 상태를 확인하고<br>
+            최종 예상 키를 예측합니다
           </p>
         </a>
 
@@ -312,8 +313,8 @@ include_once(G5_THEME_PATH.'/head.php');
           <div class="program-icon">📐</div>
           <h3 class="card-title">저신장</h3>
           <p class="card-desc">
-            성장 부진의 원인을 정확히 파악하고<br>
-            근거 기반의 맞춤 성장 치료를<br>
+            성장이 더딘 원인을 정확히 확인하고<br>
+            아이에게 맞는 성장 치료를<br>
             제공합니다
           </p>
         </a>
@@ -323,9 +324,9 @@ include_once(G5_THEME_PATH.'/head.php');
           <div class="program-icon">⏱️</div>
           <h3 class="card-title">성조숙증</h3>
           <p class="card-desc">
-            또래보다 빠른 사춘기 발달을<br>
-            조기에 발견하고 적기 치료를 통해<br>
-            성장을 돕습니다
+            또래보다 빠른 사춘기를<br>
+            조기에 진단하고 적절한 치료로<br>
+            건강한 성장을 돕습니다
           </p>
         </a>
 
@@ -334,9 +335,9 @@ include_once(G5_THEME_PATH.'/head.php');
           <div class="program-icon">⚖️</div>
           <h3 class="card-title">소아비만</h3>
           <p class="card-desc">
-            과학적 체성분 분석과<br>
-            맞춤 생활습관 관리를 통해<br>
-            건강한 성장을 돕습니다
+            체성분 분석과 맞춤 생활습관<br>
+            관리를 통해 건강한 성장과<br>
+            체중 관리를 돕습니다
           </p>
         </a>
 
@@ -345,9 +346,9 @@ include_once(G5_THEME_PATH.'/head.php');
           <div class="program-icon">🍎</div>
           <h3 class="card-title">저체중</h3>
           <p class="card-desc">
-            식사 습관 및 대사 분석을 통해<br>
-            살이 안 찌는 원인을 감별하고<br>
-            건강하게 증량하도록 돕습니다
+            식습관과 대사 상태를 분석하여<br>
+            건강하게 체중을 늘릴 수 있도록<br>
+            돕습니다
           </p>
         </a>
 
@@ -356,9 +357,9 @@ include_once(G5_THEME_PATH.'/head.php');
           <div class="program-icon">🤧</div>
           <h3 class="card-title">알레르기</h3>
           <p class="card-desc">
-            비염과 아토피 등 성장을 저해하는<br>
-            면역 질환을 개선하고<br>
-            건강한 성장 환경을 만듭니다
+            비염, 아토피 등 알레르기 질환을<br>
+            관리하여 아이가 건강하게<br>
+            성장할 수 있도록 돕습니다
           </p>
         </a>
       </div>
