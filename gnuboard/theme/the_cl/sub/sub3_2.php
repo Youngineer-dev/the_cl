@@ -84,8 +84,8 @@ include_once(G5_PATH.'/head.php');
     </div>
   </div>
   <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="삼성더클성장의원의 뼈나이 판독 및 성장호르몬 치료 상세 진료 절차" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="송파구 잠실역 삼성더클성장의원 편안한 대기 및 진료 예약 상담 안내" class="ed-collage__sub">
+    <img src="<?php echo $G5_URL; ?>/img/prog_process_main.jpg" alt="삼성더클성장의원의 뼈나이 판독 및 성장호르몬 치료 상세 진료 절차" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/prog_process_sub.jpg" alt="송파구 잠실역 삼성더클성장의원 편안한 대기 및 진료 예약 상담 안내" class="ed-collage__sub">
   </div>
 </section>
 

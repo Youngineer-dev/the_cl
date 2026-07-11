@@ -2220,7 +2220,7 @@ body.nav-open .site-header .hamburger span {
 .sub-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("../img/interior.png");
+  background-image: url("../img/sub_hero_bg.jpg");
   background-size: cover;
   background-position: center;
   /* 검은 마스킹 대신 밝기를 살리고, 색감은 아래 세이지 그린 오버레이가 담당 */

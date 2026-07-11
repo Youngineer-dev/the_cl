@@ -107,8 +107,8 @@ include_once(G5_PATH.'/head.php');
     </div>
   </div>
   <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="삼성더클성장의원의 비급여 항목 안내 및 의료 규정 준수 서류" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="잠실 삼성더클성장의원 입구 프론트 및 수납 상담 데스크 전경" class="ed-collage__sub">
+    <img src="<?php echo $G5_URL; ?>/img/prog_uninsured_main.jpg" alt="삼성더클성장의원의 비급여 항목 안내 및 의료 규정 준수 서류" class="ed-collage__main">
+    <img src="<?php echo $G5_URL; ?>/img/prog_uninsured_sub.jpg" alt="잠실 삼성더클성장의원 입구 프론트 및 수납 상담 데스크 전경" class="ed-collage__sub">
   </div>
 </section>
 

@@ -21,7 +21,7 @@ $file = sql_fetch(" SELECT bf_file FROM {$g5['board_file_table']} WHERE bo_table
 if ($file['bf_file']) {
     $thumb = G5_DATA_URL . '/file/gallery/' . $file['bf_file'];
 } else {
-    $thumb = G5_THEME_URL . '/img/programs.png';
+    $thumb = G5_THEME_URL . '/img/board_fallback.jpg';
 }
 
 $post['subject'] = get_text($post['wr_subject']);

@@ -25,7 +25,7 @@ while ($row = sql_fetch_array($result)) {
     if ($row['bf_file']) {
         $thumb = G5_DATA_URL . '/file/gallery/' . $row['bf_file'];
     } else {
-        $thumb = G5_THEME_URL . '/img/programs.png'; // Fallback
+        $thumb = G5_THEME_URL . '/img/board_fallback.jpg'; // Fallback
     }
 
     $posts[] = [
