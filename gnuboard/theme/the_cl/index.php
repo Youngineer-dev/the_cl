@@ -86,7 +86,7 @@ include_once(G5_THEME_PATH.'/head.php');
       <!-- Doctor 1 -->
       <article class="doctor-card reveal">
         <div class="doctor-photo">
-          <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=3" alt="삼성더클성장의원 소아청소년과 전문의 및 소아내분비 세부전문의 노유선 대표원장 프로필 사진">
+          <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=7" alt="삼성더클성장의원 소아청소년과 전문의 및 소아내분비 세부전문의 노유선 대표원장 프로필 사진">
         </div>
         <div class="doctor-info">
           <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>

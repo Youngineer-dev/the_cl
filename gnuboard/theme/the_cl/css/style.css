@@ -1535,8 +1535,8 @@ body.nav-open .site-header .hamburger span {
   text-align: center;
   white-space: nowrap;
   padding: 12px 24px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 600;
   border-radius: 4px;
   background: var(--c-primary);
   color: white;
@@ -6327,7 +6327,7 @@ fieldset#captcha #captcha_info {
   /* 메인 연락 버튼: 좁은 폭에서 텍스트 잘림 방지 */
   .contact-btn {
     padding: 12px 8px;
-    font-size: 13.5px;
+    font-size: 15.5px;
   }
   .ed-pill {
     padding: 13px 30px;
