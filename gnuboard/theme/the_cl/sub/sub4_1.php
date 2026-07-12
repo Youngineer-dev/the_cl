@@ -116,7 +116,7 @@ function custom_paging($total_pages, $page) {
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Community</span></li>
       <li class="separator">></li>

@@ -70,7 +70,7 @@ include_once(G5_PATH.'/head.php');
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">About</span></li>
       <li class="separator">></li>
