@@ -300,7 +300,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 1 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_1.php" class="program-card reveal">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_growth.jpg" alt="성장평가 · 예상키" loading="lazy">
+            <img src="<?php echo $G5_URL; ?>/img/icon_growth.jpg?v=2" alt="성장평가 · 예상키" loading="lazy">
           </div>
           <h3 class="card-title">성장평가 · 예상키</h3>
           <p class="card-desc">
@@ -313,7 +313,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 2 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_2.php" class="program-card reveal reveal-delay-1">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_short.jpg" alt="저신장" loading="lazy">
+            <img src="<?php echo $G5_URL; ?>/img/icon_short.jpg?v=2" alt="저신장" loading="lazy">
           </div>
           <h3 class="card-title">저신장</h3>
           <p class="card-desc">
@@ -326,7 +326,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 3 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_3.php" class="program-card reveal reveal-delay-2">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_precocious.jpg" alt="성조숙증" loading="lazy">
+            <img src="<?php echo $G5_URL; ?>/img/icon_precocious.jpg?v=2" alt="성조숙증" loading="lazy">
           </div>
           <h3 class="card-title">성조숙증</h3>
           <p class="card-desc">
@@ -339,7 +339,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 4 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_4.php" class="program-card reveal reveal-delay-3">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_obesity.jpg" alt="소아비만" loading="lazy">
+            <img src="<?php echo $G5_URL; ?>/img/icon_obesity.jpg?v=2" alt="소아비만" loading="lazy">
           </div>
           <h3 class="card-title">소아비만</h3>
           <p class="card-desc">
@@ -352,7 +352,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 5 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_5.php" class="program-card reveal reveal-delay-4">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_underweight.jpg" alt="저체중" loading="lazy">
+            <img src="<?php echo $G5_URL; ?>/img/icon_underweight.jpg?v=2" alt="저체중" loading="lazy">
           </div>
           <h3 class="card-title">저체중</h3>
           <p class="card-desc">
@@ -365,7 +365,7 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 6 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_6.php" class="program-card reveal reveal-delay-5">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_allergy.jpg" alt="알레르기" loading="lazy">
+            <img src="<?php echo $G5_URL; ?>/img/icon_allergy.jpg?v=2" alt="알레르기" loading="lazy">
           </div>
           <h3 class="card-title">알레르기</h3>
           <p class="card-desc">
