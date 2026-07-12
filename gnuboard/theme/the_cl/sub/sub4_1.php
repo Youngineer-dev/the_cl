@@ -22,11 +22,8 @@ $result = sql_query($sql);
 $posts = [];
 $num = $total_count - ($page - 1) * $page_rows;
 while ($row = sql_fetch_array($result)) {
-    if ($row['bf_file']) {
-        $thumb = G5_DATA_URL . '/file/gallery/' . $row['bf_file'];
-    } else {
-        $thumb = G5_THEME_URL . '/img/board_fallback.jpg'; // Fallback
-    }
+    // 가오픈: 준비중 폴백 이미지 미사용 — 실제 업로드 파일만 썸네일로 사용
+    $thumb = $row['bf_file'] ? (G5_DATA_URL . '/file/gallery/' . $row['bf_file']) : '';
 
     $posts[] = [
         'id' => $row['wr_id'],
@@ -155,8 +152,10 @@ function custom_paging($total_pages, $page) {
     <div class="board-gallery reveal">
       <?php foreach ($posts as $post): ?>
       <a href="<?php echo $G5_URL; ?>/sub/sub4_1_view.php?id=<?php echo $post['id']; ?>" class="board-gallery__item">
-        <div class="board-gallery__thumb">
+        <div class="board-gallery__thumb<?php echo $post['thumb'] ? '' : ' board-gallery__thumb--empty'; ?>">
+          <?php if ($post['thumb']) { ?>
           <img src="<?php echo $post['thumb']; ?>" alt="<?php echo $post['subject']; ?>" loading="lazy">
+          <?php } ?>
           <span class="board-gallery__cat"><?php echo $post['cat']; ?></span>
         </div>
         <div class="board-gallery__body">

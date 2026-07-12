@@ -16,13 +16,9 @@ if (!get_cookie("g5_view_gallery_{$id}")) {
     $post['wr_hit'] += 1;
 }
 
-// 첨부 이미지 조회
+// 첨부 이미지 조회 (가오픈: 준비중 폴백 이미지 미사용)
 $file = sql_fetch(" SELECT bf_file FROM {$g5['board_file_table']} WHERE bo_table = 'gallery' AND wr_id = '$id' AND bf_no = 0 ");
-if ($file['bf_file']) {
-    $thumb = G5_DATA_URL . '/file/gallery/' . $file['bf_file'];
-} else {
-    $thumb = G5_THEME_URL . '/img/board_fallback.jpg';
-}
+$thumb = (!empty($file['bf_file'])) ? (G5_DATA_URL . '/file/gallery/' . $file['bf_file']) : '';
 
 $post['subject'] = get_text($post['wr_subject']);
 $post['writer'] = get_text($post['wr_name']);
@@ -133,9 +129,11 @@ $list_url = G5_THEME_URL . '/sub/sub4_1.php';
 
       <!-- 본문 -->
       <div class="board-view__body">
+        <?php if ($thumb) { ?>
         <figure class="board-view__figure">
           <img src="<?php echo $thumb; ?>" alt="<?php echo $post['subject']; ?>">
         </figure>
+        <?php } ?>
 
         <?php if (!empty($stats)): ?>
         <div class="board-view__stats">

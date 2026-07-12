@@ -37,6 +37,15 @@ include_once(G5_PATH.'/head.php');
 </style>
 
 <style>
+/* 초반 인트로 문구 좌측 정렬 (미러 레이아웃·계단 들여쓰기 해제) */
+.ed-split .ed-split__text {
+  text-align: left;
+}
+.ed-split .ed-split__title .i2,
+.ed-split .ed-split__title .i3 {
+  padding-left: 0;
+}
+
 /* 모바일 비급여 테이블 가독성 극대화 최적화 */
 @media (max-width: 768px) {
     /* 글자량이 많은 세부내용 셀은 레이블 아래로 줄바꿈하여 100% 가로공간 확보 */
@@ -88,8 +97,8 @@ include_once(G5_PATH.'/head.php');
 <main class="sub-main">
   <div class="container">
 
-<!-- 스플릿 인트로 (미러형: 이미지 좌 / 텍스트 우) -->
-<section class="ed-split ed-split--reverse reveal" style="padding-top: 40px;">
+<!-- 스플릿 인트로 (텍스트 좌측 정렬) -->
+<section class="ed-split reveal" style="padding-top: 40px;">
   <div class="ed-split__text">
     <span class="ed-eyebrow">Non-Benefit Fees</span>
     <h2 class="ed-split__title">
@@ -106,10 +115,7 @@ include_once(G5_PATH.'/head.php');
       </p>
     </div>
   </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/prog_uninsured_main.jpg" alt="삼성더클성장의원의 비급여 항목 안내 및 의료 규정 준수 서류" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/prog_uninsured_sub.jpg" alt="잠실 삼성더클성장의원 입구 프론트 및 수납 상담 데스크 전경" class="ed-collage__sub">
-  </div>
+  <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
 </section>
 
 <!-- 비급여 표 -->

@@ -79,10 +79,7 @@ include_once(G5_PATH.'/head.php');
           </p>
         </div>
       </div>
-      <div class="ed-collage reveal reveal-delay-2">
-        <img src="<?php echo $G5_URL; ?>/img/prog_allergy_main.jpg" alt="잠실 삼성더클성장의원 소아 알레르기 및 면역 반응 정밀 진단" class="ed-collage__main">
-        <img src="<?php echo $G5_URL; ?>/img/prog_allergy_sub.jpg" alt="송파구 삼성더클성장의원 소아 알레르기 케어용 진료 공간" class="ed-collage__sub">
-      </div>
+      <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
     </section>
 
     <!-- ============================================================

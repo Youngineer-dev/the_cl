@@ -61,15 +61,6 @@ include_once(G5_THEME_PATH.'/head.php');
           </div>
           <a href="#doctors" class="view-more reveal reveal-delay-5">view more →</a>
         </div>
-
-        <div class="about-images">
-          <div class="about-img-1 reveal">
-            <img src="<?php echo $G5_URL; ?>/img/home_about_care.jpg" alt="잠실 삼성더클성장의원 소아내분비 전문의의 세심한 성장 진료 모습">
-          </div>
-          <div class="about-img-2 reveal reveal-delay-2">
-            <img src="<?php echo $G5_URL; ?>/img/home_about_interior.jpg" alt="송파구 삼성더클성장의원의 쾌적하고 편안한 클리닉 인테리어 내부">
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -391,42 +382,6 @@ include_once(G5_THEME_PATH.'/head.php');
   </div>
 
   <!-- ============================================================
-       SPACE / GALLERY SECTION
-       ============================================================ -->
-  <section class="space" id="space">
-    <div class="container">
-      <div class="space-header">
-        <p class="section-en reveal">Space</p>
-        <p class="section-title reveal reveal-delay-1">아이와 부모님 모두 편안한 공간</p>
-      </div>
-
-      <div class="space-gallery">
-        <div class="space-gallery-item reveal">
-          <img src="<?php echo $G5_URL; ?>/img/home_space_waiting.jpg" alt="잠실 삼성더클성장의원 소아과 대기 공간 및 따뜻한 인테리어 대기실">
-          <div class="gallery-caption">
-            <p class="caption-en">Waiting Area</p>
-            <p class="caption-kr">편안하고 따뜻한 대기 공간</p>
-          </div>
-        </div>
-        <div class="space-gallery-item reveal reveal-delay-1">
-          <img src="<?php echo $G5_URL; ?>/img/home_space_consult.jpg" alt="송파 삼성더클성장의원 소아 성장 클리닉의 1대1 맞춤 진료실 내부">
-          <div class="gallery-caption">
-            <p class="caption-en">Consultation</p>
-            <p class="caption-kr">1:1 맞춤 진료실</p>
-          </div>
-        </div>
-        <div class="space-gallery-item reveal reveal-delay-2">
-          <img src="<?php echo $G5_URL; ?>/img/home_space_exam.jpg" alt="삼성더클성장의원 뼈나이 및 골연령 측정, 예상키 분석을 위한 성장 정밀 검사실">
-          <div class="gallery-caption">
-            <p class="caption-en">Examination</p>
-            <p class="caption-kr">정밀 검사 공간</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
        CONTACT / FOOTER
        ============================================================ -->
   <section class="contact" id="contact">
@@ -435,9 +390,6 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Left -->
         <div class="contact-left reveal">
           <p class="section-en">Contact Us</p>
-          <div class="contact-img">
-            <img src="<?php echo $G5_URL; ?>/img/home_contact_entrance.jpg" alt="송파구 잠실역 인근 삼성더클성장의원 내부 클리닉 외관 및 입구">
-          </div>
           <p class="address">
             <span class="star">✦</span> 서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호<br>
             <span style="padding-left: 18px;">잠실역 9번출구 도보 3분</span>

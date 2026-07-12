@@ -888,6 +888,12 @@ body.nav-open .site-header .hamburger span {
   gap: 80px;
   align-items: center;
 }
+/* 가오픈: 준비중 이미지 제거된 홈 about — 텍스트 단독 */
+.about-inner:not(:has(.about-images)) {
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 820px;
+}
 
 .about-text .section-en {
   font-family: var(--font-serif);
@@ -2183,11 +2189,16 @@ body.nav-open .site-header .hamburger span {
 .sub-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("../img/sub_hero_bg.jpg");
+  /* 가오픈: 준비중 플레이스홀더 이미지 제거 — 단색 그라데이션 배경 */
+  background:
+    linear-gradient(
+      135deg,
+      #6b7c72 0%,
+      #8a9a8e 45%,
+      #7a8b80 100%
+    );
   background-size: cover;
   background-position: center;
-  /* 검은 마스킹 대신 밝기를 살리고, 색감은 아래 세이지 그린 오버레이가 담당 */
-  filter: brightness(0.92) contrast(1.02) saturate(0.9);
   transform: scale(1.02);
   transition: transform 10s var(--ease-elegant);
 }
@@ -3545,6 +3556,17 @@ body.nav-open .site-header .hamburger span {
   align-items: center;
   position: relative;
 }
+/* 가오픈: 이미지 없이 레이아웃 칸만 유지 */
+.imgBox--empty {
+  min-height: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+.imgBox--empty::before {
+  display: none;
+}
 
 .sub11_sect2_item.imgLeft {
   grid-template-columns: 1fr 1.15fr;
@@ -4019,6 +4041,19 @@ body.nav-open .site-header .hamburger span {
   position: relative;
   min-height: 520px;
   width: 100%;
+}
+/* 가오픈: 이미지 미노출 시 그리드 칸만 유지(텍스트 폭·줄바꿈 보존), 빈 영역 시각 제거 */
+.ed-collage.ed-collage--empty {
+  min-height: 0 !important;
+  height: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+.ed-collage.ed-collage--empty::before {
+  display: none;
 }
 .ed-collage img {
   position: absolute;
@@ -4976,6 +5011,12 @@ body.nav-open .site-header .hamburger span {
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  background: var(--c-bg-cream, #f5f6f4);
+}
+.board-gallery__thumb--empty {
+  min-height: 48px;
+  aspect-ratio: auto;
+  background: transparent;
 }
 .board-gallery__thumb img {
   width: 100%;

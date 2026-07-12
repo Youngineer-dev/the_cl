@@ -80,7 +80,7 @@ $clinic_schema = [
     "url" => G5_URL . "/",
     "telephone" => "02-421-7757",
     "logo" => G5_THEME_URL . "/img/brand_logo.png",
-    "image" => G5_THEME_URL . "/img/og_clinic.jpg",
+    "image" => G5_THEME_URL . "/img/brand_logo.png",
     "address" => [
         "@type" => "PostalAddress",
         "streetAddress" => "올림픽로 329, 3층 329, 330, 331호",
@@ -128,7 +128,7 @@ if (isset($page_schema_json) && $page_schema_json) {
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="shortcut icon" href="<?php echo G5_THEME_URL; ?>/img/favicon.ico?v=3" type="image/x-icon">
 <link rel="icon" href="<?php echo G5_THEME_URL; ?>/img/favicon.png?v=3" type="image/png">
-<link rel="stylesheet" href="<?php echo G5_THEME_URL; ?>/css/style.css?v=71">
+<link rel="stylesheet" href="<?php echo G5_THEME_URL; ?>/css/style.css?v=73">
 <!--[if lte IE 8]>
 <script src="<?php echo G5_JS_URL ?>/html5.js"></script>
 <![endif]-->

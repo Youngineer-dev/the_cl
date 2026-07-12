@@ -84,10 +84,7 @@ include_once(G5_PATH.'/head.php');
     </div>
     <a href="<?php echo $G5_URL; ?>/sub/sub3_1.php" class="ed-pill ed-split__cta">진료 시간 확인 →</a>
   </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/prog_infusion_main.jpg" alt="잠실 삼성더클성장의원 소아청소년 프라이빗 영양 수액 치료 공간" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/prog_infusion_sub.jpg" alt="송파 삼성더클성장의원 소아내분비 전문의의 밀착 성장 케어" class="ed-collage__sub">
-  </div>
+  <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
 </section>
 
 <!-- 3-up 카드 -->

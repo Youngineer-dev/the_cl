@@ -82,10 +82,7 @@ include_once(G5_PATH.'/head.php');
           </p>
         </div>
       </div>
-      <div class="ed-collage reveal reveal-delay-2">
-        <img src="<?php echo $G5_URL; ?>/img/prog_obesity_main.jpg" alt="잠실 삼성더클성장의원 소아내분비 전문의의 소아비만 및 소아 당뇨 대사 정밀 진단" class="ed-collage__main">
-        <img src="<?php echo $G5_URL; ?>/img/prog_obesity_sub.jpg" alt="송파구 삼성더클성장의원 소아비만 및 체성분 분석을 위한 성장 클리닉 공간" class="ed-collage__sub">
-      </div>
+      <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
     </section>
 
     <!-- ============================================================

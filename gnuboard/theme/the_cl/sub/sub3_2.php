@@ -83,10 +83,7 @@ include_once(G5_PATH.'/head.php');
       </p>
     </div>
   </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/prog_process_main.jpg" alt="삼성더클성장의원의 뼈나이 판독 및 성장호르몬 치료 상세 진료 절차" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/prog_process_sub.jpg" alt="송파구 잠실역 삼성더클성장의원 편안한 대기 및 진료 예약 상담 안내" class="ed-collage__sub">
-  </div>
+  <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
 </section>
 
 <!-- 세로 프로세스 (5단계) -->
