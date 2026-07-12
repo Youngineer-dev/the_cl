@@ -296,92 +296,72 @@ include_once(G5_THEME_PATH.'/head.php');
         <p class="section-desc reveal reveal-delay-2">삼성더클성장의원의 진료과목을 소개합니다</p>
       </div>
 
-      <div class="programs-slider reveal" data-programs-slider>
-        <div class="programs-slider__viewport">
-          <div class="programs-slider__track">
-            <a href="<?php echo $G5_URL; ?>/sub/sub2_1.php" class="program-card">
-              <div class="program-card__media">
-                <img src="<?php echo $G5_URL; ?>/img/prog_card_growth.jpg" alt="성장평가 · 예상키 진료" loading="lazy">
-                <span class="program-card__num">01</span>
-              </div>
-              <div class="program-card__body">
-                <h3 class="card-title">성장평가 · 예상키</h3>
-                <p class="card-desc">정밀 성장 평가로 현재 상태를 확인하고 최종 예상 키를 예측합니다.</p>
-                <span class="program-card__more">자세히 보기</span>
-              </div>
-            </a>
+      <div class="programs-grid">
+        <!-- Card 1 -->
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_1.php" class="program-card reveal">
+          <div class="program-icon">📏</div>
+          <h3 class="card-title">성장평가 · 예상키</h3>
+          <p class="card-desc">
+            정밀 성장 평가를 통해<br>
+            현재 성장 상태를 확인하고<br>
+            최종 예상 키를 예측합니다
+          </p>
+        </a>
 
-            <a href="<?php echo $G5_URL; ?>/sub/sub2_2.php" class="program-card">
-              <div class="program-card__media">
-                <img src="<?php echo $G5_URL; ?>/img/prog_card_short.jpg" alt="저신장 진료" loading="lazy">
-                <span class="program-card__num">02</span>
-              </div>
-              <div class="program-card__body">
-                <h3 class="card-title">저신장</h3>
-                <p class="card-desc">성장이 더딘 원인을 확인하고 아이에게 맞는 성장 치료를 제공합니다.</p>
-                <span class="program-card__more">자세히 보기</span>
-              </div>
-            </a>
+        <!-- Card 2 -->
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_2.php" class="program-card reveal reveal-delay-1">
+          <div class="program-icon">📐</div>
+          <h3 class="card-title">저신장</h3>
+          <p class="card-desc">
+            성장이 더딘 원인을 정확히 확인하고<br>
+            아이에게 맞는 성장 치료를<br>
+            제공합니다
+          </p>
+        </a>
 
-            <a href="<?php echo $G5_URL; ?>/sub/sub2_3.php" class="program-card">
-              <div class="program-card__media">
-                <img src="<?php echo $G5_URL; ?>/img/prog_card_precocious.jpg" alt="성조숙증 진료" loading="lazy">
-                <span class="program-card__num">03</span>
-              </div>
-              <div class="program-card__body">
-                <h3 class="card-title">성조숙증</h3>
-                <p class="card-desc">또래보다 빠른 사춘기를 조기 진단하고 적절한 치료로 건강한 성장을 돕습니다.</p>
-                <span class="program-card__more">자세히 보기</span>
-              </div>
-            </a>
+        <!-- Card 3 -->
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_3.php" class="program-card reveal reveal-delay-2">
+          <div class="program-icon">⏱️</div>
+          <h3 class="card-title">성조숙증</h3>
+          <p class="card-desc">
+            또래보다 빠른 사춘기를<br>
+            조기에 진단하고 적절한 치료로<br>
+            건강한 성장을 돕습니다
+          </p>
+        </a>
 
-            <a href="<?php echo $G5_URL; ?>/sub/sub2_4.php" class="program-card">
-              <div class="program-card__media">
-                <img src="<?php echo $G5_URL; ?>/img/prog_card_obesity.jpg" alt="소아비만 진료" loading="lazy">
-                <span class="program-card__num">04</span>
-              </div>
-              <div class="program-card__body">
-                <h3 class="card-title">소아비만</h3>
-                <p class="card-desc">체성분 분석과 맞춤 생활습관 관리를 통해 건강한 성장과 체중 관리를 돕습니다.</p>
-                <span class="program-card__more">자세히 보기</span>
-              </div>
-            </a>
+        <!-- Card 4 -->
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_4.php" class="program-card reveal reveal-delay-3">
+          <div class="program-icon">⚖️</div>
+          <h3 class="card-title">소아비만</h3>
+          <p class="card-desc">
+            체성분 분석과 맞춤 생활습관<br>
+            관리를 통해 건강한 성장과<br>
+            체중 관리를 돕습니다
+          </p>
+        </a>
 
-            <a href="<?php echo $G5_URL; ?>/sub/sub2_5.php" class="program-card">
-              <div class="program-card__media">
-                <img src="<?php echo $G5_URL; ?>/img/prog_card_underweight.jpg" alt="저체중 진료" loading="lazy">
-                <span class="program-card__num">05</span>
-              </div>
-              <div class="program-card__body">
-                <h3 class="card-title">저체중</h3>
-                <p class="card-desc">식습관과 대사 상태를 분석하여 건강하게 체중을 늘릴 수 있도록 돕습니다.</p>
-                <span class="program-card__more">자세히 보기</span>
-              </div>
-            </a>
+        <!-- Card 5 -->
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_5.php" class="program-card reveal reveal-delay-4">
+          <div class="program-icon">🍎</div>
+          <h3 class="card-title">저체중</h3>
+          <p class="card-desc">
+            식습관과 대사 상태를 분석하여<br>
+            건강하게 체중을 늘릴 수 있도록<br>
+            돕습니다
+          </p>
+        </a>
 
-            <a href="<?php echo $G5_URL; ?>/sub/sub2_6.php" class="program-card">
-              <div class="program-card__media">
-                <img src="<?php echo $G5_URL; ?>/img/prog_card_allergy.jpg" alt="알레르기 진료" loading="lazy">
-                <span class="program-card__num">06</span>
-              </div>
-              <div class="program-card__body">
-                <h3 class="card-title">알레르기</h3>
-                <p class="card-desc">비염·아토피 등 알레르기 질환을 관리하여 아이가 건강하게 성장할 수 있도록 돕습니다.</p>
-                <span class="program-card__more">자세히 보기</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="programs-slider__controls">
-          <button type="button" class="programs-slider__btn" data-prog-prev aria-label="이전 진료과목">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <div class="programs-slider__dots" data-prog-dots></div>
-          <button type="button" class="programs-slider__btn" data-prog-next aria-label="다음 진료과목">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-        </div>
+        <!-- Card 6 -->
+        <a href="<?php echo $G5_URL; ?>/sub/sub2_6.php" class="program-card reveal reveal-delay-5">
+          <div class="program-icon">🤧</div>
+          <h3 class="card-title">알레르기</h3>
+          <p class="card-desc">
+            비염, 아토피 등 알레르기 질환을<br>
+            관리하여 아이가 건강하게<br>
+            성장할 수 있도록 돕습니다
+          </p>
+        </a>
       </div>
     </div>
   </section>
