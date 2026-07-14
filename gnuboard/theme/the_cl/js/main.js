@@ -486,3 +486,26 @@
     startAuto();
   })();
 })();
+
+// 네이버 지도 길찾기 PC/모바일 분기 처리 함수
+function goToNaverMap(e) {
+  if (e) e.preventDefault();
+  
+  var pcUrl = "https://map.naver.com/p/entry/place/2041623550?placePath=%252Fhome%253Fentry%253Dplt&searchType=place&lng=127.1068893&lat=37.5161072&c=15.00,0,0,0,dh";
+  var mobileWebUrl = "https://m.map.naver.com/menu/route.nhn?dlat=37.5161072&dlng=127.1068893&dname=%EC%82%BC%EC%84%B1%EB%8D%94%ED%81%B4%EC%84%B1%EC%9E%A5%EC%9D%98%EC%9B%90&pathType=0";
+  var appUrl = "nmap://route/public?dlat=37.5161072&dlng=127.1068893&dname=%EC%82%BC%EC%84%B1%EB%8D%94%ED%81%B4%EC%84%B1%EC%9E%A5%EC%9D%98%EC%9B%90&appname=com.thecl";
+  
+  var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  
+  if (isMobile) {
+    var clickedAt = +new Date();
+    window.location.href = appUrl;
+    setTimeout(function() {
+      if (+new Date() - clickedAt < 2000) {
+        window.location.href = mobileWebUrl;
+      }
+    }, 1500);
+  } else {
+    window.open(pcUrl, '_blank');
+  }
+}

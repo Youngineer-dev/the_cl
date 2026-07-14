@@ -166,7 +166,7 @@ include_once(G5_PATH.'/head.php');
     </div>
     
     <div class="map-buttons" style="margin-top: 30px;">
-      <a href="#" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+      <a href="#" onclick="goToNaverMap(event)" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
         <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #03C75A; flex-shrink: 0;">
           <path d="M16.2 3H21v18h-4.8l-8.4-12v12H3V3h4.8l8.4 12z"/>
         </svg>네이버 길찾기
