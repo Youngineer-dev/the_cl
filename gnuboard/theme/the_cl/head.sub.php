@@ -55,12 +55,17 @@ if($config['cf_add_meta'])
 <title><?php echo $g5_head_title; ?></title>
 <meta name="description" content="<?php echo htmlspecialchars($g5_head_description, ENT_QUOTES, 'UTF-8'); ?>">
 <?php
-// 현재 접속 프로토콜 및 도메인, 경로 기반으로 대표 URL 정의
-$canonical_proto = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
-$canonical_host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
-$canonical_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$canonical_url = $canonical_proto . '://' . $canonical_host . $canonical_path;
-$og_url = $canonical_proto . '://' . $canonical_host . $_SERVER['REQUEST_URI'];
+// Pretty URL 기준 canonical / OG
+if (function_exists('the_cl_canonical_url')) {
+    $canonical_url = the_cl_canonical_url();
+    $og_url = $canonical_url;
+} else {
+    $canonical_proto = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
+    $canonical_host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
+    $canonical_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $canonical_url = $canonical_proto . '://' . $canonical_host . $canonical_path;
+    $og_url = $canonical_proto . '://' . $canonical_host . $_SERVER['REQUEST_URI'];
+}
 $og_image = G5_THEME_URL . '/img/og.png'; // 기본 대표 이미지
 ?>
 <link rel="canonical" href="<?php echo htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8'); ?>">
@@ -77,7 +82,8 @@ $clinic_schema = [
     "name" => "삼성더클성장의원",
     "alternateName" => "더클성장의원, THE CL",
     "description" => "송파구 잠실에 위치한 소아 성장 클리닉으로, 소아내분비 세부전문의가 성조숙증, 저신장, 소아비만, 예상키 진단, 뼈나이 분석 등을 정밀 진료합니다.",
-    "url" => G5_URL . "/",
+    "url" => (function_exists('the_cl_url') ? the_cl_url('home') : (G5_URL . "/")),
+
     "telephone" => "02-421-7757",
     "logo" => G5_THEME_URL . "/img/brand_logo.png",
     "image" => G5_THEME_URL . "/img/brand_logo.png",

@@ -6,7 +6,7 @@ include_once(G5_PATH.'/head.php');
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $post = sql_fetch(" SELECT * FROM {$g5['write_prefix']}gallery WHERE wr_id = '$id' AND wr_is_comment = 0 ");
 if (!$post) {
-    alert('존재하지 않는 게시글입니다.', G5_URL.'/theme/the_cl/sub/sub4_1.php');
+    alert('존재하지 않는 게시글입니다.', the_cl_url('community/cases'));
 }
 
 // 조회수 증가
@@ -45,7 +45,7 @@ $nav = [
     'next' => $next_post ? ['id' => $next_post['wr_id'], 'subject' => get_text($next_post['wr_subject'])] : null
 ];
 
-$list_url = G5_THEME_URL . '/sub/sub4_1.php';
+$list_url = the_cl_url('community/cases');
 ?>
 
 <style>
@@ -100,7 +100,7 @@ $list_url = G5_THEME_URL . '/sub/sub4_1.php';
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo function_exists('the_cl_url') ? the_cl_url('home') : (G5_URL.'/'); ?>">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Community</span></li>
       <li class="separator">></li>
@@ -157,13 +157,13 @@ $list_url = G5_THEME_URL . '/sub/sub4_1.php';
       <!-- 이전/다음 글 -->
       <nav class="board-view__nav" aria-label="이전 다음 글">
         <?php if ($nav['prev']): ?>
-        <a class="board-view__navrow" href="<?php echo $G5_URL; ?>/sub/sub4_1_view.php?id=<?php echo $nav['prev']['id']; ?>">
+        <a class="board-view__navrow" href="<?php echo the_cl_url('cases_view', array('id' => $nav['prev']['id'])); ?>">
           <span class="board-view__navlabel">다음 글</span>
           <span class="board-view__navtitle"><?php echo $nav['prev']['subject']; ?></span>
         </a>
         <?php endif; ?>
         <?php if ($nav['next']): ?>
-        <a class="board-view__navrow" href="<?php echo $G5_URL; ?>/sub/sub4_1_view.php?id=<?php echo $nav['next']['id']; ?>">
+        <a class="board-view__navrow" href="<?php echo the_cl_url('cases_view', array('id' => $nav['next']['id'])); ?>">
           <span class="board-view__navlabel">이전 글</span>
           <span class="board-view__navtitle"><?php echo $nav['next']['subject']; ?></span>
         </a>
@@ -174,7 +174,7 @@ $list_url = G5_THEME_URL . '/sub/sub4_1.php';
       <div class="board-view__foot" style="gap: 12px;">
         <a href="<?php echo $list_url; ?>" class="board-view__listbtn" style="background: var(--c-text-light); border-color: var(--c-text-light);">목록으로</a>
         <?php if (isset($is_member) && $is_member) { ?>
-        <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=cases&id=<?php echo $post['id']; ?>" class="board-view__listbtn">수정</a>
+        <a href="<?php echo the_cl_url('write', array('bo_table' => 'cases', 'id' => $post['id'])); ?>" class="board-view__listbtn">수정</a>
         <a href="javascript:alert('프로토타입 단계로 삭제 기능은 그누보드 이식 후 작동합니다.');" class="board-view__listbtn" style="background: #e63c3c; border-color: #e63c3c;">삭제</a>
         <?php } ?>
       </div>

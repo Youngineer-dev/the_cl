@@ -1,10 +1,13 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
-// $G5_URL이 정의되어 있지 않거나 테마 경로가 아닌 경우 바인딩
+// $G5_URL: 에셋 경로용
 if (!isset($G5_URL)) {
     $G5_URL = G5_THEME_URL;
 }
+$u = function ($key, $params = array()) {
+    return function_exists('the_cl_url') ? the_cl_url($key, $params) : (G5_URL . '/');
+};
 ?>
   <!-- 전역 롤링 슬로건 마퀴 트랙 -->
   <div class="loop-text-section" style="padding: 24px 0; border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border); background: var(--c-primary-pale); margin-bottom: 0;">
@@ -20,11 +23,11 @@ if (!isset($G5_URL)) {
   <footer class="site-footer">
     <div class="container">
       <div class="footer-links" style="margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; font-weight: 500; letter-spacing: -0.3px;">
-        <a href="<?php echo $G5_URL; ?>/sub/privacy.php" style="color: var(--c-primary-dark); text-decoration: none; font-weight: 600;">개인정보처리방침</a>
+        <a href="<?php echo $u('privacy'); ?>" style="color: var(--c-primary-dark); text-decoration: none; font-weight: 600;">개인정보처리방침</a>
         <span style="color: var(--c-border); opacity: 0.6;">|</span>
-        <a href="<?php echo $G5_URL; ?>/sub/terms.php" style="color: var(--c-text-light); text-decoration: none;">이용약관</a>
+        <a href="<?php echo $u('terms'); ?>" style="color: var(--c-text-light); text-decoration: none;">이용약관</a>
         <span style="color: var(--c-border); opacity: 0.6;">|</span>
-        <a href="<?php echo $G5_URL; ?>/sub/uninsured.php" style="color: var(--c-text-light); text-decoration: none;">비급여항목</a>
+        <a href="<?php echo $u('uninsured'); ?>" style="color: var(--c-text-light); text-decoration: none;">비급여항목</a>
       </div>
       <div class="footer-inner">
         <div class="footer-info">
@@ -65,7 +68,7 @@ if (!isset($G5_URL)) {
       <button class="quick-btn phone" title="전화문의" onclick="location.href='tel:02-421-7757'">
         <svg class="q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       </button>
-      <button class="quick-btn map" title="오시는 길" onclick="location.href='<?php echo $G5_URL; ?>/sub/sub1_5.php'">
+      <button class="quick-btn map" title="오시는 길" onclick="location.href='<?php echo $u('about/location'); ?>'">
         <svg class="q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       </button>
       <button class="quick-btn top-btn" title="맨 위로">
@@ -97,7 +100,7 @@ if (!isset($G5_URL)) {
       </span>
       <span class="mqb-label">전화상담</span>
     </a>
-    <a class="mqb-item" href="<?php echo $G5_URL; ?>/sub/sub1_5.php">
+    <a class="mqb-item" href="<?php echo $u('about/location'); ?>">
       <span class="mqb-ico mqb-ico-map">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       </span>
@@ -113,4 +116,4 @@ if (!isset($G5_URL)) {
 
   <!-- JavaScript -->
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="<?php echo $G5_URL; ?>/js/main.js?v=14"></script>
+  <script src="<?php echo $G5_URL; ?>/js/main.js?v=16"></script>

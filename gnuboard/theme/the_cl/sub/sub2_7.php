@@ -51,7 +51,7 @@ include_once(G5_PATH.'/head.php');
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo function_exists('the_cl_url') ? the_cl_url('home') : (G5_URL.'/'); ?>">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Clinic</span></li>
       <li class="separator">></li>
@@ -82,7 +82,7 @@ include_once(G5_PATH.'/head.php');
         안심 고농축 영양수액 칵테일을 아이의 상태에 맞춰 구성합니다.
       </p>
     </div>
-    <a href="<?php echo $G5_URL; ?>/sub/sub3_1.php" class="ed-pill ed-split__cta">진료 시간 확인 →</a>
+    <a href="<?php echo the_cl_url('info/hours'); ?>" class="ed-pill ed-split__cta">진료 시간 확인 →</a>
   </div>
   <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
 </section>

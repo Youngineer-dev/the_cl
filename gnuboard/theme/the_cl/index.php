@@ -289,7 +289,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
       <div class="programs-grid">
         <!-- Card 1 -->
-        <a href="<?php echo $G5_URL; ?>/sub/sub2_1.php" class="program-card reveal">
+        <a href="<?php echo the_cl_url('clinic/growth'); ?>" class="program-card reveal">
           <div class="program-icon">
             <img src="<?php echo $G5_URL; ?>/img/icon_growth.jpg?v=2" alt="성장평가 · 예상키" loading="lazy">
           </div>
@@ -302,7 +302,7 @@ include_once(G5_THEME_PATH.'/head.php');
         </a>
 
         <!-- Card 2 -->
-        <a href="<?php echo $G5_URL; ?>/sub/sub2_2.php" class="program-card reveal reveal-delay-1">
+        <a href="<?php echo the_cl_url('clinic/short-stature'); ?>" class="program-card reveal reveal-delay-1">
           <div class="program-icon">
             <img src="<?php echo $G5_URL; ?>/img/icon_short.jpg?v=2" alt="저신장" loading="lazy">
           </div>
@@ -315,7 +315,7 @@ include_once(G5_THEME_PATH.'/head.php');
         </a>
 
         <!-- Card 3 -->
-        <a href="<?php echo $G5_URL; ?>/sub/sub2_3.php" class="program-card reveal reveal-delay-2">
+        <a href="<?php echo the_cl_url('clinic/precocious-puberty'); ?>" class="program-card reveal reveal-delay-2">
           <div class="program-icon">
             <img src="<?php echo $G5_URL; ?>/img/icon_precocious.jpg?v=2" alt="성조숙증" loading="lazy">
           </div>
@@ -328,7 +328,7 @@ include_once(G5_THEME_PATH.'/head.php');
         </a>
 
         <!-- Card 4 -->
-        <a href="<?php echo $G5_URL; ?>/sub/sub2_4.php" class="program-card reveal reveal-delay-3">
+        <a href="<?php echo the_cl_url('clinic/obesity'); ?>" class="program-card reveal reveal-delay-3">
           <div class="program-icon">
             <img src="<?php echo $G5_URL; ?>/img/icon_obesity.jpg?v=2" alt="소아비만" loading="lazy">
           </div>
@@ -341,7 +341,7 @@ include_once(G5_THEME_PATH.'/head.php');
         </a>
 
         <!-- Card 5 -->
-        <a href="<?php echo $G5_URL; ?>/sub/sub2_5.php" class="program-card reveal reveal-delay-4">
+        <a href="<?php echo the_cl_url('clinic/underweight'); ?>" class="program-card reveal reveal-delay-4">
           <div class="program-icon">
             <img src="<?php echo $G5_URL; ?>/img/icon_underweight.jpg?v=2" alt="저체중" loading="lazy">
           </div>
@@ -354,7 +354,7 @@ include_once(G5_THEME_PATH.'/head.php');
         </a>
 
         <!-- Card 6 -->
-        <a href="<?php echo $G5_URL; ?>/sub/sub2_6.php" class="program-card reveal reveal-delay-5">
+        <a href="<?php echo the_cl_url('clinic/allergy'); ?>" class="program-card reveal reveal-delay-5">
           <div class="program-icon">
             <img src="<?php echo $G5_URL; ?>/img/icon_allergy.jpg?v=2" alt="알레르기" loading="lazy">
           </div>

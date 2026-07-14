@@ -274,39 +274,39 @@
     const bc = document.querySelector('.breadcrumb');
     if (!bc) return;
 
-    // 브레드크럼은 /sub/ 안의 페이지에만 존재하므로 상대 경로로 링크
-    // ※ 상단 GNB 메뉴(header.html.php) + 하단 Policy 링크(footer.html.php)와
-    //    동일한 구조를 유지할 것 — 메뉴 변경 시 여기도 함께 수정
+    // Pretty URL (사이트 루트 폴더 방식) — header/footer 와 동일
+    const root = (typeof g5_url === 'string' && g5_url) ? g5_url.replace(/\/$/, '') : '';
+    const p = (path) => root + path;
     const CATEGORIES = [
-      { label: 'About', href: 'sub1_1.php' },
-      { label: 'Clinic', href: 'sub2_1.php' },
-      { label: 'Community', href: 'sub4_2.php' },
-      { label: 'Policy', href: 'privacy.php' }
+      { label: 'About', href: p('/about/') },
+      { label: 'Clinic', href: p('/clinic/growth/') },
+      { label: 'Community', href: p('/community/faq/') },
+      { label: 'Policy', href: p('/privacy/') }
     ];
     const PAGES = {
       about: [
-        { label: '병원 소개', href: 'sub1_1.php' },
-        { label: '의료진 소개', href: 'sub1_3.php' },
-        { label: '진료 시간', href: 'sub3_1.php' },
-        { label: '둘러보기', href: 'sub1_4.php' },
-        { label: '오시는 길', href: 'sub1_5.php' }
+        { label: '병원 소개', href: p('/about/') },
+        { label: '의료진 소개', href: p('/about/doctors/') },
+        { label: '진료 시간', href: p('/info/hours/') },
+        { label: '둘러보기', href: p('/about/tour/') },
+        { label: '오시는 길', href: p('/about/location/') }
       ],
       clinic: [
-        { label: '성장평가 · 예상키', href: 'sub2_1.php' },
-        { label: '저신장', href: 'sub2_2.php' },
-        { label: '성조숙증', href: 'sub2_3.php' },
-        { label: '소아비만', href: 'sub2_4.php' },
-        { label: '저체중', href: 'sub2_5.php' },
-        { label: '알레르기', href: 'sub2_6.php' }
+        { label: '성장평가 · 예상키', href: p('/clinic/growth/') },
+        { label: '저신장', href: p('/clinic/short-stature/') },
+        { label: '성조숙증', href: p('/clinic/precocious-puberty/') },
+        { label: '소아비만', href: p('/clinic/obesity/') },
+        { label: '저체중', href: p('/clinic/underweight/') },
+        { label: '알레르기', href: p('/clinic/allergy/') }
       ],
       community: [
-        { label: '자주묻는 질문', href: 'sub4_2.php' },
-        { label: '공지사항', href: 'sub4_3.php' }
+        { label: '자주묻는 질문', href: p('/community/faq/') },
+        { label: '공지사항', href: p('/community/notice/') }
       ],
       policy: [
-        { label: '개인정보처리방침', href: 'privacy.php' },
-        { label: '이용약관', href: 'terms.php' },
-        { label: '비급여항목', href: 'uninsured.php' }
+        { label: '개인정보처리방침', href: p('/privacy/') },
+        { label: '이용약관', href: p('/terms/') },
+        { label: '비급여항목', href: p('/uninsured/') }
       ]
     };
 
@@ -319,7 +319,7 @@
     const catLi = items[1];
     const curLi = items[items.length - 1];
     const catKey = (catLi.textContent || '').trim().toLowerCase();
-    const curFile = (location.pathname.split('/').pop() || '').toLowerCase();
+    const curPath = (location.pathname || '/').replace(/\/$/, '') || '/';
 
     const closeAll = () => {
       document.querySelectorAll('.bc-dropdown.open').forEach((d) => d.classList.remove('open'));
@@ -381,7 +381,14 @@
     attach(catLi, CATEGORIES, (it) => it.label.toLowerCase() === catKey);
     // 현재 페이지 → 현재 카테고리 내 메뉴 목록
     if (curLi !== catLi) {
-      attach(curLi, PAGES[catKey] || [], (it) => it.href.toLowerCase() === curFile);
+      attach(curLi, PAGES[catKey] || [], (it) => {
+        try {
+          const hrefPath = new URL(it.href, location.origin).pathname.replace(/\/$/, '') || '/';
+          return hrefPath === curPath;
+        } catch (e) {
+          return String(it.href).indexOf(curPath) !== -1;
+        }
+      });
     }
 
     document.addEventListener('click', (e) => {

@@ -113,7 +113,7 @@ function custom_paging($total_pages, $page) {
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo function_exists('the_cl_url') ? the_cl_url('home') : (G5_URL.'/'); ?>">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Community</span></li>
       <li class="separator">></li>
@@ -151,7 +151,7 @@ function custom_paging($total_pages, $page) {
     <!-- 게시판 갤러리 목록 -->
     <div class="board-gallery reveal">
       <?php foreach ($posts as $post): ?>
-      <a href="<?php echo $G5_URL; ?>/sub/sub4_1_view.php?id=<?php echo $post['id']; ?>" class="board-gallery__item">
+      <a href="<?php echo the_cl_url('cases_view', array('id' => $post['id'])); ?>" class="board-gallery__item">
         <div class="board-gallery__thumb<?php echo $post['thumb'] ? '' : ' board-gallery__thumb--empty'; ?>">
           <?php if ($post['thumb']) { ?>
           <img src="<?php echo $post['thumb']; ?>" alt="<?php echo $post['subject']; ?>" loading="lazy">
@@ -177,7 +177,7 @@ function custom_paging($total_pages, $page) {
     <!-- 글쓰기 버튼 (로그인 회원 전용) -->
     <?php if (isset($is_member) && $is_member) { ?>
     <div class="board-btn-wrap reveal" style="display: flex; justify-content: flex-end; margin-top: 24px;">
-      <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=cases" class="board-btn-write" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 24px; background: var(--c-primary); color: #ffffff; border-radius: 4px; font-size: 14px; font-weight: 500; transition: background 0.3s; box-shadow: 0 4px 10px rgba(152, 169, 158, 0.15);">글쓰기</a>
+      <a href="<?php echo the_cl_url('write', array('bo_table' => 'cases')); ?>" class="board-btn-write" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 24px; background: var(--c-primary); color: #ffffff; border-radius: 4px; font-size: 14px; font-weight: 500; transition: background 0.3s; box-shadow: 0 4px 10px rgba(152, 169, 158, 0.15);">글쓰기</a>
     </div>
     <?php } ?>
 

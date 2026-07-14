@@ -30,7 +30,7 @@ $popup_slides = array(
     array(
         'title' => '사전 예약 안내',
         'image' => $G5_URL.'/img/popup_notice.png?v=2',
-        'link'  => $G5_URL.'/sub/sub4_3_view.php?id=1',
+        'link'  => the_cl_url('notice_view', array('id' => 1)),
     ),
 );
 

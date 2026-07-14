@@ -16,7 +16,7 @@ if ($action === 'delete' && $id) {
         // 게시판 총 글 수 동기화 감소
         sql_query(" UPDATE {$g5['board_table']} SET bo_count_write = IF(bo_count_write > 0, bo_count_write - 1, 0) WHERE bo_table = 'notice' ");
         
-        alert('성공적으로 삭제되었습니다.', G5_THEME_URL . '/sub/sub4_3.php');
+        alert('성공적으로 삭제되었습니다.', the_cl_url('community/notice'));
     } else {
         alert('삭제 권한이 없습니다.');
     }
@@ -24,7 +24,7 @@ if ($action === 'delete' && $id) {
 
 $post = sql_fetch(" SELECT * FROM {$g5['write_prefix']}notice WHERE wr_id = '$id' AND wr_is_comment = 0 ");
 if (!$post) {
-    alert('존재하지 않는 게시글입니다.', G5_URL.'/theme/the_cl/sub/sub4_3.php');
+    alert('존재하지 않는 게시글입니다.', the_cl_url('community/notice'));
 }
 
 // 조회수 증가
@@ -62,7 +62,7 @@ while ($row = sql_fetch_array($res_cmt)) {
     ];
 }
 
-$list_url = G5_THEME_URL . '/sub/sub4_3.php';
+$list_url = the_cl_url('community/notice');
 ?>
 
 <style>
@@ -117,7 +117,7 @@ $list_url = G5_THEME_URL . '/sub/sub4_3.php';
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo function_exists('the_cl_url') ? the_cl_url('home') : (G5_URL.'/'); ?>">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Community</span></li>
       <li class="separator">></li>
@@ -154,13 +154,13 @@ $list_url = G5_THEME_URL . '/sub/sub4_3.php';
       <!-- 이전/다음 글 -->
       <nav class="board-view__nav" aria-label="이전 다음 글">
         <?php if ($nav['prev']): ?>
-        <a class="board-view__navrow" href="<?php echo $G5_URL; ?>/sub/sub4_3_view.php?id=<?php echo $nav['prev']['id']; ?>">
+        <a class="board-view__navrow" href="<?php echo the_cl_url('notice_view', array('id' => $nav['prev']['id'])); ?>">
           <span class="board-view__navlabel">다음 글</span>
           <span class="board-view__navtitle"><?php echo $nav['prev']['subject']; ?></span>
         </a>
         <?php endif; ?>
         <?php if ($nav['next']): ?>
-        <a class="board-view__navrow" href="<?php echo $G5_URL; ?>/sub/sub4_3_view.php?id=<?php echo $nav['next']['id']; ?>">
+        <a class="board-view__navrow" href="<?php echo the_cl_url('notice_view', array('id' => $nav['next']['id'])); ?>">
           <span class="board-view__navlabel">이전 글</span>
           <span class="board-view__navtitle"><?php echo $nav['next']['subject']; ?></span>
         </a>
@@ -173,8 +173,8 @@ $list_url = G5_THEME_URL . '/sub/sub4_3.php';
         
         <?php if (isset($is_member) && $is_member) { ?>
         <div class="board-view__admin-actions" style="display: flex; gap: 8px;">
-          <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=notice&w=u&id=<?php echo $post['wr_id']; ?>" class="board-view__listbtn" style="margin: 0;">수정</a>
-          <a href="javascript:if(confirm('한번 삭제한 자료는 복구할 수 없습니다.\n\n정말 삭제하시겠습니까?')) { location.href='<?php echo G5_THEME_URL; ?>/sub/sub4_3_view.php?id=<?php echo $post['wr_id']; ?>&action=delete'; }" class="board-view__listbtn" style="background: #e63c3c; border-color: #e63c3c; margin: 0;">삭제</a>
+          <a href="<?php echo the_cl_url('write', array('bo_table' => 'notice')); ?>&w=u&id=<?php echo $post['wr_id']; ?>" class="board-view__listbtn" style="margin: 0;">수정</a>
+          <a href="javascript:if(confirm('한번 삭제한 자료는 복구할 수 없습니다.\n\n정말 삭제하시겠습니까?')) { location.href='<?php echo the_cl_url('notice_view', array('id' => $post['wr_id'], 'action' => 'delete')); ?>'; }" class="board-view__listbtn" style="background: #e63c3c; border-color: #e63c3c; margin: 0;">삭제</a>
         </div>
         <?php } ?>
       </div>

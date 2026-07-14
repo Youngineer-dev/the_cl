@@ -22,7 +22,7 @@ include_once(G5_THEME_PATH.'/header.html.php');
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo function_exists('the_cl_url') ? the_cl_url('home') : (G5_URL.'/'); ?>">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Member</span></li>
       <li class="separator">></li>
@@ -52,7 +52,7 @@ include_once(G5_THEME_PATH.'/header.html.php');
         </div>
 
         <div style="display: flex; gap: 12px; justify-content: center;">
-          <a href="<?php echo G5_URL; ?>/index.php" class="btn-cancel" style="display: inline-flex; align-items: center; justify-content: center; width: 140px; height: 52px; box-sizing: border-box; border: 1px solid var(--c-border); border-radius: 6px; font-size: 14px; font-weight: 500; color: var(--c-text-light); background: #ffffff; transition: all 0.3s; text-decoration: none;">홈으로 이동</a>
+          <a href="<?php echo function_exists('the_cl_url') ? the_cl_url('home') : (G5_URL.'/'); ?>" class="btn-cancel" style="display: inline-flex; align-items: center; justify-content: center; width: 140px; height: 52px; box-sizing: border-box; border: 1px solid var(--c-border); border-radius: 6px; font-size: 14px; font-weight: 500; color: var(--c-text-light); background: #ffffff; transition: all 0.3s; text-decoration: none;">홈으로 이동</a>
           <a href="<?php echo G5_BBS_URL; ?>/login.php" class="btn-submit auth-btn" style="width: 140px; height: 52px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px;">로그인하기</a>
         </div>
       </div>

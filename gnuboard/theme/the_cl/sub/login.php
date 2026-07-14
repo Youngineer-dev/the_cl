@@ -51,7 +51,7 @@ include_once(G5_PATH.'/head.php');
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo function_exists('the_cl_url') ? the_cl_url('home') : (G5_URL.'/'); ?>">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Member</span></li>
       <li class="separator">></li>
@@ -95,7 +95,7 @@ include_once(G5_PATH.'/head.php');
         </form>
 
         <div class="auth-card-footer">
-          <p>아직 회원이 아니신가요? <a href="<?php echo $G5_URL; ?>/sub/register.php" class="join-link">회원가입 하기</a></p>
+          <p>아직 회원이 아니신가요? <a href="<?php echo the_cl_url('register'); ?>" class="join-link">회원가입 하기</a></p>
         </div>
       </div>
     </div>

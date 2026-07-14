@@ -142,7 +142,7 @@ function custom_paging($total_pages, $page) {
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo function_exists('the_cl_url') ? the_cl_url('home') : (G5_URL.'/'); ?>">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Community</span></li>
       <li class="separator">></li>
@@ -185,7 +185,7 @@ function custom_paging($total_pages, $page) {
       </div>
 
       <?php foreach ($posts as $post): ?>
-      <a href="<?php echo $G5_URL; ?>/sub/sub4_3_view.php?id=<?php echo $post['id']; ?>" class="board-list__row<?php echo $post['pinned'] ? ' is-notice' : ''; ?>">
+      <a href="<?php echo the_cl_url('notice_view', array('id' => $post['id'])); ?>" class="board-list__row<?php echo $post['pinned'] ? ' is-notice' : ''; ?>">
         <span class="board-list__num">
           <?php if ($post['pinned']): ?>
             <span class="board-list__badge">공지</span>
@@ -211,7 +211,7 @@ function custom_paging($total_pages, $page) {
     <!-- 글쓰기 버튼 (로그인 회원 전용) -->
     <?php if (isset($is_member) && $is_member) { ?>
     <div class="board-btn-wrap reveal" style="display: flex; justify-content: flex-end; margin-top: 24px;">
-      <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=notice" class="board-btn-write" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 24px; background: var(--c-primary); color: #ffffff; border-radius: 4px; font-size: 14px; font-weight: 500; transition: background 0.3s; box-shadow: 0 4px 10px rgba(152, 169, 158, 0.15);">글쓰기</a>
+      <a href="<?php echo the_cl_url('write', array('bo_table' => 'notice')); ?>" class="board-btn-write" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 24px; background: var(--c-primary); color: #ffffff; border-radius: 4px; font-size: 14px; font-weight: 500; transition: background 0.3s; box-shadow: 0 4px 10px rgba(152, 169, 158, 0.15);">글쓰기</a>
     </div>
     <?php } ?>
 
