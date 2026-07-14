@@ -426,8 +426,8 @@ include_once(G5_THEME_PATH.'/head.php');
             진료예약 후 내방하시면 더 편안하게 진료를 받아보실 수 있습니다
           </p>
           <div class="contact-buttons">
-            <a href="#" class="contact-btn">카톡 상담</a>
-            <a href="#" class="contact-btn outline">네이버 예약</a>
+            <a href="https://pf.kakao.com/_NDmwX" target="_blank" rel="noopener" class="contact-btn">카톡 상담</a>
+            <a href="https://map.naver.com/p/entry/place/2041623550?placePath=%2Fhome%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607142021%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.1068893&amp;lat=37.5161072&amp;c=15.00,0,0,0,dh" target="_blank" rel="noopener" class="contact-btn outline">네이버 예약</a>
           </div>
 
           <!-- 진료시간 -->

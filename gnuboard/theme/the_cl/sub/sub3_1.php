@@ -135,7 +135,7 @@ include_once(G5_PATH.'/head.php');
     <div class="ed-card2 reveal reveal-delay-1" style="text-align: center;">
       <div class="ed-card2__no" style="margin: 0 auto 18px;">💬</div>
       <h3 class="ed-card2__title">카카오톡 24시간 문의</h3>
-      <a href="#" class="ed-pill" style="margin: 14px 0; background: #FEE500; color: #391B1B;">삼성더클성장 채널상담</a>
+      <a href="https://pf.kakao.com/_NDmwX" target="_blank" rel="noopener" class="ed-pill" style="margin: 14px 0; background: #FEE500; color: #391B1B;">삼성더클성장 채널상담</a>
       <p class="ed-card2__desc">채널을 추가하시면 예약일 알림 서비스와 1:1 채팅 문의를 자유롭게 이용하실 수 있습니다.</p>
     </div>
   </div>

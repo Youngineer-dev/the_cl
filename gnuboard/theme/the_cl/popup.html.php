@@ -30,12 +30,7 @@ $popup_slides = array(
     array(
         'title' => '사전 예약 안내',
         'image' => $G5_URL.'/img/popup_notice.png?v=2',
-        'link'  => $G5_URL.'/sub/sub4_3_view.php?id=3',
-    ),
-    array(
-        'title' => '진료일정 안내',
-        'image' => $G5_URL.'/img/popup_2.png?v=1',
-        'link'  => '',
+        'link'  => $G5_URL.'/sub/sub4_3_view.php?id=1',
     ),
 );
 

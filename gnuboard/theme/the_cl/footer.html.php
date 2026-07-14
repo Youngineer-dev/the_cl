@@ -51,13 +51,13 @@ if (!isset($G5_URL)) {
 
   <div class="quick-menu" id="quickMenu">
     <div class="quick-items" id="quickItems">
-      <button class="quick-btn kakao" title="카톡상담">
+      <button class="quick-btn kakao" title="카톡상담" onclick="window.open('https://pf.kakao.com/_NDmwX', '_blank')">
         <svg class="q-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 3.185-9 7.11 0 2.52 1.658 4.735 4.148 5.922-.26 1.004-.945 3.636-1.082 4.18-.173.694.256.685.538.497.222-.147 3.522-2.392 4.933-3.353.473.074.96.114 1.463.114 4.97 0 9-3.185 9-7.11S16.97 3 12 3z"/></svg>
       </button>
-      <button class="quick-btn naver" title="네이버예약" onclick="window.open('#', '_blank')">
+      <button class="quick-btn naver" title="네이버예약" onclick="window.open('https://map.naver.com/p/entry/place/2041623550?placePath=%2Fhome%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607142021%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.1068893&amp;lat=37.5161072&amp;c=15.00,0,0,0,dh', '_blank')">
         <svg class="q-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16.273 12.845 7.376 0H0v24h7.726V11.155L16.624 24H24V0h-7.727z"/></svg>
       </button>
-      <button class="quick-btn blog" title="네이버블로그" onclick="window.open('https://blog.naver.com/', '_blank')">
+      <button class="quick-btn blog" title="네이버블로그" onclick="window.open('https://blog.naver.com/snake5320', '_blank')">
         <svg class="q-icon" viewBox="0 0 24 24" fill="currentColor">
           <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7.6 11.5H9.6v-2h2.8c.8 0 1.4-.4 1.4-1.1s-.6-1-1.4-1H9.6V6.6h3.1c1.8 0 3.2.7 3.2 2.4 0 1-.6 1.7-1.5 2.1.9.3 1.5 1 1.5 2.1 0 1.7-1.4 2.3-3.5 2.3z"/>
         </svg>
@@ -79,13 +79,13 @@ if (!isset($G5_URL)) {
 
   <!-- 모바일 하단 퀵 메뉴 (모바일에서만 노출) -->
   <nav class="mobile-quick-bar" id="mobileQuickBar" aria-label="빠른 메뉴">
-    <a class="mqb-item" href="#" target="_blank" rel="noopener">
+    <a class="mqb-item" href="https://pf.kakao.com/_NDmwX" target="_blank" rel="noopener">
       <span class="mqb-ico mqb-ico-kakao">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 3.185-9 7.11 0 2.52 1.658 4.735 4.148 5.922-.26 1.004-.945 3.636-1.082 4.18-.173.694.256.685.538.497.222-.147 3.522-2.392 4.933-3.353.473.074.96.114 1.463.114 4.97 0 9-3.185 9-7.11S16.97 3 12 3z"/></svg>
       </span>
       <span class="mqb-label">카카오톡</span>
     </a>
-    <a class="mqb-item" href="#" target="_blank" rel="noopener">
+    <a class="mqb-item" href="https://map.naver.com/p/entry/place/2041623550?placePath=%2Fhome%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607142021%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.1068893&amp;lat=37.5161072&amp;c=15.00,0,0,0,dh" target="_blank" rel="noopener">
       <span class="mqb-ico mqb-ico-naver">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.273 12.845 7.376 0H0v24h7.726V11.155L16.624 24H24V0h-7.727z"/></svg>
       </span>

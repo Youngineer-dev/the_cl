@@ -61,7 +61,7 @@ $canonical_host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localh
 $canonical_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $canonical_url = $canonical_proto . '://' . $canonical_host . $canonical_path;
 $og_url = $canonical_proto . '://' . $canonical_host . $_SERVER['REQUEST_URI'];
-$og_image = G5_THEME_URL . '/img/brand_logo.png'; // 기본 대표 이미지
+$og_image = G5_THEME_URL . '/img/og.png'; // 기본 대표 이미지
 ?>
 <link rel="canonical" href="<?php echo htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8'); ?>">
 <meta property="og:type" content="website">

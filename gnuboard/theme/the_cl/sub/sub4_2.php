@@ -373,7 +373,7 @@ include_once(G5_PATH.'/head.php');
   <div class="faq-blog-cta reveal">
     <span class="cta-label">추가로 더 궁금한 점이 있으신가요?</span>
     <!-- TODO: href 에 실제 블로그 주소를 입력해 주세요 -->
-    <a href="#" target="_blank" rel="noopener" class="cta-btn">
+    <a href="https://blog.naver.com/snake5320" target="_blank" rel="noopener" class="cta-btn">
       블로그에서 더 많은 성장 이야기 보기 <span aria-hidden="true">→</span>
     </a>
   </div>
