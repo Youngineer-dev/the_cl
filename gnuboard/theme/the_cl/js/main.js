@@ -509,3 +509,25 @@ function goToNaverMap(e) {
     window.open(pcUrl, '_blank');
   }
 }
+
+// 카카오맵 길찾기 PC/모바일 분기 처리 함수 (place.map.kakao.com/155695442)
+function goToKakaoMap(e) {
+  if (e) e.preventDefault();
+
+  var webUrl = "https://map.kakao.com/link/to/155695442";
+  var appUrl = "kakaomap://route?ep=37.5161072,127.1068893&by=CAR";
+
+  var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    var clickedAt = +new Date();
+    window.location.href = appUrl;
+    setTimeout(function() {
+      if (+new Date() - clickedAt < 2000) {
+        window.location.href = webUrl;
+      }
+    }, 1500);
+  } else {
+    window.open(webUrl, '_blank');
+  }
+}

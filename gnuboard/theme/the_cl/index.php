@@ -403,7 +403,7 @@ include_once(G5_THEME_PATH.'/head.php');
                 <path d="M16.2 3H21v18h-4.8l-8.4-12v12H3V3h4.8l8.4 12z"/>
               </svg>네이버 길찾기
             </a>
-            <a href="#" class="map-btn">
+            <a href="#" onclick="goToKakaoMap(event)" class="map-btn">
               <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #FEE500; flex-shrink: 0; filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.25)); margin-right: 6px;">
                 <path d="M12 3c-5.5 0-10 3.8-10 8.5 0 3.1 2 5.8 5 7.2l-1.3 4.8c-.1.3 0 .6.2.8.1.1.3.2.5.2.1 0 .2 0 .3-.1l5.6-3.7c.9.2 1.8.3 2.7.3 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/>
               </svg>카카오 길찾기
