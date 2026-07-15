@@ -1368,7 +1368,8 @@ body.nav-open .site-header .hamburger span {
   font-style: italic;
   color: var(--c-primary);
   opacity: 0.5;
-  padding-right: 60px;
+  /* 세트 간 간격은 .sep margin과 동일하게 유지 (추가 padding 없음) */
+  padding-right: 0;
   flex-shrink: 0;
 }
 
