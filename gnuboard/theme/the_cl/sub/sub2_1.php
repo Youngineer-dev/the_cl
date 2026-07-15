@@ -1,8 +1,40 @@
 <?php
-$page_title = "성장 평가";
+$page_title = "성장평가 · 예상키";
+$page_description = "잠실 삼성더클성장의원의 과학적인 성장 평가 및 예상키 측정 프로그램을 통해 우리 아이의 성장 템포와 정밀 데이터를 진단하세요.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* Clinic/Info 서브페이지 모바일 타이포 · 여백 보완 (PC 레이아웃 유지) */
+@media (max-width: 768px) {
+  .ed-split__title--simple,
+  .ed-split__title {
+    word-break: keep-all;
+    letter-spacing: -0.4px;
+  }
+  .ed-split__body .lead {
+    word-break: keep-all;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+  }
+  .ed-features {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-top: 60px"] {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-bottom: 80px"] {
+    padding-bottom: 48px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -10,8 +42,8 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-overlay"></div>
   <div class="sub-hero-content reveal">
     <p class="sub-hero-category">Clinic</p>
-    <h1 class="sub-hero-title">성장 평가</h1>
-    <p class="sub-hero-subtitle">체계적인 데이터 기반 성장 예측</p>
+    <h1 class="sub-hero-title">소아 성장평가 · 예상키 진단</h1>
+    <p class="sub-hero-subtitle">더클 성장잠재력 분석 클리닉</p>
   </div>
 </section>
 
@@ -19,11 +51,11 @@ include_once(G5_PATH.'/head.php');
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Clinic</span></li>
       <li class="separator">></li>
-      <li class="current">성장 평가</li>
+      <li class="current">성장평가 · 예상키</li>
     </ul>
   </div>
 </div>
@@ -32,74 +64,131 @@ include_once(G5_PATH.'/head.php');
 <main class="sub-main">
   <div class="container">
 
-<!-- 스플릿 인트로 (텍스트 좌 / 겹친 이미지 우) -->
-<section class="ed-split reveal">
-  <div class="ed-split__text">
-    <span class="ed-eyebrow">Growth Evaluation</span>
-    <h2 class="ed-split__title">
-      <span class="i1">키와 체중을</span>
-      <span class="i2">기록하는 것을 넘어,</span>
-      <span class="i3"><strong>미래 키를 예측</strong>합니다</span>
-    </h2>
-    <div class="ed-split__body">
-      <p class="lead">
-        뼈 나이, 유전적 신장 잠재력, 혈액 내 호르몬 농도를 종합 분석합니다.
-      </p>
-      <p>
-        빅데이터와 연계한 첨단 예측 기법으로 최종 신장의 오차율을 철저히 낮춘
-        과학적 리포트를 드립니다. 막연한 기대가 아닌, 데이터가 말하는 성장의 방향을 제시합니다.
-      </p>
-    </div>
-    <a href="<?php echo $G5_URL; ?>/sub/sub3_2.php" class="ed-pill ed-split__cta">진료 절차 안내 →</a>
-  </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="성장 평가 데이터" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="정밀 계측" class="ed-collage__sub">
-  </div>
-</section>
+    <!-- ============================================================
+         SPLIT INTRO (성장 잠재력 인트로)
+         ============================================================ -->
+    <section class="ed-split reveal">
+      <div class="ed-split__text">
+        <span class="ed-eyebrow">더클 성장잠재력 분석 클리닉</span>
+        <h2 class="ed-split__title ed-split__title--simple">
+          현재 키보다 중요한 것은 <span class="br-all" aria-hidden="true"></span> 아이의 <strong>성장 잠재력</strong>입니다
+        </h2>
+        <div class="ed-split__body" style="margin-top: 24px;">
+          <p class="lead">
+            더클은 성장곡선, 성장속도, 사춘기, 뼈나이, 부모키를 종합적으로 분석하여 아이에게 맞는 성장 전략을 제시합니다.
+          </p>
+        </div>
+      </div>
+      <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
+    </section>
 
-<!-- 세로 프로세스 (4단계) -->
-<section class="ed-features" style="padding-top: 40px;">
-  <div class="ed-sectlabel reveal">
-    <span class="ed-kicker">Evaluation Flow</span>
-    <h2>정밀 성장 평가 <strong>4단계</strong></h2>
-  </div>
+    <!-- ============================================================
+         SELF CHECK (성장 고민 체크리스트)
+         ============================================================ -->
+    <section class="ed-check reveal" style="margin-top: 60px;">
+      <div class="ed-check__head">
+        <span class="ed-kicker">Self Check</span>
+        <p class="ed-check__label">이런 고민이 <br class="pc-only"> 한 번이라도 있었다면</p>
+      </div>
+      <ul class="ed-check__list">
+        <li class="ed-check__item"><span class="ed-check__num">01</span><p>우리 아이는 최종적으로 몇 cm까지 클 수 있을까?</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">02</span><p>지금 성장 속도는 정상일까?</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">03</span><p>사춘기가 너무 빠르거나 늦은 것은 아닐까?</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">04</span><p>부모 키를 고려하면 더 클 수 있는 여지가 있을까?</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">05</span><p>성장호르몬 치료가 필요한 상황일까?</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">06</span><p>아직 문제는 없지만 성장 상태를 한번 점검해보고 싶다</p></li>
+      </ul>
+    </section>
 
-  <div class="ed-steps" style="margin-top: 30px;">
-    <div class="ed-step reveal">
-      <div class="ed-step__num"><span>01</span></div>
-      <div class="ed-step__body">
-        <span class="ed-step__eyebrow">Measurement</span>
-        <h3 class="ed-step__title">신체 초정밀 계측</h3>
-        <p class="ed-step__desc">자동 디지털 신장 측정기로 아침/오후 편차를 감안한 고도화된 정량 계측을 시행하고, BMI와 세부 체성분을 자동 환산합니다.</p>
+    <!-- ============================================================
+         EVALUATION PROCESS (성장 및 예상키 평가 과정 Step 1 ~ 6)
+         ============================================================ -->
+    <section class="ed-features" style="padding-top: 60px; padding-bottom: 20px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px;">
+        <span class="ed-kicker">Evaluation Flow</span>
+        <h2>더클 성장 잠재력, <strong>예상키 평가 과정</strong></h2>
       </div>
-    </div>
-    <div class="ed-step reveal reveal-delay-1">
-      <div class="ed-step__num"><span>02</span></div>
-      <div class="ed-step__body">
-        <span class="ed-step__eyebrow">Bone Age AI</span>
-        <h3 class="ed-step__title">골연령 정밀 촬영 및 AI 분석</h3>
-        <p class="ed-step__desc">저선량 X-ray로 좌측 손목을 촬영하고, 소아 골성숙도 판정 전용 솔루션을 가동하여 뼈의 실제 생체 나이를 도출합니다.</p>
+
+      <div class="ed-steps" style="margin-top: 30px;">
+        <!-- Step 1 -->
+        <div class="ed-step reveal">
+          <div class="ed-step__num"><span>01</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 1</span>
+            <h3 class="ed-step__title">기본 신체 검진</h3>
+            <p class="ed-step__desc">
+              <strong>가족력 · 과거력 · 현 병력 청취</strong>: 유전적 소인 파악 및 성장에 영향을 줄 수 있는 기존 질환 유무 확인<br>
+              <strong>신체 전반 자세평가</strong>: 거북목, 척추 정렬, 골반 틀어짐 등 성장을 방해하는 체형 불균형 분석<br>
+              <strong>정밀 신체진찰 소견</strong>: 전문의의 세밀한 진찰을 통해 전반적인 상태 확인
+            </p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="ed-step reveal reveal-delay-1">
+          <div class="ed-step__num"><span>02</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 2</span>
+            <h3 class="ed-step__title">성장곡선 분석</h3>
+            <p class="ed-step__desc"><strong>현재 키 · 체중 · 성장 속도</strong>: 또래 표준 데이터와 비교하여 아이의 현재 성장 위치와 백분위 확인</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="ed-step reveal reveal-delay-2">
+          <div class="ed-step__num"><span>03</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 3</span>
+            <h3 class="ed-step__title">뼈나이 평가</h3>
+            <p class="ed-step__desc"><strong>성숙도 · 잔여성장</strong>: X-ray 검사를 통한 실제 뼈나이 측정 및 앞으로 자랄 수 있는 기간 예측</p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="ed-step reveal reveal-delay-3">
+          <div class="ed-step__num"><span>04</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 4</span>
+            <h3 class="ed-step__title">부모키 · 목표키 분석</h3>
+            <p class="ed-step__desc"><strong>유전적 성장잠재력</strong>: 부모님의 신장을 바탕으로 산출한 일차적인 유전적 목표치 분석</p>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="ed-step reveal reveal-delay-4">
+          <div class="ed-step__num"><span>05</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 5</span>
+            <h3 class="ed-step__title">성장 · 사춘기 혈액검사</h3>
+            <p class="ed-step__desc"><strong>성장 및 성호르몬 분석</strong>: IGF-1(성장호르몬 결합단백), LH/FSH, E2/T 검사를 통해 사춘기 진행 단계와 호르몬 밸런스 평가</p>
+          </div>
+        </div>
+        <!-- Step 6 -->
+        <div class="ed-step reveal reveal-delay-5">
+          <div class="ed-step__num"><span>06</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 6</span>
+            <h3 class="ed-step__title">건강 · 대사 상태 평가</h3>
+            <p class="ed-step__desc"><strong>기초 대사 및 영양 분석</strong>: 빈혈, 비타민D, 갑상선 기능, 간, 신장 기능 검사 및 체성분(InBody) 분석</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="ed-step reveal reveal-delay-2">
-      <div class="ed-step__num"><span>03</span></div>
-      <div class="ed-step__body">
-        <span class="ed-step__eyebrow">Hormone Test</span>
-        <h3 class="ed-step__title">성장 인자 호르몬 검사</h3>
-        <p class="ed-step__desc">채혈 검사로 인슐린양 성장인자(IGF-1)와 결합 단백질 수치를 측정해 현재 호르몬 대사 작용이 활발한지 점검합니다.</p>
+    </section>
+
+    <!-- ============================================================
+         COMPREHENSIVE SOLUTION (종합 성장잠재력 분석)
+         ============================================================ -->
+    <section style="padding-top: 60px; padding-bottom: 80px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px; text-align: center;">
+        <span class="ed-kicker">Comprehensive Solution</span>
+        <h2>종합 <strong>성장잠재력 분석</strong></h2>
+        <p style="font-size: 15px; color: var(--c-text-light); margin-top: 10px; line-height: 1.6; word-break: keep-all;">
+          앞선 6단계의 정밀 검사 결과를 종합하여 <br class="mo-only">더클만의 최종 성장 솔루션을 도출합니다.
+        </p>
       </div>
-    </div>
-    <div class="ed-step reveal reveal-delay-3">
-      <div class="ed-step__num"><span>04</span></div>
-      <div class="ed-step__body">
-        <span class="ed-step__eyebrow">Final Report</span>
-        <h3 class="ed-step__title">최종 성장 리포트 발급</h3>
-        <p class="ed-step__desc">부모님의 유전 신장(MPH)과 종합 분석 데이터를 결합하여 최종 예상 신장과 분기별 권장 성장 목표를 브리핑합니다.</p>
+      
+      <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <span class="ed-pill-badge">예상 성인키 예측</span>
+        <span class="ed-pill-badge">성장을 가로막는 방해요인 감별</span>
+        <span class="ed-pill-badge">아이 맞춤형 1:1 성장전략 수립</span>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
   </div>
 </main>

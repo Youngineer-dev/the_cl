@@ -16,13 +16,9 @@ if (!get_cookie("g5_view_gallery_{$id}")) {
     $post['wr_hit'] += 1;
 }
 
-// 첨부 이미지 조회
+// 첨부 이미지 조회 (가오픈: 준비중 폴백 이미지 미사용)
 $file = sql_fetch(" SELECT bf_file FROM {$g5['board_file_table']} WHERE bo_table = 'gallery' AND wr_id = '$id' AND bf_no = 0 ");
-if ($file['bf_file']) {
-    $thumb = G5_DATA_URL . '/file/gallery/' . $file['bf_file'];
-} else {
-    $thumb = G5_THEME_URL . '/img/programs.png';
-}
+$thumb = (!empty($file['bf_file'])) ? (G5_DATA_URL . '/file/gallery/' . $file['bf_file']) : '';
 
 $post['subject'] = get_text($post['wr_subject']);
 $post['writer'] = get_text($post['wr_name']);
@@ -52,6 +48,43 @@ $nav = [
 $list_url = G5_THEME_URL . '/sub/sub4_1.php';
 ?>
 
+<style>
+/* 정책·회원·커뮤니티 페이지 모바일 가독성 보완 */
+@media (max-width: 768px) {
+  .privacy-container,
+  .terms-container {
+    padding: 20px 0 !important;
+  }
+  .privacy-body,
+  .terms-body,
+  .board-intro {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  .auth-card-wrap,
+  .write-form-wrap {
+    margin-top: 12px;
+  }
+  .sub-intro-text .section-title {
+    word-break: keep-all;
+  }
+  .faq-blog-cta {
+    padding: 28px 18px !important;
+  }
+  .board-view__title {
+    word-break: keep-all;
+  }
+  .write-form-card {
+    padding: 28px 16px !important;
+  }
+}
+@media (max-width: 480px) {
+  .auth-card-title,
+  .write-form-title {
+    font-size: 20px !important;
+  }
+}
+</style>
 <!-- SUB HERO -->
 <section class="sub-hero">
   <div class="sub-hero-bg"></div>
@@ -67,7 +100,7 @@ $list_url = G5_THEME_URL . '/sub/sub4_1.php';
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Community</span></li>
       <li class="separator">></li>
@@ -96,9 +129,11 @@ $list_url = G5_THEME_URL . '/sub/sub4_1.php';
 
       <!-- 본문 -->
       <div class="board-view__body">
+        <?php if ($thumb) { ?>
         <figure class="board-view__figure">
           <img src="<?php echo $thumb; ?>" alt="<?php echo $post['subject']; ?>">
         </figure>
+        <?php } ?>
 
         <?php if (!empty($stats)): ?>
         <div class="board-view__stats">

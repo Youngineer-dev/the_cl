@@ -171,6 +171,7 @@
       hamburger.classList.toggle('active');
       const isOpen = navOverlay.classList.toggle('open');
       document.body.style.overflow = isOpen ? 'hidden' : '';
+      document.body.classList.toggle('nav-open', isOpen);
       if (isOpen) {
         navTarget = navCurrent = 0;
         applyNav();
@@ -183,6 +184,7 @@
       hamburger.classList.remove('active');
       navOverlay.classList.remove('open');
       document.body.style.overflow = '';
+      document.body.classList.remove('nav-open');
       isDragging = false;
     };
 
@@ -245,23 +247,13 @@
     });
   });
 
-  // --- Parallax effect on hero ---
-  const heroBg = document.querySelector('.hero-bg');
-  const heroParallax = () => {
-    if (!heroBg) return;
-    const scrollY = window.scrollY;
-    const heroH = document.querySelector('.hero')?.offsetHeight || 600;
-
-    if (scrollY < heroH) {
-      heroBg.style.transform = `scale(${1.05 + scrollY * 0.0002}) translateY(${scrollY * 0.3}px)`;
-    }
-  };
+  /* 히어로 패럴랙스(JS)는 제거됨
+     — CSS heroZoom 애니메이션이 transform 을 덮어써 시각 효과가 없었고,
+     스크롤마다 offsetHeight 를 읽어 강제 레이아웃(재계산)만 유발해
+     PC 스크롤 버벅임의 원인이 되었음 */
 
   // --- Event Listeners ---
-  window.addEventListener('scroll', () => {
-    handleScroll();
-    heroParallax();
-  }, { passive: true });
+  window.addEventListener('scroll', handleScroll, { passive: true });
 
   window.addEventListener('resize', () => {
     // 뷰포트 변경 시 필요한 로직 (현재는 옵저버가 자동 처리)
@@ -272,6 +264,133 @@
     handleScroll();
     initReveal();
   });
+
+  /* ============================================================
+     BREADCRUMB DROPDOWN
+     - 카테고리 클릭 → 전체 카테고리 팝업
+     - 현재 페이지 클릭 → 해당 카테고리 내 메뉴 팝업
+     ============================================================ */
+  (function initBreadcrumbDropdown() {
+    const bc = document.querySelector('.breadcrumb');
+    if (!bc) return;
+
+    // 브레드크럼은 /sub/ 안의 페이지에만 존재하므로 상대 경로로 링크
+    // ※ 상단 GNB 메뉴(header.html.php) + 하단 Policy 링크(footer.html.php)와
+    //    동일한 구조를 유지할 것 — 메뉴 변경 시 여기도 함께 수정
+    const CATEGORIES = [
+      { label: 'About', href: 'sub1_1.php' },
+      { label: 'Clinic', href: 'sub2_1.php' },
+      { label: 'Community', href: 'sub4_2.php' },
+      { label: 'Policy', href: 'privacy.php' }
+    ];
+    const PAGES = {
+      about: [
+        { label: '병원 소개', href: 'sub1_1.php' },
+        { label: '의료진 소개', href: 'sub1_3.php' },
+        { label: '진료 시간', href: 'sub3_1.php' },
+        { label: '둘러보기', href: 'sub1_4.php' },
+        { label: '오시는 길', href: 'sub1_5.php' }
+      ],
+      clinic: [
+        { label: '성장평가 · 예상키', href: 'sub2_1.php' },
+        { label: '저신장', href: 'sub2_2.php' },
+        { label: '성조숙증', href: 'sub2_3.php' },
+        { label: '소아비만', href: 'sub2_4.php' },
+        { label: '저체중', href: 'sub2_5.php' },
+        { label: '알레르기', href: 'sub2_6.php' }
+      ],
+      community: [
+        { label: '자주묻는 질문', href: 'sub4_2.php' },
+        { label: '공지사항', href: 'sub4_3.php' }
+      ],
+      policy: [
+        { label: '개인정보처리방침', href: 'privacy.php' },
+        { label: '이용약관', href: 'terms.php' },
+        { label: '비급여항목', href: 'uninsured.php' }
+      ]
+    };
+
+    const items = Array.prototype.filter.call(
+      bc.children,
+      (li) => !li.classList.contains('separator')
+    );
+    if (items.length < 3) return;
+
+    const catLi = items[1];
+    const curLi = items[items.length - 1];
+    const catKey = (catLi.textContent || '').trim().toLowerCase();
+    const curFile = (location.pathname.split('/').pop() || '').toLowerCase();
+
+    const closeAll = () => {
+      document.querySelectorAll('.bc-dropdown.open').forEach((d) => d.classList.remove('open'));
+      document.querySelectorAll('.bc-trigger.open').forEach((t) => {
+        t.classList.remove('open');
+        t.setAttribute('aria-expanded', 'false');
+      });
+    };
+
+    const attach = (li, list, isActive) => {
+      if (!list || !list.length) return;
+      li.classList.add('bc-trigger');
+      li.setAttribute('tabindex', '0');
+      li.setAttribute('role', 'button');
+      li.setAttribute('aria-haspopup', 'true');
+      li.setAttribute('aria-expanded', 'false');
+
+      const caret = document.createElement('span');
+      caret.className = 'bc-caret';
+      caret.textContent = '▾';
+      li.appendChild(caret);
+
+      const drop = document.createElement('ul');
+      drop.className = 'bc-dropdown';
+      list.forEach((item) => {
+        const a = document.createElement('a');
+        a.href = item.href;
+        a.textContent = item.label;
+        if (isActive(item)) a.classList.add('active');
+        const w = document.createElement('li');
+        w.appendChild(a);
+        drop.appendChild(w);
+      });
+      li.appendChild(drop);
+
+      const toggle = () => {
+        const wasOpen = drop.classList.contains('open');
+        closeAll();
+        if (!wasOpen) {
+          drop.classList.add('open');
+          li.classList.add('open');
+          li.setAttribute('aria-expanded', 'true');
+        }
+      };
+      li.addEventListener('click', (e) => {
+        if (e.target.closest('.bc-dropdown')) return; // 팝업 내 링크는 그대로 이동
+        e.preventDefault();
+        toggle();
+      });
+      li.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    };
+
+    // 카테고리 → 전체 카테고리 목록
+    attach(catLi, CATEGORIES, (it) => it.label.toLowerCase() === catKey);
+    // 현재 페이지 → 현재 카테고리 내 메뉴 목록
+    if (curLi !== catLi) {
+      attach(curLi, PAGES[catKey] || [], (it) => it.href.toLowerCase() === curFile);
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.bc-trigger')) closeAll();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAll();
+    });
+  })();
 
   /* ============================================================
      MAIN POPUP
@@ -329,102 +448,29 @@
     popup.addEventListener('mouseenter', stopAuto);
     popup.addEventListener('mouseleave', startAuto);
 
-    // --- 드래그 이동 (이미지 스테이지를 핸들로 사용) ---
-    const handle = document.getElementById('popupHandle');
-    let dragging = false;
-    let startX = 0, startY = 0;
-    let baseX = 0, baseY = 0; // 드래그 시작 시점의 오프셋(px)
-    let offX = 0, offY = 0;   // 현재 오프셋(px)
-    let moved = false;
-
-    const applyOffset = () => {
-      popup.style.setProperty('--px', offX + 'px');
-      popup.style.setProperty('--py', offY + 'px');
-    };
-
-    // 팝업이 화면 밖으로 나가지 않도록 오프셋 범위 제한
-    const clamp = () => {
-      const margin = 12;
-      const maxX = Math.max(0, (window.innerWidth - popup.offsetWidth) / 2 - margin);
-      const maxY = Math.max(0, (window.innerHeight - popup.offsetHeight) / 2 - margin);
-      offX = Math.max(-maxX, Math.min(maxX, offX));
-      offY = Math.max(-maxY, Math.min(maxY, offY));
-    };
-
-    if (handle) {
-      handle.addEventListener('pointerdown', (e) => {
-        // 닫기 버튼 위에서는 드래그 시작하지 않음
-        if (e.target.closest('.popup-close')) return;
-        dragging = true;
-        moved = false;
-        startX = e.clientX;
-        startY = e.clientY;
-        baseX = offX;
-        baseY = offY;
-        popup.classList.add('is-dragging');
-        stopAuto();
-        if (handle.setPointerCapture) {
-          try { handle.setPointerCapture(e.pointerId); } catch (err) {}
-        }
-      });
-
-      handle.addEventListener('pointermove', (e) => {
-        if (!dragging) return;
-        const dx = e.clientX - startX;
-        const dy = e.clientY - startY;
-        if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
-        offX = baseX + dx;
-        offY = baseY + dy;
-        clamp();
-        applyOffset();
-      });
-
-      const endDrag = (e) => {
-        if (!dragging) return;
-        dragging = false;
-        popup.classList.remove('is-dragging');
-        if (handle.releasePointerCapture && e) {
-          try { handle.releasePointerCapture(e.pointerId); } catch (err) {}
-        }
-        startAuto();
-      };
-      handle.addEventListener('pointerup', endDrag);
-      handle.addEventListener('pointercancel', endDrag);
-      // 드래그 후 헤더 내 의도치 않은 클릭 방지
-      handle.addEventListener('click', (e) => {
-        if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
-      }, true);
-    }
-
-    // 창 크기 변경 시 위치 보정
-    window.addEventListener('resize', () => {
-      clamp();
-      applyOffset();
-    }, { passive: true });
+    // (드래그 기능 제거 완료 - 네이버/카카오 예약 및 공지 이동 링크 네이티브 작동 보장)
 
     // --- 닫기 / 오늘 하루 그만보기 ---
-    const hideCheckbox = document.getElementById('popupHideToday');
+    const hideTodayBtn = document.getElementById('popupHideToday');
 
-    const closePopup = () => {
+    const closePopup = (savePreference = false) => {
       stopAuto();
-      if (hideCheckbox && hideCheckbox.checked) {
+      if (savePreference) {
         try {
           const endOfDay = new Date();
           endOfDay.setHours(23, 59, 59, 999);
           localStorage.setItem(popupKey, String(endOfDay.getTime()));
         } catch (e) { /* 무시 */ }
       }
-      popup.style.transition = 'opacity 0.3s, transform 0.3s';
-      popup.style.opacity = '0';
-      popup.style.pointerEvents = 'none';
-      setTimeout(() => popup.remove(), 300);
+      popup.remove();
     };
 
     const closeX = document.getElementById('popupCloseX');
-    if (closeX) closeX.addEventListener('click', closePopup);
+    if (closeX) closeX.addEventListener('click', () => closePopup(false));
+    if (hideTodayBtn) hideTodayBtn.addEventListener('click', () => closePopup(true));
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && document.body.contains(popup)) closePopup();
+      if (e.key === 'Escape' && document.body.contains(popup)) closePopup(false);
     });
 
     // --- 표시 시작 ---
@@ -440,3 +486,48 @@
     startAuto();
   })();
 })();
+
+// 네이버 지도 길찾기 PC/모바일 분기 처리 함수
+function goToNaverMap(e) {
+  if (e) e.preventDefault();
+  
+  var pcUrl = "https://map.naver.com/p/entry/place/2041623550?placePath=%252Fhome%253Fentry%253Dplt&searchType=place&lng=127.1068893&lat=37.5161072&c=15.00,0,0,0,dh";
+  var mobileWebUrl = "https://m.map.naver.com/menu/route.nhn?dlat=37.5161072&dlng=127.1068893&dname=%EC%82%BC%EC%84%B1%EB%8D%94%ED%81%B4%EC%84%B1%EC%9E%A5%EC%9D%98%EC%9B%90&pathType=0";
+  var appUrl = "nmap://route/public?dlat=37.5161072&dlng=127.1068893&dname=%EC%82%BC%EC%84%B1%EB%8D%94%ED%81%B4%EC%84%B1%EC%9E%A5%EC%9D%98%EC%9B%90&appname=com.thecl";
+  
+  var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  
+  if (isMobile) {
+    var clickedAt = +new Date();
+    window.location.href = appUrl;
+    setTimeout(function() {
+      if (+new Date() - clickedAt < 2000) {
+        window.location.href = mobileWebUrl;
+      }
+    }, 1500);
+  } else {
+    window.open(pcUrl, '_blank');
+  }
+}
+
+// 카카오맵 길찾기 PC/모바일 분기 처리 함수 (place.map.kakao.com/155695442)
+function goToKakaoMap(e) {
+  if (e) e.preventDefault();
+
+  var webUrl = "https://map.kakao.com/link/to/155695442";
+  var appUrl = "kakaomap://route?ep=37.5161072,127.1068893&by=CAR";
+
+  var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    var clickedAt = +new Date();
+    window.location.href = appUrl;
+    setTimeout(function() {
+      if (+new Date() - clickedAt < 2000) {
+        window.location.href = webUrl;
+      }
+    }, 1500);
+  } else {
+    window.open(webUrl, '_blank');
+  }
+}

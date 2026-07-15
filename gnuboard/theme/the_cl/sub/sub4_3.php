@@ -1,5 +1,6 @@
 <?php
 $page_title = "공지사항";
+$page_description = "삼성더클성장의원의 최신 소식, 진료 일정 변경 및 다양한 성장 건강 정보를 신속하게 전해드립니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 
@@ -89,6 +90,43 @@ function custom_paging($total_pages, $page) {
 }
 ?>
 
+<style>
+/* 정책·회원·커뮤니티 페이지 모바일 가독성 보완 */
+@media (max-width: 768px) {
+  .privacy-container,
+  .terms-container {
+    padding: 20px 0 !important;
+  }
+  .privacy-body,
+  .terms-body,
+  .board-intro {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  .auth-card-wrap,
+  .write-form-wrap {
+    margin-top: 12px;
+  }
+  .sub-intro-text .section-title {
+    word-break: keep-all;
+  }
+  .faq-blog-cta {
+    padding: 28px 18px !important;
+  }
+  .board-view__title {
+    word-break: keep-all;
+  }
+  .write-form-card {
+    padding: 28px 16px !important;
+  }
+}
+@media (max-width: 480px) {
+  .auth-card-title,
+  .write-form-title {
+    font-size: 20px !important;
+  }
+}
+</style>
 <!-- SUB HERO -->
 <section class="sub-hero">
   <div class="sub-hero-bg"></div>
@@ -104,7 +142,7 @@ function custom_paging($total_pages, $page) {
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Community</span></li>
       <li class="separator">></li>
@@ -173,7 +211,7 @@ function custom_paging($total_pages, $page) {
     <!-- 글쓰기 버튼 (로그인 회원 전용) -->
     <?php if (isset($is_member) && $is_member) { ?>
     <div class="board-btn-wrap reveal" style="display: flex; justify-content: flex-end; margin-top: 24px;">
-      <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=notice" class="board-btn-write" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 24px; background: var(--c-primary); color: #ffffff; border-radius: 4px; font-size: 13px; font-weight: 500; transition: background 0.3s; box-shadow: 0 4px 10px rgba(46, 139, 87, 0.15);">글쓰기</a>
+      <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=notice" class="board-btn-write" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 24px; background: var(--c-primary); color: #ffffff; border-radius: 4px; font-size: 14px; font-weight: 500; transition: background 0.3s; box-shadow: 0 4px 10px rgba(152, 169, 158, 0.15);">글쓰기</a>
     </div>
     <?php } ?>
 

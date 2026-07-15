@@ -1,8 +1,40 @@
 <?php
-$page_title = "갑상선 질환";
+$page_title = "저체중";
+$page_description = "소아청소년 저체중의 원인을 정확하게 분석하고, 성장에 필요한 영양 공급과 흡수 능력을 개선하는 맞춤 영양 관리 프로그램입니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* Clinic/Info 서브페이지 모바일 타이포 · 여백 보완 (PC 레이아웃 유지) */
+@media (max-width: 768px) {
+  .ed-split__title--simple,
+  .ed-split__title {
+    word-break: keep-all;
+    letter-spacing: -0.4px;
+  }
+  .ed-split__body .lead {
+    word-break: keep-all;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+  }
+  .ed-features {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-top: 60px"] {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-bottom: 80px"] {
+    padding-bottom: 48px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -10,8 +42,8 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-overlay"></div>
   <div class="sub-hero-content reveal">
     <p class="sub-hero-category">Clinic</p>
-    <h1 class="sub-hero-title">갑상선 질환</h1>
-    <p class="sub-hero-subtitle">소아청소년 특화 갑상선 클리닉</p>
+    <h1 class="sub-hero-title">저체중</h1>
+    <p class="sub-hero-subtitle">저체중 대사 클리닉</p>
   </div>
 </section>
 
@@ -19,11 +51,11 @@ include_once(G5_PATH.'/head.php');
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Clinic</span></li>
       <li class="separator">></li>
-      <li class="current">갑상선 질환</li>
+      <li class="current">저체중</li>
     </ul>
   </div>
 </div>
@@ -32,52 +64,138 @@ include_once(G5_PATH.'/head.php');
 <main class="sub-main">
   <div class="container">
 
-<!-- 스플릿 인트로 (텍스트 좌 / 겹친 이미지 우) -->
-<section class="ed-split reveal">
-  <div class="ed-split__text">
-    <span class="ed-eyebrow">Thyroid Disorders</span>
-    <h2 class="ed-split__title">
-      <span class="i1">성장 대사의</span>
-      <span class="i2">사령탑,</span>
-      <span class="i3"><strong>갑상선 호르몬</strong></span>
-    </h2>
-    <div class="ed-split__body">
-      <p class="lead">
-        소아청소년기 갑상선 기능 이상은 골성숙 지연과 성장 부진의 주된 원인이 됩니다.
-      </p>
-      <p>
-        피로감과 집중력 저하뿐 아니라 키 성장에도 직접 영향을 주는 갑상선 호르몬.
-        삼성더클성장의원은 호르몬 수치의 안정적 복원과 장기적인 모니터링을 책임집니다.
-      </p>
-    </div>
-  </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="갑상선 진료" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="호르몬 검사" class="ed-collage__sub">
-  </div>
-</section>
+    <!-- ============================================================
+         SPLIT INTRO (저체중 인트로)
+         ============================================================ -->
+    <section class="ed-split reveal">
+      <div class="ed-split__text">
+        <span class="ed-eyebrow">저체중 대사 클리닉</span>
+        <h2 class="ed-split__title ed-split__title--simple">
+          <strong>살이 안 찌는 아이</strong>, <span class="br-all" aria-hidden="true"></span> 원인에 맞는 영양 평가가 필요합니다
+        </h2>
+        <div class="ed-split__body" style="margin-top: 24px;">
+          <p class="lead">
+            더클은 아이의 성장 흐름, 식사 습관, 체성분, 영양 상태를 함께 살펴 체중 정체의 원인을 찾고, 아이에게 맞는 현실적인 영양 관리 방향을 제안합니다.
+          </p>
+        </div>
+      </div>
+      <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
+    </section>
 
-<!-- 자가체크 밴드 -->
-<section class="ed-check reveal">
-  <div class="ed-check__head">
-    <span class="ed-kicker">Self Check</span>
-    <p class="ed-check__label">소아 갑상선<br>자가 체크리스트</p>
-  </div>
-  <ul class="ed-check__list">
-    <li class="ed-check__item"><span class="ed-check__num">01</span><p>또래에 비해 추위나 더위를 지나치게 많이 탈 때</p></li>
-    <li class="ed-check__item"><span class="ed-check__num">02</span><p>충분히 자도 극심한 피로를 호소하고 활력이 떨어질 때</p></li>
-    <li class="ed-check__item"><span class="ed-check__num">03</span><p>목 앞부분(갑상선 위치)이 불룩하게 튀어나와 보일 때</p></li>
-    <li class="ed-check__item"><span class="ed-check__num">04</span><p>많이 먹는데 살이 빠지거나, 안 먹어도 급격히 찔 때</p></li>
-    <li class="ed-check__item"><span class="ed-check__num">05</span><p>피부가 유난히 거칠고 건조하며 모발이 끊어질 때</p></li>
-    <li class="ed-check__item"><span class="ed-check__num">06</span><p>심박수가 비정상적으로 빨라 가슴이 두근거릴 때</p></li>
-  </ul>
-</section>
+    <!-- ============================================================
+         SELF CHECK (저체중 자가진찰 고민)
+         ============================================================ -->
+    <section class="ed-check reveal" style="margin-top: 60px;">
+      <div class="ed-check__head">
+        <span class="ed-kicker">Self Check</span>
+        <p class="ed-check__label">우리 아이, <br class="pc-only"> 이런 모습이 있나요?</p>
+      </div>
+      <ul class="ed-check__list">
+        <li class="ed-check__item"><span class="ed-check__num">01</span><p>잘 먹이려고 노력해도 체중이 잘 늘지 않는다</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">02</span><p>편식이 심하거나 식사 시간이 늘 스트레스가 된다</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">03</span><p>또래보다 체중 백분위가 낮게 유지된다</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">04</span><p>키는 크는 것 같은데 몸이 마르고 체력이 부족해 보인다</p></li>
+      </ul>
+    </section>
 
-<!-- 닫는 문장 밴드 -->
-<section class="ed-statement reveal">
-  <span class="ed-eyebrow">Our Promise</span>
-  <p>“작은 호르몬의 균형이 아이의 하루와 성장을 바꿉니다.<br>정밀한 진단으로 그 균형을 되찾아 드리겠습니다.”</p>
-</section>
+    <!-- ============================================================
+         EVALUATION PROCESS (저체중 평가 과정 Step 1 ~ 6)
+         ============================================================ -->
+    <section class="ed-features" style="padding-top: 60px; padding-bottom: 20px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px;">
+        <span class="ed-kicker">Evaluation Flow</span>
+        <h2>더클만의 <strong>저체중·영양 대사 평가 과정</strong></h2>
+      </div>
+
+      <div class="ed-steps" style="margin-top: 30px;">
+        <!-- Step 1 -->
+        <div class="ed-step reveal">
+          <div class="ed-step__num"><span>01</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 1</span>
+            <h3 class="ed-step__title">식사 습관과 섭식 행동 평가</h3>
+            <p class="ed-step__desc">
+              아이의 식사량, 편식, 간식·음료 섭취, 식사 환경, 식사 시간의 스트레스 요인을 확인합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="ed-step reveal reveal-delay-1">
+          <div class="ed-step__num"><span>02</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 2</span>
+            <h3 class="ed-step__title">성장도표 분석</h3>
+            <p class="ed-step__desc">
+              현재 키와 체중뿐 아니라 과거 성장 곡선을 함께 확인하여 체중 증가가 언제부터 둔화되었는지 평가합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="ed-step reveal reveal-delay-2">
+          <div class="ed-step__num"><span>03</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 3</span>
+            <h3 class="ed-step__title">체성분 분석</h3>
+            <p class="ed-step__desc">
+              InBody 검사를 통해 근육량, 체지방량, 체수분 상태 등을 확인하고 단순히 마른 체형인지, 영양 보충이 필요한 상태인지 살펴봅니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="ed-step reveal reveal-delay-3">
+          <div class="ed-step__num"><span>04</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 4</span>
+            <h3 class="ed-step__title">성장 목표 범위 확인</h3>
+            <p class="ed-step__desc">
+              부모님의 키와 아이의 성장 흐름을 바탕으로 아이에게 맞는 성장 방향과 추적 목표를 설정합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="ed-step reveal reveal-delay-4">
+          <div class="ed-step__num"><span>05</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 5</span>
+            <h3 class="ed-step__title">영양·대사 혈액검사</h3>
+            <p class="ed-step__desc">
+              필요한 경우 빈혈, 저장철, 비타민 D, 아연, 간·신장 기능, 염증 지표 등 체중 증가와 성장에 영향을 줄 수 있는 요인을 확인합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 6 -->
+        <div class="ed-step reveal reveal-delay-5">
+          <div class="ed-step__num"><span>06</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 6</span>
+            <h3 class="ed-step__title">맞춤 영양 관리 계획</h3>
+            <p class="ed-step__desc">
+              아이의 식사 패턴에 맞춰 칼로리 밀도를 높이는 방법, 식사 행동 교정, 필요 시 영양 보충식 활용까지 현실적으로 안내합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         COMPREHENSIVE GOALS (최종 관리 방향)
+         ============================================================ -->
+    <section style="padding-top: 60px; padding-bottom: 80px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px; text-align: center;">
+        <span class="ed-kicker">Diagnostic Plan</span>
+        <h2>최종 <strong>관리 방향</strong></h2>
+        <p style="font-size: 15px; color: var(--c-text-light); margin-top: 10px; line-height: 1.6; word-break: keep-all;">
+          식생활 습관 개선과 대사 지표 분석을 통해 무리하지 않으면서도 건강하게 증량할 수 있는 관리 로드맵을 설계합니다.
+        </p>
+      </div>
+
+      <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <span class="ed-pill-badge">아이에게 맞는 건강한 체중 증가 목표 설정</span>
+        <span class="ed-pill-badge">부족한 영양소가 있다면 근거에 기반한 보충 계획</span>
+        <span class="ed-pill-badge">부모와 아이 모두 부담을 줄이는 식사 습관 개선</span>
+        <span class="ed-pill-badge">성장 흐름에 따른 주기적 추적 관리</span>
+      </div>
+    </section>
 
   </div>
 </main>

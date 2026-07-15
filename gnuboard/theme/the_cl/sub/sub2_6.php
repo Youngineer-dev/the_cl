@@ -1,8 +1,40 @@
 <?php
-$page_title = "당뇨";
+$page_title = "알레르기";
+$page_description = "어린이 비염, 천식, 아토피 등 소아 알레르기 질환에 대한 정밀 진단 및 원인 항원 맞춤 관리를 시행합니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* Clinic/Info 서브페이지 모바일 타이포 · 여백 보완 (PC 레이아웃 유지) */
+@media (max-width: 768px) {
+  .ed-split__title--simple,
+  .ed-split__title {
+    word-break: keep-all;
+    letter-spacing: -0.4px;
+  }
+  .ed-split__body .lead {
+    word-break: keep-all;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+  }
+  .ed-features {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-top: 60px"] {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-bottom: 80px"] {
+    padding-bottom: 48px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -10,8 +42,8 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-overlay"></div>
   <div class="sub-hero-content reveal">
     <p class="sub-hero-category">Clinic</p>
-    <h1 class="sub-hero-title">당뇨</h1>
-    <p class="sub-hero-subtitle">소아 당뇨의 체계적 관리</p>
+    <h1 class="sub-hero-title">알레르기</h1>
+    <p class="sub-hero-subtitle">성장 방해 알레르기 관리 클리닉</p>
   </div>
 </section>
 
@@ -19,11 +51,11 @@ include_once(G5_PATH.'/head.php');
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Clinic</span></li>
       <li class="separator">></li>
-      <li class="current">당뇨</li>
+      <li class="current">알레르기</li>
     </ul>
   </div>
 </div>
@@ -32,69 +64,128 @@ include_once(G5_PATH.'/head.php');
 <main class="sub-main">
   <div class="container">
 
-<!-- 스플릿 인트로 (미러형: 이미지 좌 / 텍스트 우) -->
-<section class="ed-split ed-split--reverse reveal">
-  <div class="ed-split__text">
-    <span class="ed-eyebrow">Pediatric Diabetes</span>
-    <h2 class="ed-split__title">
-      <span class="i1">성장과 혈당을</span>
-      <span class="i2">함께 살피는</span>
-      <span class="i3"><strong>소아 맞춤 케어</strong></span>
-    </h2>
-    <div class="ed-split__body">
-      <p class="lead">
-        소아 당뇨는 성인 당뇨와 성격이 다르고, 지속적인 성장 발달을 동시에 고려해야 합니다.
-      </p>
-      <p>
-        인슐린 의존성을 정밀하게 파악하여, 아이가 낙인 효과 없이 학교생활을 활발히
-        영위하도록 일상에 밀착해 정성껏 돌봅니다.
-      </p>
-    </div>
-  </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="혈당 관리" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="소아 진료" class="ed-collage__sub">
-  </div>
-</section>
+    <!-- ============================================================
+         SPLIT INTRO (알레르기 인트로)
+         ============================================================ -->
+    <section class="ed-split reveal">
+      <div class="ed-split__text">
+        <span class="ed-eyebrow">알레르기</span>
+        <h2 class="ed-split__title ed-split__title--simple">
+          <strong>성장 방해 알레르기</strong> 관리 클리닉
+        </h2>
+        <div class="ed-split__body" style="margin-top: 24px;">
+          <p class="lead">
+            알레르기 비염과 아토피로 인한 코막힘, 수면장애, 가려움, 잦은 불편감은 아이의 생활 리듬과 성장 환경에 영향을 줄 수 있습니다. 더클은 성장기 아이의 수면과 일상생활을 방해하는 알레르기 요인을 확인하고, 아이에게 맞는 관리 방향을 함께 찾아갑니다.
+          </p>
+        </div>
+      </div>
+      <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
+    </section>
 
-<!-- 빅넘버 리스트 -->
-<section class="ed-features">
-  <div class="ed-sectlabel reveal">
-    <span class="ed-kicker">Care Program</span>
-    <h2>일상을 지키는 <strong>3가지 관리</strong></h2>
-  </div>
+    <!-- ============================================================
+         SELF CHECK (알레르기 자가진찰 고민)
+         ============================================================ -->
+    <section class="ed-check reveal" style="margin-top: 60px;">
+      <div class="ed-check__head">
+        <span class="ed-kicker">Self Check</span>
+        <p class="ed-check__label">이런 경우 <br class="pc-only"> 평가를 권합니다</p>
+      </div>
+      <ul class="ed-check__list">
+        <li class="ed-check__item"><span class="ed-check__num">01</span><p>코막힘 때문에 입으로 숨을 쉬는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">02</span><p>밤에 코가 막혀 자주 깨는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">03</span><p>재채기, 콧물, 코가려움이 반복되는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">04</span><p>아토피로 가려움과 수면장애가 있는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">05</span><p>알레르기 면역치료가 가능한지 궁금한 경우</p></li>
+      </ul>
+    </section>
 
-  <div class="ed-feat reveal">
-    <div class="ed-feat__num">01</div>
-    <div class="ed-feat__body">
-      <h3 class="ed-feat__title">1형 당뇨 특화 인슐린 매니지먼트</h3>
-      <p class="ed-feat__desc">
-        췌장 인슐린 분비 결핍이 원인인 1형 당뇨 아동을 위해 안전한 인슐린 펜 투여법 교육과
-        실시간 연속혈당측정기(CGM) 데이터 모니터링을 통합 지도합니다.
-      </p>
-    </div>
-  </div>
-  <div class="ed-feat reveal reveal-delay-1">
-    <div class="ed-feat__num">02</div>
-    <div class="ed-feat__body">
-      <h3 class="ed-feat__title">인슐린 저항성 개선 (2형 당뇨)</h3>
-      <p class="ed-feat__desc">
-        서구화된 식생활로 증가하는 소아 2형 당뇨를 완화하기 위해 복부 비만을 해소하고
-        췌장의 인슐린 저항성을 떨어뜨리는 라이프 코칭을 적용합니다.
-      </p>
-    </div>
-  </div>
-  <div class="ed-feat reveal reveal-delay-2">
-    <div class="ed-feat__num">03</div>
-    <div class="ed-feat__body">
-      <h3 class="ed-feat__title">학교 및 가정 연계 네트워크</h3>
-      <p class="ed-feat__desc">
-        아이가 학교나 유치원에서 저혈당 응급 상황에 처하지 않도록 가정통신 안내 가이드를
-        보완해 드리고, 대처 약물 상비 매뉴얼을 수립해 드립니다.
-      </p>
-    </div>
-  </div>
-</section>
+    <!-- ============================================================
+         EVALUATION PROCESS (알레르기 평가 과정 Step 1 ~ 5)
+         ============================================================ -->
+    <section class="ed-features" style="padding-top: 60px; padding-bottom: 20px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px;">
+        <span class="ed-kicker">Evaluation Flow</span>
+        <h2>더클만의 <strong>알레르기 평가 과정</strong></h2>
+      </div>
+
+      <div class="ed-steps" style="margin-top: 30px;">
+        <!-- Step 1 -->
+        <div class="ed-step reveal">
+          <div class="ed-step__num"><span>01</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 1</span>
+            <h3 class="ed-step__title">증상 확인</h3>
+            <p class="ed-step__desc">
+              재채기, 콧물, 코막힘, 코골이, 입호흡, 눈·피부 가려움 등 반복되는 증상을 확인합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="ed-step reveal reveal-delay-1">
+          <div class="ed-step__num"><span>02</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 2</span>
+            <h3 class="ed-step__title">알레르기 가능성 평가</h3>
+            <p class="ed-step__desc">
+              증상 양상, 반복 시기, 가족력, 생활환경을 바탕으로 알레르기 비염과 아토피 가능성을 살핍니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="ed-step reveal reveal-delay-2">
+          <div class="ed-step__num"><span>03</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 3</span>
+            <h3 class="ed-step__title">원인 알레르겐 검사</h3>
+            <p class="ed-step__desc">
+              필요 시 MAST 또는 특이 IgE 검사로 주요 알레르겐 감작 여부를 확인합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="ed-step reveal reveal-delay-3">
+          <div class="ed-step__num"><span>04</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 4</span>
+            <h3 class="ed-step__title">생활환경 관리</h3>
+            <p class="ed-step__desc">
+              침구, 실내 먼지, 반려동물, 꽃가루, 피부 보습 등 아이에게 필요한 관리 방법을 안내합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="ed-step reveal reveal-delay-4">
+          <div class="ed-step__num"><span>05</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 5</span>
+            <h3 class="ed-step__title">맞춤 치료 상담</h3>
+            <p class="ed-step__desc">
+              증상 정도와 원인에 따라 약물치료, 환경관리, 피부관리, 필요 시 면역치료 가능성을 상담합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         COMPREHENSIVE GOALS (관리 방향)
+         ============================================================ -->
+    <section style="padding-top: 60px; padding-bottom: 80px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px; text-align: center;">
+        <span class="ed-kicker">Diagnostic Plan</span>
+        <h2>관리 <strong>방향</strong></h2>
+        <p style="font-size: 15px; color: var(--c-text-light); margin-top: 10px; line-height: 1.6; word-break: keep-all;">
+          알레르기 유발 요인을 체계적으로 관리하여 아이가 깊은 수면을 취하고 건강한 일상을 보낼 수 있도록 지원합니다.
+        </p>
+      </div>
+
+      <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <span class="ed-pill-badge">알레르기 원인 확인</span>
+        <span class="ed-pill-badge">비염·아토피 증상 관리</span>
+        <span class="ed-pill-badge">수면과 생활 리듬 개선</span>
+        <span class="ed-pill-badge">성장기 아이의 건강한 성장 환경 관리</span>
+      </div>
+    </section>
 
   </div>
 </main>

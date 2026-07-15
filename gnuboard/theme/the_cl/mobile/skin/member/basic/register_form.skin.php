@@ -60,11 +60,11 @@ include_once(G5_THEME_PATH.'/header.html.php');
             <h4 class="terms-title" style="font-size: 16px; font-weight: 600; color: var(--c-primary); margin-bottom: 20px;">이용약관 및 개인정보 수집 동의</h4>
             
             <div class="terms-box-wrap">
-              <label class="terms-label" style="font-size: 13px; font-weight: 500; color: var(--c-text); display: block; margin-bottom: 8px;">이용약관 (필수)</label>
-              <div class="terms-box" style="height: 120px; overflow-y: auto; padding: 12px; border: 1px solid var(--c-border); border-radius: 4px; font-size: 12px; line-height: 1.6; color: var(--c-text-light); background: var(--c-primary-pale); margin-bottom: 10px;">
+              <label class="terms-label" style="font-size: 14px; font-weight: 500; color: var(--c-text); display: block; margin-bottom: 8px;">이용약관 (필수)</label>
+              <div class="terms-box" style="height: 120px; overflow-y: auto; padding: 12px; border: 1px solid var(--c-border); border-radius: 4px; font-size: 13px; line-height: 1.6; color: var(--c-text-light); background: var(--c-primary-pale); margin-bottom: 10px;">
                 <?php echo get_text($config['cf_stipulation']) ?>
               </div>
-              <label class="remember-me terms-agree" for="agree_terms" style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer;">
+              <label class="remember-me terms-agree" for="agree_terms" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer;">
                 <input type="checkbox" name="agree_terms" id="agree_terms" required>
                 <span class="checkbox-custom"></span>
                 위 이용약관에 동의합니다.
@@ -72,14 +72,14 @@ include_once(G5_THEME_PATH.'/header.html.php');
             </div>
 
             <div class="terms-box-wrap" style="margin-top: 20px;">
-              <label class="terms-label" style="font-size: 13px; font-weight: 500; color: var(--c-text); display: block; margin-bottom: 8px;">개인정보 수집 및 이용 동의 (필수)</label>
-              <div class="terms-box" style="height: 120px; overflow-y: auto; padding: 12px; border: 1px solid var(--c-border); border-radius: 4px; font-size: 12px; line-height: 1.6; color: var(--c-text-light); background: var(--c-primary-pale); margin-bottom: 10px;">
+              <label class="terms-label" style="font-size: 14px; font-weight: 500; color: var(--c-text); display: block; margin-bottom: 8px;">개인정보 수집 및 이용 동의 (필수)</label>
+              <div class="terms-box" style="height: 120px; overflow-y: auto; padding: 12px; border: 1px solid var(--c-border); border-radius: 4px; font-size: 13px; line-height: 1.6; color: var(--c-text-light); background: var(--c-primary-pale); margin-bottom: 10px;">
                 [개인정보 수집 및 이용 항목]<br>
                 1. 수집 항목: 이름, 아이디, 비밀번호, 이메일, 휴대폰 번호<br>
                 2. 수집 목적: 회원 식별, 서비스 안내, 진료 예약 관련 고지<br>
                 3. 보유 및 이용 기간: 회원 탈퇴 시 혹은 법정 의무 보관 기간 종료 시까지
               </div>
-              <label class="remember-me terms-agree" for="agree_privacy" style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer;">
+              <label class="remember-me terms-agree" for="agree_privacy" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer;">
                 <input type="checkbox" name="agree_privacy" id="agree_privacy" required>
                 <span class="checkbox-custom"></span>
                 위 개인정보 수집 및 이용에 동의합니다.
@@ -92,7 +92,7 @@ include_once(G5_THEME_PATH.'/header.html.php');
             <div class="form-group">
               <label for="reg_mb_id" class="form-label">아이디 (필수)</label>
               <input type="text" name="mb_id" value="<?php echo $member['mb_id'] ?>" id="reg_mb_id" <?php echo $required ?> <?php echo $readonly ?> class="form-input" placeholder="영문, 숫자 4~12자" required autocomplete="username">
-              <span id="msg_mb_id" style="font-size: 11px; margin-top: 4px; display: block; color: var(--c-accent-light);"></span>
+              <span id="msg_mb_id" style="font-size: 12px; margin-top: 4px; display: block; color: var(--c-primary-dark);"></span>
             </div>
 
             <div class="form-group">

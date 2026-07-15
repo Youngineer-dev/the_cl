@@ -22,11 +22,8 @@ $result = sql_query($sql);
 $posts = [];
 $num = $total_count - ($page - 1) * $page_rows;
 while ($row = sql_fetch_array($result)) {
-    if ($row['bf_file']) {
-        $thumb = G5_DATA_URL . '/file/gallery/' . $row['bf_file'];
-    } else {
-        $thumb = G5_THEME_URL . '/img/programs.png'; // Fallback
-    }
+    // 가오픈: 준비중 폴백 이미지 미사용 — 실제 업로드 파일만 썸네일로 사용
+    $thumb = $row['bf_file'] ? (G5_DATA_URL . '/file/gallery/' . $row['bf_file']) : '';
 
     $posts[] = [
         'id' => $row['wr_id'],
@@ -64,6 +61,43 @@ function custom_paging($total_pages, $page) {
 }
 ?>
 
+<style>
+/* 정책·회원·커뮤니티 페이지 모바일 가독성 보완 */
+@media (max-width: 768px) {
+  .privacy-container,
+  .terms-container {
+    padding: 20px 0 !important;
+  }
+  .privacy-body,
+  .terms-body,
+  .board-intro {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  .auth-card-wrap,
+  .write-form-wrap {
+    margin-top: 12px;
+  }
+  .sub-intro-text .section-title {
+    word-break: keep-all;
+  }
+  .faq-blog-cta {
+    padding: 28px 18px !important;
+  }
+  .board-view__title {
+    word-break: keep-all;
+  }
+  .write-form-card {
+    padding: 28px 16px !important;
+  }
+}
+@media (max-width: 480px) {
+  .auth-card-title,
+  .write-form-title {
+    font-size: 20px !important;
+  }
+}
+</style>
 <!-- SUB HERO -->
 <section class="sub-hero">
   <div class="sub-hero-bg"></div>
@@ -79,7 +113,7 @@ function custom_paging($total_pages, $page) {
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Community</span></li>
       <li class="separator">></li>
@@ -98,7 +132,6 @@ function custom_paging($total_pages, $page) {
     </div>
     <p class="board-intro reveal">
       모든 치료 사례는 의료법과 개인정보 보호 기준에 따라 철저히 익명화하여 게시됩니다.
-      개별 성장 그래프 등 상세 데이터는 본인 인증을 마친 회원에 한해 열람하실 수 있습니다.
     </p>
 
     <!-- 게시판 상단: 총 건수 + 검색 -->
@@ -119,8 +152,10 @@ function custom_paging($total_pages, $page) {
     <div class="board-gallery reveal">
       <?php foreach ($posts as $post): ?>
       <a href="<?php echo $G5_URL; ?>/sub/sub4_1_view.php?id=<?php echo $post['id']; ?>" class="board-gallery__item">
-        <div class="board-gallery__thumb">
+        <div class="board-gallery__thumb<?php echo $post['thumb'] ? '' : ' board-gallery__thumb--empty'; ?>">
+          <?php if ($post['thumb']) { ?>
           <img src="<?php echo $post['thumb']; ?>" alt="<?php echo $post['subject']; ?>" loading="lazy">
+          <?php } ?>
           <span class="board-gallery__cat"><?php echo $post['cat']; ?></span>
         </div>
         <div class="board-gallery__body">
@@ -142,7 +177,7 @@ function custom_paging($total_pages, $page) {
     <!-- 글쓰기 버튼 (로그인 회원 전용) -->
     <?php if (isset($is_member) && $is_member) { ?>
     <div class="board-btn-wrap reveal" style="display: flex; justify-content: flex-end; margin-top: 24px;">
-      <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=cases" class="board-btn-write" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 24px; background: var(--c-primary); color: #ffffff; border-radius: 4px; font-size: 13px; font-weight: 500; transition: background 0.3s; box-shadow: 0 4px 10px rgba(46, 139, 87, 0.15);">글쓰기</a>
+      <a href="<?php echo $G5_URL; ?>/sub/write.php?bo_table=cases" class="board-btn-write" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 24px; background: var(--c-primary); color: #ffffff; border-radius: 4px; font-size: 14px; font-weight: 500; transition: background 0.3s; box-shadow: 0 4px 10px rgba(152, 169, 158, 0.15);">글쓰기</a>
     </div>
     <?php } ?>
 

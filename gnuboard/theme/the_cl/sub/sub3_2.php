@@ -1,8 +1,40 @@
 <?php
 $page_title = "진료 절차";
+$page_description = "성장 및 성조숙증 검사를 위한 정밀 계측부터 소아내분비 세부전문의 상담까지 이어지는 체계적인 진료 절차를 설명합니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* Clinic/Info 서브페이지 모바일 타이포 · 여백 보완 (PC 레이아웃 유지) */
+@media (max-width: 768px) {
+  .ed-split__title--simple,
+  .ed-split__title {
+    word-break: keep-all;
+    letter-spacing: -0.4px;
+  }
+  .ed-split__body .lead {
+    word-break: keep-all;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+  }
+  .ed-features {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-top: 60px"] {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-bottom: 80px"] {
+    padding-bottom: 48px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -19,7 +51,7 @@ include_once(G5_PATH.'/head.php');
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Info</span></li>
       <li class="separator">></li>
@@ -51,10 +83,7 @@ include_once(G5_PATH.'/head.php');
       </p>
     </div>
   </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="진료 절차" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="진료 대기" class="ed-collage__sub">
-  </div>
+  <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
 </section>
 
 <!-- 세로 프로세스 (5단계) -->

@@ -1,8 +1,40 @@
 <?php
 $page_title = "영양수액";
+$page_description = "성장기 면역력 증진 및 영양 불균형 해소를 돕는 잠실 삼성더클성장의원의 안전하고 정밀하게 조제된 영양수액 클리닉입니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* Clinic/Info 서브페이지 모바일 타이포 · 여백 보완 (PC 레이아웃 유지) */
+@media (max-width: 768px) {
+  .ed-split__title--simple,
+  .ed-split__title {
+    word-break: keep-all;
+    letter-spacing: -0.4px;
+  }
+  .ed-split__body .lead {
+    word-break: keep-all;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+  }
+  .ed-features {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-top: 60px"] {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-bottom: 80px"] {
+    padding-bottom: 48px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -19,7 +51,7 @@ include_once(G5_PATH.'/head.php');
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Clinic</span></li>
       <li class="separator">></li>
@@ -52,10 +84,7 @@ include_once(G5_PATH.'/head.php');
     </div>
     <a href="<?php echo $G5_URL; ?>/sub/sub3_1.php" class="ed-pill ed-split__cta">진료 시간 확인 →</a>
   </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="영양수액 치료실" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="프리미엄 케어" class="ed-collage__sub">
-  </div>
+  <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
 </section>
 
 <!-- 3-up 카드 -->

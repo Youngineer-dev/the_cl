@@ -14,7 +14,7 @@
 * **업로드할 폴더**:
   * `css/` : 테마 전체 스타일시트 파일 (`style.css` - 4,000줄 이상의 테마 디자인 스타일 포함)
   * `js/` : 프론트엔드 인터랙션 스크립트 (`main.js` - Lenis 스크롤, AOS 효과 등 포함)
-  * `img/` : 로고 및 메인/서브페이지 이미지 리소스 5종 (`brand_logo.png`, `doctor.png`, `hero.png`, `interior.png`, `programs.png`)
+  * `img/` : 로고·의료진·히어로·팝업 등 고정 자산 + 페이지/슬롯별 전용 이미지(`home_*`, `clinic_*`, `about_*`, `prog_*`, `case_*` 등)
   * `skin/` : PC 및 모바일 커스텀 회원 스킨
     * **PC 스킨 경로**: `theme/the_cl/skin/member/basic/`
     * **모바일 스킨 경로**: `theme/the_cl/mobile/skin/member/basic/` (그누보드 관리자 페이지에서 모바일 스킨을 활성화하기 위해 필수 업로드 필요)

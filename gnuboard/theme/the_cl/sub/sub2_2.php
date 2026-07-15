@@ -1,8 +1,40 @@
 <?php
 $page_title = "저신장";
+$page_description = "성장 속도가 느린 아이를 위한 저신장 정밀 검사, 골연령(뼈나이) 판독 및 삼성더클만의 맞춤형 성장호르몬 치료 솔루션을 안내합니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* Clinic/Info 서브페이지 모바일 타이포 · 여백 보완 (PC 레이아웃 유지) */
+@media (max-width: 768px) {
+  .ed-split__title--simple,
+  .ed-split__title {
+    word-break: keep-all;
+    letter-spacing: -0.4px;
+  }
+  .ed-split__body .lead {
+    word-break: keep-all;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+  }
+  .ed-features {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-top: 60px"] {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-bottom: 80px"] {
+    padding-bottom: 48px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -10,8 +42,8 @@ include_once(G5_PATH.'/head.php');
   <div class="sub-hero-overlay"></div>
   <div class="sub-hero-content reveal">
     <p class="sub-hero-category">Clinic</p>
-    <h1 class="sub-hero-title">저신장</h1>
-    <p class="sub-hero-subtitle">성장 부진의 근본 원인 해결</p>
+    <h1 class="sub-hero-title">저신장 - 성장호르몬 치료</h1>
+    <p class="sub-hero-subtitle">정밀 저신장 클리닉</p>
   </div>
 </section>
 
@@ -19,7 +51,7 @@ include_once(G5_PATH.'/head.php');
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Clinic</span></li>
       <li class="separator">></li>
@@ -32,118 +64,151 @@ include_once(G5_PATH.'/head.php');
 <main class="sub-main">
   <div class="container">
 
-<!-- ============================================================
-     A. 비대칭 스플릿 인트로 (텍스트 좌 / 겹친 이미지 우)
-     ============================================================ -->
-<section class="ed-split reveal">
-  <div class="ed-split__text">
-    <span class="ed-eyebrow">Short Stature Clinic</span>
-    <h2 class="ed-split__title">
-      <span class="i1">작은 키는</span>
-      <span class="i2">미용이 아니라</span>
-      <span class="i3"><strong>치료의 영역</strong>입니다</span>
-    </h2>
-    <div class="ed-split__body">
-      <p class="lead">
-        저신장은 단순히 키가 작은 고민이 아니라
-        호르몬 결핍, 영양 대사 장애 등 치료가 필요한 질환일 수 있습니다.
-      </p>
+    <!-- ============================================================
+         SPLIT INTRO (저신장 인트로)
+         ============================================================ -->
+    <section class="ed-split reveal">
+      <div class="ed-split__text">
+        <span class="ed-eyebrow">정밀 저신장 클리닉</span>
+        <h2 class="ed-split__title ed-split__title--simple">
+          왜 우리 아이는 <span class="br-all" aria-hidden="true"></span> <strong>또래보다 작을까요?</strong>
+        </h2>
+        <div class="ed-split__body" style="margin-top: 24px;">
+          <p class="lead">
+            아이의 성장곡선과 성장속도를 면밀히 확인하고, 저신장의 원인을 감별하여 성장호르몬 치료가 필요한지, 꾸준한 추적이 필요한지, 생활 관리가 우선인지 판단합니다.
+          </p>
+        </div>
+      </div>
+      <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================================================
+         SELF CHECK (저신장 자가진찰 고민)
+         ============================================================ -->
+    <section class="ed-check reveal" style="margin-top: 60px;">
+      <div class="ed-check__head">
+        <span class="ed-kicker">Self Check</span>
+        <p class="ed-check__label">이런 경우 <br class="pc-only"> 평가가 필요합니다</p>
+      </div>
+      <ul class="ed-check__list">
+        <li class="ed-check__item"><span class="ed-check__num">01</span><p>1년에 4cm 미만으로 자르는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">02</span><p>또래보다 머리 하나 정도 작아 보이는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">03</span><p>성장곡선이 점차 아래로 떨어지는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">04</span><p>부모 키를 고려해도 작다고 느껴지는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">05</span><p>최종키가 걱정되는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">06</span><p>성장호르몬 치료가 도움이 될지 궁금한 경우</p></li>
+      </ul>
+    </section>
+
+    <!-- ============================================================
+         EVALUATION PROCESS (저신장 평가 과정 Step 1 ~ 6)
+         ============================================================ -->
+    <section class="ed-features" style="padding-top: 60px; padding-bottom: 20px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px;">
+        <span class="ed-kicker">Evaluation Flow</span>
+        <h2>더클만의 <strong>저신장 평가 과정</strong></h2>
+      </div>
+
+      <div class="ed-steps" style="margin-top: 30px;">
+        <!-- Step 1 -->
+        <div class="ed-step reveal">
+          <div class="ed-step__num"><span>01</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 1</span>
+            <h3 class="ed-step__title">병력 및 가족력 분석</h3>
+            <p class="ed-step__desc">
+              출생력, 성장 과정, 과거 질환, 복용 약물, 부모님의 키와 가족 성장 패턴을 확인하여 저신장의 원인이 될 수 있는 기본 요인을 살핍니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="ed-step reveal reveal-delay-1">
+          <div class="ed-step__num"><span>02</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 2</span>
+            <h3 class="ed-step__title">성장곡선 및 성장속도 분석</h3>
+            <p class="ed-step__desc">
+              현재 키 한 번의 수치만 보지 않습니다. 과거 성장 기록을 함께 확인하여 성장속도가 유지되고 있는지, 성장곡선에서 이탈하고 있는지 평가합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="ed-step reveal reveal-delay-2">
+          <div class="ed-step__num"><span>03</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 3</span>
+            <h3 class="ed-step__title">유전적 성장 범위 평가</h3>
+            <p class="ed-step__desc">
+              부모님의 키를 바탕으로 목표키와 유전적 성장 범위를 확인합니다.<br>아이의 현재 키와 성장 흐름이 가족적 기대 범위 안에 있는지 분석합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="ed-step reveal reveal-delay-3">
+          <div class="ed-step__num"><span>04</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 4</span>
+            <h3 class="ed-step__title">정밀 신체진찰</h3>
+            <p class="ed-step__desc">
+              체형, 신체 비율, 자세, 사춘기 진행 상태, 성장 관련 이상 소견을 확인합니다.<br>저신장과 관련된 신체적 단서가 있는지 전문의가 직접 평가합니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class="ed-step reveal reveal-delay-4">
+          <div class="ed-step__num"><span>05</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 5</span>
+            <h3 class="ed-step__title">뼈나이·성장판 평가</h3>
+            <p class="ed-step__desc">
+              X-ray를 통해 뼈나이와 성장판 성숙도를 확인합니다.<br>실제 나이와 뼈나이의 차이, 잔여 성장 가능성, 사춘기 진행과의 균형을 함께 봅니다.
+            </p>
+          </div>
+        </div>
+        <!-- Step 6 -->
+        <div class="ed-step reveal reveal-delay-5">
+          <div class="ed-step__num"><span>06</span></div>
+          <div class="ed-step__body">
+            <span class="ed-step__eyebrow">Step 6</span>
+            <h3 class="ed-step__title">저신장 원인 감별 검사</h3>
+            <p class="ed-step__desc">
+              필요한 경우 성장호르몬 축, 갑상선 기능, 빈혈, 비타민 D, 영양 상태, 간·신장 기능, 염증 및 만성질환 가능성을 확인합니다. 성장이 느린 원인이 체질적인지, 치료가 필요한 의학적 원인이 있는지 감별합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         COMPREHENSIVE GOALS (종합 저신장 진단 및 치료 계획)
+         ============================================================ -->
+    <section style="padding-top: 60px; padding-bottom: 40px;">
+      <div class="ed-sectlabel reveal" style="margin-bottom: 30px; text-align: center;">
+        <span class="ed-kicker">Diagnostic Plan</span>
+        <h2>종합 저신장 진단 및 <strong>치료 계획</strong></h2>
+        <p style="font-size: 15px; color: var(--c-text-light); margin-top: 10px; line-height: 1.6; word-break: keep-all;">
+          앞선 평가 결과를 종합하여 아이의 저신장 원인을 분석하고, 성장호르몬 치료가 필요한지, 추적 관찰이 적절한지, 영양·수면·운동 관리가 우선인지 결정합니다.
+        </p>
+      </div>
+
+      <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <span class="ed-pill-badge">성장속도 저하 여부 확인</span>
+        <span class="ed-pill-badge">병적 저신장 원인 감별</span>
+        <span class="ed-pill-badge">뼈나이와 잔여 성장 가능성 평가</span>
+        <span class="ed-pill-badge">성장호르몬 치료 필요성 검토</span>
+        <span class="ed-pill-badge">아이 맞춤형 추적 및 치료 계획 수립</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TREATMENT STATEMENT (성장호르몬 고민 해결 밴드)
+         ============================================================ -->
+    <section class="ed-statement-band reveal">
+      <h3>성장호르몬 치료가 필요한지 고민되시나요?</h3>
       <p>
-        삼성더클성장의원은 막연한 불안이나 과잉 처방을 철저히 배제하고,
-        뼈나이·유전 신장·성장 인자 호르몬을 정밀하게 분석한 객관적 근거 위에서
-        과학적으로 입증된 안전한 성장 솔루션만을 권장합니다.
+        모든 키 작은 아이에게 성장호르몬 치료가 필요한 것은 아닙니다. 더클은 성장속도, 뼈나이, 성장판 상태, 성장잠재력, 혈액검사 결과를 종합적으로 분석하여 치료가 도움이 될 아이를 신중하게 선별합니다.
       </p>
-    </div>
-    <a href="<?php echo $G5_URL; ?>/sub/sub2_1.php" class="ed-pill ed-split__cta">성장 평가 절차 보기 →</a>
-  </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/hero.png" alt="성장 정밀 진단" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="성장 클리닉 공간" class="ed-collage__sub">
-  </div>
-</section>
-
-<!-- ============================================================
-     B. 에디토리얼 자가체크 밴드
-     ============================================================ -->
-<section class="ed-check reveal">
-  <div class="ed-check__head">
-    <span class="ed-kicker">Self Check</span>
-    <p class="ed-check__label">이럴 때,<br>정밀 검사가 필요합니다</p>
-  </div>
-  <ul class="ed-check__list">
-    <li class="ed-check__item">
-      <span class="ed-check__num">01</span>
-      <p>또래 100명 중 앞에서 3번째 이내로 현저히 작을 때</p>
-    </li>
-    <li class="ed-check__item">
-      <span class="ed-check__num">02</span>
-      <p>연간 성장 속도가 4cm 이하로 더디게 자랄 때</p>
-    </li>
-    <li class="ed-check__item">
-      <span class="ed-check__num">03</span>
-      <p>또래보다 머리 하나 크기 이상 차이가 심할 때</p>
-    </li>
-    <li class="ed-check__item">
-      <span class="ed-check__num">04</span>
-      <p>매년 옷·신발 사이즈가 거의 변하지 않을 때</p>
-    </li>
-    <li class="ed-check__item">
-      <span class="ed-check__num">05</span>
-      <p>부모님이 모두 작아 유전적 저신장이 우려될 때</p>
-    </li>
-    <li class="ed-check__item">
-      <span class="ed-check__num">06</span>
-      <p>출생 체중이 주수에 비해 유독 작게 태어났을 때</p>
-    </li>
-  </ul>
-</section>
-
-<!-- ============================================================
-     C. 빅넘버 치료 리스트
-     ============================================================ -->
-<section class="ed-features">
-  <div class="sub-intro-text" style="text-align: left; max-width: none; margin-bottom: 10px;">
-    <span class="ed-kicker">Treatment</span>
-    <h2 class="section-title reveal" style="font-size: 30px; font-weight: 300; margin-top: 14px;">
-      근거에 기반한 <strong>3단계 맞춤 성장 치료</strong>
-    </h2>
-  </div>
-
-  <div class="ed-feat reveal">
-    <div class="ed-feat__num">01</div>
-    <div class="ed-feat__body">
-      <h3 class="ed-feat__title">성장 호르몬 주사 요법</h3>
-      <p class="ed-feat__desc">
-        체내에 부족한 성장호르몬을 무통 주사 펜으로 매일 밤 수면 전 자가 투여하는 치료법입니다.
-        지난 수십 년간 전 세계 소아를 대상으로 안전성과 효능이 정밀하게 입증되었으며,
-        세부전문의의 분기별 모니터링 아래 안심하고 진행됩니다.
-      </p>
-    </div>
-  </div>
-
-  <div class="ed-feat reveal reveal-delay-1">
-    <div class="ed-feat__num">02</div>
-    <div class="ed-feat__body">
-      <h3 class="ed-feat__title">성장판 자극 도수 치료</h3>
-      <p class="ed-feat__desc">
-        원내 전문 운동 재활 물리치료팀이 관절 및 뼈 성장판 주변부 근육의 긴장을 해소하고
-        척추를 정렬하여 성장 에너지를 활성화합니다. 약물 치료와 병행 시 시너지를 높입니다.
-      </p>
-    </div>
-  </div>
-
-  <div class="ed-feat reveal reveal-delay-2">
-    <div class="ed-feat__num">03</div>
-    <div class="ed-feat__body">
-      <h3 class="ed-feat__title">라이프 영양 처방</h3>
-      <p class="ed-feat__desc">
-        뼈 성장에 필수적인 칼슘·비타민D·아연·양질의 단백질 흡수를 늘리기 위해
-        일상 식습관과 보조 보충제의 최적 처방을 구성합니다. 굶지 않고 건강하게,
-        성장의 토대를 일상에서부터 단단히 만듭니다.
-      </p>
-    </div>
-  </div>
-</section>
+    </section>
 
   </div>
 </main>

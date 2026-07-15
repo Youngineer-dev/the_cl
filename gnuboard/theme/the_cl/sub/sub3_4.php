@@ -1,8 +1,40 @@
 <?php
 $page_title = "비급여";
+$page_description = "잠실 삼성더클성장의원의 비급여 진료 항목과 비용을 관련 법령에 의거하여 투명하게 안내해 드립니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
+<style>
+/* Clinic/Info 서브페이지 모바일 타이포 · 여백 보완 (PC 레이아웃 유지) */
+@media (max-width: 768px) {
+  .ed-split__title--simple,
+  .ed-split__title {
+    word-break: keep-all;
+    letter-spacing: -0.4px;
+  }
+  .ed-split__body .lead {
+    word-break: keep-all;
+  }
+  .ed-check {
+    margin-top: 36px !important;
+  }
+  .ed-features {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-top: 60px"] {
+    padding-top: 40px !important;
+  }
+  section[style*="padding-bottom: 80px"] {
+    padding-bottom: 48px !important;
+  }
+}
+@media (max-width: 480px) {
+  .ed-split__title--simple {
+    font-size: 20px !important;
+  }
+}
+</style>
+
 
 <!-- SUB HERO -->
 <section class="sub-hero">
@@ -19,7 +51,7 @@ include_once(G5_PATH.'/head.php');
 <div class="breadcrumb-wrap">
   <div class="container">
     <ul class="breadcrumb">
-      <li><a href="<?php echo $G5_URL; ?>/index.php">Home</a></li>
+      <li><a href="<?php echo G5_URL; ?>/index.php">Home</a></li>
       <li class="separator">></li>
       <li><span style="text-transform: uppercase;">Info</span></li>
       <li class="separator">></li>
@@ -51,10 +83,7 @@ include_once(G5_PATH.'/head.php');
       </p>
     </div>
   </div>
-  <div class="ed-collage reveal reveal-delay-2">
-    <img src="<?php echo $G5_URL; ?>/img/programs.png" alt="진료비 안내" class="ed-collage__main">
-    <img src="<?php echo $G5_URL; ?>/img/interior.png" alt="상담 데스크" class="ed-collage__sub">
-  </div>
+  <div class="ed-collage ed-collage--empty reveal reveal-delay-2" aria-hidden="true"></div>
 </section>
 
 <!-- 비급여 표 (기능 유지) -->
@@ -120,9 +149,8 @@ include_once(G5_PATH.'/head.php');
       </tbody>
     </table>
   </div>
-  <p class="reveal" style="margin-top: 20px; font-size: 13px; color: var(--c-text-light); font-weight: 300;">
+  <p class="reveal" style="margin-top: 20px; font-size: 14px; color: var(--c-text-light); font-weight: 400;">
     ※ 상기 비용은 부가세 포함 금액이며, 환자의 개별 상태와 처방 용량에 따라 달라질 수 있습니다.
-    질환 목적의 성장호르몬 치료는 조건 충족 시 실손 보험 적용 대상이 될 수 있습니다.
   </p>
 </section>
 

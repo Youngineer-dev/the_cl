@@ -17,6 +17,15 @@ if (defined('_INDEX_')) {
     $g5_head_title = ($g5['title'] ? $g5['title'] . ' - ' : '') . '삼성더클성장의원';
 }
 
+// 메타 디스크립션 설정 (SEO / GSO 최적화)
+if (isset($g5['description']) && $g5['description']) {
+    $g5_head_description = strip_tags($g5['description']);
+} else if (isset($page_description) && $page_description) {
+    $g5_head_description = strip_tags($page_description);
+} else {
+    $g5_head_description = "송파구 잠실역에 위치한 삼성더클성장의원입니다. 대학병원 교수 출신 소아내분비 세부전문의가 소아 성장 클리닉, 성조숙증, 소아 비만, 예상키 및 뼈나이 검사를 1:1 맞춤 진료합니다.";
+}
+
 // 현재 접속자
 // 게시판 제목에 ' 포함되면 오류 발생
 $g5['lo_location'] = addslashes($g5['title']);
@@ -44,10 +53,82 @@ if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
 ?>
 <title><?php echo $g5_head_title; ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($g5_head_description, ENT_QUOTES, 'UTF-8'); ?>">
+<?php
+// 현재 접속 프로토콜 및 도메인, 경로 기반으로 대표 URL 정의
+$canonical_proto = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
+$canonical_host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
+$canonical_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$canonical_url = $canonical_proto . '://' . $canonical_host . $canonical_path;
+$og_url = $canonical_proto . '://' . $canonical_host . $_SERVER['REQUEST_URI'];
+$og_image = G5_THEME_URL . '/img/og.png'; // 기본 대표 이미지
+?>
+<link rel="canonical" href="<?php echo htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8'); ?>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="<?php echo htmlspecialchars($g5_head_title, ENT_QUOTES, 'UTF-8'); ?>">
+<meta property="og:description" content="<?php echo htmlspecialchars($g5_head_description, ENT_QUOTES, 'UTF-8'); ?>">
+<meta property="og:image" content="<?php echo htmlspecialchars($og_image, ENT_QUOTES, 'UTF-8'); ?>">
+<meta property="og:url" content="<?php echo htmlspecialchars($og_url, ENT_QUOTES, 'UTF-8'); ?>">
+<?php
+// 기본 MedicalClinic 스키마 생성 (GSO / AI 최적화)
+$clinic_schema = [
+    "@context" => "https://schema.org",
+    "@type" => "MedicalClinic",
+    "name" => "삼성더클성장의원",
+    "alternateName" => "더클성장의원, THE CL",
+    "description" => "송파구 잠실에 위치한 소아 성장 클리닉으로, 소아내분비 세부전문의가 성조숙증, 저신장, 소아비만, 예상키 진단, 뼈나이 분석 등을 정밀 진료합니다.",
+    "url" => G5_URL . "/",
+    "telephone" => "02-421-7757",
+    "logo" => G5_THEME_URL . "/img/brand_logo.png",
+    "image" => G5_THEME_URL . "/img/brand_logo.png",
+    "address" => [
+        "@type" => "PostalAddress",
+        "streetAddress" => "올림픽로 329, 3층 329, 330, 331호",
+        "addressLocality" => "서울특별시",
+        "addressRegion" => "송파구",
+        "postalCode" => "05510",
+        "addressCountry" => "KR"
+    ],
+    "geo" => [
+        "@type" => "GeoCoordinates",
+        "latitude" => "37.5165",
+        "longitude" => "127.1025"
+    ],
+    "openingHoursSpecification" => [
+        [
+            "@type" => "OpeningHoursSpecification",
+            "dayOfWeek" => ["Tuesday", "Wednesday", "Friday"],
+            "opens" => "10:00",
+            "closes" => "18:30"
+        ],
+        [
+            "@type" => "OpeningHoursSpecification",
+            "dayOfWeek" => ["Thursday"],
+            "opens" => "13:00",
+            "closes" => "20:30"
+        ],
+        [
+            "@type" => "OpeningHoursSpecification",
+            "dayOfWeek" => ["Saturday"],
+            "opens" => "08:30",
+            "closes" => "15:00"
+        ]
+    ],
+    "medicalSpecialty" => "Pediatrics"
+];
+echo '<script type="application/ld+json">' . json_encode($clinic_schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . '</script>' . PHP_EOL;
+
+// 페이지 특화 추가 스키마 출력 (예: FAQPage)
+if (isset($page_schema_json) && $page_schema_json) {
+    echo '<script type="application/ld+json">' . json_encode($page_schema_json, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . '</script>' . PHP_EOL;
+}
+?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?php echo G5_THEME_URL; ?>/css/style.css?v=36">
+<link rel="shortcut icon" href="<?php echo G5_THEME_URL; ?>/img/favicon.ico?v=3" type="image/x-icon">
+<link rel="icon" href="<?php echo G5_THEME_URL; ?>/img/favicon.png?v=3" type="image/png">
+<link rel="stylesheet" href="<?php echo G5_THEME_URL; ?>/css/style.css?v=73">
 <!--[if lte IE 8]>
 <script src="<?php echo G5_JS_URL ?>/html5.js"></script>
 <![endif]-->
@@ -74,8 +155,8 @@ var g5_admin_url = "<?php echo G5_ADMIN_URL; ?>";
 add_javascript('<script src="'.G5_JS_URL.'/jquery-1.12.4.min.js"></script>', 0);
 add_javascript('<script src="'.G5_JS_URL.'/jquery-migrate-1.4.1.min.js"></script>', 0);
 add_javascript('<script src="'.G5_JS_URL.'/common.js?ver='.G5_JS_VER.'"></script>', 0);
-add_javascript('<script src="'.G5_JS_URL.'/wrest.js?ver='.G5_JS_VER.'"></script>', 0);
-add_javascript('<script src="'.G5_JS_URL.'/placeholders.min.js"></script>', 0);
+add_javascript('<script src="'.G5_JS_URL.'/wrest.js?ver='.G5_JS_VER.'"></script>', 1);
+add_javascript('<script src="'.G5_JS_URL.'/placeholders.min.js"></script>', 1);
 add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/font-awesome/css/font-awesome.min.css">', 0);
 
 if(G5_IS_MOBILE) {

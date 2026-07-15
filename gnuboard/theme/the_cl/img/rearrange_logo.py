@@ -1,5 +1,7 @@
 import os
+import urllib.request
 from PIL import Image, ImageDraw, ImageFont
+from fontTools.ttLib import TTFont
 
 def get_text_width(text, font):
     # Returns the exact width of the text rendered with the given font
@@ -12,10 +14,41 @@ def get_text_height(text, font):
     return bbox[3] - bbox[1]
 
 def rearrange_logo():
-    logo_path = 'gnuboard/theme/the_cl/img/brand_logo.png'
-    backup_path = 'gnuboard/theme/the_cl/img/brand_logo_backup.png'
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    logo_path = os.path.join(script_dir, 'brand_logo.png')
+    backup_path = os.path.join(script_dir, 'brand_logo_backup.png')
     
-    # 1. Back up original if it hasn't been done yet
+    woff_path = os.path.join(script_dir, 'Batang_Regular.woff')
+    ttf_path = os.path.join(script_dir, 'Batang_Regular.ttf')
+    woff_bold_path = os.path.join(script_dir, 'Batang_Bold.woff')
+    ttf_bold_path = os.path.join(script_dir, 'Batang_Bold.ttf')
+    
+    # 1. Download and convert font if not exists (Regular & Bold)
+    if not os.path.exists(ttf_path):
+        if not os.path.exists(woff_path):
+            woff_url = 'https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Batang_Regular.woff'
+            print(f"Downloading Regular WOFF font from {woff_url}...")
+            urllib.request.urlretrieve(woff_url, woff_path)
+            print("Regular WOFF font downloaded successfully.")
+        
+        print("Converting Regular WOFF to TTF using fontTools...")
+        font_woff = TTFont(woff_path)
+        font_woff.save(ttf_path)
+        print(f"Regular TTF font converted and saved to: {ttf_path}")
+
+    if not os.path.exists(ttf_bold_path):
+        if not os.path.exists(woff_bold_path):
+            woff_bold_url = 'https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Batang_Bold.woff'
+            print(f"Downloading Bold WOFF font from {woff_bold_url}...")
+            urllib.request.urlretrieve(woff_bold_url, woff_bold_path)
+            print("Bold WOFF font downloaded successfully.")
+        
+        print("Converting Bold WOFF to TTF using fontTools...")
+        font_woff_bold = TTFont(woff_bold_path)
+        font_woff_bold.save(ttf_bold_path)
+        print(f"Bold TTF font converted and saved to: {ttf_bold_path}")
+
+    # 2. Back up original if it hasn't been done yet
     if not os.path.exists(backup_path):
         if os.path.exists(logo_path):
             img_orig = Image.open(logo_path)
@@ -28,10 +61,21 @@ def rearrange_logo():
     # Always load from the backup to avoid repeated slicing of already sliced images
     img = Image.open(backup_path)
     
-    # 2. Crop symbol from backup (y=0 to y=387)
+    # 3. Crop symbol from backup (y=0 to y=387)
     symbol = img.crop((0, 0, img.width, 387))
     symbol_bbox = symbol.getbbox()
     symbol_cropped = symbol.crop(symbol_bbox)
+    
+    # Recolor the symbol to the new primary sage green color (152, 169, 158)
+    sym_data = symbol_cropped.getdata()
+    new_sym_data = []
+    new_sym_color = (152, 169, 158)
+    for item in sym_data:
+        if item[3] > 0:
+            new_sym_data.append((new_sym_color[0], new_sym_color[1], new_sym_color[2], item[3]))
+        else:
+            new_sym_data.append(item)
+    symbol_cropped.putdata(new_sym_data)
     
     # Resize symbol to target canvas height (300px)
     canvas_height = 300
@@ -40,13 +84,10 @@ def rearrange_logo():
     sym_new_w = int(sym_w * (sym_new_h / sym_h))
     symbol_resized = symbol_cropped.resize((sym_new_w, sym_new_h), Image.Resampling.LANCZOS)
     
-    # 3. Create the text canvas dynamically using system fonts
-    hangul_font_path = 'C:/Windows/Fonts/malgunbd.ttf' # Malgun Gothic Bold
-    english_font_path = 'C:/Windows/Fonts/arial.ttf'    # Arial
-    
+    # 4. Create the text canvas dynamically using the converted Batang font
     # Base font sizes
     hangul_font_size = 80
-    hangul_font = ImageFont.truetype(hangul_font_path, hangul_font_size)
+    hangul_font = ImageFont.truetype(ttf_bold_path, hangul_font_size)
     
     # Text contents
     part1 = "삼성"
@@ -56,8 +97,8 @@ def rearrange_logo():
     english_text = "SAMSUNG THE CL GROWTH CLINIC"
     
     # Colors (RGBA)
-    color_green = (46, 139, 87, 255) # Primary Green #2E8B57
-    color_gold = (184, 150, 62, 255) # Accent Warm Gold #B8963E
+    color_green = (92, 110, 99, 255) # Dark Sage Green #5C6E63 (for high readability)
+    color_gold = (192, 206, 197, 255) # Light Sage Green #C0CEC5 (accent color)
     
     # Calculate exact widths to align texts
     w_p1 = get_text_width(part1, hangul_font)
@@ -67,13 +108,13 @@ def rearrange_logo():
     
     # Fit the English subtitle font size to match the hangul's total width exactly
     eng_font_size = 40
-    eng_font = ImageFont.truetype(english_font_path, eng_font_size)
+    eng_font = ImageFont.truetype(ttf_path, eng_font_size)
     while eng_font_size > 5:
         w_eng = get_text_width(english_text, eng_font)
         if w_eng <= w_total_hangul:
             break
         eng_font_size -= 0.5
-        eng_font = ImageFont.truetype(english_font_path, int(eng_font_size) if eng_font_size.is_integer() else eng_font_size)
+        eng_font = ImageFont.truetype(ttf_path, int(eng_font_size) if eng_font_size.is_integer() else eng_font_size)
         
     w_eng = get_text_width(english_text, eng_font)
     h_eng = get_text_height(english_text, eng_font)
@@ -89,11 +130,11 @@ def rearrange_logo():
     
     # Draw Hangul parts
     # Draw "삼성" at x=0
-    draw.text((0, 0), part1, font=hangul_font, fill=color_green)
+    draw.text((0, 0), part1, font=hangul_font, fill=color_green, stroke_width=2, stroke_fill=color_green)
     # Draw "더클" at x=w_p1 (aligned precisely)
-    draw.text((w_p1, 0), part2, font=hangul_font, fill=color_gold)
+    draw.text((w_p1, 0), part2, font=hangul_font, fill=color_gold, stroke_width=2, stroke_fill=color_gold)
     # Draw "성장의원" at x=w_p12
-    draw.text((w_p12, 0), part3, font=hangul_font, fill=color_green)
+    draw.text((w_p12, 0), part3, font=hangul_font, fill=color_green, stroke_width=2, stroke_fill=color_green)
     
     # Draw English text (centered under Hangul, or left-aligned)
     # Since we matched the width, left-aligned x=0 works perfectly, or center if slightly smaller
@@ -101,7 +142,7 @@ def rearrange_logo():
     eng_y = h_hangul + text_gap
     draw.text((eng_x, eng_y), english_text, font=eng_font, fill=color_green)
     
-    # 4. Resize text canvas to match the overall logo height beautifully
+    # 5. Resize text canvas to match the overall logo height beautifully
     # Text height should be balanced, e.g., about 160px high within the 300px logo canvas
     target_txt_h = 160
     txt_w, txt_h = text_img.size
@@ -109,7 +150,7 @@ def rearrange_logo():
     txt_new_w = int(txt_w * (txt_new_h / txt_h))
     text_resized = text_img.resize((txt_new_w, txt_new_h), Image.Resampling.LANCZOS)
     
-    # 5. Composite logo (Symbol + Text)
+    # 6. Composite logo (Symbol + Text)
     gap = 50 # spacing between symbol and text
     canvas_width = sym_new_w + gap + txt_new_w
     
