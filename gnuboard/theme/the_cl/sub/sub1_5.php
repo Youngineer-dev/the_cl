@@ -9,11 +9,28 @@ include_once(G5_PATH.'/head.php');
 /* ============================================================
    ABOUT 1-5 (오시는 길) 전용 모바일 보완
    ============================================================ */
+/* 왼쪽 컬럼을 세로 flex로 만들어 지도가 오른쪽 안내 박스 높이만큼 늘어나게 함 */
+.contact-inner .contact-left {
+  display: flex;
+  flex-direction: column;
+}
 .sub15-map {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  height: 350px;
+  position: relative;
+  flex: 1;
+  min-height: 350px;
+  margin-bottom: 0; /* .contact-img 기본 24px 제거 — 지도가 그만큼 더 높아짐 */
+}
+#naverMap,
+.sub15-map-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#naverMap {
+  z-index: 2;
 }
 .sub15-map-inner {
   width: 100%;
@@ -78,7 +95,10 @@ include_once(G5_PATH.'/head.php');
   margin: 0;
 }
 @media (max-width: 768px) {
+  /* 모바일은 1단 배치라 flex 확장 대신 고정 높이 사용 */
   .sub15-map {
+    flex: none;
+    min-height: 0;
     height: 240px;
   }
   .sub15-map-inner .pin {
@@ -158,6 +178,7 @@ include_once(G5_PATH.'/head.php');
 <div class="contact-inner" style="margin-top: 60px;">
   <div class="contact-left reveal">
     <div class="contact-img sub15-map">
+      <div id="naverMap" style="width:100%; height:100%; display:none;"></div>
       <div class="sub15-map-inner">
         <span class="pin">📍</span>
         <strong>삼성더클성장의원 약도</strong>
@@ -165,7 +186,7 @@ include_once(G5_PATH.'/head.php');
       </div>
     </div>
     
-    <div class="map-buttons" style="margin-top: 30px;">
+    <div class="map-buttons" style="margin-top: 14px;">
       <a href="#" onclick="goToNaverMap(event)" class="map-btn" style="flex: 1; text-align: center; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
         <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #03C75A; flex-shrink: 0;">
           <path d="M16.2 3H21v18h-4.8l-8.4-12v12H3V3h4.8l8.4 12z"/>
@@ -211,6 +232,51 @@ include_once(G5_PATH.'/head.php');
 
   </div>
 </main>
+
+<!-- 네이버 지도 (약도) -->
+<script>
+// 인증 실패 시 기존 약도 placeholder 유지
+window.navermap_authFailure = function () {
+  var mapEl = document.getElementById('naverMap');
+  if (mapEl) mapEl.style.display = 'none';
+};
+</script>
+<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=b8z40h1j8i"></script>
+<script>
+(function () {
+  if (!(window.naver && naver.maps)) return;
+
+  var mapEl = document.getElementById('naverMap');
+  if (!mapEl) return;
+  mapEl.style.display = 'block';
+
+  var pos = new naver.maps.LatLng(37.5161072, 127.1068893);
+  var map = new naver.maps.Map('naverMap', {
+    center: pos,
+    zoom: 16,
+    scrollWheel: false,
+    zoomControl: true,
+    zoomControlOptions: {
+      position: naver.maps.Position.TOP_RIGHT,
+      style: naver.maps.ZoomControlStyle.SMALL
+    }
+  });
+  var marker = new naver.maps.Marker({
+    position: pos,
+    map: map,
+    title: '삼성더클성장의원'
+  });
+  var iw = new naver.maps.InfoWindow({
+    content: '<div style="padding:10px 14px; font-size:13px; line-height:1.5;">'
+      + '<strong>삼성더클성장의원</strong><br>서울 송파구 올림픽로 329, 3층<br>'
+      + '<a href="https://map.naver.com/p/entry/place/2041623550" target="_blank" rel="noopener" style="color:#03C75A; font-weight:600;">네이버 지도에서 보기 &gt;</a></div>'
+  });
+  iw.open(map, marker);
+  naver.maps.Event.addListener(marker, 'click', function () {
+    iw.open(map, marker);
+  });
+})();
+</script>
 
 <?php
 include_once(G5_PATH.'/tail.php');
