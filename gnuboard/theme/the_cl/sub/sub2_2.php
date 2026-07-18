@@ -91,7 +91,7 @@ include_once(G5_PATH.'/head.php');
         <p class="ed-check__label">이런 경우 <br class="pc-only"> 평가가 필요합니다</p>
       </div>
       <ul class="ed-check__list">
-        <li class="ed-check__item"><span class="ed-check__num">01</span><p>1년에 4cm 미만으로 자르는 경우</p></li>
+        <li class="ed-check__item"><span class="ed-check__num">01</span><p>1년에 4cm 미만으로 자라는 경우</p></li>
         <li class="ed-check__item"><span class="ed-check__num">02</span><p>또래보다 머리 하나 정도 작아 보이는 경우</p></li>
         <li class="ed-check__item"><span class="ed-check__num">03</span><p>성장곡선이 점차 아래로 떨어지는 경우</p></li>
         <li class="ed-check__item"><span class="ed-check__num">04</span><p>부모 키를 고려해도 작다고 느껴지는 경우</p></li>
