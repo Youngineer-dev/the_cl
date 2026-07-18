@@ -331,12 +331,25 @@ ol {
   height: 48px;
   width: auto;
   transition: all 0.4s var(--ease-out);
-  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
+/* 기본 상태 (최상위 스크롤): 흰색 로고 노출, 컬러 로고 숨김 */
+.logo-link .logo-color {
+  display: none;
+}
+.logo-link .logo-white {
+  display: block;
+}
+
+/* 스크롤 시: 컬러 로고 노출, 흰색 로고 숨김 */
 .site-header.scrolled .logo-img {
-  filter: none;
   height: 40px;
+}
+.site-header.scrolled .logo-link .logo-color {
+  display: block;
+}
+.site-header.scrolled .logo-link .logo-white {
+  display: none;
 }
 
 /* Header Right - Location + Hamburger */
@@ -567,8 +580,12 @@ body.nav-open .site-header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-body.nav-open .site-header .logo-img {
-  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4)) !important;
+body.nav-open .site-header .logo-img.logo-color {
+  display: none !important;
+}
+
+body.nav-open .site-header .logo-img.logo-white {
+  display: block !important;
 }
 
 body.nav-open .site-header .header-phone {
