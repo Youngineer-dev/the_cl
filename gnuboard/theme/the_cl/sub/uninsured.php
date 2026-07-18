@@ -154,7 +154,7 @@ include_once(G5_PATH.'/head.php');
           <td data-label="금액" class="pt-price">10,000원</td>
         </tr>
         <tr>
-          <td rowspan="2" class="pt-cat" data-label="분류">제증명</td>
+          <td rowspan="6" class="pt-cat" data-label="분류">제증명</td>
           <td data-label="비급여 항목" class="pt-name">진단서 또는 소견서</td>
           <td data-label="세부 내용">-</td>
           <td data-label="금액" class="pt-price">20,000원</td>
@@ -164,6 +164,30 @@ include_once(G5_PATH.'/head.php');
           <td data-label="비급여 항목" class="pt-name">통원확인서</td>
           <td data-label="세부 내용">-</td>
           <td data-label="금액" class="pt-price">3,000원</td>
+        </tr>
+        <tr>
+          <td class="pt-cat-m" data-label="분류">제증명</td>
+          <td data-label="비급여 항목" class="pt-name">영문 진단서 / 소견서</td>
+          <td data-label="세부 내용">-</td>
+          <td data-label="금액" class="pt-price">20,000원</td>
+        </tr>
+        <tr>
+          <td class="pt-cat-m" data-label="분류">제증명</td>
+          <td data-label="비급여 항목" class="pt-name">영상기록 복사 (CD)</td>
+          <td data-label="세부 내용">-</td>
+          <td data-label="금액" class="pt-price">10,000원</td>
+        </tr>
+        <tr>
+          <td class="pt-cat-m" data-label="분류">제증명</td>
+          <td data-label="비급여 항목" class="pt-name">진료기록 사본 (1~5매)</td>
+          <td data-label="세부 내용"><div class="pt-desc">1매당 비용</div></td>
+          <td data-label="금액" class="pt-price">1,000원</td>
+        </tr>
+        <tr>
+          <td class="pt-cat-m" data-label="분류">제증명</td>
+          <td data-label="비급여 항목" class="pt-name">진료기록 사본 (6매 이상)</td>
+          <td data-label="세부 내용"><div class="pt-desc">1매당 비용</div></td>
+          <td data-label="금액" class="pt-price">100원</td>
         </tr>
       </tbody>
     </table>

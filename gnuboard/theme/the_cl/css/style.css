@@ -2953,6 +2953,9 @@ body.nav-open .site-header .hamburger span {
   font-weight: 500;
   color: var(--c-primary-dark);
 }
+.premium-table .pt-name {
+  min-width: 220px;
+}
 /* 데스크톱에서는 rowspan 병합 셀이 대분류를 대신 표시하므로 모바일용 중복 셀 숨김 */
 .premium-table .pt-cat-m {
   display: none;
