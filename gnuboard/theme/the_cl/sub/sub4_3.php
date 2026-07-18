@@ -195,7 +195,6 @@ function custom_paging($total_pages, $page) {
         </span>
         <span class="board-list__subject">
           <span class="board-list__subject-text"><?php echo $post['subject']; ?></span>
-          <?php if (!empty($post['comments'])): ?><span class="board-list__cmt">[<?php echo $post['comments']; ?>]</span><?php endif; ?>
           <?php if (!empty($post['new'])): ?><span class="board-list__new">N</span><?php endif; ?>
         </span>
         <span class="board-list__writer"><?php echo $post['writer']; ?></span>

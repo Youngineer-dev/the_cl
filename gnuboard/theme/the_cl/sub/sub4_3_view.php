@@ -50,17 +50,7 @@ $nav = [
     'next' => $next_post ? ['id' => $next_post['wr_id'], 'subject' => get_text($next_post['wr_subject'])] : null
 ];
 
-// 댓글 조회
-$comments = [];
-$sql_cmt = " SELECT * FROM {$g5['write_prefix']}notice WHERE wr_parent = '$id' AND wr_is_comment = 1 ORDER BY wr_comment, wr_comment_reply ";
-$res_cmt = sql_query($sql_cmt);
-while ($row = sql_fetch_array($res_cmt)) {
-    $comments[] = [
-        'name' => get_text($row['wr_name']),
-        'date' => date('Y.m.d', strtotime($row['wr_datetime'])),
-        'content' => conv_content($row['wr_content'], 0)
-    ];
-}
+
 
 $list_url = G5_THEME_URL . '/sub/sub4_3.php';
 ?>
@@ -179,31 +169,7 @@ $list_url = G5_THEME_URL . '/sub/sub4_3.php';
         <?php } ?>
       </div>
 
-      <!-- 댓글 -->
-      <section class="board-comment">
-        <h3 class="board-comment__title">댓글 <strong><?php echo count($comments); ?></strong></h3>
-        <?php if (count($comments) > 0): ?>
-        <ul class="board-comment__list">
-          <?php foreach ($comments as $cmt): ?>
-          <li class="board-comment__item">
-            <div class="board-comment__head">
-              <span class="board-comment__name"><?php echo $cmt['name']; ?></span>
-              <span class="board-comment__date"><?php echo $cmt['date']; ?></span>
-            </div>
-            <p class="board-comment__text"><?php echo $cmt['content']; ?></p>
-          </li>
-          <?php endforeach; ?>
-        </ul>
-        <?php else: ?>
-          <p class="board-comment__empty">등록된 댓글이 없습니다.</p>
-        <?php endif; ?>
 
-        <form class="board-comment__form" onsubmit="return false;">
-          <input type="text" class="board-comment__name-input" placeholder="이름" aria-label="이름">
-          <textarea class="board-comment__textarea" placeholder="댓글을 입력하세요" aria-label="댓글 내용"></textarea>
-          <button type="submit" class="board-comment__submit">댓글 등록</button>
-        </form>
-      </section>
 
     </article>
   </div>
