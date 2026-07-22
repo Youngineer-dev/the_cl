@@ -19,7 +19,7 @@ if (!isset($G5_URL)) {
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-links" style="margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; font-weight: 500; letter-spacing: -0.3px;">
+      <div class="footer-links">
         <a href="<?php echo $G5_URL; ?>/sub/privacy.php" style="color: rgba(255, 255, 255, 0.85); text-decoration: none; font-weight: 600;">개인정보처리방침</a>
         <span style="color: rgba(255, 255, 255, 0.35);">|</span>
         <a href="<?php echo $G5_URL; ?>/sub/terms.php" style="color: rgba(255, 255, 255, 0.65); text-decoration: none;">이용약관</a>
@@ -38,6 +38,36 @@ if (!isset($G5_URL)) {
   </footer>
 
   <style>
+  .footer-links {
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  @media (max-width: 768px) {
+    .site-footer,
+    .site-footer .container,
+    .footer-inner,
+    .footer-info {
+      text-align: center !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100% !important;
+    }
+    .footer-links {
+      justify-content: center !important;
+      text-align: center !important;
+      align-items: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: 100% !important;
+    }
+  }
   /* 네이버 블로그 퀵메뉴 호버 스타일 */
   .quick-btn.blog:hover {
     background: #03c75a !important;

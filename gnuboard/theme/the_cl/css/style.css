@@ -1606,6 +1606,7 @@ body.nav-open .site-header .hamburger span {
 
 .footer-links {
   display: flex;
+  justify-content: flex-start;
   gap: 20px;
 }
 
@@ -7496,6 +7497,27 @@ fieldset#captcha #captcha_info {
   /* —— 하단 퀵바 여백 확보 (콘텐츠 가림 방지) —— */
   .sub-main {
     padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* —— 모바일 푸터 전체 완벽 중앙 정렬 —— */
+  .site-footer,
+  .site-footer .container,
+  .footer-inner,
+  .footer-info {
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .footer-links {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
