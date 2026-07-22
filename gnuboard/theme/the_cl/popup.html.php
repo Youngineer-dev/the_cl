@@ -27,11 +27,13 @@ if (!isset($G5_URL)) {
    - link : 클릭 시 이동할 URL 주소 (빈 값으로 두면 링크가 비활성화됩니다)
    ============================================================ */
 $popup_slides = array(
+    /*
     array(
         'title' => '사전 예약 안내',
         'image' => $G5_URL.'/img/popup_notice.png?v=2',
         'link'  => $G5_URL.'/sub/sub4_3_view.php?id=1',
     ),
+    */
 );
 
 /* 이미지 비율 (width / height) — PC·모바일 어디서든 동일하게 유지됩니다. */
@@ -45,6 +47,9 @@ $popup_width = '440px';
 $popup_key = 'thecl-popup-2026-07-07-v9'; // 캐시 락 완전 리셋을 위해 v9 상향
 
 $popup_total = count($popup_slides);
+
+// 팝업 항목이 없으면 팝업창 비활성화
+if ($popup_total === 0) return;
 ?>
 
 <!-- ============================================================
