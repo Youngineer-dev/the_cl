@@ -20,9 +20,11 @@ if (!isset($G5_URL)) {
       </div>
       <div class="header-right">
         <span class="header-location">잠실역 9번출구 도보 3분</span>
-        <div class="header-contact">
-          <a href="tel:02-421-7757" class="header-phone">02-421-7757</a>
-        </div>
+        <?php if (!empty($is_admin)) { ?>
+          <a href="<?php echo $G5_URL; ?>/sub/popup_admin.php" class="admin-quick-btn" style="background:#0056b3; color:#fff; padding:6px 12px; border-radius:20px; font-size:12px; font-weight:600; text-decoration:none; margin-right:8px; display:inline-flex; align-items:center; gap:4px;">
+            ⚙ 팝업 관리
+          </a>
+        <?php } ?>
         <button class="hamburger" id="hamburger" aria-label="메뉴 열기" style="background:none; border:none; padding:0; cursor:pointer;">
           <span></span><span></span><span></span>
         </button>

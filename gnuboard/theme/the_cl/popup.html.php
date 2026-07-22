@@ -20,31 +20,40 @@ if (!isset($G5_URL)) {
 </style>
 <?php
 /* ============================================================
-   메인 팝업 콘텐츠 데이터 (정사각 이미지형)
-   - 모든 정보를 이미지 한 장에 담습니다.
-   - title : 접근성용 대체텍스트(alt)로 사용됩니다.
-   - image : 슬라이드 이미지 (테마 /img 경로 기준)
-   - link : 클릭 시 이동할 URL 주소 (빈 값으로 두면 링크가 비활성화됩니다)
+   메인 팝업 콘텐츠 데이터 (동적 JSON 설정 연동)
    ============================================================ */
-$popup_slides = array(
-    /*
-    array(
-        'title' => '사전 예약 안내',
-        'image' => $G5_URL.'/img/popup_notice.png?v=2',
-        'link'  => $G5_URL.'/sub/sub4_3_view.php?id=1',
-    ),
-    */
-);
-
-/* 이미지 비율 (width / height) — PC·모바일 어디서든 동일하게 유지됩니다. */
+$popup_data_file = G5_THEME_PATH . '/data/popup_config.json';
+$popup_slides = array();
 $popup_ratio = '1 / 1';
-
-/* 팝업 너비 (px) — 비율에 따라 높이는 자동 계산됩니다. */
 $popup_width = '440px';
+$popup_key   = 'thecl-popup-v1';
 
-/* 팝업 식별 키 — 콘텐츠가 바뀌어 다시 노출하고 싶을 때 값을 변경하면
-   '오늘 하루 그만보기'를 누른 사용자에게도 새 팝업이 다시 표시됩니다. */
-$popup_key = 'thecl-popup-2026-07-07-v9'; // 캐시 락 완전 리셋을 위해 v9 상향
+if (file_exists($popup_data_file)) {
+    $json_content = @file_get_contents($popup_data_file);
+    if ($json_content) {
+        $popup_config = json_decode($json_content, true);
+        if (is_array($popup_config)) {
+            if (!empty($popup_config['popup_key'])) $popup_key = $popup_config['popup_key'];
+            if (!empty($popup_config['popup_width'])) $popup_width = $popup_config['popup_width'];
+            if (!empty($popup_config['popup_ratio'])) $popup_ratio = $popup_config['popup_ratio'];
+            
+            if (isset($popup_config['slides']) && is_array($popup_config['slides'])) {
+                $active_slides = array();
+                foreach ($popup_config['slides'] as $slide) {
+                    if (isset($slide['use_flag']) && ($slide['use_flag'] === true || $slide['use_flag'] === 'true' || $slide['use_flag'] == 1)) {
+                        $active_slides[] = $slide;
+                    }
+                }
+                usort($active_slides, function($a, $b) {
+                    $order_a = isset($a['order']) ? (int)$a['order'] : 0;
+                    $order_b = isset($b['order']) ? (int)$b['order'] : 0;
+                    return $order_a - $order_b;
+                });
+                $popup_slides = $active_slides;
+            }
+        }
+    }
+}
 
 $popup_total = count($popup_slides);
 
