@@ -384,6 +384,66 @@ include_once(G5_THEME_PATH.'/head.php');
   <!-- ============================================================
        CONTACT / FOOTER
        ============================================================ -->
+  <style>
+  .contact-map-wrap {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    margin: 20px 0 24px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--c-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    background-color: var(--c-primary-pale);
+  }
+  #homeNaverMap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: none;
+  }
+  .home-map-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-primary-dark);
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+  }
+  .home-map-fallback .pin {
+    font-size: 38px;
+    margin-bottom: 6px;
+  }
+  .home-map-fallback strong {
+    font-size: 16px;
+    margin-bottom: 4px;
+    word-break: keep-all;
+  }
+  .home-map-fallback p {
+    font-size: 13px;
+    color: var(--c-text-light);
+    word-break: keep-all;
+    line-height: 1.5;
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    .contact-map-wrap {
+      height: 220px;
+      margin: 16px 0 20px;
+    }
+  }
+  </style>
+
   <section class="contact" id="contact">
     <div class="container">
       <div class="contact-inner">
@@ -397,6 +457,17 @@ include_once(G5_THEME_PATH.'/head.php');
           <p class="address" style="margin-top: 8px;">
             <span class="star">✦</span> 주차 &nbsp; 건물 내 주차장 이용 가능 (1시간 무료)
           </p>
+
+          <!-- 지도 영역 -->
+          <div class="contact-map-wrap">
+            <div id="homeNaverMap"></div>
+            <div class="home-map-fallback">
+              <span class="pin">📍</span>
+              <strong>삼성더클성장의원 약도</strong>
+              <p>서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</p>
+            </div>
+          </div>
+
           <div class="map-buttons">
             <a href="#" onclick="goToNaverMap(event)" class="map-btn">
               <svg class="map-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="color: #03C75A; flex-shrink: 0; margin-right: 6px;">
@@ -453,6 +524,50 @@ include_once(G5_THEME_PATH.'/head.php');
       </div>
     </div>
   </section>
+
+  <!-- 네이버 지도 연동 스크립트 -->
+  <script>
+  window.navermap_authFailure = function () {
+    var mapEl = document.getElementById('homeNaverMap');
+    if (mapEl) mapEl.style.display = 'none';
+  };
+  </script>
+  <script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=b8z40h1j8i"></script>
+  <script>
+  (function () {
+    if (!(window.naver && naver.maps)) return;
+
+    var mapEl = document.getElementById('homeNaverMap');
+    if (!mapEl) return;
+    mapEl.style.display = 'block';
+
+    var pos = new naver.maps.LatLng(37.5161072, 127.1068893);
+    var map = new naver.maps.Map('homeNaverMap', {
+      center: pos,
+      zoom: 16,
+      scrollWheel: false,
+      zoomControl: true,
+      zoomControlOptions: {
+        position: naver.maps.Position.TOP_RIGHT,
+        style: naver.maps.ZoomControlStyle.SMALL
+      }
+    });
+    var marker = new naver.maps.Marker({
+      position: pos,
+      map: map,
+      title: '삼성더클성장의원'
+    });
+    var iw = new naver.maps.InfoWindow({
+      content: '<div style="padding:10px 14px; font-size:13px; line-height:1.5;">'
+        + '<strong>삼성더클성장의원</strong><br>서울 송파구 올림픽로 329, 3층<br>'
+        + '<a href="https://map.naver.com/p/entry/place/2041623550" target="_blank" rel="noopener" style="color:#03C75A; font-weight:600;">네이버 지도에서 보기 &gt;</a></div>'
+    });
+    iw.open(map, marker);
+    naver.maps.Event.addListener(marker, 'click', function () {
+      iw.open(map, marker);
+    });
+  })();
+  </script>
 
 <?php
 // 메인 팝업 (드래그 이동 / 자동 슬라이드 / 제목 선택 / 오늘 하루 그만보기)
