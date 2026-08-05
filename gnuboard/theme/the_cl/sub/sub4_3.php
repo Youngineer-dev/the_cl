@@ -63,7 +63,7 @@ $sql = " SELECT * FROM {$g5['write_prefix']}notice
          ORDER BY wr_num, wr_id DESC LIMIT $from_record, $page_rows ";
 $result = sql_query($sql);
 
-$num = $total_count - ($page - 1) * $page_rows;
+$num = $list_count - ($page - 1) * $page_rows;
 while ($row = sql_fetch_array($result)) {
     $posts[] = [
         'id' => $row['wr_id'],
@@ -79,7 +79,7 @@ while ($row = sql_fetch_array($result)) {
     ];
 }
 
-$total_pages = ceil($total_count / $page_rows);
+$total_pages = ceil($list_count / $page_rows); // 목록 쿼리 기준(고정 공지 제외)
 function custom_paging($total_pages, $page) {
     if ($total_pages <= 1) return '';
     $html = '<nav class="board-pagination reveal" aria-label="페이지 이동">';

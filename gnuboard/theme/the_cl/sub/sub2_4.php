@@ -71,7 +71,7 @@ include_once(G5_PATH.'/head.php');
       <div class="ed-split__text">
         <span class="ed-eyebrow">소아 비만 클리닉</span>
         <h2 class="ed-split__title ed-split__title--simple">
-          아이의 <strong>체중 증가</strong>는<span class="br-all" aria-hidden="true"></span>단순한 의지 문제가 아닐 수 있습니다.
+          아이의 <strong>체중 증가</strong>는 <span class="br-all" aria-hidden="true"></span>단순한 의지 문제가 아닐 수 있습니다.
         </h2>
         <div class="ed-split__body" style="margin-top: 24px;">
           <p class="lead" style="margin-bottom: 16px;">

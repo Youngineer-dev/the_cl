@@ -1,0 +1,36 @@
+# ==================================================================
+#  삼성더클성장의원 - Apache 설정
+#  업로드 위치: [그누보드 설치 루트]/.htaccess
+#  ※ 서버에 이미 .htaccess 가 있다면 덮어쓰지 말고 아래 내용을 병합하세요.
+# ==================================================================
+
+# ------------------------------------------------------------------
+#  커스텀 오류 페이지
+#  하나의 스크립트가 REDIRECT_STATUS 로 상태를 구분해 처리합니다.
+# ------------------------------------------------------------------
+ErrorDocument 403 /theme/the_cl/sub/404.php
+ErrorDocument 404 /theme/the_cl/sub/404.php
+ErrorDocument 410 /theme/the_cl/sub/404.php
+ErrorDocument 500 /theme/the_cl/sub/404.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # --------------------------------------------------------------
+    #  폐지된 페이지 -> 410 Gone
+    #  404 보다 색인 해제가 빠릅니다. (검색엔진에 "영구 삭제" 신호)
+    #  색인이 모두 정리되면(수개월 후) 이 블록은 삭제해도 됩니다.
+    # --------------------------------------------------------------
+    RewriteRule ^theme/the_cl/sub/sub1_2\.php$  - [G,L]
+    RewriteRule ^theme/the_cl/sub/sub2_7\.php$  - [G,L]
+    RewriteRule ^theme/the_cl/sub/sub3_2\.php$  - [G,L]
+    RewriteRule ^theme/the_cl/sub/sub3_3\.php$  - [G,L]
+    RewriteRule ^theme/the_cl/sub/sub4_1\.php$  - [G,L]
+    RewriteRule ^theme/the_cl/sub/sub4_1_view\.php$ - [G,L]
+
+    # --------------------------------------------------------------
+    #  비급여 중복 URL -> 정식 페이지로 301
+    #  sub3_4.php 와 uninsured.php 가 동일 주제였으므로 통합합니다.
+    # --------------------------------------------------------------
+    RewriteRule ^theme/the_cl/sub/sub3_4\.php$ /theme/the_cl/sub/uninsured.php [R=301,L]
+</IfModule>

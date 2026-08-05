@@ -55,6 +55,12 @@ if($config['cf_add_meta'])
 <title><?php echo $g5_head_title; ?></title>
 <meta name="description" content="<?php echo htmlspecialchars($g5_head_description, ENT_QUOTES, 'UTF-8'); ?>">
 <?php
+// 에러 페이지 등 색인에서 제외할 화면은 페이지 상단에서 $page_noindex = true; 로 선언
+if (!empty($page_noindex)) {
+    echo '<meta name="robots" content="noindex, follow">' . PHP_EOL;
+}
+?>
+<?php
 // 현재 접속 프로토콜 및 도메인, 경로 기반으로 대표 URL 정의
 $canonical_proto = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
 $canonical_host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';

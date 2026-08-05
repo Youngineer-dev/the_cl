@@ -3,6 +3,16 @@ $page_title = "비급여항목";
 $page_description = "잠실 삼성더클성장의원의 비급여 진료 항목과 비용을 관련 법령에 의거하여 투명하게 안내해 드립니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
+
+/* ------------------------------------------------------------------
+   비급여 진료비용 최종 변경일
+   의료법 시행규칙 제42조의2(비급여 진료비용 등의 고지)에 따른 필수 표기.
+
+   ※ 아래 표의 금액·항목을 수정할 때마다 이 날짜를 반드시 함께 갱신하세요.
+     (자동 날짜를 쓰면 실제 변경이 없어도 매일 바뀐 것처럼 표기되어 부적합)
+   ------------------------------------------------------------------ */
+$uninsured_updated = '2026-08-05';
+$uninsured_updated_ts = strtotime($uninsured_updated);
 ?>
 <style>
 /* 정책·회원·커뮤니티 페이지 모바일 가독성 보완 */
@@ -44,6 +54,20 @@ include_once(G5_PATH.'/head.php');
 .ed-split .ed-split__title .i2,
 .ed-split .ed-split__title .i3 {
   padding-left: 0;
+}
+
+/* 비급여 최종 변경일 (의료법 시행규칙 제42조의2 고지) */
+.uninsured-updated {
+  margin: -8px 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--c-text-light);
+  letter-spacing: -0.2px;
+}
+.uninsured-updated time {
+  margin-left: 6px;
+  font-weight: 600;
+  color: var(--c-primary-dark);
 }
 
 /* 모바일 비급여 테이블 가독성 극대화 최적화 */
@@ -124,6 +148,10 @@ include_once(G5_PATH.'/head.php');
     <span class="ed-kicker">Price Guide</span>
     <h2>비급여 진료비 <strong>항목 안내</strong></h2>
   </div>
+  <p class="uninsured-updated reveal">
+    최종 변경일
+    <time datetime="<?php echo $uninsured_updated; ?>"><?php echo date('Y년 n월 j일', $uninsured_updated_ts); ?></time>
+  </p>
   <div class="premium-table-wrap reveal">
     <table class="premium-table">
       <thead>
@@ -193,7 +221,9 @@ include_once(G5_PATH.'/head.php');
     </table>
   </div>
   <p class="reveal" style="margin-top: 20px; font-size: 14px; color: var(--c-text-light); font-weight: 400;">
-    ※ 상기 비용은 부가세 포함 금액이며, 환자의 개별 상태와 처방 용량에 따라 달라질 수 있습니다.
+    ※ 상기 비용은 부가세 포함 금액이며, 환자의 개별 상태와 처방 용량에 따라 달라질 수 있습니다.<br>
+    ※ 본 비급여 진료비용은 <strong><?php echo date('Y년 n월 j일', $uninsured_updated_ts); ?></strong> 기준이며,
+    「의료법 시행규칙」 제42조의2에 따라 고지합니다.
   </p>
 </section>
 
