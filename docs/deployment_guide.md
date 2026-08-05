@@ -25,12 +25,11 @@
       * `register_result.skin.php` : 커스텀 회원가입 완료 화면
       * `password_lost.skin.php` : 커스텀 아이디/비밀번호 찾기 화면
   * `sub/` : DB 데이터 및 커스텀 페이지가 연동된 동적 서브페이지 26개 파일
-    * `_common.php`, `_board_data.php` (설정 및 더미 데이터 파일)
+    * `_common.php` (공통 설정 파일)
     * `login.php`, `register.php`, `write.php` (로그인, 회원가입, 글쓰기 커스텀 라우팅 페이지)
-    * `sub1_1.php` ~ `sub1_5.php` (소개, 인사말, 의료진, 둘러보기, 오시는길)
-    * `sub2_1.php` ~ `sub2_7.php` (성장평가, 저신장, 성조숙, 소아비만, 갑상선, 당뇨, 영양수액)
-    * `sub3_1.php` ~ `sub3_4.php` (진료시간, 진료절차, 검사항목, 비급여)
-    * `sub4_1.php`, `sub4_1_view.php` (치료사례 목록/상세)
+    * `sub1_1.php`, `sub1_3.php` ~ `sub1_5.php` (소개, 의료진, 둘러보기, 오시는길)
+    * `sub2_1.php` ~ `sub2_6.php` (성장평가, 저신장, 성조숙, 소아비만, 저체중, 알레르기)
+    * `sub3_1.php` (진료시간)
     * `sub4_2.php` (FAQ static accordion page)
     * `sub4_3.php`, `sub4_3_view.php` (공지사항 목록/상세)
 
@@ -48,7 +47,7 @@
 > 개발 편의용 파이썬 스크립트 파일들(`.py`), Git 관리용 디렉터리(`.git`), PDF 및 임시 스크린샷 파일 등은 실서버 배포 대상에서 제외합니다.
 
 ### ② 확장 리디렉션 스크립트 업로드 (`extend/`)
-그누보드의 글 작성/수정 완료 시 기존 기본 상세 뷰 대신 테마의 전용 서브페이지 상세 뷰(`sub4_3_view.php`, `sub4_1_view.php`)로 자동 리디렉션 처리해 주는 확장 스크립트 파일을 업로드합니다.
+그누보드의 글 작성/수정 완료 시 기존 기본 상세 뷰 대신 테마의 전용 서브페이지 상세 뷰(`sub4_3_view.php`)로 자동 리디렉션 처리해 주는 확장 스크립트 파일을 업로드합니다.
 
 * **서버 업로드 경로**: `[그누보드 설치 경로]/extend/the_cl_redirect.extend.php` (로컬 `gnuboard/extend/the_cl_redirect.extend.php` 파일)
 * **스크립트 소스 코드**:
@@ -61,8 +60,6 @@ add_replace('write_update_move_url', 'the_cl_write_redirect', 10, 5);
 function the_cl_write_redirect($redirect_url, $board, $wr_id, $w, $qstr) {
     if ($board['bo_table'] == 'notice') {
         return G5_THEME_URL . '/sub/sub4_3_view.php?id=' . $wr_id;
-    } else if ($board['bo_table'] == 'gallery') {
-        return G5_THEME_URL . '/sub/sub4_1_view.php?id=' . $wr_id;
     }
     return $redirect_url;
 }

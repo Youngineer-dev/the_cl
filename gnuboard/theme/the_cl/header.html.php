@@ -63,7 +63,6 @@ if (!isset($G5_URL)) {
             <a href="<?php echo $G5_URL; ?>/sub/sub4_2.php" class="gnb-title">COMMUNITY</a>
             <div class="gnb-dropdown">
               <ul class="gnb-sub-menu">
-                <?php /* <li><a href="<?php echo $G5_URL; ?>/sub/sub4_1.php">치료 사례</a></li> */ ?>
                 <li><a href="<?php echo $G5_URL; ?>/sub/sub4_2.php">자주묻는 질문</a></li>
                 <li><a href="<?php echo $G5_URL; ?>/sub/sub4_3.php">공지사항</a></li>
               </ul>
@@ -103,7 +102,6 @@ if (!isset($G5_URL)) {
         <div class="nav-menu-group">
           <h3 class="nav-menu-title">Community</h3>
           <ul class="nav-menu-items">
-            <?php /* <li><a href="<?php echo $G5_URL; ?>/sub/sub4_1.php">치료 사례</a></li> */ ?>
             <li><a href="<?php echo $G5_URL; ?>/sub/sub4_2.php">자주묻는 질문</a></li>
             <li><a href="<?php echo $G5_URL; ?>/sub/sub4_3.php">공지사항</a></li>
           </ul>

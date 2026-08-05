@@ -42,10 +42,11 @@ clinic-prototype/
 
 | 그룹      | 메뉴                                                                    | 파일                            |
 | --------- | ----------------------------------------------------------------------- | ------------------------------- |
-| About     | 병원 소개 / 원장 인사말 / 의료진 소개 / 둘러보기 / 오시는 길            | `sub/sub1_1.php` ~ `sub1_5.php` |
-| Clinic    | 성장 평가 / 저신장 / 성조숙 / 소아 비만 / 갑상선 질환 / 당뇨 / 영양수액 | `sub/sub2_1.php` ~ `sub2_7.php` |
-| Info      | 진료 시간 / 진료 절차 / 검사 항목 / 비급여                              | `sub/sub3_1.php` ~ `sub3_4.php` |
-| Community | 치료 사례 / FAQ / 공지사항                                              | `sub/sub4_1.php` ~ `sub4_3.php` |
+| About     | 병원 소개 / 의료진 소개 / 둘러보기 / 오시는 길                          | `sub/sub1_1.php`, `sub1_3.php` ~ `sub1_5.php` |
+| Clinic    | 성장 평가 / 저신장 / 성조숙 / 소아 비만 / 저체중 / 알레르기             | `sub/sub2_1.php` ~ `sub2_6.php` |
+| Info      | 진료 시간                                                               | `sub/sub3_1.php`                |
+| Community | FAQ / 공지사항                                                          | `sub/sub4_2.php`, `sub4_3.php`  |
+| 정책      | 개인정보처리방침 / 이용약관 / 비급여항목                                | `sub/privacy.php`, `terms.php`, `uninsured.php` |
 
 ---
 

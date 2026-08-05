@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Disallow: /adm/
+Disallow: /data/
+Disallow: /extend/
+Disallow: /plugin/
+Disallow: /lib/
+Disallow: /skin/
+Disallow: /mobile/
+Disallow: /bbs/login.php
+Disallow: /bbs/register.php
+Disallow: /bbs/password_lost.php
+Disallow: /bbs/member_confirm.php
+Disallow: /bbs/write.php
+Disallow: /bbs/delete.php
+Disallow: /theme/the_cl/sub/login.php
+Disallow: /theme/the_cl/sub/register.php
+Disallow: /theme/the_cl/sub/write.php
+
+# 네이버 검색로봇
+User-agent: Yeti
+Allow: /
+
+# 구글 검색로봇
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://thecl.kr/sitemap.xml

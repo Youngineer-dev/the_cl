@@ -5,7 +5,6 @@ include_once(G5_PATH.'/head.php');
 
 $w = isset($_GET['w']) ? clean_xss_tags($_GET['w']) : '';
 $bo_table = isset($_GET['bo_table']) ? clean_xss_tags($_GET['bo_table']) : 'notice';
-if ($bo_table == 'cases') $bo_table = 'gallery';
 $wr_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
 $write = [];
@@ -104,7 +103,6 @@ if ($w == 'u' && $wr_id) {
               <label for="bo_table" class="form-label">게시판 선택</label>
               <select name="bo_table" id="bo_table" class="form-input form-select" <?php echo $w == 'u' ? 'disabled' : ''; ?>>
                 <option value="notice" <?php echo $bo_table == 'notice' ? 'selected' : ''; ?>>공지사항 (Notice)</option>
-                <option value="gallery" <?php echo $bo_table == 'gallery' ? 'selected' : ''; ?>>치료 사례 (Treatment Cases)</option>
               </select>
               <?php if ($w == 'u') { ?>
                 <input type="hidden" name="bo_table" value="<?php echo $bo_table; ?>">
@@ -128,32 +126,7 @@ if ($w == 'u' && $wr_id) {
               </label>
             </div>
 
-            <!-- 4. 치료 사례 전용 지표 입력 영역 (cases 전용 여분 필드 wr_1 ~ wr_4 매핑) -->
-            <div class="form-group" id="case_stats_wrap" style="grid-column: span 2; display: none; background: var(--c-bg-cream); padding: 24px; border-radius: 8px; border: 1px solid var(--c-border); margin-bottom: 8px;">
-              <h4 style="font-size: 14px; font-weight: 600; color: var(--c-primary-dark); margin-bottom: 16px; display: flex; align-items: center; gap: 6px;">
-                <span style="font-size: 16px;">📈</span> 치료 지표 입력 (치료사례 전용 통계 정보)
-              </h4>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                <div class="form-group">
-                  <label for="wr_1" class="form-label">지표 1 항목명 (wr_1)</label>
-                  <input type="text" name="wr_1" id="wr_1" class="form-input" placeholder="예: 치료 기간, 평가 항목" value="<?php echo isset($write['wr_1']) ? get_text($write['wr_1']) : '치료 기간'; ?>">
-                </div>
-                <div class="form-group">
-                  <label for="wr_2" class="form-label">지표 1 수치/값 (wr_2)</label>
-                  <input type="text" name="wr_2" id="wr_2" class="form-input" placeholder="예: 24개월, 7종" value="<?php echo isset($write['wr_2']) ? get_text($write['wr_2']) : ''; ?>">
-                </div>
-                <div class="form-group">
-                  <label for="wr_3" class="form-label">지표 2 항목명 (wr_3)</label>
-                  <input type="text" name="wr_3" id="wr_3" class="form-input" placeholder="예: 성장 결과, 관리 플랜" value="<?php echo isset($write['wr_3']) ? get_text($write['wr_3']) : '성장 결과'; ?>">
-                </div>
-                <div class="form-group">
-                  <label for="wr_4" class="form-label">지표 2 수치/값 (wr_4)</label>
-                  <input type="text" name="wr_4" id="wr_4" class="form-input" placeholder="예: +18.5cm, 수립 완료" value="<?php echo isset($write['wr_4']) ? get_text($write['wr_4']) : ''; ?>">
-                </div>
-              </div>
-            </div>
-
-            <!-- 5. 작성자 및 비밀번호 -->
+            <!-- 4. 작성자 및 비밀번호 -->
             <div class="form-group">
               <label for="wr_name" class="form-label">작성자명</label>
               <input type="text" name="wr_name" id="wr_name" class="form-input" value="<?php echo isset($write['wr_name']) ? get_text($write['wr_name']) : (isset($member['mb_nick']) ? $member['mb_nick'] : '관리자'); ?>" required>
@@ -217,7 +190,6 @@ if ($w == 'u' && $wr_id) {
 document.addEventListener('DOMContentLoaded', function() {
   const boTableSelect = document.getElementById('bo_table');
   const caNameSelect = document.getElementById('ca_name');
-  const caseStatsWrap = document.getElementById('case_stats_wrap');
   const noticeOptionWrap = document.getElementById('notice_option_wrap');
   const fileLabel1 = document.getElementById('file_label_1');
 
@@ -227,13 +199,6 @@ document.addEventListener('DOMContentLoaded', function() {
       { value: '안내', text: '공지안내' },
       { value: '소식', text: '병원소식' },
       { value: '이벤트', text: '이벤트' }
-    ],
-    gallery: [
-      { value: '저신장', text: '저신장 클리닉' },
-      { value: '성조숙', text: '성조숙 클리닉' },
-      { value: '소아비만', text: '소아비만 클리닉' },
-      { value: '갑상선', text: '갑상선 질환' },
-      { value: '성장평가', text: '정밀 성장평가' }
     ],
     faq: [
       { value: '진료/예약', text: '진료 및 예약' },
@@ -260,19 +225,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 2. 게시판별 커스텀 필드 제어
-    if (boTable === 'gallery') {
-      caseStatsWrap.style.display = 'block';
-      noticeOptionWrap.style.display = 'none';
-      fileLabel1.textContent = '대표 이미지 (치료 사례 리스트 썸네일 이미지 - 필수)';
-    } else if (boTable === 'notice') {
-      caseStatsWrap.style.display = 'none';
+    if (boTable === 'notice') {
       noticeOptionWrap.style.display = 'flex';
-      fileLabel1.textContent = '첨부 파일 1 (선택)';
     } else {
-      caseStatsWrap.style.display = 'none';
       noticeOptionWrap.style.display = 'none';
-      fileLabel1.textContent = '첨부 파일 1 (선택)';
     }
+    fileLabel1.textContent = '첨부 파일 1 (선택)';
   }
 
   // 초기 로드 시 실행 및 주소창 파라미터 감지
