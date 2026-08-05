@@ -42,9 +42,21 @@ if (!empty($notice_list)) {
     }
 }
 
-$sql_count = " SELECT count(*) as cnt FROM {$g5['write_prefix']}notice WHERE wr_is_comment = 0 $exclude_notice_query ";
-$row_count = sql_fetch($sql_count);
-$total_count = $row_count['cnt'] ?? 0;
+/* 상단 고정 공지는 목록 쿼리에서 제외되므로 집계를 두 가지로 나눈다.
+     $list_count  : 고정 공지를 뺀 수 — 번호 매기기·페이지 계산용
+     $total_count : 게시판 전체 글 수 — "전체 N건" 표시용
+   둘을 구분하지 않으면, 글이 전부 고정 공지일 때
+   화면에는 글이 보이는데 "전체 0건"으로 표시된다. */
+$row_count = sql_fetch(
+    " SELECT count(*) as cnt FROM {$g5['write_prefix']}notice
+      WHERE wr_is_comment = 0 $exclude_notice_query "
+);
+$list_count = $row_count['cnt'] ?? 0;
+
+$row_total = sql_fetch(
+    " SELECT count(*) as cnt FROM {$g5['write_prefix']}notice WHERE wr_is_comment = 0 "
+);
+$total_count = $row_total['cnt'] ?? 0;
 
 $sql = " SELECT * FROM {$g5['write_prefix']}notice 
          WHERE wr_is_comment = 0 $exclude_notice_query
