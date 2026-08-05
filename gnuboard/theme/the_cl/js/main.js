@@ -531,3 +531,26 @@ function goToKakaoMap(e) {
     window.open(webUrl, '_blank');
   }
 }
+
+// 티맵 길찾기 PC/모바일 분기 처리 함수 (poiId 13388570)
+function goToTmap(e) {
+  if (e) e.preventDefault();
+
+  // 티맵 공식 공유 링크 (PC: 웹 지도 / 모바일: 앱 열기 유도)
+  var webUrl = "https://poi.tmobiweb.com/app/share/position?contents=cGtleT0xMzM4ODU3MDAxJnBvaUlkPTEzMzg4NTcwJm5hdlNlcT0xJnR5cGU9MiZwb2lOYW1lPSVFQyU4MiVCQyVFQyU4NCVCMSVFQiU4RCU5NCVFRCU4MSVCNCVFQyU4NCVCMSVFQyU5RSVBNSVFQyU5RCU5OCVFQyU5QiU5MCZjZW50ZXJYPTQ1NzU5MjImY2VudGVyWT0xMzUwNDc2JnRpbWU9MjAyNiVFQiU4NSU4NCswOCVFQyU5QiU5NCswNSVFQyU5RCVCQyswNiUzQTQxJnRlbD0wMi00MjEtNzc1NyZhZGRyPSVFQyU4NCU5QyVFQyU5QSVCOCslRUMlODYlQTElRUQlOEMlOEMlRUElQjUlQUMrJUVDJTk4JUFDJUVCJUE2JUJDJUVEJTk0JUJEJUVCJUExJTlDKzMyOQ==&tailParam=%7B%22reqType%22%3A%220%22%2C%22reqMode%22%3A%221100%22%2C%22extra%22%3A%22112%22%7D";
+  var appUrl = "tmap://route?goalname=%EC%82%BC%EC%84%B1%EB%8D%94%ED%81%B4%EC%84%B1%EC%9E%A5%EC%9D%98%EC%9B%90&goalx=127.1068893&goaly=37.5161072";
+
+  var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    var clickedAt = +new Date();
+    window.location.href = appUrl;
+    setTimeout(function() {
+      if (+new Date() - clickedAt < 2000) {
+        window.location.href = webUrl;
+      }
+    }, 1500);
+  } else {
+    window.open(webUrl, '_blank');
+  }
+}

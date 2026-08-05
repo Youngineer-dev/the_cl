@@ -30,7 +30,7 @@ if (!isset($G5_URL)) {
         <div class="footer-info">
           <span>삼성더클성장의원</span><br>
           <span>사업자번호 : 418-90-74970</span><span class="finfo-sep"> &nbsp;|&nbsp; </span><span>대표 노유선</span><br>
-          <span>서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</span><span class="finfo-sep"> &nbsp;|&nbsp; </span><span>TEL 02-421-7757</span><br>
+          <span>서울특별시 송파구 올림픽로 329, 3층 329, 330, 331호</span><span class="finfo-sep"> &nbsp;|&nbsp; </span><span>TEL 02-421-7757</span><span class="finfo-sep"> &nbsp;|&nbsp; </span><span>FAX 02-421-7758</span><br>
           <span style="margin-top: 4px; display: inline-block;">COPYRIGHT © 2025 삼성더클성장의원. ALL RIGHTS RESERVED<a href="<?php echo G5_BBS_URL; ?>/login.php" style="color: inherit; text-decoration: none; cursor: default;">.</a></span>
         </div>
       </div>
@@ -84,7 +84,7 @@ if (!isset($G5_URL)) {
       <button class="quick-btn kakao" title="카톡상담" onclick="window.open('https://pf.kakao.com/_NDmwX', '_blank')">
         <svg class="q-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 3.185-9 7.11 0 2.52 1.658 4.735 4.148 5.922-.26 1.004-.945 3.636-1.082 4.18-.173.694.256.685.538.497.222-.147 3.522-2.392 4.933-3.353.473.074.96.114 1.463.114 4.97 0 9-3.185 9-7.11S16.97 3 12 3z"/></svg>
       </button>
-      <button class="quick-btn naver" title="네이버예약" onclick="window.open('https://map.naver.com/p/entry/place/2041623550?placePath=%2Fhome%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607142021%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.1068893&amp;lat=37.5161072&amp;c=15.00,0,0,0,dh', '_blank')">
+      <button class="quick-btn naver" title="네이버예약" onclick="window.open('https://booking.naver.com/booking/16/bizes/1699471', '_blank')">
         <svg class="q-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16.273 12.845 7.376 0H0v24h7.726V11.155L16.624 24H24V0h-7.727z"/></svg>
       </button>
       <button class="quick-btn blog" title="네이버블로그" onclick="window.open('https://blog.naver.com/snake5320', '_blank')">
@@ -115,7 +115,7 @@ if (!isset($G5_URL)) {
       </span>
       <span class="mqb-label">카카오톡</span>
     </a>
-    <a class="mqb-item" href="https://map.naver.com/p/entry/place/2041623550?placePath=%2Fhome%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607142021%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.1068893&amp;lat=37.5161072&amp;c=15.00,0,0,0,dh" target="_blank" rel="noopener">
+    <a class="mqb-item" href="https://booking.naver.com/booking/16/bizes/1699471" target="_blank" rel="noopener">
       <span class="mqb-ico mqb-ico-naver">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.273 12.845 7.376 0H0v24h7.726V11.155L16.624 24H24V0h-7.727z"/></svg>
       </span>

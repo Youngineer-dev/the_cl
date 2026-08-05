@@ -479,7 +479,7 @@ include_once(G5_THEME_PATH.'/head.php');
                 <path d="M12 3c-5.5 0-10 3.8-10 8.5 0 3.1 2 5.8 5 7.2l-1.3 4.8c-.1.3 0 .6.2.8.1.1.3.2.5.2.1 0 .2 0 .3-.1l5.6-3.7c.9.2 1.8.3 2.7.3 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/>
               </svg>카카오 길찾기
             </a>
-            <a href="#" class="map-btn">
+            <a href="#" onclick="goToTmap(event)" class="map-btn">
               <svg class="map-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #1F87FF; flex-shrink: 0; margin-right: 6px;">
                 <polygon points="3 11 22 2 13 21 11 13 3 11"/>
               </svg>티맵 길찾기
@@ -498,7 +498,7 @@ include_once(G5_THEME_PATH.'/head.php');
           </p>
           <div class="contact-buttons">
             <a href="https://pf.kakao.com/_NDmwX" target="_blank" rel="noopener" class="contact-btn">카톡 상담</a>
-            <a href="https://map.naver.com/p/entry/place/2041623550?placePath=%2Fhome%3Fentry%3Dplt%26from%3Dmap%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607142021%26locale%3Dko%26svcName%3Dmap_pcv5&amp;searchType=place&amp;lng=127.1068893&amp;lat=37.5161072&amp;c=15.00,0,0,0,dh" target="_blank" rel="noopener" class="contact-btn outline">네이버 예약</a>
+            <a href="https://booking.naver.com/booking/16/bizes/1699471" target="_blank" rel="noopener" class="contact-btn outline">네이버 예약</a>
           </div>
 
           <!-- 진료시간 -->
