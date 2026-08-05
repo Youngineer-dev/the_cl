@@ -200,20 +200,20 @@ ol {
 }
 
 /* --- Scroll Reveal Animation --- */
+/* opacity·transform 만 사용 — 둘 다 합성 단계에서 처리되어 재래스터화가 없다.
+   filter: blur() 트랜지션은 프레임마다 요소를 다시 그려야 하므로
+   (요소당 별도 렌더 서피스 생성) 등장 요소가 많은 페이지에서 전역 렉의 원인이 된다. */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  filter: blur(8px);
   transition:
     opacity 0.7s var(--ease-elegant),
-    transform 0.7s var(--ease-elegant),
-    filter 0.7s var(--ease-elegant);
+    transform 0.7s var(--ease-elegant);
 }
 
 .reveal.revealed {
   opacity: 1;
   transform: translateY(0);
-  filter: blur(0);
 }
 
 @media (min-width: 768px) {
