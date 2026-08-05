@@ -275,7 +275,7 @@ include_once(G5_PATH.'/head.php');
         <!-- Value 2: Long - Image Left -->
         <article class="sub11_sect2_item item2 imgLeft reveal">
           <div class="imgBox">
-            <img src="<?php echo $G5_URL; ?>/img/about_lifestyle.webp?v=4" alt="성장기 아동의 일상 습관과 예상 키 성장을 위한 일대일 라이프스타일 동행" class="item_img" loading="lazy" width="1152" height="864">
+            <img src="<?php echo $G5_URL; ?>/img/about_lifestyle.webp?v=5" alt="인바디 체성분 분석기와 신장계를 갖춘 삼성더클성장의원 신체계측실 - 성장 추적 관리 공간" class="item_img" loading="lazy" width="1152" height="864">
             <i class="bgText marcell">Long</i>
           </div>
           <div class="descBox">

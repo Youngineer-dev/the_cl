@@ -205,10 +205,12 @@ ol {
    (요소당 별도 렌더 서피스 생성) 등장 요소가 많은 페이지에서 전역 렉의 원인이 된다. */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(32px);
+  /* 60Hz에서는 프레임 수가 적어 급한 가감속이 계단처럼 보인다.
+     시간을 늘리고 뒤로 갈수록 완만한 곡선(easeOutQuint)을 써서 정착 구간을 부드럽게. */
   transition:
-    opacity 0.7s var(--ease-elegant),
-    transform 0.7s var(--ease-elegant);
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.revealed {

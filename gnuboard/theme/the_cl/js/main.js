@@ -6,21 +6,56 @@
 (function () {
   'use strict';
 
-  // --- Smooth Scroll (Lenis) ---
+  /* ============================================================
+     스크롤 감각 설정 — 여기 세 값만 조정하면 됩니다.
+
+       enabled          false 로 두면 Lenis 를 끄고 브라우저 기본(네이티브)
+                        스크롤을 씁니다. 네이티브는 합성 스레드가 직접 처리해
+                        입력 지연이 0 이고 주사율 영향도 받지 않습니다.
+                        부드러운 관성은 없어지지만 절대 무겁지 않습니다.
+
+       lerp             목표 지점까지 따라붙는 속도. 클수록 즉각적(가벼움),
+                        작을수록 여운이 길다(부드럽지만 무겁게 느껴짐).
+                        0.10 무거움 ← 0.14 기본 → 0.20 즉각적
+
+       wheelMultiplier  휠 1틱당 이동 거리.
+                        1.0 조금씩 ← 1.25 기본 → 1.6 성큼성큼
+     ============================================================ */
+  const SCROLL = {
+    enabled: true,
+    lerp: 0.14,
+    wheelMultiplier: 1.25
+  };
+
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
   let lenis;
-  if (typeof Lenis !== 'undefined') {
+  if (SCROLL.enabled && typeof Lenis !== 'undefined' && !prefersReducedMotion) {
     lenis = new Lenis({
-      lerp: 0.15,          // 스크롤 반응 속도 증가 (기본 0.1, 높을수록 빠르고 기민함)
-      wheelMultiplier: 1.2, // 마우스 휠 1틱당 이동 거리 20% 증가
-      duration: 0.8,        // 앵커 이동 등 부가 애니메이션 시간 단축
+      lerp: SCROLL.lerp,
+      wheelMultiplier: SCROLL.wheelMultiplier,
+      smoothWheel: true,
+      duration: 0.9, // 앵커(#) 이동 등 scrollTo 전용
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
     });
 
-    function raf(time) {
+    let rafId;
+    const raf = (time) => {
       lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
+    };
+    rafId = requestAnimationFrame(raf);
+
+    // 탭이 백그라운드일 때는 루프를 멈춰 불필요한 연산 제거
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        cancelAnimationFrame(rafId);
+      } else {
+        rafId = requestAnimationFrame(raf);
+      }
+    });
   }
 
   // --- 화면 밖 무한 애니메이션 일시정지 (스크롤 렉 완화) ---
