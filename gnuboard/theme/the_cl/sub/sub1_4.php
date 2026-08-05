@@ -74,6 +74,29 @@ include_once(G5_PATH.'/head.php');
   </div>
 </div>
 
+<?php
+// 둘러보기 공간 갤러리 (파일명, 영문 캡션, 국문 캡션, alt)
+$space_items = [
+    ['space_02', 'Reception',       '접수 데스크',   '삼성더클성장의원 접수 데스크와 브랜드 사인'],
+    ['space_04', 'Consulting Room', '진료실',        '소아내분비 전문의 진료실'],
+    ['space_05', 'Counseling Room', '상담실',        '성장 치료 계획을 상담하는 독립 상담실'],
+    ['space_06', 'Treatment Room',  '처치실',        '커튼으로 분리된 개별 처치실 베드'],
+    ['space_07', 'Waiting Lounge',  '대기 라운지',   '진료실 앞에서 편안하게 기다리는 대기 라운지'],
+    ['space_09', 'Clinic View',     '클리닉 전경',   '삼성더클성장의원 내부 전경'],
+];
+?>
+<div class="space-gallery reveal reveal-delay-3" style="margin-top: 50px;">
+  <?php foreach ($space_items as $i => $sp) { ?>
+    <figure class="space-gallery-item">
+      <img src="<?php echo $G5_URL; ?>/img/<?php echo $sp[0]; ?>.webp?v=1" alt="<?php echo $sp[3]; ?>" loading="<?php echo $i < 3 ? 'eager' : 'lazy'; ?>" width="800" height="600">
+      <figcaption class="gallery-caption">
+        <p class="caption-en"><?php echo $sp[1]; ?></p>
+        <p class="caption-kr"><?php echo $sp[2]; ?></p>
+      </figcaption>
+    </figure>
+  <?php } ?>
+</div>
+
   </div>
 </main>
 

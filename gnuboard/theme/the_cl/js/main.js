@@ -23,6 +23,24 @@
     requestAnimationFrame(raf);
   }
 
+  // --- 화면 밖 무한 애니메이션 일시정지 (스크롤 렉 완화) ---
+  // 히어로 줌·마퀴·장식 오브 등은 보이지 않는 동안에도 계속 재합성되므로,
+  // 뷰포트를 벗어나면 멈춰 스크롤 프레임 예산을 확보한다.
+  const animTargets = document.querySelectorAll(
+    '.hero, .hero-bg, .hero-scroll-indicator, .loop-text-track, .footer-slogan-track, .about, .programs, .doctors, .sub-main'
+  );
+  if ('IntersectionObserver' in window && animTargets.length) {
+    const animIO = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('anim-paused', !entry.isIntersecting);
+        });
+      },
+      { rootMargin: '150px 0px' }
+    );
+    animTargets.forEach((el) => animIO.observe(el));
+  }
+
   // --- Scroll Reveal (Intersection Observer) ---
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -207,7 +225,9 @@
   const quickMenuWrap = document.querySelector('#quickMenu');
   if (quickToggle && quickMenuWrap) {
     quickToggle.addEventListener('click', () => {
-      quickMenuWrap.classList.toggle('is-closed');
+      const closed = quickMenuWrap.classList.toggle('is-closed');
+      // 스크린리더에 접힘/펼침 상태 전달
+      quickToggle.setAttribute('aria-expanded', String(!closed));
     });
   }
 

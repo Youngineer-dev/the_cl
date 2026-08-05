@@ -93,10 +93,7 @@ include_once(G5_PATH.'/head.php');
 
 <article class="doctor-card reveal sub13-doctor-card">
   <div class="doctor-photo">
-    <picture>
-      <source srcset="<?php echo $G5_URL; ?>/img/doctor.webp?v=4" type="image/webp">
-      <img src="<?php echo $G5_URL; ?>/img/doctor.jpg?v=4" alt="잠실 삼성더클성장의원 소아내분비 세부전문의 노유선 대표원장 프로필" width="766" height="816">
-    </picture>
+    <img src="<?php echo $G5_URL; ?>/img/doctor.webp?v=4" alt="잠실 삼성더클성장의원 소아내분비 세부전문의 노유선 대표원장 프로필" width="766" height="816">
   </div>
   <div class="doctor-info">
     <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>

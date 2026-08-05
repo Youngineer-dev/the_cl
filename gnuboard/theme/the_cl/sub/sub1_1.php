@@ -247,10 +247,7 @@ include_once(G5_PATH.'/head.php');
       </section>
 
       <!-- 대표 이미지 프레임 -->
-      <picture>
-        <source srcset="<?php echo $G5_URL; ?>/img/about_intro.webp?v=3" type="image/webp">
-        <img src="<?php echo $G5_URL; ?>/img/about_intro.jpg?v=3" alt="송파 잠실 삼성더클성장의원 인테리어 전경" class="sub11_sect1_img reveal reveal-delay-1" width="1280" height="720">
-      </picture>
+      <img src="<?php echo $G5_URL; ?>/img/about_intro.webp?v=4" alt="송파 잠실 삼성더클성장의원 인테리어 전경" class="sub11_sect1_img reveal reveal-delay-1" width="1280" height="720">
 
       <!-- ============================================================
            CORE VALUES: CARE & LONG (이전 지그재그 레이아웃 복원)
@@ -270,10 +267,7 @@ include_once(G5_PATH.'/head.php');
             </p>
           </div>
           <div class="imgBox">
-            <picture>
-              <source srcset="<?php echo $G5_URL; ?>/img/about_care_diagnosis.webp?v=3" type="image/webp">
-              <img src="<?php echo $G5_URL; ?>/img/about_care_diagnosis.jpg?v=3" alt="소아내분비 전문의의 세심한 성장 발달 및 예상키 정밀 진단 과정" class="item_img" loading="lazy" width="1152" height="864">
-            </picture>
+            <img src="<?php echo $G5_URL; ?>/img/about_care_diagnosis.webp?v=4" alt="소아내분비 전문의의 세심한 성장 발달 및 예상키 정밀 진단 과정" class="item_img" loading="lazy" width="1152" height="864">
             <i class="bgText marcell">Care</i>
           </div>
         </article>
@@ -281,10 +275,7 @@ include_once(G5_PATH.'/head.php');
         <!-- Value 2: Long - Image Left -->
         <article class="sub11_sect2_item item2 imgLeft reveal">
           <div class="imgBox">
-            <picture>
-              <source srcset="<?php echo $G5_URL; ?>/img/about_lifestyle.webp?v=3" type="image/webp">
-              <img src="<?php echo $G5_URL; ?>/img/about_lifestyle.jpg?v=3" alt="성장기 아동의 일상 습관과 예상 키 성장을 위한 일대일 라이프스타일 동행" class="item_img" loading="lazy" width="1152" height="864">
-            </picture>
+            <img src="<?php echo $G5_URL; ?>/img/about_lifestyle.webp?v=4" alt="성장기 아동의 일상 습관과 예상 키 성장을 위한 일대일 라이프스타일 동행" class="item_img" loading="lazy" width="1152" height="864">
             <i class="bgText marcell">Long</i>
           </div>
           <div class="descBox">

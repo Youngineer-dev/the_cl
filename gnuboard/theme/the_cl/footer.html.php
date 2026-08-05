@@ -8,11 +8,21 @@ if (!isset($G5_URL)) {
 ?>
   <!-- 전역 롤링 슬로건 마퀴 트랙 -->
   <div class="loop-text-section" style="padding: 24px 0; border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border); background: var(--c-primary-pale); margin-bottom: 0;">
+    <?php
+    /* 마퀴는 트랙 너비의 -50%만큼 이동하므로, 두 세트를 완전히 동일하게 구성해야
+       이음매가 생기지 않습니다. 한 세트가 최소 화면 너비 이상이어야 하므로
+       (WQHD 2560px·4K 3840px 대응) 세트당 6개를 반복합니다. */
+    $loop_sets = 2;
+    $loop_reps = 6;
+    ?>
     <div class="loop-text-track">
-      <p class="loop-text" style="font-size: 24px; opacity: 0.65; color: var(--c-primary);">Grow Together <span class="sep">✦</span> Grow Healthy <span class="sep">✦</span> Samsung The CL <span class="sep">✦</span></p>
-      <p class="loop-text" style="font-size: 24px; opacity: 0.65; color: var(--c-primary);">Grow Together <span class="sep">✦</span> Grow Healthy <span class="sep">✦</span> Samsung The CL <span class="sep">✦</span></p>
-      <p class="loop-text" style="font-size: 24px; opacity: 0.65; color: var(--c-primary);">Grow Together <span class="sep">✦</span> Grow Healthy <span class="sep">✦</span> Samsung The CL <span class="sep">✦</span></p>
-      <p class="loop-text" style="font-size: 24px; opacity: 0.65; color: var(--c-primary);">Grow Together <span class="sep">✦</span> Grow Healthy <span class="sep">✦</span> Samsung The CL <span class="sep">✦</span></p>
+      <?php for ($s = 0; $s < $loop_sets; $s++) { ?>
+        <div class="loop-text-set">
+          <?php for ($i = 0; $i < $loop_reps; $i++) { ?>
+            <p class="loop-text" style="font-size: 24px; opacity: 0.65; color: var(--c-primary);"<?php echo ($s || $i) ? ' aria-hidden="true"' : ''; ?>>Grow Together <span class="sep">✦</span> Grow Healthy <span class="sep">✦</span> Samsung The CL <span class="sep">✦</span></p>
+          <?php } ?>
+        </div>
+      <?php } ?>
     </div>
   </div>
 
@@ -79,31 +89,31 @@ if (!isset($G5_URL)) {
   }
   </style>
 
-  <div class="quick-menu" id="quickMenu">
+  <div class="quick-menu" id="quickMenu" role="navigation" aria-label="빠른 메뉴">
     <div class="quick-items" id="quickItems">
-      <button class="quick-btn kakao" title="카톡상담" onclick="window.open('https://pf.kakao.com/_NDmwX', '_blank')">
-        <svg class="q-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 3.185-9 7.11 0 2.52 1.658 4.735 4.148 5.922-.26 1.004-.945 3.636-1.082 4.18-.173.694.256.685.538.497.222-.147 3.522-2.392 4.933-3.353.473.074.96.114 1.463.114 4.97 0 9-3.185 9-7.11S16.97 3 12 3z"/></svg>
+      <button class="quick-btn kakao" type="button" title="카톡상담" aria-label="카카오톡 상담 (새 창)" onclick="window.open('https://pf.kakao.com/_NDmwX', '_blank')">
+        <svg class="q-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 3.185-9 7.11 0 2.52 1.658 4.735 4.148 5.922-.26 1.004-.945 3.636-1.082 4.18-.173.694.256.685.538.497.222-.147 3.522-2.392 4.933-3.353.473.074.96.114 1.463.114 4.97 0 9-3.185 9-7.11S16.97 3 12 3z"/></svg>
       </button>
-      <button class="quick-btn naver" title="네이버예약" onclick="window.open('https://booking.naver.com/booking/16/bizes/1699471', '_blank')">
-        <svg class="q-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16.273 12.845 7.376 0H0v24h7.726V11.155L16.624 24H24V0h-7.727z"/></svg>
+      <button class="quick-btn naver" type="button" title="네이버예약" aria-label="네이버 예약 (새 창)" onclick="window.open('https://booking.naver.com/booking/16/bizes/1699471', '_blank')">
+        <svg class="q-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M16.273 12.845 7.376 0H0v24h7.726V11.155L16.624 24H24V0h-7.727z"/></svg>
       </button>
-      <button class="quick-btn blog" title="네이버블로그" onclick="window.open('https://blog.naver.com/snake5320', '_blank')">
-        <svg class="q-icon" viewBox="0 0 24 24" fill="currentColor">
+      <button class="quick-btn blog" type="button" title="네이버블로그" aria-label="네이버 블로그 (새 창)" onclick="window.open('https://blog.naver.com/snake5320', '_blank')">
+        <svg class="q-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor">
           <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7.6 11.5H9.6v-2h2.8c.8 0 1.4-.4 1.4-1.1s-.6-1-1.4-1H9.6V6.6h3.1c1.8 0 3.2.7 3.2 2.4 0 1-.6 1.7-1.5 2.1.9.3 1.5 1 1.5 2.1 0 1.7-1.4 2.3-3.5 2.3z"/>
         </svg>
       </button>
-      <button class="quick-btn phone" title="전화문의" onclick="location.href='tel:02-421-7757'">
-        <svg class="q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <button class="quick-btn phone" type="button" title="전화문의" aria-label="전화 상담 02-421-7757" onclick="location.href='tel:02-421-7757'">
+        <svg class="q-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       </button>
-      <button class="quick-btn map" title="오시는 길" onclick="location.href='<?php echo $G5_URL; ?>/sub/sub1_5.php'">
-        <svg class="q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <button class="quick-btn map" type="button" title="오시는 길" aria-label="오시는 길 안내" onclick="location.href='<?php echo $G5_URL; ?>/sub/sub1_5.php'">
+        <svg class="q-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       </button>
-      <button class="quick-btn top-btn" title="맨 위로">
-        <svg class="q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+      <button class="quick-btn top-btn" type="button" title="맨 위로" aria-label="페이지 맨 위로 이동">
+        <svg class="q-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
       </button>
     </div>
-    <button class="quick-toggle-btn" id="quickToggle" title="퀵메뉴 접기/펼치기">
-      <svg class="q-icon toggle-plus" style="pointer-events: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    <button class="quick-toggle-btn" id="quickToggle" type="button" title="퀵메뉴 접기/펼치기" aria-label="빠른 메뉴 접기/펼치기" aria-expanded="true" aria-controls="quickItems">
+      <svg class="q-icon toggle-plus" aria-hidden="true" focusable="false" style="pointer-events: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
     </button>
   </div>
 
