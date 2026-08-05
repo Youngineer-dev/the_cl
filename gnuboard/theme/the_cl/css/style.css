@@ -158,6 +158,12 @@ img {
   display: block;
 }
 
+/* <picture>가 레이아웃 박스를 만들지 않도록 처리
+   (기존 .xxx img 선택자와 flex/grid 배치를 그대로 유지하기 위함) */
+picture {
+  display: contents;
+}
+
 ul,
 ol {
   list-style: none;
@@ -724,7 +730,16 @@ body.nav-open .site-header .hamburger span {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("../img/hero_main.png");
+  /* WebP 미지원 브라우저는 첫 선언(JPG)을 사용 */
+  background-image: url("../img/hero_main.jpg");
+  background-image: -webkit-image-set(
+    url("../img/hero_main.webp") type("image/webp"),
+    url("../img/hero_main.jpg") type("image/jpeg")
+  );
+  background-image: image-set(
+    url("../img/hero_main.webp") type("image/webp"),
+    url("../img/hero_main.jpg") type("image/jpeg")
+  );
   background-size: cover;
   background-position: center;
   transform: scale(1.05);

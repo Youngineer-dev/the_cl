@@ -77,7 +77,10 @@ include_once(G5_THEME_PATH.'/head.php');
       <!-- Doctor 1 -->
       <article class="doctor-card reveal">
         <div class="doctor-photo">
-          <img src="<?php echo $G5_URL; ?>/img/doctor.png?v=7" alt="삼성더클성장의원 소아청소년과 전문의 및 소아내분비 세부전문의 노유선 대표원장 프로필 사진">
+          <picture>
+            <source srcset="<?php echo $G5_URL; ?>/img/doctor.webp?v=8" type="image/webp">
+            <img src="<?php echo $G5_URL; ?>/img/doctor.jpg?v=8" alt="삼성더클성장의원 소아청소년과 전문의 및 소아내분비 세부전문의 노유선 대표원장 프로필 사진" width="766" height="816">
+          </picture>
         </div>
         <div class="doctor-info">
           <span class="doctor-position">소아청소년과 전문의 · 소아내분비 세부전문의</span>
@@ -291,7 +294,10 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 1 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_1.php" class="program-card reveal">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_growth.jpg?v=2" alt="성장평가 · 예상키" loading="lazy">
+            <picture>
+              <source srcset="<?php echo $G5_URL; ?>/img/icon_growth.webp?v=3" type="image/webp">
+              <img src="<?php echo $G5_URL; ?>/img/icon_growth.jpg?v=3" alt="성장평가 · 예상키" loading="lazy" width="280" height="280">
+            </picture>
           </div>
           <h3 class="card-title">성장평가 · 예상키</h3>
           <p class="card-desc">
@@ -304,7 +310,10 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 2 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_2.php" class="program-card reveal reveal-delay-1">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_short.jpg?v=2" alt="저신장" loading="lazy">
+            <picture>
+              <source srcset="<?php echo $G5_URL; ?>/img/icon_short.webp?v=3" type="image/webp">
+              <img src="<?php echo $G5_URL; ?>/img/icon_short.jpg?v=3" alt="저신장" loading="lazy" width="280" height="280">
+            </picture>
           </div>
           <h3 class="card-title">저신장</h3>
           <p class="card-desc">
@@ -317,7 +326,10 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 3 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_3.php" class="program-card reveal reveal-delay-2">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_precocious.jpg?v=2" alt="성조숙증" loading="lazy">
+            <picture>
+              <source srcset="<?php echo $G5_URL; ?>/img/icon_precocious.webp?v=3" type="image/webp">
+              <img src="<?php echo $G5_URL; ?>/img/icon_precocious.jpg?v=3" alt="성조숙증" loading="lazy" width="280" height="280">
+            </picture>
           </div>
           <h3 class="card-title">성조숙증</h3>
           <p class="card-desc">
@@ -330,7 +342,10 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 4 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_4.php" class="program-card reveal reveal-delay-3">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_obesity.jpg?v=2" alt="소아비만" loading="lazy">
+            <picture>
+              <source srcset="<?php echo $G5_URL; ?>/img/icon_obesity.webp?v=3" type="image/webp">
+              <img src="<?php echo $G5_URL; ?>/img/icon_obesity.jpg?v=3" alt="소아비만" loading="lazy" width="280" height="280">
+            </picture>
           </div>
           <h3 class="card-title">소아비만</h3>
           <p class="card-desc">
@@ -343,7 +358,10 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 5 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_5.php" class="program-card reveal reveal-delay-4">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_underweight.jpg?v=2" alt="저체중" loading="lazy">
+            <picture>
+              <source srcset="<?php echo $G5_URL; ?>/img/icon_underweight.webp?v=3" type="image/webp">
+              <img src="<?php echo $G5_URL; ?>/img/icon_underweight.jpg?v=3" alt="저체중" loading="lazy" width="280" height="280">
+            </picture>
           </div>
           <h3 class="card-title">저체중</h3>
           <p class="card-desc">
@@ -356,7 +374,10 @@ include_once(G5_THEME_PATH.'/head.php');
         <!-- Card 6 -->
         <a href="<?php echo $G5_URL; ?>/sub/sub2_6.php" class="program-card reveal reveal-delay-5">
           <div class="program-icon">
-            <img src="<?php echo $G5_URL; ?>/img/icon_allergy.jpg?v=2" alt="알레르기" loading="lazy">
+            <picture>
+              <source srcset="<?php echo $G5_URL; ?>/img/icon_allergy.webp?v=3" type="image/webp">
+              <img src="<?php echo $G5_URL; ?>/img/icon_allergy.jpg?v=3" alt="알레르기" loading="lazy" width="280" height="280">
+            </picture>
           </div>
           <h3 class="card-title">알레르기</h3>
           <p class="card-desc">

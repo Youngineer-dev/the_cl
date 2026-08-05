@@ -61,13 +61,16 @@ $canonical_host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localh
 $canonical_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $canonical_url = $canonical_proto . '://' . $canonical_host . $canonical_path;
 $og_url = $canonical_proto . '://' . $canonical_host . $_SERVER['REQUEST_URI'];
-$og_image = G5_THEME_URL . '/img/og.png'; // 기본 대표 이미지
+$og_image = G5_THEME_URL . '/img/og.jpg'; // 기본 대표 이미지 (1200x630, 카카오/페북 규격)
 ?>
 <link rel="canonical" href="<?php echo htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8'); ?>">
 <meta property="og:type" content="website">
 <meta property="og:title" content="<?php echo htmlspecialchars($g5_head_title, ENT_QUOTES, 'UTF-8'); ?>">
 <meta property="og:description" content="<?php echo htmlspecialchars($g5_head_description, ENT_QUOTES, 'UTF-8'); ?>">
 <meta property="og:image" content="<?php echo htmlspecialchars($og_image, ENT_QUOTES, 'UTF-8'); ?>">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="<?php echo htmlspecialchars($og_url, ENT_QUOTES, 'UTF-8'); ?>">
 <?php
 // 기본 MedicalClinic 스키마 생성 (GSO / AI 최적화)
@@ -80,19 +83,26 @@ $clinic_schema = [
     "url" => G5_URL . "/",
     "telephone" => "02-421-7757",
     "logo" => G5_THEME_URL . "/img/brand_logo.png",
-    "image" => G5_THEME_URL . "/img/brand_logo.png",
+    "image" => G5_THEME_URL . "/img/og.jpg",
     "address" => [
         "@type" => "PostalAddress",
         "streetAddress" => "올림픽로 329, 3층 329, 330, 331호",
-        "addressLocality" => "서울특별시",
-        "addressRegion" => "송파구",
+        "addressLocality" => "송파구",
+        "addressRegion" => "서울특별시",
         "postalCode" => "05510",
         "addressCountry" => "KR"
     ],
     "geo" => [
         "@type" => "GeoCoordinates",
-        "latitude" => "37.5165",
-        "longitude" => "127.1025"
+        "latitude" => "37.5161072",
+        "longitude" => "127.1068893"
+    ],
+    // 동일 사업체 인식용 외부 프로필 (로컬 SEO)
+    "sameAs" => [
+        "https://map.naver.com/p/entry/place/2041623550",
+        "https://booking.naver.com/booking/16/bizes/1699471",
+        "https://blog.naver.com/snake5320",
+        "https://pf.kakao.com/_NDmwX"
     ],
     "openingHoursSpecification" => [
         [
