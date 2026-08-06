@@ -1,5 +1,6 @@
 <?php
 $page_title = "개인정보처리방침";
+$page_description = "삼성더클성장의원의 개인정보처리방침입니다. 수집하는 개인정보 항목과 이용 목적, 진료기록 보유·이용 기간, 파기 절차, 정보주체의 권리 행사 방법과 개인정보 보호책임자를 안내합니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>

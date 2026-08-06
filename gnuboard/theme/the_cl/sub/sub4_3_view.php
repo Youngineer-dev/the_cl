@@ -1,7 +1,8 @@
 <?php
-$page_title = "공지사항";
+/* head.php 는 데이터 조회가 끝난 뒤에 include 한다.
+   - 글 제목·본문을 title / meta description 에 반영하려면 출력 전에 값이 필요하고
+   - 조회수 쿠키(set_cookie)도 헤더 출력 전에 발급되어야 하기 때문이다. */
 include_once('./_common.php');
-include_once(G5_PATH.'/head.php');
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $action = isset($_GET['action']) ? $_GET['action'] : '';
@@ -53,6 +54,41 @@ $nav = [
 
 
 $list_url = G5_THEME_URL . '/sub/sub4_3.php';
+
+/* ------------------------------------------------------------------
+   SEO — 글마다 고유한 제목·설명·정규 URL
+   ------------------------------------------------------------------ */
+$page_title = $post['subject'];
+
+/* 본문 요약문 생성.
+   strip_tags 대신 태그를 공백으로 치환한다 — </p><p> 를 그냥 제거하면
+   앞뒤 문장이 "…입니다.여름 하계…" 처럼 달라붙는다. */
+$desc_src = preg_replace('/<[^>]*>/u', ' ', $post['content']);
+$desc_src = html_entity_decode($desc_src, ENT_QUOTES, 'UTF-8');
+$desc_src = str_replace("\xC2\xA0", ' ', $desc_src);            // &nbsp;
+$desc_src = trim(preg_replace('/\s+/u', ' ', $desc_src));
+if ($desc_src === '') {
+    $desc_src = $post['subject'];
+}
+$page_description = '삼성더클성장의원 공지사항 - ' . $desc_src;
+
+/* 검색결과 노출 길이에 맞춰 접두어까지 포함한 최종 문자열을 자른다.
+   테마가 mbstring 에 의존하지 않으므로 iconv 폴백을 둔다. */
+$desc_max = 155;
+if (function_exists('mb_substr')) {
+    if (mb_strlen($page_description, 'UTF-8') > $desc_max) {
+        $page_description = rtrim(mb_substr($page_description, 0, $desc_max, 'UTF-8')) . '…';
+    }
+} elseif (function_exists('iconv_substr')) {
+    if (iconv_strlen($page_description, 'UTF-8') > $desc_max) {
+        $page_description = rtrim(iconv_substr($page_description, 0, $desc_max, 'UTF-8')) . '…';
+    }
+}
+
+// 쿼리스트링이 글을 결정하므로 정규 URL 에 ?id= 를 포함시킨다
+$page_canonical_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) . '?id=' . $id;
+
+include_once(G5_PATH.'/head.php');
 ?>
 
 <style>

@@ -65,6 +65,12 @@ if (!empty($page_noindex)) {
 $canonical_proto = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
 $canonical_host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
 $canonical_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+/* 게시글 상세처럼 쿼리스트링이 콘텐츠를 결정하는 화면은
+   페이지 상단에서 $page_canonical_path 에 "경로?쿼리" 를 지정한다.
+   지정하지 않으면 쿼리를 제외한 경로만 정규 URL로 사용한다. */
+if (!empty($page_canonical_path)) {
+    $canonical_path = $page_canonical_path;
+}
 $canonical_url = $canonical_proto . '://' . $canonical_host . $canonical_path;
 $og_url = $canonical_proto . '://' . $canonical_host . $_SERVER['REQUEST_URI'];
 $og_image = G5_THEME_URL . '/img/og.jpg'; // 기본 대표 이미지 (1200x630, 카카오/페북 규격)

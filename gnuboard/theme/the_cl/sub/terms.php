@@ -1,5 +1,6 @@
 <?php
 $page_title = "이용약관";
+$page_description = "삼성더클성장의원 홈페이지 이용약관입니다. 서비스 이용 조건과 절차, 이용자의 권리·의무 및 책임 사항, 게시물 관리 기준과 약관 변경 시 고지 방법을 안내합니다.";
 include_once('./_common.php');
 include_once(G5_PATH.'/head.php');
 ?>
