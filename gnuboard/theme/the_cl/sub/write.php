@@ -17,6 +17,20 @@ if ($w == 'u' && $wr_id) {
     $board = sql_fetch(" SELECT bo_notice FROM {$g5['board_table']} WHERE bo_table = '$bo_table' ");
     $notice_list = explode(',', trim($board['bo_notice'] ?? ''));
 }
+
+/* ------------------------------------------------------------------
+   그누보드 write_update.php 가 수정 요청을 검증할 때 쓰는 세션.
+
+     if (get_session('ss_bo_table') != $_POST['bo_table']
+      || get_session('ss_wr_id')   != $_POST['wr_id'])
+         alert('올바른 방법으로 수정하여 주십시오.');
+
+   원본 bbs/write.php 는 폼을 출력하기 직전에 이 값을 심는다.
+   이 테마는 자체 폼을 쓰므로 동일하게 발급해 주어야 수정이 통과된다.
+   (신규 작성은 $wr_id 가 0 이며, 원본도 동일하게 무조건 설정한다)
+   ------------------------------------------------------------------ */
+set_session('ss_bo_table', $bo_table);
+set_session('ss_wr_id', $wr_id);
 ?>
 
 <style>
