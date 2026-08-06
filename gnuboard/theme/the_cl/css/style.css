@@ -60,8 +60,7 @@
   /* Typography */
   --font-serif: "MaruBuri", "Cormorant", "Georgia", serif;
   --font-sans:
-    "MaruBuri", "Noto Sans KR", -apple-system, "Segoe UI",
-    sans-serif;
+    "MaruBuri", "Noto Sans KR", -apple-system, "Segoe UI", sans-serif;
 
   /* Spacing */
   --section-pad: 120px;
@@ -760,11 +759,7 @@ body.nav-open .site-header .hamburger span {
   inset: 0;
   /* 상단 스크림: 헤더(슬로건·메뉴·전화번호) 글씨 가독성 확보 */
   background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.22) 0%,
-      rgba(0, 0, 0, 0) 20%
-    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0) 20%),
     radial-gradient(
       circle at center,
       rgba(0, 0, 0, 0.35) 0%,
@@ -1324,8 +1319,8 @@ body.nav-open .site-header .hamburger span {
 
 .space-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
 .space-gallery-item {
@@ -1941,6 +1936,10 @@ body.nav-open .site-header .hamburger span {
     padding-left: 0;
   }
 
+  .hero-bg {
+    background-position: 65% center;
+  }
+
   .hero-title {
     font-size: 28px;
     letter-spacing: 4px;
@@ -2249,11 +2248,7 @@ body.nav-open .site-header .hamburger span {
   /* 세이지 그린 마스크 — 뒤편 인테리어는 비치되 흰색 글씨 대비를 확보.
      밝은 실사 배경(평균 157/255)에 맞춰 강도 상향 (그라데이션 배경 시절 값에서 조정) */
   background:
-    linear-gradient(
-      180deg,
-      rgba(45, 54, 49, 0.34) 0%,
-      rgba(45, 54, 49, 0) 28%
-    ),
+    linear-gradient(180deg, rgba(45, 54, 49, 0.34) 0%, rgba(45, 54, 49, 0) 28%),
     radial-gradient(
       circle at center,
       rgba(45, 54, 49, 0.35) 0%,
@@ -2262,7 +2257,7 @@ body.nav-open .site-header .hamburger span {
     ),
     linear-gradient(
       180deg,
-      rgba(152, 169, 158, 0.20) 0%,
+      rgba(152, 169, 158, 0.2) 0%,
       rgba(92, 110, 99, 0.35) 100%
     );
 }

@@ -17,17 +17,10 @@ include_once(G5_PATH.'/head.php');
     font-size: 14px;
     line-height: 1.85;
   }
-  .space-gallery-item img {
-    height: 220px;
-    object-fit: cover;
-  }
 }
 @media (max-width: 480px) {
   .sub-intro-text .section-title {
     font-size: 19px !important;
-  }
-  .space-gallery-item img {
-    height: 200px;
   }
 }
 </style>
@@ -80,8 +73,6 @@ $space_items = [
     ['space_02', 'Reception',       '접수 데스크',   '삼성더클성장의원 접수 데스크와 브랜드 사인'],
     ['space_04', 'Consulting Room', '진료실',        '소아내분비 전문의 진료실'],
     ['space_05', 'Counseling Room', '상담실',        '성장 치료 계획을 상담하는 독립 상담실'],
-    ['space_06', 'Treatment Room',  '처치실',        '커튼으로 분리된 개별 처치실 베드'],
-    ['space_07', 'Waiting Lounge',  '대기 라운지',   '진료실 앞에서 편안하게 기다리는 대기 라운지'],
     ['space_09', 'Clinic View',     '클리닉 전경',   '삼성더클성장의원 내부 전경'],
 ];
 ?>
