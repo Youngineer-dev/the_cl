@@ -57,7 +57,7 @@ include_once(G5_PATH.'/head.php');
   <p class="section-en reveal">Clinic Gallery</p>
   <h2 class="section-title reveal reveal-delay-1">
     심리적 안정감을 제공하는 인테리어,<span class="br-all" aria-hidden="true"></span>
-    <strong>가장 위생적이고 안온한 의료 공간</strong>
+    <strong>위생과 편안함을 함께 고려한 의료 공간</strong>
   </h2>
   <div class="desc-group reveal reveal-delay-2" style="margin-top: 30px;">
     <p class="desc">

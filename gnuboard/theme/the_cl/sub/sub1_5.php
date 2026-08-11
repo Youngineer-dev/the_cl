@@ -171,7 +171,7 @@ include_once(G5_PATH.'/head.php');
   <p class="section-en reveal">Directions</p>
   <h2 class="ed-split__title ed-split__title--simple">
       잠실역 도보 3분 거리,<span class="br-all" aria-hidden="true"></span>
-      <strong>가장 쾌적하게 방문하시는 길</strong>
+      <strong>편안하게 방문하시는 길</strong>
     </h2>
 </div>
 
